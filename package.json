@@ -1,0 +1,45 @@
+{
+  "name": "nora-trimtex-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:api": "pnpm --dir server dev",
+    "build": "next build",
+    "build:cloudflare": "opennextjs-cloudflare build",
+    "preview:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "dry-run:cloudflare": "opennextjs-cloudflare build && wrangler deploy --dry-run",
+    "build:api": "pnpm --dir server build",
+    "typecheck:api": "pnpm --dir server typecheck",
+    "start": "next start",
+    "lint": "eslint .",
+    "seed:api": "pnpm --dir server seed",
+    "prepare:migration": "node scripts/prepare-migrated-catalog.mjs",
+    "import:migration": "pnpm --dir server import:migration",
+    "upload:assets": "pnpm --dir server upload:assets",
+    "migration:legacy": "node scripts/import-china-catalog.mjs",
+    "import:tassel-dimensions": "node scripts/import-tassel-dimensions.mjs",
+    "import:technical-images": "node scripts/import-product-technical-images.mjs",
+    "test:cart-browser": "node scripts/test-cart-browser.mjs"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "latest",
+    "lucide-react": "latest",
+    "next": "16.2.10",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-redux": "latest"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^5.9.3",
+    "wrangler": "latest"
+  },
+  "packageManager": "pnpm@11.9.0"
+}
