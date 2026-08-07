@@ -1,0 +1,5810 @@
+{
+  "2": {
+    "sku": "ZB51",
+    "sourceVariantId": "2",
+    "dimensionsZh": "总长：810mm",
+    "compositionZh": "人丝52% 棉纱14% 人棉34%"
+  },
+  "3": {
+    "sku": "AT481",
+    "sourceVariantId": "3",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "腈纶 85.6 人丝 5.7"
+  },
+  "4": {
+    "sku": "MPZ102",
+    "sourceVariantId": "4",
+    "dimensionsZh": "圆盘直径：65mm",
+    "compositionZh": "人丝89.8%,棉纱9.7%,纱带0.5%"
+  },
+  "6": {
+    "sku": "AG710",
+    "sourceVariantId": "16288",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "人丝 53.8 棉纱23.1 金线 2.8 涤纶 10.5 鱼线 9.8"
+  },
+  "9": {
+    "sku": "AV592Y",
+    "sourceVariantId": "13012",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "人丝 84.4 人棉 1.7 腈纶 2.8棉纱 5.1 鱼线 1.6 涤纶 4.4"
+  },
+  "10": {
+    "sku": "MB738A",
+    "sourceVariantId": "265",
+    "dimensionsZh": "跨度：920mm/脖长：100mm/穗长：270mm/总长：830.00mm",
+    "compositionZh": "人丝50.1% 腈纶11.4% 纱带0.2% 棉纱38.3%"
+  },
+  "12": {
+    "sku": "AT809A",
+    "sourceVariantId": "12",
+    "dimensionsZh": "幅宽：118mm",
+    "compositionZh": "人丝69.2 棉纱1.2 鱼线3.7 涤纶1.6 腈纶24.3"
+  },
+  "14": {
+    "sku": "AT736F",
+    "sourceVariantId": "20262",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人丝37.4%金线5.4%人棉43.6%棉纱 5.1%涤纶6.2%鱼线2.3%"
+  },
+  "16": {
+    "sku": "MPZ101",
+    "sourceVariantId": "273",
+    "dimensionsZh": "圆盘直径：65mm",
+    "compositionZh": "人丝72.4%,棉纱14.9%,纱带1.5%,腈纶11.2%"
+  },
+  "18": {
+    "sku": "AT557B",
+    "sourceVariantId": "18",
+    "dimensionsZh": "幅宽：59mm",
+    "compositionZh": "人丝69.6%腈纶14.2%棉纱5.3%人棉3.4%鱼线 3.7%涤纶3.8%"
+  },
+  "20": {
+    "sku": "AT557C",
+    "sourceVariantId": "352",
+    "dimensionsZh": "幅宽：95mm",
+    "compositionZh": "人丝 68.9 腈纶 13棉纱 6.5 人棉 4.1 鱼线 4.6 涤纶 2.9"
+  },
+  "22": {
+    "sku": "MB712Y",
+    "sourceVariantId": "6821",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：325mm/总长：846.00mm",
+    "compositionZh": "人丝74.7%,棉纱25.3%"
+  },
+  "51": {
+    "sku": "DE366Y",
+    "sourceVariantId": "83",
+    "dimensionsZh": "幅宽：122mm",
+    "compositionZh": "人棉2,人丝46,腈纶2 ,金线1 ,棉纱47,涤纶2"
+  },
+  "55": {
+    "sku": "AT923B",
+    "sourceVariantId": "8610",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "人丝52.6 腈纶8.4 金线16.1"
+  },
+  "71": {
+    "sku": "SBM398CY",
+    "sourceVariantId": "19572",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "74": {
+    "sku": "AT398B",
+    "sourceVariantId": "262",
+    "dimensionsZh": "幅宽：97mm",
+    "compositionZh": "涤纶 64.1 腈纶 13.4 人丝 9棉纱 7 鱼线 6.5"
+  },
+  "77": {
+    "sku": "AG398",
+    "sourceVariantId": "152",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "涤纶 57.8 腈纶 15.7 人丝 10.3 棉纱 8.4 鱼线 7.8"
+  },
+  "79": {
+    "sku": "AT398",
+    "sourceVariantId": "250",
+    "dimensionsZh": "幅宽：125mm",
+    "compositionZh": "涤纶 44.1,腈纶 27.4,人丝 17.1,银线 5.1,棉纱 2,鱼线 2.4,人棉 1.9"
+  },
+  "99": {
+    "sku": "MB919A",
+    "sourceVariantId": "753",
+    "dimensionsZh": "跨度：900mm/脖长：90mm/穗长：270mm/总长：790.00mm",
+    "compositionZh": "人丝27.1%,人棉19.9%,棉纱43.1%,腈纶9.9%"
+  },
+  "103": {
+    "sku": "MB917AY",
+    "sourceVariantId": "632",
+    "dimensionsZh": "跨度：900mm/脖长：90mm/穗长：330mm/总长：850.00mm",
+    "compositionZh": "人丝66.1%,棉纱29.7%,人棉4.2%"
+  },
+  "105": {
+    "sku": "AG204T",
+    "sourceVariantId": "2042",
+    "dimensionsZh": "幅宽：13mm",
+    "compositionZh": "涤纶12.9% 锦纶6.7% 棉纱8.9% 人丝43.5% 人棉27.9%"
+  },
+  "106": {
+    "sku": "MBR546Y",
+    "sourceVariantId": "13591",
+    "dimensionsZh": "跨度：1000mm/脖长：90mm/穗长：360mm/总长：926.00mm",
+    "compositionZh": "人丝35.7% 人棉18% 金线1% 棉纱44.7% 粘钻绒布带0.6%"
+  },
+  "116": {
+    "sku": "MBR712A",
+    "sourceVariantId": "6747",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：305mm/总长：826.00mm",
+    "compositionZh": "人丝81.6%,棉纱18.4%"
+  },
+  "118": {
+    "sku": "AT927A",
+    "sourceVariantId": "880",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人丝62.2 腈纶10.7"
+  },
+  "119": {
+    "sku": "AT927",
+    "sourceVariantId": "907",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "人丝51.7 腈纶16.9"
+  },
+  "120": {
+    "sku": "AT927D",
+    "sourceVariantId": "882",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "人丝60.4 腈纶29"
+  },
+  "121": {
+    "sku": "XR26",
+    "sourceVariantId": "428",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "锦纶14.1% 棉纱40.1% 人丝45.8%"
+  },
+  "124": {
+    "sku": "MB927",
+    "sourceVariantId": "881",
+    "dimensionsZh": "跨度：900mm/脖长：55/75mm/穗长：305mm/总长：735.00mm",
+    "compositionZh": "人丝 64.8% 棉纱35.2%"
+  },
+  "128": {
+    "sku": "AG919",
+    "sourceVariantId": "681",
+    "dimensionsZh": "幅宽：15mm",
+    "compositionZh": "人丝69.4 人棉9.2 雪尼尔9.9"
+  },
+  "129": {
+    "sku": "AE919Y",
+    "sourceVariantId": "669",
+    "dimensionsZh": "幅宽：123mm",
+    "compositionZh": "人丝44.8 人棉23.8 棉纱26.9 涤纶2.8 鱼线0.5"
+  },
+  "130": {
+    "sku": "AT919E",
+    "sourceVariantId": "678",
+    "dimensionsZh": "幅宽：37mm",
+    "compositionZh": "人丝16.8 人棉75.4 雪尼尔2.3"
+  },
+  "131": {
+    "sku": "AT919D",
+    "sourceVariantId": "677",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "人丝18 人棉74.6 雪尼尔1.9"
+  },
+  "132": {
+    "sku": "AG919B",
+    "sourceVariantId": "752",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "人丝54.3 人棉24.4 雪尼尔10"
+  },
+  "134": {
+    "sku": "AT935B",
+    "sourceVariantId": "8703",
+    "dimensionsZh": "幅宽：112mm",
+    "compositionZh": "人丝 87.3 棉纱 6.4"
+  },
+  "136": {
+    "sku": "SBM935Y",
+    "sourceVariantId": "450",
+    "dimensionsZh": "跨度：1200mm/脖长：60mm/穗长：400mm/总长：1040.40mm",
+    "compositionZh": "人丝70.8% 金线1.2% 棉纱28%"
+  },
+  "145": {
+    "sku": "ZB919",
+    "sourceVariantId": "694",
+    "dimensionsZh": "总长：810mm",
+    "compositionZh": "人棉92.7%,棉纱7.3%"
+  },
+  "146": {
+    "sku": "AT919A",
+    "sourceVariantId": "757",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝17.4 人棉73 雪尼尔1.8"
+  },
+  "147": {
+    "sku": "AV996AY",
+    "sourceVariantId": "4147",
+    "dimensionsZh": "幅宽：95mm",
+    "compositionZh": "涤纶4.5% 人丝85.9% 棉纱6.0% 锦纶3.6%"
+  },
+  "148": {
+    "sku": "AT996A",
+    "sourceVariantId": "3661",
+    "dimensionsZh": "幅宽：54mm",
+    "compositionZh": "涤纶1.9% 人丝86.6% 锦纶4.7% 棉纱6.7%"
+  },
+  "149": {
+    "sku": "AT996M",
+    "sourceVariantId": "1411",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "涤纶11.2% 人丝59.5% 锦纶12.1% 棉纱17.2%"
+  },
+  "150": {
+    "sku": "AT996C",
+    "sourceVariantId": "488",
+    "dimensionsZh": "幅宽：110mm",
+    "compositionZh": "涤纶2.9% 人丝90.0% 锦纶3.0% 棉纱4.1%"
+  },
+  "151": {
+    "sku": "AE996Y",
+    "sourceVariantId": "4428",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "涤纶3.0% 锦纶2.1% 棉纱45.3% 人丝49.6%"
+  },
+  "152": {
+    "sku": "AG996B",
+    "sourceVariantId": "490",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "锦纶22.9% 棉纱32.0% 人丝45.2%"
+  },
+  "153": {
+    "sku": "MK996A",
+    "sourceVariantId": "1427",
+    "dimensionsZh": "吊绳长：60mm/穗长：215mm",
+    "compositionZh": "涤纶1.0% 棉纱41.6% 人丝57.2% 锦纶0.1%"
+  },
+  "154": {
+    "sku": "MB996Y",
+    "sourceVariantId": "3494",
+    "dimensionsZh": "跨度：1000mm/脖长：85mm/穗长：305mm/总长：866.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.2% 人丝60.9% 棉纱38.8%"
+  },
+  "155": {
+    "sku": "WXR996",
+    "sourceVariantId": "3658",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝81% 人棉18.8% 涤纶0.2%"
+  },
+  "156": {
+    "sku": "AG996A",
+    "sourceVariantId": "14983",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "锦纶22.7% 棉纱32.1% 人丝45.1%"
+  },
+  "157": {
+    "sku": "MB996A",
+    "sourceVariantId": "495",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：325mm/总长：881.00mm",
+    "compositionZh": "丙纶0.4% 棉纱54.3% 人丝45.2% 涤纶0.1% 涤纶0.1%"
+  },
+  "159": {
+    "sku": "MQZ970A",
+    "sourceVariantId": "4425",
+    "dimensionsZh": "成品直径：65mm",
+    "compositionZh": "锦纶8.4% 棉纱24.7% 人丝58.7% 人棉8.0% 涤纶0.2%"
+  },
+  "160": {
+    "sku": "BMFB904",
+    "sourceVariantId": "15001",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类9.7% 涤纶1.0% 棉纱58.7% 人丝30.6%"
+  },
+  "164": {
+    "sku": "DR930C",
+    "sourceVariantId": "534",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人棉35.9% 金银线19.4% 人丝44.7%"
+  },
+  "168": {
+    "sku": "ZT8032A",
+    "sourceVariantId": "535",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "人丝92.1% 涤纶2.9% 人棉5.0%"
+  },
+  "169": {
+    "sku": "WR8032",
+    "sourceVariantId": "536",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "涤纶2.5% 人棉44.5% 人丝53.0%"
+  },
+  "170": {
+    "sku": "MB955Y",
+    "sourceVariantId": "561",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：350mm/总长：910.00mm",
+    "compositionZh": "丙纶0.1% 涤纶0.3% 人丝59.2% 棉纱40.5%"
+  },
+  "171": {
+    "sku": "MK955",
+    "sourceVariantId": "1716",
+    "dimensionsZh": "吊绳长：100mm/穗长：245mm",
+    "compositionZh": "丙纶0.2% 涤纶0.5% 人丝99.4%"
+  },
+  "172": {
+    "sku": "MB8032Y",
+    "sourceVariantId": "5088",
+    "dimensionsZh": "跨度：1000mm/脖长：68mm/穗长：480mm/总长：1032.00mm",
+    "compositionZh": "涤纶0.6% 丙纶0.1% 人丝76.4% 棉纱22.9%"
+  },
+  "173": {
+    "sku": "ZT955",
+    "sourceVariantId": "540",
+    "dimensionsZh": "幅宽：105mm",
+    "compositionZh": "金银线1.4% 涤纶2.4% 人丝89.8% 人棉5.4% 棉纱1.0%"
+  },
+  "174": {
+    "sku": "MB906Y",
+    "sourceVariantId": "541",
+    "dimensionsZh": "跨度：800mm/脖长：80mm/穗长：305mm/总长：765.00mm",
+    "compositionZh": "人丝43.4%,棉纱39%,人棉17.6%"
+  },
+  "175": {
+    "sku": "DR955",
+    "sourceVariantId": "1681",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "涤纶16.4% 人丝83.6%"
+  },
+  "176": {
+    "sku": "MB955",
+    "sourceVariantId": "20338",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：350mm/总长：910.00mm",
+    "compositionZh": "丙纶0.1% 涤纶0.3% 人丝71.3% 棉纱28.4%"
+  },
+  "177": {
+    "sku": "DG906",
+    "sourceVariantId": "544",
+    "dimensionsZh": "幅宽：28mm",
+    "compositionZh": "人丝43 人棉57"
+  },
+  "178": {
+    "sku": "WRQ8032",
+    "sourceVariantId": "3106",
+    "dimensionsZh": "幅宽：105mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "180": {
+    "sku": "WXR8032",
+    "sourceVariantId": "1684",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝74.7% 人棉24.9% 涤纶0.4%"
+  },
+  "182": {
+    "sku": "ZT955A",
+    "sourceVariantId": "549",
+    "dimensionsZh": "幅宽：180mm",
+    "compositionZh": "金银线0.9% 涤纶1.3% 人丝93.8% 人棉3.4% 棉纱0.6%"
+  },
+  "183": {
+    "sku": "ZT955B",
+    "sourceVariantId": "1749",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "锦纶6.5% 棉纱42.2% 人丝49.2% 涤纶1.5% 金银线0.6%"
+  },
+  "184": {
+    "sku": "DR955A",
+    "sourceVariantId": "6421",
+    "dimensionsZh": "幅宽：59mm",
+    "compositionZh": "涤纶21.4% 人丝75.6% 金银线2.9%"
+  },
+  "185": {
+    "sku": "MK8032",
+    "sourceVariantId": "5975",
+    "dimensionsZh": "吊绳长：60mm/穗长：130mm",
+    "compositionZh": "人丝99.5% 涤纶0.5%"
+  },
+  "186": {
+    "sku": "ZT8032",
+    "sourceVariantId": "1691",
+    "dimensionsZh": "幅宽：56mm",
+    "compositionZh": "涤纶13.5% 人棉49.1% 人丝37.4%"
+  },
+  "188": {
+    "sku": "BUF4A",
+    "sourceVariantId": "555",
+    "dimensionsZh": "直径：11.0mm",
+    "compositionZh": "人丝20.7%,棉纱70.7%,涤纶8.6%"
+  },
+  "189": {
+    "sku": "WRQ8032A",
+    "sourceVariantId": "3178",
+    "dimensionsZh": "幅宽：105mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "190": {
+    "sku": "MB8032AY",
+    "sourceVariantId": "3111",
+    "dimensionsZh": "跨度：1000mm/脖长：65mm/穗长：460mm/总长：1009.00mm",
+    "compositionZh": "涤纶0.7% 丙纶0.1% 人丝68.1% 棉纱31.1%"
+  },
+  "193": {
+    "sku": "AG914A",
+    "sourceVariantId": "581",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "涤纶8.3% 金银线12.8% 锦纶8.9% 棉纱31.3% 人丝28.4% 针织圆带10.3%"
+  },
+  "194": {
+    "sku": "NF15",
+    "sourceVariantId": "573",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "人丝50%；棉纱48.2%；涤纶1.8%"
+  },
+  "196": {
+    "sku": "NF89B",
+    "sourceVariantId": "575",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "金线23%,人丝77%"
+  },
+  "198": {
+    "sku": "NF89",
+    "sourceVariantId": "6417",
+    "dimensionsZh": "幅宽：125mm",
+    "compositionZh": "金线13%,人丝47%,棉纱40%"
+  },
+  "200": {
+    "sku": "MQZ964",
+    "sourceVariantId": "2396",
+    "dimensionsZh": "成品直径：68mm",
+    "compositionZh": "锦纶9.2% 棉纱18.5% 人丝59.9% 涤纶1.4% 金银线2.8% 其它带类8.3%"
+  },
+  "201": {
+    "sku": "BMFB964",
+    "sourceVariantId": "2114",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类9.0% 涤纶0.9% 棉纱55.0% 金银线4.1% 人丝31.0%"
+  },
+  "202": {
+    "sku": "MKR964",
+    "sourceVariantId": "2076",
+    "dimensionsZh": "吊绳长：100mm/穗长：210mm",
+    "compositionZh": "塑料类2.7% 棉纱26.3% 人丝32.4% 塑料模3.7% 金银线0.7%木模29.7%"
+  },
+  "203": {
+    "sku": "AE964Y",
+    "sourceVariantId": "2074",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "棉纱32.5% 人丝48.6% 腈纶9.3% 人棉2.0% 金银线1.8% 其它带类2.7%"
+  },
+  "204": {
+    "sku": "AH964Y",
+    "sourceVariantId": "2392",
+    "dimensionsZh": "幅宽：215mm",
+    "compositionZh": "涤纶0.8%棉纱46.2% 人丝47.4% 金银线2.2% 其它带类1.6% 人棉1.1%"
+  },
+  "206": {
+    "sku": "AG964",
+    "sourceVariantId": "769",
+    "dimensionsZh": "幅宽：34mm",
+    "compositionZh": "锦纶5.6%其它带类18.6% 金银线3.1% 人丝49.7% 棉纱8.5% 人棉12.6%"
+  },
+  "207": {
+    "sku": "AV964",
+    "sourceVariantId": "611",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶1.6% 锦纶0.1% 扁带16.0% 人丝70.1% 金银线4.5% 腈纶7.6%"
+  },
+  "208": {
+    "sku": "AT964",
+    "sourceVariantId": "830",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "腈纶33.9%人棉4.1%金银线5.9%木模27.4%塑料类4.8%锦纶6.1%人丝12.9%"
+  },
+  "209": {
+    "sku": "MBR964Y",
+    "sourceVariantId": "595",
+    "dimensionsZh": "跨度：1100mm/脖长：90mm/穗长：400mm/总长：1016.00mm",
+    "compositionZh": "棉纱36.6% 人丝29.5%腈纶2.8%金银线1.9% 木模20.7% 亚克力类4.6%"
+  },
+  "210": {
+    "sku": "AT964B",
+    "sourceVariantId": "2104",
+    "dimensionsZh": "幅宽：112mm",
+    "compositionZh": "涤纶2.1% 腈纶22.8% 人丝58.7% 金银线5.8%其它带类4.3%人棉3.1%"
+  },
+  "211": {
+    "sku": "BUFC964",
+    "sourceVariantId": "2388",
+    "dimensionsZh": "直径：12.0mm",
+    "compositionZh": "其它带类7.1% 涤纶0.4% 棉纱60.6% 金银线3.6% 人丝28.1%"
+  },
+  "212": {
+    "sku": "AT964A",
+    "sourceVariantId": "2385",
+    "dimensionsZh": "幅宽：146mm",
+    "compositionZh": "涤纶4.2% 腈纶48.8% 人棉5.0% 金银线8.3%人丝23.1% 其它带类5.8%"
+  },
+  "216": {
+    "sku": "AT917CY",
+    "sourceVariantId": "627",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "人丝 49.6 人棉 19.4"
+  },
+  "217": {
+    "sku": "AG917Y",
+    "sourceVariantId": "1455",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "人丝 62.7 人棉 20"
+  },
+  "221": {
+    "sku": "MB947Y",
+    "sourceVariantId": "1338",
+    "dimensionsZh": "跨度：1100mm/脖长：90mm/穗长：375mm/总长：993.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.1% 人丝52.0% 锦纶0.1% 扁带18.5% 棉纱29.2%"
+  },
+  "227": {
+    "sku": "MB520Y",
+    "sourceVariantId": "6803",
+    "dimensionsZh": "跨度：600mm/脖长：70mm/穗长：235mm/总长：593.00mm",
+    "compositionZh": "人丝：73.5%，银线：1.9%，棉纱：18.1%，人棉：6.5%"
+  },
+  "229": {
+    "sku": "AC404",
+    "sourceVariantId": "913",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人丝 96.8涤纶 3 鱼线 0.2"
+  },
+  "233": {
+    "sku": "AT923",
+    "sourceVariantId": "805",
+    "dimensionsZh": "幅宽：110mm",
+    "compositionZh": "人丝 63.3 腈纶 22.8 金线 5.7"
+  },
+  "234": {
+    "sku": "MB923",
+    "sourceVariantId": "806",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：325mm/总长：835.00mm",
+    "compositionZh": "人丝67.1%, 金线2.4%, 腈纶12.6%, 棉纱17.4%, 鱼线0.5%"
+  },
+  "236": {
+    "sku": "ZSE981Y",
+    "sourceVariantId": "1989",
+    "dimensionsZh": "幅宽：165mm",
+    "compositionZh": "涤纶2.6% 锦纶1.1% 棉纱32.2% 人丝56.6% 金银线3.3% 人棉4.2%"
+  },
+  "237": {
+    "sku": "WXR981",
+    "sourceVariantId": "810",
+    "dimensionsZh": "幅宽：95mm",
+    "compositionZh": "人棉47.3% 涤纶0.4% 金银线5.4% 人丝46.8%"
+  },
+  "238": {
+    "sku": "AC451CY",
+    "sourceVariantId": "1930",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶2.2% 锦纶0.2% 金银线7.5% 人丝69.8% 人棉20.2%"
+  },
+  "239": {
+    "sku": "BMFC980",
+    "sourceVariantId": "1978",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类9.3% 涤纶0.3% 锦纶0.3% 棉纱48.7% 金银线13.6% 人丝27.8%"
+  },
+  "240": {
+    "sku": "ZSR981",
+    "sourceVariantId": "3020",
+    "dimensionsZh": "幅宽：41mm",
+    "compositionZh": "锦纶5.9% 棉纱14.3% 人丝46.3% 金银线10.4% 人棉23.1%"
+  },
+  "241": {
+    "sku": "DT981",
+    "sourceVariantId": "814",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶4.8% 人棉53.0% 金银线17.8% 人丝21.0% 锦纶0.4% 棉纱3.1%"
+  },
+  "242": {
+    "sku": "AE981",
+    "sourceVariantId": "2277",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "涤纶1.6% 锦纶0.1% 人棉52.7% 人丝43.5% 金银线2.1%"
+  },
+  "243": {
+    "sku": "DG981",
+    "sourceVariantId": "1973",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "人丝62.7% 人棉10.4% 锦纶1.6% 棉纱13.4% 金银线12.0%"
+  },
+  "244": {
+    "sku": "DT981AY",
+    "sourceVariantId": "817",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "金银线5.4% 涤纶4.3% 人丝84.1% 人棉3.9% 锦纶0.3% 棉纱2.1%"
+  },
+  "245": {
+    "sku": "BMFB980A",
+    "sourceVariantId": "1775",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类7.8% 涤纶0.4% 锦纶0.5% 棉纱45.7% 金银线15.0% 人丝30.7%"
+  },
+  "246": {
+    "sku": "MBS981Y",
+    "sourceVariantId": "2269",
+    "dimensionsZh": "跨度：1100mm/脖长：90mm/穗长：375mm/总长：992.00mm",
+    "compositionZh": "棉纱54.9% 人丝36.7% 涤纶0.7% 金银线5.9% 锦纶0.3% 人棉1.2%"
+  },
+  "248": {
+    "sku": "MK981",
+    "sourceVariantId": "1915",
+    "dimensionsZh": "吊绳长：100mm/穗长：178mm",
+    "compositionZh": "涤纶0.9% 丙纶0.6% 棉纱43.8% 金银线9.8% 人丝45.0%"
+  },
+  "249": {
+    "sku": "ZST981",
+    "sourceVariantId": "3527",
+    "dimensionsZh": "幅宽：145mm",
+    "compositionZh": "涤纶6.9% 金银线17.4% 人丝56.5% 锦纶2.6% 棉纱6.2% 人棉10.4%"
+  },
+  "251": {
+    "sku": "SGE933",
+    "sourceVariantId": "8683",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶5.1% 其它带类94.9%"
+  },
+  "252": {
+    "sku": "WR135A",
+    "sourceVariantId": "19833",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人棉99.4% 涤纶0.6%"
+  },
+  "253": {
+    "sku": "SBM933",
+    "sourceVariantId": "851",
+    "dimensionsZh": "跨度：1200mm/脖长：100mm/穗长：378mm/总长：1058.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.2% 人丝67.4% 棉纱31.0% 金银线1.2%"
+  },
+  "254": {
+    "sku": "SKM933",
+    "sourceVariantId": "963",
+    "dimensionsZh": "吊绳长：100mm/穗长：225mm",
+    "compositionZh": "涤纶0.3% 丙纶0.5% 人丝99.2%"
+  },
+  "255": {
+    "sku": "WG89",
+    "sourceVariantId": "854",
+    "dimensionsZh": "幅宽：9mm",
+    "compositionZh": "人棉37.9% 锦纶0.4% 棉纱61.7%"
+  },
+  "258": {
+    "sku": "WDF1B",
+    "sourceVariantId": "19607",
+    "dimensionsZh": "直径：5.4mm",
+    "compositionZh": "人棉69.2% 棉纱30.8%"
+  },
+  "259": {
+    "sku": "WG17U",
+    "sourceVariantId": "860",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "人棉98.5% 涤纶1.5%"
+  },
+  "264": {
+    "sku": "SBMR933AY",
+    "sourceVariantId": "962",
+    "dimensionsZh": "跨度：1200mm/脖长：95mm/穗长：315mm/总长：990.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.1% 人丝54.6% 棉纱43.5% 金银线1.6%"
+  },
+  "267": {
+    "sku": "BUFC971",
+    "sourceVariantId": "2578",
+    "dimensionsZh": "直径：13.0mm",
+    "compositionZh": "其它带类5.8% 涤纶0.4% 棉纱62.2% 人丝30.3% 金银线1.3%"
+  },
+  "268": {
+    "sku": "MQZ971",
+    "sourceVariantId": "19612",
+    "dimensionsZh": "成品直径：80mm",
+    "compositionZh": "锦纶5.1% 棉纱22.4% 人棉11.4% 人丝51.8% 金银线7.7% 涤纶1.6%"
+  },
+  "269": {
+    "sku": "XT971",
+    "sourceVariantId": "2603",
+    "dimensionsZh": "幅宽：154mm",
+    "compositionZh": "涤纶8.8% 人丝65.0% 金银线2.9% 锦纶5.3% 棉纱18.0%"
+  },
+  "270": {
+    "sku": "XE971AY",
+    "sourceVariantId": "17617",
+    "dimensionsZh": "幅宽：140mm",
+    "compositionZh": "人丝47.4% 涤纶3.5% 棉纱42.5% 金银线3.7% 锦纶2.8%"
+  },
+  "271": {
+    "sku": "XT971BY",
+    "sourceVariantId": "17613",
+    "dimensionsZh": "幅宽：180mm",
+    "compositionZh": "涤纶3.3% 金银线2.3% 人棉6.5% 人丝79.4% 锦纶2.0% 棉纱6.6%"
+  },
+  "272": {
+    "sku": "BU971",
+    "sourceVariantId": "2613",
+    "dimensionsZh": "直径：13.0mm",
+    "compositionZh": "棉纱66.3% 人丝32.3% 金银线1.4%"
+  },
+  "273": {
+    "sku": "XH971Y",
+    "sourceVariantId": "2587",
+    "dimensionsZh": "幅宽：200mm",
+    "compositionZh": "涤纶2.7% 人丝52.3% 金银线2.5% 棉纱41.0% 锦纶1.5%"
+  },
+  "274": {
+    "sku": "XT971AY",
+    "sourceVariantId": "9621",
+    "dimensionsZh": "幅宽：135mm",
+    "compositionZh": "涤纶4.1% 金银线0.7% 人丝70.5% 人棉19.5% 锦纶1.2% 棉纱3.9%"
+  },
+  "275": {
+    "sku": "MK971A",
+    "sourceVariantId": "2630",
+    "dimensionsZh": "吊绳长：100mm/穗长：265mm",
+    "compositionZh": "丙纶0.9% 棉纱46.3% 人丝52.6% 涤纶0.2%"
+  },
+  "276": {
+    "sku": "XR971",
+    "sourceVariantId": "2666",
+    "dimensionsZh": "幅宽：74mm",
+    "compositionZh": "锦纶11.7% 棉纱36.3% 人丝38.0% 金银线1.8% 人棉12.2%"
+  },
+  "277": {
+    "sku": "MK971",
+    "sourceVariantId": "20095",
+    "dimensionsZh": "吊绳长：50mm/穗长：155mm",
+    "compositionZh": "涤纶9.9% 人丝80.4% 金银线1.4% 棉纱8.4%"
+  },
+  "278": {
+    "sku": "MBS971Y",
+    "sourceVariantId": "1033",
+    "dimensionsZh": "跨度：1200mm/脖长：95mm/穗长：555mm/总长：1224.00mm",
+    "compositionZh": "丙纶0.2% 棉纱50.6% 金银线6.1% 人丝42.4% 涤纶0.6% 涤纶0.6%"
+  },
+  "284": {
+    "sku": "ZG997",
+    "sourceVariantId": "4474",
+    "dimensionsZh": "幅宽：11.5mm",
+    "compositionZh": "人棉46.0% 麻54.0%"
+  },
+  "287": {
+    "sku": "BMFB997",
+    "sourceVariantId": "20114",
+    "dimensionsZh": "直径：7.0mm",
+    "compositionZh": "其它带类11.6% 涤纶0.6% 锦纶0.7% 棉纱43.7% 麻24.6% 人棉18.8%"
+  },
+  "288": {
+    "sku": "ZT997A",
+    "sourceVariantId": "1367",
+    "dimensionsZh": "幅宽：43mm",
+    "compositionZh": "涤纶9.6% 麻45.4% 人棉42.1% 锦纶2.9%"
+  },
+  "292": {
+    "sku": "ZT997",
+    "sourceVariantId": "4478",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶1.7% 麻50.8% 人棉47.5%"
+  },
+  "295": {
+    "sku": "ZG997B",
+    "sourceVariantId": "1488",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "人棉37.2% 麻62.8%"
+  },
+  "311": {
+    "sku": "MB942AY",
+    "sourceVariantId": "1119",
+    "dimensionsZh": "跨度：1100mm/脖长：90mm/穗长：305mm/总长：925.00mm",
+    "compositionZh": "涤纶0.7% 丙纶0.3% 腈纶7.1% 人丝61.0% 人棉0.1% 棉纱30.8%"
+  },
+  "312": {
+    "sku": "MB942",
+    "sourceVariantId": "1169",
+    "dimensionsZh": "跨度：1100mm/脖长：100mm/穗长：300mm/总长：926.00mm",
+    "compositionZh": "涤纶0.5% 丙纶0.5% 腈纶6.1% 棉纱50.8% 人丝42.0% 锦纶0.1%"
+  },
+  "313": {
+    "sku": "AT942D",
+    "sourceVariantId": "8770",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "人丝71.5% 涤纶7.8% 锦纶3.1% 棉纱12.8% 人棉4.8%"
+  },
+  "314": {
+    "sku": "AE942Y",
+    "sourceVariantId": "1192",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "涤纶3.2% 棉纱36.6% 人丝58.4% 锦纶0.6% 人棉1.3%"
+  },
+  "315": {
+    "sku": "AG942",
+    "sourceVariantId": "1190",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "涤纶10.1% 锦纶4.7% 棉纱27.1% 人丝47.6% 人棉10.4%"
+  },
+  "316": {
+    "sku": "MPZ942",
+    "sourceVariantId": "1271",
+    "dimensionsZh": "圆盘直径：70mm",
+    "compositionZh": "丙纶0.5% 腈纶15.1% 人丝74.5% 棉纱6.1% 锦纶1.7% 人棉1.8%"
+  },
+  "318": {
+    "sku": "AC942Y",
+    "sourceVariantId": "8836",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶3.0% 人丝97.0%"
+  },
+  "319": {
+    "sku": "BMFC182C",
+    "sourceVariantId": "1112",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类11.0% 涤纶0.7% 棉纱61.1% 人丝27.2%"
+  },
+  "320": {
+    "sku": "AT942BY",
+    "sourceVariantId": "2122",
+    "dimensionsZh": "幅宽：82mm",
+    "compositionZh": "涤纶4.5% 人丝86.8% 锦纶1.0% 棉纱5.6% 人棉2.1%"
+  },
+  "323": {
+    "sku": "AE945Y",
+    "sourceVariantId": "1194",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "涤纶2.3% 棉纱23.8% 人丝61.5% 腈纶8.8% 金银线1.0% 针织圆带1.3%"
+  },
+  "325": {
+    "sku": "MK721A",
+    "sourceVariantId": "2836",
+    "dimensionsZh": "吊绳长：100mm/穗长：180mm",
+    "compositionZh": "亚克力类2.0% 涤纶0.9% 人丝45% 木模52.1%"
+  },
+  "327": {
+    "sku": "AC342C",
+    "sourceVariantId": "2856",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶1.7% 锦纶0.2% 人棉15.6% 人丝82.5%"
+  },
+  "328": {
+    "sku": "ZT245E",
+    "sourceVariantId": "8786",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶2.1% 人棉88.4% 人丝9.5%"
+  },
+  "330": {
+    "sku": "BMFC70H",
+    "sourceVariantId": "20291",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "人丝21.3% ,棉纱68.2%, 涤纶10.5%"
+  },
+  "331": {
+    "sku": "MB1236A",
+    "sourceVariantId": "2823",
+    "dimensionsZh": "跨度：900mm/脖长：90mm/穗长：310mm/总长：830.00mm",
+    "compositionZh": "人棉17.7% 人丝29.8% 亚克力类0.8% 木模39.3% 塑料模3.3% 棉纱7.0%"
+  },
+  "333": {
+    "sku": "DR219C",
+    "sourceVariantId": "2868",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人棉55.1% 人丝44.9%"
+  },
+  "334": {
+    "sku": "ZE27Y",
+    "sourceVariantId": "20289",
+    "dimensionsZh": "幅宽：165mm",
+    "compositionZh": "涤纶2.1% 棉纱33.9% 人棉27.0% 人丝37.0%"
+  },
+  "335": {
+    "sku": "ZT245D",
+    "sourceVariantId": "2846",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "亚克力类5.4% 人丝15.3% 木模76.2% 涤纶0.7% 人棉2.4%"
+  },
+  "336": {
+    "sku": "ZT245C",
+    "sourceVariantId": "2785",
+    "dimensionsZh": "幅宽：77mm",
+    "compositionZh": "涤纶4.4% 人丝47.4% 人棉48.1%"
+  },
+  "337": {
+    "sku": "BMFB133A",
+    "sourceVariantId": "2897",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "涤纶10.5% 棉纱61.9% 人丝12.7% 人棉14.9%"
+  },
+  "338": {
+    "sku": "ZG810",
+    "sourceVariantId": "2803",
+    "dimensionsZh": "幅宽：23mm",
+    "compositionZh": "人棉43.7% 人丝56.3%"
+  },
+  "339": {
+    "sku": "MK721",
+    "sourceVariantId": "1151",
+    "dimensionsZh": "吊绳长：100mm/穗长：110mm",
+    "compositionZh": "亚克力类2.5% 涤纶1.7% 人丝52.4% 人棉10.8% 木模32.5%"
+  },
+  "340": {
+    "sku": "MB1236Y",
+    "sourceVariantId": "2855",
+    "dimensionsZh": "跨度：900mm/脖长：85mm/穗长：310mm/总长：845.00mm",
+    "compositionZh": "人棉20.0% 人丝32.8% 亚克力类1.8% 塑料模3.3% 木模28.0% 棉纱11.8%"
+  },
+  "342": {
+    "sku": "AT945",
+    "sourceVariantId": "1201",
+    "dimensionsZh": "幅宽：86mm",
+    "compositionZh": "涤纶3.8% 腈纶22.2% 人丝70.0% 金银线0.4% 针织圆带1.2% 其它带类2.3%"
+  },
+  "345": {
+    "sku": "MB983Y",
+    "sourceVariantId": "3290",
+    "dimensionsZh": "跨度：1100mm/脖长：75mm/穗长：258mm/总长：861.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.3% 人丝55.0% 扁带2.8% 锦纶0.2% 棉纱41.7%"
+  },
+  "347": {
+    "sku": "AC983",
+    "sourceVariantId": "10262",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶2.6% 人丝53.8% 人棉43.6%"
+  },
+  "348": {
+    "sku": "AT983",
+    "sourceVariantId": "3258",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶8.5% 人棉44.5% 人丝37.5% 扁带9.5%"
+  },
+  "351": {
+    "sku": "AF983",
+    "sourceVariantId": "3293",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶1.6% 棉纱47.2% 人丝47.1% 扁带4.1%"
+  },
+  "357": {
+    "sku": "WG32G",
+    "sourceVariantId": "1492",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "人棉98.7% 涤纶1.3%"
+  },
+  "358": {
+    "sku": "WG98AY",
+    "sourceVariantId": "1389",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶5.2% 人棉42.8% 人丝44.5% 锦纶0.7% 棉纱6.8%"
+  },
+  "363": {
+    "sku": "VMFB8001",
+    "sourceVariantId": "20148",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类9.3% 涤纶0.4% 锦纶0.5% 棉纱46.5% 人丝43.2%"
+  },
+  "364": {
+    "sku": "AC8001",
+    "sourceVariantId": "1542",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶1.7% 锦纶0.2% 腈纶10.3% 人棉13.9% 人丝73.9%"
+  },
+  "365": {
+    "sku": "MB8001A",
+    "sourceVariantId": "5101",
+    "dimensionsZh": "跨度：1000mm/脖长：75/100mm/穗长：310mm/总长：794.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.4% 人丝79.7% 棉纱19.7%"
+  },
+  "366": {
+    "sku": "WXR8001B",
+    "sourceVariantId": "4597",
+    "dimensionsZh": "幅宽：61mm",
+    "compositionZh": "人丝36.3% 涤纶0.7% 人棉63.0%"
+  },
+  "367": {
+    "sku": "AV8001Y",
+    "sourceVariantId": "4621",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶2.9% 锦纶2.5% 人丝89.0% 棉纱4.4% 人棉1.3%"
+  },
+  "368": {
+    "sku": "WG8001Y",
+    "sourceVariantId": "4713",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "涤纶1.3% 棉纱27.7% 人棉22.6% 人丝48.4%"
+  },
+  "370": {
+    "sku": "WXR8001C",
+    "sourceVariantId": "2356",
+    "dimensionsZh": "幅宽：82mm",
+    "compositionZh": "人丝36.3% 涤纶0.5% 人棉63.2%"
+  },
+  "371": {
+    "sku": "MB8001Y",
+    "sourceVariantId": "4777",
+    "dimensionsZh": "跨度：1050mm/穗长：230mm/总长：755mm",
+    "compositionZh": "涤纶0.8% 丙纶0.2% 人丝78.7% 棉纱20.3%"
+  },
+  "372": {
+    "sku": "DR8001A",
+    "sourceVariantId": "4598",
+    "dimensionsZh": "幅宽：88mm",
+    "compositionZh": "人丝74.1% 人棉25.9%"
+  },
+  "373": {
+    "sku": "AT8001G",
+    "sourceVariantId": "1551",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "涤纶3.4% 人丝73.5% 人棉13.8% 锦纶3.2% 棉纱6.2%"
+  },
+  "375": {
+    "sku": "AT8001B",
+    "sourceVariantId": "1553",
+    "dimensionsZh": "幅宽：57mm",
+    "compositionZh": "涤纶3.3% 人丝72.3% 人棉13.8% 锦纶3.6% 棉纱7.0%"
+  },
+  "376": {
+    "sku": "MN8001",
+    "sourceVariantId": "1554",
+    "dimensionsZh": "总长：1020mm/跨度：900mm/穗长：60mm",
+    "compositionZh": "涤纶3.6% 人丝54.0% 人棉18.7% 棉纱23.7%"
+  },
+  "377": {
+    "sku": "AT8001C",
+    "sourceVariantId": "4773",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶4.8% 人丝55.0% 锦纶9.9% 棉纱22.5% 人棉7.8%"
+  },
+  "378": {
+    "sku": "AG8001A",
+    "sourceVariantId": "4709",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "锦纶15.3% 棉纱30.0% 人丝46.7% 人棉8.0%"
+  },
+  "379": {
+    "sku": "DB8001",
+    "sourceVariantId": "2352",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "人丝38.5% 涤纶0.7% 棉纱60.9%"
+  },
+  "381": {
+    "sku": "ZT954",
+    "sourceVariantId": "1604",
+    "dimensionsZh": "幅宽：82mm",
+    "compositionZh": "涤纶2.5% 人丝64.1% 人棉31.5% 棉纱2.0%"
+  },
+  "382": {
+    "sku": "BMFC954",
+    "sourceVariantId": "1662",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类8.6% 涤纶0.5% 棉纱54.4% 人丝21.0% 人棉15.5%"
+  },
+  "383": {
+    "sku": "AV954",
+    "sourceVariantId": "1664",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶1.2% 锦纶0.1% 人丝55.9% 人棉42.8%"
+  },
+  "385": {
+    "sku": "AT954",
+    "sourceVariantId": "1606",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶5.5% 锦纶1.5% 人丝53.7% 人棉39.0% 棉纱0.3%"
+  },
+  "386": {
+    "sku": "ZG954",
+    "sourceVariantId": "1596",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "人棉29.1% 人丝61.6% 棉纱9.3%"
+  },
+  "387": {
+    "sku": "ZT954B",
+    "sourceVariantId": "1603",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "涤纶4.7% 腈纶31.0% 人丝42.9% 人棉19.2% 锦纶0.9% 棉纱1.3%"
+  },
+  "388": {
+    "sku": "ZE954Y",
+    "sourceVariantId": "1566",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "涤纶3.0% 棉纱38.3% 人丝43.1% 腈纶8.3% 人棉7.0% 锦纶0.2%"
+  },
+  "389": {
+    "sku": "MPZ954",
+    "sourceVariantId": "1610",
+    "dimensionsZh": "圆盘直径：55mm/总长：260mm",
+    "compositionZh": "涤纶2.8% 人丝62.8% 人棉27.5% 丙纶0.4% 棉纱5.1% 锦纶1.4%"
+  },
+  "390": {
+    "sku": "MB954",
+    "sourceVariantId": "1568",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：230mm/总长：830.00mm",
+    "compositionZh": "涤纶1.6% 人丝46.6% 人棉25.6% 丙纶0.2% 棉纱25.7% 锦纶0.2%"
+  },
+  "392": {
+    "sku": "MB943AY",
+    "sourceVariantId": "1761",
+    "dimensionsZh": "跨度：980mm/穗长：430mm/总长：920mm",
+    "compositionZh": "人丝68.7% 涤纶0.6% 棉纱28.4% 人棉2.3%"
+  },
+  "394": {
+    "sku": "MB943Y",
+    "sourceVariantId": "1572",
+    "dimensionsZh": "跨度：950mm/穗长：535mm/总长：1010mm",
+    "compositionZh": "人丝67.6% 涤纶0.6% 棉纱28.7% 人棉3.1%"
+  },
+  "396": {
+    "sku": "AC55E",
+    "sourceVariantId": "1577",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "亚麻 97.8"
+  },
+  "398": {
+    "sku": "AT974A",
+    "sourceVariantId": "2736",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "人棉36.7% 涤纶11.4% 麻51.9%"
+  },
+  "399": {
+    "sku": "MK974",
+    "sourceVariantId": "2773",
+    "dimensionsZh": "吊绳长：100mm/穗长：170mm",
+    "compositionZh": "涤纶0.6% 丙纶0.4% 人丝10.2% 人棉33.5% 麻55.3%"
+  },
+  "400": {
+    "sku": "DBM974",
+    "sourceVariantId": "2746",
+    "dimensionsZh": "总长：930mm",
+    "compositionZh": "麻44.5% 涤纶1.8% 棉纱53.7%"
+  },
+  "401": {
+    "sku": "MB974Y",
+    "sourceVariantId": "2713",
+    "dimensionsZh": "跨度：1000mm/脖长：90mm/穗长：385mm/总长：953.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.2% 人丝4.4% 人棉14.4% 麻45.7% 棉纱35.1%"
+  },
+  "403": {
+    "sku": "AG974",
+    "sourceVariantId": "2716",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "涤纶18.6% 麻81.4%"
+  },
+  "404": {
+    "sku": "AR974",
+    "sourceVariantId": "1585",
+    "dimensionsZh": "幅宽：49mm",
+    "compositionZh": "涤纶19.0% 麻81.0%"
+  },
+  "405": {
+    "sku": "AG653",
+    "sourceVariantId": "2724",
+    "dimensionsZh": "幅宽：10mm",
+    "compositionZh": "涤纶13.8% 麻59.3% 锦纶6.5% 棉纱20.5%"
+  },
+  "406": {
+    "sku": "VUFC974",
+    "sourceVariantId": "2735",
+    "dimensionsZh": "直径：11.0mm",
+    "compositionZh": "其它带类8.8% 涤纶0.2% 锦纶0.3% 棉纱51.5% 麻39.1%"
+  },
+  "407": {
+    "sku": "AT974C",
+    "sourceVariantId": "1588",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶8.6% 麻54.2% 人丝8.7% 人棉28.5%"
+  },
+  "408": {
+    "sku": "WDF974",
+    "sourceVariantId": "1589",
+    "dimensionsZh": "直径：17mm",
+    "compositionZh": "人棉21.3% 涤纶1.2% 棉纱31.3% 麻46.2%"
+  },
+  "409": {
+    "sku": "XR974",
+    "sourceVariantId": "1590",
+    "dimensionsZh": "幅宽：63mm",
+    "compositionZh": "锦纶7.7% 棉纱24.3% 麻68.0%"
+  },
+  "411": {
+    "sku": "ZT955D",
+    "sourceVariantId": "1731",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶4.5% 人棉52.8% 人丝42.7%"
+  },
+  "415": {
+    "sku": "MB982Y",
+    "sourceVariantId": "3127",
+    "dimensionsZh": "跨度：1000mm/脖长：60mm/穗长：545mm/总长：1105.00mm",
+    "compositionZh": "人丝64.1% 涤纶0.4% 棉纱35.5%"
+  },
+  "416": {
+    "sku": "WXG982A",
+    "sourceVariantId": "1791",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "人棉48.5% 涤纶1.1% 人丝50.3%"
+  },
+  "417": {
+    "sku": "AT982A",
+    "sourceVariantId": "3046",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "涤纶12.1% 人丝58.5% 棉纱27.5% 人棉1.9%"
+  },
+  "418": {
+    "sku": "WXR982C",
+    "sourceVariantId": "3041",
+    "dimensionsZh": "幅宽：93mm",
+    "compositionZh": "人丝：66%，人棉20S/2:34%"
+  },
+  "419": {
+    "sku": "MK982",
+    "sourceVariantId": "3136",
+    "dimensionsZh": "吊绳长：100mm/穗长：250mm",
+    "compositionZh": "涤纶0.3% 丙纶0.3% 人丝99.3%"
+  },
+  "420": {
+    "sku": "AT982",
+    "sourceVariantId": "3051",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶6.1% 人丝92.9% 人棉1.0%"
+  },
+  "421": {
+    "sku": "WXG982C",
+    "sourceVariantId": "3240",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "人棉49.8% 涤纶2.0% 人丝48.3%"
+  },
+  "422": {
+    "sku": "MB982A",
+    "sourceVariantId": "3070",
+    "dimensionsZh": "跨度：1000mm/脖长：85mm/穗长：365mm/总长：930.00mm",
+    "compositionZh": "涤纶0.1% 丙纶0.1% 人丝62.9% 棉纱36.8%"
+  },
+  "423": {
+    "sku": "WXR982D",
+    "sourceVariantId": "3216",
+    "dimensionsZh": "幅宽：79mm",
+    "compositionZh": "人丝69%；人棉30.7%；涤纶0.3%"
+  },
+  "424": {
+    "sku": "WXR982A",
+    "sourceVariantId": "4585",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝73.1%；人棉26.5%；涤纶0.4%"
+  },
+  "425": {
+    "sku": "ZG539A",
+    "sourceVariantId": "1800",
+    "dimensionsZh": "直径5.5mm",
+    "compositionZh": "人棉18.4% 棉纱39.6% 人丝41.9%"
+  },
+  "428": {
+    "sku": "AE956B",
+    "sourceVariantId": "1832",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "涤纶1.0% 锦纶0.1% 棉纱50.2% 金银线1.6% 人丝45.6% 其它带类1.4%"
+  },
+  "429": {
+    "sku": "MPZ956",
+    "sourceVariantId": "1833",
+    "dimensionsZh": "圆盘直径：65mm/总长：334mm",
+    "compositionZh": "涤纶7.7%腈纶24.6% 人丝56.7% 金银线0.6% 扁带3.5% 其它带类2.7%"
+  },
+  "431": {
+    "sku": "MB956Y",
+    "sourceVariantId": "1896",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：355mm/总长：951.00mm",
+    "compositionZh": "涤纶3.5%腈纶10.8% 人丝46.9% 金银线0.7%其它带类1.7% 棉纱34.5%"
+  },
+  "432": {
+    "sku": "AT956D",
+    "sourceVariantId": "1834",
+    "dimensionsZh": "幅宽：148mm",
+    "compositionZh": "涤纶2.5% 人丝67.2% 腈纶20.7% 金银线0.5% 锦纶1.2%人棉3.8%"
+  },
+  "435": {
+    "sku": "AE956AY",
+    "sourceVariantId": "20072",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "涤纶1.6% 棉纱45.5% 金银线3.0% 人丝45.9% 其它带类1.3% 人棉1.8%"
+  },
+  "436": {
+    "sku": "ZT626S",
+    "sourceVariantId": "4333",
+    "dimensionsZh": "幅宽：34mm",
+    "compositionZh": "涤纶15.1% 桑丝84.9%"
+  },
+  "437": {
+    "sku": "ZT626T",
+    "sourceVariantId": "4134",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "涤纶16.4% 棉纱1.6% 人棉4.6% 桑丝77.3%"
+  },
+  "438": {
+    "sku": "BD117",
+    "sourceVariantId": "2189",
+    "dimensionsZh": "直径：5.5mm",
+    "compositionZh": "桑丝32.6% ,棉纱67.4%"
+  },
+  "439": {
+    "sku": "MK993",
+    "sourceVariantId": "4371",
+    "dimensionsZh": "吊绳长：80mm/穗长：210mm",
+    "compositionZh": "丙纶0.5% 棉纱22.3% 桑丝75.5% 涤纶1.4% 锦纶0.2%"
+  },
+  "440": {
+    "sku": "MQZ993",
+    "sourceVariantId": "2178",
+    "dimensionsZh": "成品直径：70mm",
+    "compositionZh": "锦纶10.5% 棉纱26.0% 桑丝57.9% 人棉5.4% 涤纶0.2%"
+  },
+  "441": {
+    "sku": "MB8015A",
+    "sourceVariantId": "2210",
+    "dimensionsZh": "跨度：1100mm/脖长：100mm/穗长：400mm/总长：1026.00mm",
+    "compositionZh": "丙纶0.4% 棉纱54.8% 人丝44.8% 人丝44.8%"
+  },
+  "442": {
+    "sku": "BUFC993",
+    "sourceVariantId": "4297",
+    "dimensionsZh": "直径：11.5mm",
+    "compositionZh": "其它带类7.4% 涤纶0.2% 锦纶0.3% 棉纱64.1% 桑丝28.0%"
+  },
+  "443": {
+    "sku": "ZT8015",
+    "sourceVariantId": "4313",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "涤纶2.1% 人丝97.9%"
+  },
+  "444": {
+    "sku": "DG8015",
+    "sourceVariantId": "4314",
+    "dimensionsZh": "幅宽：28mm",
+    "compositionZh": "锦纶7.3% 棉纱24.1% 人丝64.7% 人棉3.9%"
+  },
+  "445": {
+    "sku": "ZT8015C",
+    "sourceVariantId": "4310",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶7.7% 腈纶17.4% 人丝71.0% 人棉3.9%"
+  },
+  "446": {
+    "sku": "ZSR8015",
+    "sourceVariantId": "5443",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "锦纶1.2% 棉纱38.1% 人丝57.3% 人棉3.5%"
+  },
+  "447": {
+    "sku": "XT993",
+    "sourceVariantId": "2173",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "涤纶14.4% 桑丝75.8% 锦纶2.2% 棉纱7.1% 人棉0.5%"
+  },
+  "448": {
+    "sku": "ZT8015B",
+    "sourceVariantId": "4118",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "涤纶4.8% 人丝76.9% 棉纱6.9% 人棉11.4%"
+  },
+  "449": {
+    "sku": "ZG8015A",
+    "sourceVariantId": "19476",
+    "dimensionsZh": "幅宽：14mm",
+    "compositionZh": "人丝91.6% 人棉8.4%"
+  },
+  "450": {
+    "sku": "DV8015Y",
+    "sourceVariantId": "9396",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶3.8% 人丝88.4% 棉纱5.6% 锦纶1.4% 人棉0.7%"
+  },
+  "451": {
+    "sku": "MK8015D",
+    "sourceVariantId": "4325",
+    "dimensionsZh": "吊绳长：50mm/穗长：58mm",
+    "compositionZh": "涤纶6.9% 人丝83.1% 棉纱9.9%"
+  },
+  "452": {
+    "sku": "MB8015Y",
+    "sourceVariantId": "5668",
+    "dimensionsZh": "跨度：1100mm/脖长：95mm/穗长：400mm/总长：1021.00mm",
+    "compositionZh": "丙纶0.3% 棉纱55.9% 人丝43.3% 涤纶0.5%"
+  },
+  "453": {
+    "sku": "ZT8015A",
+    "sourceVariantId": "8237",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "涤纶13.7% 人丝79.0% 人棉7.3%"
+  },
+  "455": {
+    "sku": "DG993",
+    "sourceVariantId": "4341",
+    "dimensionsZh": "幅宽：12.5mm",
+    "compositionZh": "桑丝73.4% 锦纶2.5% 棉纱24.1%"
+  },
+  "456": {
+    "sku": "BD182A",
+    "sourceVariantId": "2195",
+    "dimensionsZh": "直径：6.0mm",
+    "compositionZh": "棉纱59.2% 人丝40.8%"
+  },
+  "457": {
+    "sku": "XT993AY",
+    "sourceVariantId": "4284",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "涤纶3.9% 桑丝88.5% 人丝1.8% 锦纶1.3% 棉纱4.2% 人棉0.3%"
+  },
+  "458": {
+    "sku": "XR993B",
+    "sourceVariantId": "4338",
+    "dimensionsZh": "幅宽：49mm",
+    "compositionZh": "锦纶12.6% 棉纱30.3% 桑丝44.5% 人棉12.6%"
+  },
+  "459": {
+    "sku": "XR993",
+    "sourceVariantId": "4339",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "锦纶27.7% 棉纱30.4% 桑丝42.0%"
+  },
+  "460": {
+    "sku": "MQZ8015A",
+    "sourceVariantId": "5592",
+    "dimensionsZh": "成品直径：76mm",
+    "compositionZh": "涤纶2.3% 人丝95.3% 锦纶2.0% 棉纱0.4%"
+  },
+  "461": {
+    "sku": "BU177",
+    "sourceVariantId": "5626",
+    "dimensionsZh": "直径：12.0mm",
+    "compositionZh": "棉纱69.9% 人丝30.1%"
+  },
+  "462": {
+    "sku": "WK993",
+    "sourceVariantId": "4273",
+    "dimensionsZh": "吊绳长：40mm/穗长：50mm",
+    "compositionZh": "涤纶9.0% 桑丝91.0%"
+  },
+  "463": {
+    "sku": "XG993",
+    "sourceVariantId": "4412",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "锦纶7.0% 棉纱22.3% 桑丝69.1% 人棉1.6%"
+  },
+  "464": {
+    "sku": "ZG8015",
+    "sourceVariantId": "4123",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "人丝100.0%"
+  },
+  "465": {
+    "sku": "MK8015",
+    "sourceVariantId": "5591",
+    "dimensionsZh": "吊绳长：80mm/穗长：220mm",
+    "compositionZh": "丙纶1.0% 棉纱44.4% 人丝54.5% 涤纶0.1%"
+  },
+  "466": {
+    "sku": "AC993",
+    "sourceVariantId": "2177",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶2.2% 锦纶0.2% 桑丝97.6%"
+  },
+  "467": {
+    "sku": "ZT626R",
+    "sourceVariantId": "2184",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "涤纶6.5% 腈纶24.9% 桑丝68.6%"
+  },
+  "468": {
+    "sku": "AR970Y",
+    "sourceVariantId": "1882",
+    "dimensionsZh": "幅宽：56mm",
+    "compositionZh": "涤纶9.5% 人丝50.4% 锦纶9.5% 棉纱22.9% 人棉7.7%"
+  },
+  "469": {
+    "sku": "AE993A",
+    "sourceVariantId": "4298",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "人棉54.9% 人丝44.1% 腈纶1.0%"
+  },
+  "470": {
+    "sku": "BDFB117",
+    "sourceVariantId": "2172",
+    "dimensionsZh": "直径：5.5mm",
+    "compositionZh": "其它带类17.0% 涤纶1.7% 棉纱53.1% 桑丝28.2%"
+  },
+  "471": {
+    "sku": "MB993Y",
+    "sourceVariantId": "4160",
+    "dimensionsZh": "跨度：1000mm/脖长：90mm/穗长：345mm/总长：935mm",
+    "compositionZh": "丙纶0.1% 棉纱38.7% 桑丝59.9% 涤纶1.1% 锦纶0.1%"
+  },
+  "472": {
+    "sku": "AE993",
+    "sourceVariantId": "4258",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "人棉51.0% 桑丝47.9% 腈纶1.1%"
+  },
+  "473": {
+    "sku": "XG993A",
+    "sourceVariantId": "4340",
+    "dimensionsZh": "幅宽：33mm",
+    "compositionZh": "锦纶18.5% 棉纱35.2% 桑丝46.3%"
+  },
+  "474": {
+    "sku": "BDFB182A",
+    "sourceVariantId": "18524",
+    "dimensionsZh": "直径：6.0mm",
+    "compositionZh": "其它带类16.5% 涤纶1.7% 棉纱48.5% 人丝33.4%"
+  },
+  "475": {
+    "sku": "BUFC177",
+    "sourceVariantId": "20106",
+    "dimensionsZh": "直径：12.0mm",
+    "compositionZh": "其它带类7.2% 涤纶0.5% 棉纱65.0% 人丝27.3%"
+  },
+  "476": {
+    "sku": "XV993Y",
+    "sourceVariantId": "1891",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶8.9% 桑丝85.8% 锦纶1.2% 棉纱3.8% 人棉0.3%"
+  },
+  "477": {
+    "sku": "MPZ981",
+    "sourceVariantId": "20098",
+    "dimensionsZh": "圆盘直径：80mm/总长：213mm",
+    "compositionZh": "涤纶6.3% 金银线19.5% 人丝47.4% 棉纱18.8% 人棉6.7% 锦纶1.2%"
+  },
+  "479": {
+    "sku": "MPZ984",
+    "sourceVariantId": "3425",
+    "dimensionsZh": "圆盘直径：45mm/总长：230mm",
+    "compositionZh": "涤纶0.8% 丙纶1.0% 人丝97.0% 人棉0.1% 锦纶1.0% 棉纱0.2%"
+  },
+  "481": {
+    "sku": "AT984E",
+    "sourceVariantId": "3406",
+    "dimensionsZh": "幅宽：48mm",
+    "compositionZh": "涤纶6.1% 腈纶21.3% 人丝59.4% 锦纶3.1% 棉纱1.8% 人棉8.3%"
+  },
+  "482": {
+    "sku": "AT984D",
+    "sourceVariantId": "3481",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶18.7% 锦纶9.6% 人丝40.2% 棉纱5.5% 人棉26.0%"
+  },
+  "483": {
+    "sku": "AT984A",
+    "sourceVariantId": "3395",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶8.2% 腈纶25.0% 人丝52.8% 锦纶3.3% 棉纱1.9% 人棉8.8%"
+  },
+  "484": {
+    "sku": "AT984F",
+    "sourceVariantId": "10163",
+    "dimensionsZh": "幅宽：57mm",
+    "compositionZh": "涤纶7.2% 人丝80.3% 锦纶2.9% 棉纱1.7% 人棉7.9%"
+  },
+  "485": {
+    "sku": "NG302A",
+    "sourceVariantId": "3273",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "人丝60%;棉纱40%"
+  },
+  "486": {
+    "sku": "BMF46",
+    "sourceVariantId": "6818",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "人丝30.4%,棉纱52.3%,涤纶17.3%"
+  },
+  "487": {
+    "sku": "AT1175",
+    "sourceVariantId": "2056",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "涤纶21.2% 人丝78.8%"
+  },
+  "488": {
+    "sku": "MK970",
+    "sourceVariantId": "2455",
+    "dimensionsZh": "吊绳长：80mm/穗长：210mm",
+    "compositionZh": "涤纶1.4% 棉纱43.2% 人丝54.0% 丙纶0.7% 锦纶0.8%"
+  },
+  "489": {
+    "sku": "MB970Y",
+    "sourceVariantId": "2468",
+    "dimensionsZh": "跨度：1100mm/脖长：95mm/穗长：335mm/总长：956.00mm",
+    "compositionZh": "丙纶0.3% 棉纱56.8% 人丝42.5% 涤纶0.1% 锦纶0.3%"
+  },
+  "490": {
+    "sku": "AT970A",
+    "sourceVariantId": "2030",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "涤纶7.6% 腈纶11.4% 人丝65.9% 棉纱9.2% 锦纶3.2% 人棉2.6%"
+  },
+  "491": {
+    "sku": "AE970Y",
+    "sourceVariantId": "19845",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "涤纶3.2% 棉纱45.0% 人丝48.8% 锦纶1.7% 人棉1.4%"
+  },
+  "492": {
+    "sku": "MB970A",
+    "sourceVariantId": "2032",
+    "dimensionsZh": "跨度：1100mm/脖长：95mm/穗长：335mm/总长：956.00mm",
+    "compositionZh": "丙纶0.4% 棉纱50.8% 人丝48.1% 涤纶0.4% 锦纶0.3%"
+  },
+  "493": {
+    "sku": "AG970",
+    "sourceVariantId": "2054",
+    "dimensionsZh": "幅宽：27mm",
+    "compositionZh": "涤纶5.9% 锦纶11.9% 人丝43.6% 棉纱28.8% 人棉9.7%"
+  },
+  "494": {
+    "sku": "MQZ970",
+    "sourceVariantId": "2048",
+    "dimensionsZh": "成品直径：65mm",
+    "compositionZh": "锦纶7.9% 棉纱28.8% 人丝54.4% 人棉7.5% 涤纶1.4%"
+  },
+  "496": {
+    "sku": "BMFC46H",
+    "sourceVariantId": "2040",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类12.2% 涤纶3.7% 腈纶47.6% 金银线9.5% 人丝27.0%"
+  },
+  "497": {
+    "sku": "BM46F",
+    "sourceVariantId": "2127",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "棉纱58.8% 金银线9.0% 人丝26.0% 涤纶6.2%"
+  },
+  "498": {
+    "sku": "AG462C",
+    "sourceVariantId": "2044",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "锦纶22.2% 棉纱22.6% 人丝41.8% 金银线13.3%"
+  },
+  "499": {
+    "sku": "BMFB46F",
+    "sourceVariantId": "2125",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "其它带类13.2% 涤纶6.7% 棉纱50.2% 金银线7.7% 人丝22.2%"
+  },
+  "500": {
+    "sku": "AT970",
+    "sourceVariantId": "2453",
+    "dimensionsZh": "幅宽：109mm",
+    "compositionZh": "涤纶7.7% 人丝67.7% 棉纱15.8% 锦纶4.8% 人棉3.9%"
+  },
+  "501": {
+    "sku": "BDFB118",
+    "sourceVariantId": "14565",
+    "dimensionsZh": "直径：6.0mm",
+    "compositionZh": "人丝28.9% , 棉纱54.3% , 涤纶16.8%"
+  },
+  "502": {
+    "sku": "BD118",
+    "sourceVariantId": "2234",
+    "dimensionsZh": "直径：6.0mm",
+    "compositionZh": "人丝34.7% ,棉纱65.3%"
+  },
+  "507": {
+    "sku": "AT962A",
+    "sourceVariantId": "9446",
+    "dimensionsZh": "幅宽：105mm",
+    "compositionZh": "涤纶5.7% 人丝81.0% 棉纱2.1% 针织圆带6.4% 人棉4.8%"
+  },
+  "509": {
+    "sku": "WK962",
+    "sourceVariantId": "2312",
+    "dimensionsZh": "吊绳长：80mm/穗长：135mm",
+    "compositionZh": "人丝96.9% 涤纶3.1%"
+  },
+  "510": {
+    "sku": "MB962",
+    "sourceVariantId": "2334",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：345mm/总长：965.00mm",
+    "compositionZh": "涤纶0.3% 丙纶0.2% 人丝70.0% 棉纱26.3% 人棉3.2%"
+  },
+  "511": {
+    "sku": "MB962AY",
+    "sourceVariantId": "2307",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：400mm/总长：1020.00mm",
+    "compositionZh": "涤纶0.4% 丙纶0.1% 人丝63.4% 棉纱32.1% 人棉4.0%"
+  },
+  "512": {
+    "sku": "WC962Y",
+    "sourceVariantId": "2336",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶7.7% 人丝39.9% 人棉52.4%"
+  },
+  "513": {
+    "sku": "WR962",
+    "sourceVariantId": "2295",
+    "dimensionsZh": "幅宽：60.5mm",
+    "compositionZh": "人棉80.0% 人丝20.0%"
+  },
+  "514": {
+    "sku": "AG1014A",
+    "sourceVariantId": "2366",
+    "dimensionsZh": "幅宽：39mm",
+    "compositionZh": "涤纶27.0% 麻41.9% 人棉31.1%"
+  },
+  "515": {
+    "sku": "WXR158A",
+    "sourceVariantId": "6462",
+    "dimensionsZh": "幅宽：96mm",
+    "compositionZh": "人棉47.6% 涤纶0.4% 人丝52.0%"
+  },
+  "518": {
+    "sku": "WK973",
+    "sourceVariantId": "2545",
+    "dimensionsZh": "吊绳长：50mm/穗长：84mm",
+    "compositionZh": "锦纶0.9% 其它带类3.5% 涤纶0.5% 人丝95.1%"
+  },
+  "520": {
+    "sku": "MB973Y",
+    "sourceVariantId": "2565",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：380mm/总长：940.00mm",
+    "compositionZh": "涤纶0.4% 丙纶0.2% 人丝71.4% 其它带类2.7% 棉纱25.3%"
+  },
+  "523": {
+    "sku": "AR973",
+    "sourceVariantId": "2566",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "锦纶29.8% 其它带类10.3% 人丝55.7% 腈纶4.2%"
+  },
+  "524": {
+    "sku": "AG972",
+    "sourceVariantId": "2691",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "锦纶6.9% 涤纶2.5% 棉纱5.5% 人丝51.8% 金银线1.5% 人棉31.8%"
+  },
+  "525": {
+    "sku": "AR972Y",
+    "sourceVariantId": "2690",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶4.4% 锦纶12.5% 棉纱30.2% 人丝42.0% 金银线1.7% 人棉9.2%"
+  },
+  "528": {
+    "sku": "AT991",
+    "sourceVariantId": "3982",
+    "dimensionsZh": "幅宽：118mm",
+    "compositionZh": "涤纶2.3% 人丝49.6% 人棉27.9% 棉纱7.6% 金银线3.4% 其它带类6.0%"
+  },
+  "529": {
+    "sku": "AR991",
+    "sourceVariantId": "4022",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "锦纶11.9%其它带类18.6% 棉纱27.1% 金银线9.1% 人丝21.8% 人棉10.2%"
+  },
+  "530": {
+    "sku": "MK991",
+    "sourceVariantId": "3591",
+    "dimensionsZh": "吊绳长：55mm/穗长：130mm",
+    "compositionZh": "涤纶0.4% 丙纶0.6% 人丝95.9% 棉纱1.5% 金银线0.8% 锦纶0.7%"
+  },
+  "531": {
+    "sku": "SKM991",
+    "sourceVariantId": "3613",
+    "dimensionsZh": "吊绳长：80mm/穗长：230mm",
+    "compositionZh": "涤纶0.5% 丙纶0.9% 人丝98.2% 锦纶0.4%"
+  },
+  "532": {
+    "sku": "SBM991AY",
+    "sourceVariantId": "3640",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：405mm/总长：921.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.1% 腈纶9.0% 人丝53.7%棉纱33.4% 金银线3.5%"
+  },
+  "533": {
+    "sku": "BMFB182G",
+    "sourceVariantId": "19012",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类10.4% 涤纶1.1% 棉纱50.8% 金银线9.3% 人丝28.4%"
+  },
+  "534": {
+    "sku": "BM182G",
+    "sourceVariantId": "3846",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "棉纱57.4% 金银线10.5% 人丝32.1%"
+  },
+  "535": {
+    "sku": "MQZ991",
+    "sourceVariantId": "2656",
+    "dimensionsZh": "成品直径：68mm",
+    "compositionZh": "锦纶9.1% 棉纱25.1% 人丝47.9% 金银线9.8% 涤纶1.6% 其它带类6.5%"
+  },
+  "536": {
+    "sku": "AE991Y",
+    "sourceVariantId": "3978",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "锦纶1.9% 棉纱31.9% 人丝51.5% 人棉8.2% 金银线1.9% 其它带类3.5%"
+  },
+  "537": {
+    "sku": "AG991",
+    "sourceVariantId": "3585",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "锦纶15.0% 棉纱33.9% 人丝18.6% 金银线16.3% 其它带类16.3%"
+  },
+  "538": {
+    "sku": "AT991A",
+    "sourceVariantId": "4006",
+    "dimensionsZh": "幅宽：125mm",
+    "compositionZh": "人丝51.1% 人棉23.5% 棉纱10.4% 金银线4.3%锦纶3.2% 其它带类6.1%"
+  },
+  "539": {
+    "sku": "BMFC182D",
+    "sourceVariantId": "19086",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类10.8% 涤纶0.7% 棉纱60.5% 金银线6.8% 人丝21.2%"
+  },
+  "540": {
+    "sku": "BM182D",
+    "sourceVariantId": "2698",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "棉纱68.4% 金银线7.6% 人丝23.9%"
+  },
+  "541": {
+    "sku": "ZT975",
+    "sourceVariantId": "3807",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "金银线46.4% 人丝50.6% 涤纶3.0%"
+  },
+  "542": {
+    "sku": "MK975",
+    "sourceVariantId": "3916",
+    "dimensionsZh": "吊绳长：80mm/穗长：215mm",
+    "compositionZh": "丙纶0.9% 棉纱36.6% 人丝48.2% 金银线13.9% 涤纶0.4%"
+  },
+  "543": {
+    "sku": "VM975A",
+    "sourceVariantId": "3827",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "棉纱52.5% 人丝20.3% 针织圆带27.2%"
+  },
+  "544": {
+    "sku": "VM975",
+    "sourceVariantId": "20145",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "棉纱52.7% 人丝27.7% 针织圆带19.6%"
+  },
+  "545": {
+    "sku": "VMFC975",
+    "sourceVariantId": "3837",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类10.7% 涤纶0.3% 锦纶0.4% 棉纱46.6% 人丝24.5% 针织圆带17.4%"
+  },
+  "546": {
+    "sku": "ZT975AY",
+    "sourceVariantId": "2700",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "金银线18.1% 涤纶3.8% 人丝75.6% 人棉2.5%"
+  },
+  "547": {
+    "sku": "ZF975Y",
+    "sourceVariantId": "3865",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "涤纶4.3% 金银线14.3% 人丝35.3% 棉纱40.4% 人棉5.7%"
+  },
+  "548": {
+    "sku": "ZG975A",
+    "sourceVariantId": "2702",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "涤纶3.2% 金银线33.5% 人丝32.1% 人棉31.2%"
+  },
+  "549": {
+    "sku": "XR975A",
+    "sourceVariantId": "2703",
+    "dimensionsZh": "幅宽：69mm",
+    "compositionZh": "金银线44.5% 锦纶13.6% 棉纱9.0% 人丝32.9%"
+  },
+  "550": {
+    "sku": "VMFB975A",
+    "sourceVariantId": "3882",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类9.4% 涤纶0.5% 锦纶0.6% 棉纱47.0% 人丝18.2% 针织圆带24.3%"
+  },
+  "551": {
+    "sku": "MB975B",
+    "sourceVariantId": "2706",
+    "dimensionsZh": "跨度：900mm/脖长：90mm/穗长：385mm/总长：901.00mm",
+    "compositionZh": "丙纶0.4% 棉纱44.3% 人丝39.9% 金银线14.9% 涤纶0.5%"
+  },
+  "553": {
+    "sku": "WXR40B",
+    "sourceVariantId": "19024",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "人棉45.3% 涤纶0.8% 人丝53.9%"
+  },
+  "554": {
+    "sku": "WXR36E",
+    "sourceVariantId": "2917",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人棉45.8% 涤纶0.5% 人丝53.7%"
+  },
+  "555": {
+    "sku": "WXR8A",
+    "sourceVariantId": "4566",
+    "dimensionsZh": "幅宽：69mm",
+    "compositionZh": "人棉27.5% 涤纶0.5% 麻72.1%"
+  },
+  "556": {
+    "sku": "WXR90",
+    "sourceVariantId": "4555",
+    "dimensionsZh": "幅宽：79mm",
+    "compositionZh": "人丝27.9% 人棉18.8% 涤纶0.3% 麻53.0%"
+  },
+  "557": {
+    "sku": "DR227D",
+    "sourceVariantId": "4510",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人棉73.6% 人丝26.4%"
+  },
+  "558": {
+    "sku": "WXR77",
+    "sourceVariantId": "5701",
+    "dimensionsZh": "幅宽：104mm",
+    "compositionZh": "人棉99.6% 涤纶0.4%"
+  },
+  "560": {
+    "sku": "DR291A",
+    "sourceVariantId": "5697",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人棉61.9% 人丝38.1%"
+  },
+  "561": {
+    "sku": "DR312A",
+    "sourceVariantId": "4554",
+    "dimensionsZh": "幅宽：51mm",
+    "compositionZh": "人棉67.9% 人丝32.1%"
+  },
+  "563": {
+    "sku": "DR324D",
+    "sourceVariantId": "2926",
+    "dimensionsZh": "幅宽：56mm",
+    "compositionZh": "人棉67.7% 人丝32.3%"
+  },
+  "564": {
+    "sku": "VMFB959",
+    "sourceVariantId": "2958",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "PU皮38.3% 涤纶0.4% 锦纶3.1% 棉纱58.2%"
+  },
+  "565": {
+    "sku": "AG959CY",
+    "sourceVariantId": "3011",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "涤纶8.0% 棉纱28.3% PU皮63.7%"
+  },
+  "566": {
+    "sku": "AG959A",
+    "sourceVariantId": "3005",
+    "dimensionsZh": "幅宽：22mm",
+    "compositionZh": "涤纶9.3% PU皮90.7%"
+  },
+  "567": {
+    "sku": "AG959",
+    "sourceVariantId": "2983",
+    "dimensionsZh": "幅宽：8mm",
+    "compositionZh": "涤纶12.1% PU皮87.9%"
+  },
+  "568": {
+    "sku": "AC959Y",
+    "sourceVariantId": "9892",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶2.5% 锦纶0.2% PU皮35.8% 人棉61.5%"
+  },
+  "569": {
+    "sku": "TBM959",
+    "sourceVariantId": "2974",
+    "dimensionsZh": "总长：860mm",
+    "compositionZh": "牛皮97.6% 涤纶0.3% 人丝2.0%"
+  },
+  "570": {
+    "sku": "AR959",
+    "sourceVariantId": "2945",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶5.9% PU皮94.1%"
+  },
+  "572": {
+    "sku": "TKM959",
+    "sourceVariantId": "2935",
+    "dimensionsZh": "吊绳长：100mm/穗长：150mm",
+    "compositionZh": "PU皮98.4% 人丝1.6%"
+  },
+  "573": {
+    "sku": "TB959",
+    "sourceVariantId": "2967",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "涤纶0.4% 蜡绳99.6%"
+  },
+  "574": {
+    "sku": "WXR982H",
+    "sourceVariantId": "3087",
+    "dimensionsZh": "幅宽：61mm",
+    "compositionZh": "人丝绣线：30%，20S/2人棉：29%，300D人丝强捻：40%，300D涤纶网络：1%"
+  },
+  "575": {
+    "sku": "MB984Y",
+    "sourceVariantId": "3316",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：240mm/总长：760.00mm",
+    "compositionZh": "涤纶1.8% 丙纶0.3% 腈纶7.7% 人丝46.3% 人丝46.3% 棉纱43.8%"
+  },
+  "576": {
+    "sku": "MB984",
+    "sourceVariantId": "3274",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：240mm/总长：760.00mm",
+    "compositionZh": "涤纶1.5% 丙纶0.4% 腈纶11.2% 人丝54.9% 人丝54.9% 棉纱31.9%"
+  },
+  "577": {
+    "sku": "BMF46A",
+    "sourceVariantId": "3447",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "人丝24.7 棉纱63.9 涤纶11.4"
+  },
+  "579": {
+    "sku": "BM46",
+    "sourceVariantId": "3401",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "人丝35.1% 涤纶4.7% 棉纱60.2%"
+  },
+  "580": {
+    "sku": "BDFB990",
+    "sourceVariantId": "3663",
+    "dimensionsZh": "直径：5.0mm",
+    "compositionZh": "其它带类17.8% 涤纶0.9% 锦纶1.1% 针织圆带10.4% 棉纱36.4% 人丝33.5%"
+  },
+  "581": {
+    "sku": "BD990",
+    "sourceVariantId": "18105",
+    "dimensionsZh": "直径：5.0mm",
+    "compositionZh": "针织圆带13.0% 棉纱45.3% 人丝41.7%"
+  },
+  "583": {
+    "sku": "SBM990Y",
+    "sourceVariantId": "3666",
+    "dimensionsZh": "跨度：900mm/脖长：75mm/穗长：320mm/总长：825.00mm",
+    "compositionZh": "涤纶0.4% 丙纶0.4% 人丝61.7% 锦纶0.1% 棉纱31.7% 针织圆带5.8%"
+  },
+  "584": {
+    "sku": "AT990C",
+    "sourceVariantId": "3695",
+    "dimensionsZh": "幅宽：77mm",
+    "compositionZh": "涤纶4.7% 人丝80.9% 人棉5.6% 针织圆带4.7% 锦纶1.0% 棉纱3.1%"
+  },
+  "585": {
+    "sku": "AT990B",
+    "sourceVariantId": "3803",
+    "dimensionsZh": "幅宽：41mm",
+    "compositionZh": "涤纶9.8% 人棉18.7% 人丝42.0% 针织圆带15.8% 锦纶3.4% 棉纱10.3%"
+  },
+  "586": {
+    "sku": "AT990A",
+    "sourceVariantId": "3755",
+    "dimensionsZh": "幅宽：62mm",
+    "compositionZh": "人棉22.8% 人丝44.6% 涤纶7.7% 针织圆带13.4% 锦纶2.9% 棉纱8.7%"
+  },
+  "587": {
+    "sku": "WK990",
+    "sourceVariantId": "3796",
+    "dimensionsZh": "吊绳长：80mm/穗长：165mm",
+    "compositionZh": "棉纱1.3% 人丝96.0% 人棉1.8% 涤纶0.8%"
+  },
+  "588": {
+    "sku": "AR990",
+    "sourceVariantId": "3698",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "涤纶6.0% 针织圆带15.8% 锦纶4.6% 棉纱13.9% 人丝44.2% 人棉15.4%"
+  },
+  "589": {
+    "sku": "AV990Y",
+    "sourceVariantId": "3749",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶3.0% 锦纶0.6% 人丝90.1% 人棉2.8% 针织圆带2.2% 棉纱1.4%"
+  },
+  "590": {
+    "sku": "MK990",
+    "sourceVariantId": "3934",
+    "dimensionsZh": "吊绳长：600mm/穗长：45mm",
+    "compositionZh": "涤纶0.8% 棉纱63.1% 人丝36.1%"
+  },
+  "591": {
+    "sku": "AG990",
+    "sourceVariantId": "3757",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "涤纶6.0% 针织圆带21.3% 锦纶4.6% 棉纱13.9% 人丝40.7% 人棉13.5%"
+  },
+  "599": {
+    "sku": "WG994",
+    "sourceVariantId": "4176",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "人棉45.2% 涤纶1.5% 人丝53.3%"
+  },
+  "600": {
+    "sku": "DR994A",
+    "sourceVariantId": "4177",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "人棉35.1% 人丝64.9%"
+  },
+  "603": {
+    "sku": "ZBM994",
+    "sourceVariantId": "18662",
+    "dimensionsZh": "总长：930mm",
+    "compositionZh": "人丝56.1% 棉纱43.7% 涤纶0.2%"
+  },
+  "609": {
+    "sku": "TB8005",
+    "sourceVariantId": "4946",
+    "dimensionsZh": "总长：620mm",
+    "compositionZh": "涤纶0.6% 棉纱84.3% 金银线6.2% 人丝8.9%"
+  },
+  "610": {
+    "sku": "SBM8005Y",
+    "sourceVariantId": "20364",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：410mm/总长：974.00mm",
+    "compositionZh": "涤纶0.3% 丙纶0.2% 人丝72.7% 棉纱23.3% 金银线3.5%"
+  },
+  "611": {
+    "sku": "ZT8005D",
+    "sourceVariantId": "4818",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "金银线5.8% 人丝85.7% 涤纶2.4% 人棉6.1%"
+  },
+  "612": {
+    "sku": "DR8005A",
+    "sourceVariantId": "4813",
+    "dimensionsZh": "幅宽：66mm",
+    "compositionZh": "人丝33.4% 金银线26.1% 人棉40.5%"
+  },
+  "613": {
+    "sku": "TBM8005",
+    "sourceVariantId": "4893",
+    "dimensionsZh": "跨度：900mm/脖长：60mm/穗长：250mm/总长：744.00mm",
+    "compositionZh": "涤纶0.5% 丙纶0.2% 人丝42.5% 棉纱52.2% 金银线4.6%"
+  },
+  "614": {
+    "sku": "ZT8005",
+    "sourceVariantId": "4938",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "涤纶10.0% 人棉39.8% 金银线24.2% 人丝26.1%"
+  },
+  "615": {
+    "sku": "ZG8005",
+    "sourceVariantId": "4856",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "人棉42.5% 金银线27.7% 人丝29.9%"
+  },
+  "616": {
+    "sku": "ZT8005B",
+    "sourceVariantId": "4808",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "金银线8.1% 人丝76.1% 涤纶6.5% 人棉9.2%"
+  },
+  "617": {
+    "sku": "ZT8005A",
+    "sourceVariantId": "19055",
+    "dimensionsZh": "幅宽：118mm",
+    "compositionZh": "金银线5.0% 人丝88.6% 涤纶1.9% 人棉4.5%"
+  },
+  "618": {
+    "sku": "DR8005B",
+    "sourceVariantId": "4952",
+    "dimensionsZh": "幅宽：51mm",
+    "compositionZh": "人棉42.7% 涤纶24.1% 金银线11.0% 人丝22.2%"
+  },
+  "619": {
+    "sku": "VMFC8005",
+    "sourceVariantId": "19020",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类9.6% 涤纶0.3% 锦纶0.3% 棉纱56.7% 人丝26.0% 金银线7.1%"
+  },
+  "620": {
+    "sku": "AV8005AY",
+    "sourceVariantId": "4968",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶2.9% 锦纶0.5% 人丝70.3% 金银线25.7% 其它带类0.6%"
+  },
+  "626": {
+    "sku": "WK8003",
+    "sourceVariantId": "14197",
+    "dimensionsZh": "吊绳长：90mm/穗长：245mm",
+    "compositionZh": "涤纶0.7% 人丝99.3%"
+  },
+  "633": {
+    "sku": "MK8004",
+    "sourceVariantId": "5033",
+    "dimensionsZh": "吊绳长：90mm/穗长：195mm",
+    "compositionZh": "涤纶0.5% 丙纶0.4% 人丝17.7% 麻75.1% 棉纱6.3%"
+  },
+  "645": {
+    "sku": "AC674",
+    "sourceVariantId": "5124",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶2.4% 锦纶0.2% 雪尼尔9.3% 人丝64.0% 人棉24.1%"
+  },
+  "648": {
+    "sku": "AG462E",
+    "sourceVariantId": "5246",
+    "dimensionsZh": "幅宽：13mm",
+    "compositionZh": "锦纶20.8% 棉纱22.8% 人丝31.4% 其它带类25.0%"
+  },
+  "649": {
+    "sku": "MK782",
+    "sourceVariantId": "5148",
+    "dimensionsZh": "吊绳长：100mm/穗长：208mm",
+    "compositionZh": "丙纶1.7% 棉纱47.2% 人丝45.0% 涤纶0.2% 锦纶0.4% 人棉5.6%"
+  },
+  "650": {
+    "sku": "WXR47",
+    "sourceVariantId": "5189",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶28.7%；人丝31.2%；人棉25.6%；布14.5%"
+  },
+  "651": {
+    "sku": "WXR46",
+    "sourceVariantId": "5329",
+    "dimensionsZh": "幅宽：70.5mm",
+    "compositionZh": "涤纶22%；人丝31.3%；人棉25.6%；布21.1%"
+  },
+  "652": {
+    "sku": "WXR45",
+    "sourceVariantId": "5290",
+    "dimensionsZh": "幅宽：98mm",
+    "compositionZh": "人棉45.9% 涤纶0.4% 人丝53.7%"
+  },
+  "653": {
+    "sku": "MB1089Y",
+    "sourceVariantId": "5231",
+    "dimensionsZh": "跨度：1000mm/脖长：90mm/穗长：330mm/总长：898.00mm",
+    "compositionZh": "丙纶0.3% 棉纱53.3% 人丝42.7% 金银线0.1% 涤纶0.2% 人棉3.5%"
+  },
+  "657": {
+    "sku": "AT919C",
+    "sourceVariantId": "5176",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "涤纶4.7% 人棉73.7% 锦纶0.8% 人丝18.4% 雪尼尔2.3%"
+  },
+  "660": {
+    "sku": "AE964EY",
+    "sourceVariantId": "5159",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "涤纶1.5% 锦纶1.1% 棉纱37.7% 人丝49.9% 其它带类2.0% 人棉7.7%"
+  },
+  "666": {
+    "sku": "BMFB8021",
+    "sourceVariantId": "5399",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类12.6% 涤纶0.6% 锦纶0.8% 棉纱40.5% 人棉45.5%"
+  },
+  "667": {
+    "sku": "AC8021Y",
+    "sourceVariantId": "5409",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶4.6% 锦纶1.3% 人棉85.4% 针织圆带8.7%"
+  },
+  "670": {
+    "sku": "MB8021Y",
+    "sourceVariantId": "5723",
+    "dimensionsZh": "跨度：900mm/穗长：195mm/总长：645mm",
+    "compositionZh": "棉纱53.0% 人棉45.7% 涤纶1.0% 锦纶0.3%"
+  },
+  "671": {
+    "sku": "ZT8021C",
+    "sourceVariantId": "5724",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "涤纶2.7% 人棉97.3%"
+  },
+  "672": {
+    "sku": "ZXR8021A",
+    "sourceVariantId": "5783",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "673": {
+    "sku": "ZXR8021",
+    "sourceVariantId": "5779",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "674": {
+    "sku": "ZG8021",
+    "sourceVariantId": "5736",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "675": {
+    "sku": "WXR88",
+    "sourceVariantId": "5764",
+    "dimensionsZh": "幅宽：49mm",
+    "compositionZh": "人棉47.2% 涤纶0.8% 人丝52.0%"
+  },
+  "676": {
+    "sku": "WXR36D",
+    "sourceVariantId": "5768",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "其它带类22.4% 人棉20.2% 涤纶0.3% 麻57.1%"
+  },
+  "677": {
+    "sku": "DR930",
+    "sourceVariantId": "18127",
+    "dimensionsZh": "幅宽：78mm",
+    "compositionZh": "人丝52 金线18 人棉30"
+  },
+  "678": {
+    "sku": "DG274",
+    "sourceVariantId": "5773",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "人棉75.1% 人丝24.9%"
+  },
+  "679": {
+    "sku": "DR257H",
+    "sourceVariantId": "5776",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "人棉77.5% 人丝22.5%"
+  },
+  "680": {
+    "sku": "WXR75",
+    "sourceVariantId": "5777",
+    "dimensionsZh": "幅宽：51mm",
+    "compositionZh": "人棉99.2% 涤纶0.8%"
+  },
+  "681": {
+    "sku": "WXR89",
+    "sourceVariantId": "11979",
+    "dimensionsZh": "幅宽：61mm",
+    "compositionZh": "人棉99.3% 涤纶0.7%"
+  },
+  "682": {
+    "sku": "MK8029",
+    "sourceVariantId": "5892",
+    "dimensionsZh": "吊绳长：50mm/穗长：110mm",
+    "compositionZh": "涤纶0.5% 丙纶0.4% 人丝91.2% 金银线8.0%"
+  },
+  "683": {
+    "sku": "ZR8029",
+    "sourceVariantId": "5848",
+    "dimensionsZh": "幅宽：68mm",
+    "compositionZh": "人棉13.5% 人丝53.6% 金银线32.9%"
+  },
+  "684": {
+    "sku": "ZBM8029",
+    "sourceVariantId": "5879",
+    "dimensionsZh": "总长：890mm",
+    "compositionZh": "人丝63.2% 金银线22.5% 涤纶1.5% 棉纱10.2% 人棉2.6%"
+  },
+  "685": {
+    "sku": "MB8029Y",
+    "sourceVariantId": "5894",
+    "dimensionsZh": "跨度：900mm/脖长：70mm/穗长：300mm/总长：802.00mm",
+    "compositionZh": "涤纶0.3% 丙纶0.1% 人丝53.7% 金银线8.0% 棉纱33.9% 人棉4.0%"
+  },
+  "686": {
+    "sku": "AT8029",
+    "sourceVariantId": "5963",
+    "dimensionsZh": "幅宽：43mm",
+    "compositionZh": "人丝60.4% 金银线11.6% 涤纶5.1% 锦纶9.3% 棉纱4.5% 人棉9.1%"
+  },
+  "687": {
+    "sku": "AT8029A",
+    "sourceVariantId": "5855",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶4.7% 人丝77.8% 金银线7.0% 锦纶4.3% 棉纱2.1% 人棉4.2%"
+  },
+  "688": {
+    "sku": "AV8029",
+    "sourceVariantId": "5884",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶2.5% 金银线13.1% 人丝84.4%"
+  },
+  "689": {
+    "sku": "AR8029B",
+    "sourceVariantId": "5861",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "锦纶30.0% 棉纱29.7% 人丝24.5% 金银线15.8%"
+  },
+  "690": {
+    "sku": "AR8029A",
+    "sourceVariantId": "5967",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "锦纶27.6% 涤纶1.2% 棉纱30.1% 金银线11.8% 人丝29.2%"
+  },
+  "691": {
+    "sku": "AG8029",
+    "sourceVariantId": "5916",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "锦纶19.5% 涤纶4.7% 棉纱9.6% 人丝43.3% 金银线5.1% 人棉17.8%"
+  },
+  "692": {
+    "sku": "ZT8029C",
+    "sourceVariantId": "5925",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "金银线2.6% 涤纶4.3% 人丝88.6% 人棉4.6%"
+  },
+  "693": {
+    "sku": "ZG8029",
+    "sourceVariantId": "5871",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "人棉38.0% 人丝48.1% 金银线13.9%"
+  },
+  "694": {
+    "sku": "DR8029",
+    "sourceVariantId": "5904",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "人丝63.9% 金银线36.1%"
+  },
+  "696": {
+    "sku": "WR87",
+    "sourceVariantId": "6713",
+    "dimensionsZh": "幅宽：49mm",
+    "compositionZh": "涤纶49.3% 金银线27.5% 人丝23.2%"
+  },
+  "697": {
+    "sku": "WXR8044",
+    "sourceVariantId": "6021",
+    "dimensionsZh": "幅宽：51mm",
+    "compositionZh": "人丝32.8%,人棉66.6%,涤纶0.6%"
+  },
+  "698": {
+    "sku": "MK8044",
+    "sourceVariantId": "14159",
+    "dimensionsZh": "吊绳长：80mm/穗长：230mm/总长：310mm",
+    "compositionZh": "涤纶0.3% 丙纶0.6% 人丝94.9% 棉纱2.7% 人棉1.5%"
+  },
+  "699": {
+    "sku": "MB8044BY",
+    "sourceVariantId": "6009",
+    "dimensionsZh": "跨度：850mm/穗长：158mm/总长：583mm",
+    "compositionZh": "涤纶1.2% 人丝63.7% 锦纶0.7% 棉纱30.4% 人棉4.1%"
+  },
+  "700": {
+    "sku": "WXR8044D",
+    "sourceVariantId": "6186",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝39.3%；人棉60.3%；涤纶0.4%"
+  },
+  "701": {
+    "sku": "MB8044AY",
+    "sourceVariantId": "6052",
+    "dimensionsZh": "跨度：1000mm/脖长：70mm/穗长：445mm/总长：997.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.1% 人丝78.2% 棉纱18.8% 人棉2.7%"
+  },
+  "702": {
+    "sku": "WXR8044E",
+    "sourceVariantId": "12166",
+    "dimensionsZh": "幅宽：103mm",
+    "compositionZh": "人丝24.2%；人棉75.4%；涤纶0.4%"
+  },
+  "703": {
+    "sku": "WXR8044B",
+    "sourceVariantId": "6208",
+    "dimensionsZh": "幅宽：79mm",
+    "compositionZh": "人棉48.5%；人丝16.4%；贴布（涤纶）35.1%"
+  },
+  "704": {
+    "sku": "ZT8044",
+    "sourceVariantId": "6190",
+    "dimensionsZh": "幅宽：44mm",
+    "compositionZh": "涤纶20.1% 人棉39.3% 人丝40.6%"
+  },
+  "705": {
+    "sku": "WXR8044C",
+    "sourceVariantId": "6019",
+    "dimensionsZh": "幅宽：79mm",
+    "compositionZh": "人丝49.2%；人棉50.5%；涤纶0.3%"
+  },
+  "706": {
+    "sku": "MB8044Y",
+    "sourceVariantId": "6025",
+    "dimensionsZh": "跨度：1000mm/脖长：60mm/穗长：360mm/总长：904.00mm",
+    "compositionZh": "涤纶0.6% 人丝72.5% 锦纶0.3% 棉纱23.4% 人棉3.3%"
+  },
+  "707": {
+    "sku": "TBM8045A",
+    "sourceVariantId": "6340",
+    "dimensionsZh": "跨度：900mm/脖长：65/95mm/穗长：180mm/总长：614.00mm",
+    "compositionZh": "涤纶0.6% 丙纶0.4% 人丝65.3% 棉纱29.3% 金银线4.3%"
+  },
+  "708": {
+    "sku": "WXR8045A",
+    "sourceVariantId": "6331",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "金线绣线：43%，人丝：29%，人棉：27%，涤纶：1%"
+  },
+  "709": {
+    "sku": "TBM8045AY",
+    "sourceVariantId": "6365",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：330mm/总长：844.00mm",
+    "compositionZh": "涤纶0.3% 丙纶0.2% 人丝67.7% 棉纱27.7% 金银线4.1%"
+  },
+  "710": {
+    "sku": "ZT8045B",
+    "sourceVariantId": "6366",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "涤纶9.5% 人棉45.3% 人丝45.1%"
+  },
+  "711": {
+    "sku": "ZT8045A",
+    "sourceVariantId": "6081",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶7.3% 人丝69.3% 人棉18.2% 金银线5.1%"
+  },
+  "712": {
+    "sku": "ZT8045",
+    "sourceVariantId": "6335",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人棉52.3% 金银线15.3% 人丝32.4%"
+  },
+  "713": {
+    "sku": "WXR8045C",
+    "sourceVariantId": "6393",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "金线绣线：34%，人丝：34%，人棉：31%，涤纶：1%"
+  },
+  "714": {
+    "sku": "WXR8045B",
+    "sourceVariantId": "6084",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "金线绣线：12%，人丝：57%，人棉：30%，涤纶：1%"
+  },
+  "715": {
+    "sku": "WXR8043C",
+    "sourceVariantId": "6132",
+    "dimensionsZh": "幅宽：41mm",
+    "compositionZh": "金线绣线：24%，人丝：50%，人棉：25%，涤纶：1%"
+  },
+  "716": {
+    "sku": "WXR8043A",
+    "sourceVariantId": "6171",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "金线绣线：11%，人丝：57%，人棉：31%，涤纶：1%"
+  },
+  "717": {
+    "sku": "SBM8043Y",
+    "sourceVariantId": "6087",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：350mm/总长：864.00mm",
+    "compositionZh": "人丝64.3% 涤纶0.3% 丙纶0.1% 棉纱30.7% 金银线4.6%"
+  },
+  "718": {
+    "sku": "WXR8043B",
+    "sourceVariantId": "6105",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "金线绣线：20%，人丝：56%，人棉：13%，涤纶：1%"
+  },
+  "719": {
+    "sku": "WXR8043",
+    "sourceVariantId": "6102",
+    "dimensionsZh": "幅宽：41mm",
+    "compositionZh": "金线绣线：23%，人丝：51%，人棉：25%，涤纶：1%"
+  },
+  "720": {
+    "sku": "ZT8043C",
+    "sourceVariantId": "16344",
+    "dimensionsZh": "幅宽：44mm",
+    "compositionZh": "金银线40.9% 人丝48.7% 人棉10.4%"
+  },
+  "721": {
+    "sku": "ZT8043B",
+    "sourceVariantId": "6091",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "人棉38.1% 金银线24.3% 人丝37.7%"
+  },
+  "722": {
+    "sku": "WXR8043D",
+    "sourceVariantId": "6178",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "金线绣线：35%，人丝：49%，人棉：13%，涤纶：1%"
+  },
+  "723": {
+    "sku": "WK8043",
+    "sourceVariantId": "6155",
+    "dimensionsZh": "吊绳长：60mm/穗长：125mm",
+    "compositionZh": "金银线2.5% 涤纶4.7% 人丝92.8%"
+  },
+  "724": {
+    "sku": "ZT8043A",
+    "sourceVariantId": "6094",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "金银线13.0% 涤纶8.7% 人丝67.3% 人棉11.0%"
+  },
+  "727": {
+    "sku": "JG",
+    "sourceVariantId": "6407",
+    "dimensionsZh": "幅宽：11mm",
+    "compositionZh": "金线23%;人丝63%;棉纱14%"
+  },
+  "758": {
+    "sku": "WR121B",
+    "sourceVariantId": "15313",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人棉37.3% 涤纶1.0% 麻61.7%"
+  },
+  "760": {
+    "sku": "WXR157A",
+    "sourceVariantId": "12958",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "人丝：19%，20S/2人棉：17%，涤纶：64%"
+  },
+  "765": {
+    "sku": "WG37U",
+    "sourceVariantId": "6797",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "麻85.3% 人棉13.2% 涤纶1.5%"
+  },
+  "767": {
+    "sku": "WP49A",
+    "sourceVariantId": "6629",
+    "dimensionsZh": "圆盘直径：55mm/总长：265mm",
+    "compositionZh": "人丝：77.9%，金线：5.7%，棉纱：16.4%"
+  },
+  "780": {
+    "sku": "MB520B",
+    "sourceVariantId": "6477",
+    "dimensionsZh": "跨度：880mm/脖长：65/85mm/穗长：335mm/总长：755.00mm",
+    "compositionZh": "人丝：69%，金线：1.4%，棉纱：29.6%"
+  },
+  "781": {
+    "sku": "BMFB46E",
+    "sourceVariantId": "6478",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "其它带类12.4% 涤纶6.2% 棉纱49.4% 金银线32.0%"
+  },
+  "788": {
+    "sku": "WQ69C",
+    "sourceVariantId": "8275",
+    "dimensionsZh": "成品直径：95mm",
+    "compositionZh": "涤纶8.3% 棉纱18.0% 人丝73.7%"
+  },
+  "790": {
+    "sku": "WQ169",
+    "sourceVariantId": "8271",
+    "dimensionsZh": "成品直径：120mm",
+    "compositionZh": "涤纶4.4% 棉纱7.1% 人丝88.5%"
+  },
+  "791": {
+    "sku": "WQ154C",
+    "sourceVariantId": "8265",
+    "dimensionsZh": "成品直径：100mm",
+    "compositionZh": "涤纶3.3% 棉纱7.2% 人丝89.5%"
+  },
+  "792": {
+    "sku": "WQ166D",
+    "sourceVariantId": "6491",
+    "dimensionsZh": "成品直径：90mm",
+    "compositionZh": "涤纶16.3% 其它带类83.7%"
+  },
+  "824": {
+    "sku": "AG705A",
+    "sourceVariantId": "6842",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "人丝74.4 金线2 涤纶17.3 鱼线6.3"
+  },
+  "825": {
+    "sku": "WQ166",
+    "sourceVariantId": "6530",
+    "dimensionsZh": "成品直径：148mm",
+    "compositionZh": "涤纶3.4% 其它带类96.6%"
+  },
+  "828": {
+    "sku": "AE129Y",
+    "sourceVariantId": "6590",
+    "dimensionsZh": "幅宽：110mm",
+    "compositionZh": "人丝62.7 ； 棉纱33； 银线0.2 ； 涤纶3.4； 鱼线0.7"
+  },
+  "830": {
+    "sku": "WQ137H",
+    "sourceVariantId": "6550",
+    "dimensionsZh": "成品直径：160mm",
+    "compositionZh": "涤纶2.9% 其它带类97.1%"
+  },
+  "831": {
+    "sku": "WQ137G",
+    "sourceVariantId": "8260",
+    "dimensionsZh": "成品直径：160mm",
+    "compositionZh": "涤纶2.3% 棉纱33.4% 麻64.4%"
+  },
+  "832": {
+    "sku": "WQ131D",
+    "sourceVariantId": "6596",
+    "dimensionsZh": "成品直径：125mm",
+    "compositionZh": "涤纶3.8% 其它带类96.2%"
+  },
+  "835": {
+    "sku": "MB520CY",
+    "sourceVariantId": "6640",
+    "dimensionsZh": "跨度：600mm/脖长：70mm/穗长：235mm/总长：593.00mm",
+    "compositionZh": "人丝：73.3%，金线：2.3%，棉纱：18%，人棉：6.4%"
+  },
+  "839": {
+    "sku": "AG462",
+    "sourceVariantId": "6861",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "人丝 36.8 金线 8棉纱 27.6 鱼线 27.6"
+  },
+  "846": {
+    "sku": "ZT429G",
+    "sourceVariantId": "12850",
+    "dimensionsZh": "幅宽：63mm",
+    "compositionZh": "人丝 77 人棉 10 金线5 涤纶8"
+  },
+  "847": {
+    "sku": "WP49",
+    "sourceVariantId": "6802",
+    "dimensionsZh": "圆盘直径：55mm/总长：265mm",
+    "compositionZh": "人丝：78.5%，银线：5%，棉纱：16.5%"
+  },
+  "848": {
+    "sku": "MB520A",
+    "sourceVariantId": "6807",
+    "dimensionsZh": "跨度：880mm/脖长：65/85mm/穗长：335mm/总长：755.00mm",
+    "compositionZh": "人丝：69.2%，银线：1.1%，棉纱：29.7%"
+  },
+  "849": {
+    "sku": "ZV19Y",
+    "sourceVariantId": "6710",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人棉 3 棉纱 1 人丝93 涤纶3"
+  },
+  "855": {
+    "sku": "WK96A",
+    "sourceVariantId": "6724",
+    "dimensionsZh": "吊绳长：70mm/穗长：125mm",
+    "compositionZh": "人丝：100%"
+  },
+  "856": {
+    "sku": "WQ137D",
+    "sourceVariantId": "8258",
+    "dimensionsZh": "成品直径：165mm",
+    "compositionZh": "涤纶2.7% 棉纱19.7% 麻77.5%"
+  },
+  "857": {
+    "sku": "WQ171A",
+    "sourceVariantId": "6727",
+    "dimensionsZh": "成品直径：95mm",
+    "compositionZh": "涤纶3.5% 棉纱19.6% 麻76.9%"
+  },
+  "858": {
+    "sku": "WQ69E",
+    "sourceVariantId": "6728",
+    "dimensionsZh": "成品直径：135mm",
+    "compositionZh": "涤纶4.5% 棉纱19.4% 麻76.2%"
+  },
+  "859": {
+    "sku": "WQ69D",
+    "sourceVariantId": "20261",
+    "dimensionsZh": "成品直径：95mm",
+    "compositionZh": "涤纶4.1% 棉纱19.4% 麻76.4%"
+  },
+  "860": {
+    "sku": "WQ154A",
+    "sourceVariantId": "6731",
+    "dimensionsZh": "成品直径：100mm",
+    "compositionZh": "涤纶3.7% 棉纱19.5% 麻76.8%"
+  },
+  "861": {
+    "sku": "WQ166C",
+    "sourceVariantId": "8267",
+    "dimensionsZh": "成品直径：135mm",
+    "compositionZh": "涤纶4.4% 棉纱19.4% 麻76.2%"
+  },
+  "868": {
+    "sku": "AG462B",
+    "sourceVariantId": "6748",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "锦纶25.8% 棉纱26.0% 金银线48.2%"
+  },
+  "869": {
+    "sku": "WQ137C",
+    "sourceVariantId": "6775",
+    "dimensionsZh": "成品直径：145mm",
+    "compositionZh": "涤纶4.5% 棉纱38.3% 人棉57.2%"
+  },
+  "870": {
+    "sku": "WQ131C",
+    "sourceVariantId": "6754",
+    "dimensionsZh": "成品直径：145mm",
+    "compositionZh": "涤纶3.8% 棉纱38.6% 人棉57.6%"
+  },
+  "874": {
+    "sku": "WQ169A",
+    "sourceVariantId": "6804",
+    "dimensionsZh": "成品直径：120mm",
+    "compositionZh": "涤纶5.3% 棉纱47.7% 金银线47.0%"
+  },
+  "875": {
+    "sku": "WQ154B",
+    "sourceVariantId": "6805",
+    "dimensionsZh": "成品直径：100mm",
+    "compositionZh": "涤纶3.9% 棉纱48.4% 金银线47.7%"
+  },
+  "876": {
+    "sku": "WQ166B",
+    "sourceVariantId": "6833",
+    "dimensionsZh": "成品直径：135mm",
+    "compositionZh": "涤纶4.6% 棉纱48.1% 金银线47.4%"
+  },
+  "902": {
+    "sku": "VDFB8052A",
+    "sourceVariantId": "7626",
+    "dimensionsZh": "直径：3.2mm",
+    "compositionZh": "其它带类31.7% 涤纶3.2% 棉纱29.6% 人丝35.5%"
+  },
+  "903": {
+    "sku": "BDFB180",
+    "sourceVariantId": "7480",
+    "dimensionsZh": "直径：3.2mm",
+    "compositionZh": "其它带类35.2% 涤纶1.6% 锦纶1.9% 人棉61.3%"
+  },
+  "904": {
+    "sku": "AG204V",
+    "sourceVariantId": "7642",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "涤纶11.1% 锦纶6.4% 棉纱8.7% 人丝73.9%"
+  },
+  "905": {
+    "sku": "ATR8051",
+    "sourceVariantId": "12488",
+    "dimensionsZh": "幅宽：76mm",
+    "compositionZh": "金银线8.4% 涤纶9.6% 人棉53.4% 人丝28.6%"
+  },
+  "906": {
+    "sku": "CM8051A",
+    "sourceVariantId": "7498",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "金线：14%，人丝：29%，涤纶：57%"
+  },
+  "907": {
+    "sku": "MBR8051Y",
+    "sourceVariantId": "7485",
+    "dimensionsZh": "跨度：1100mm/脖长：80mm/穗长：525mm/总长：1135.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.1% 人丝65.9% 针织圆带0.5% 棉纱31.5% 金银线1.9%"
+  },
+  "908": {
+    "sku": "CM8051C",
+    "sourceVariantId": "7562",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "金线：27%，人丝：10%，涤纶：63%"
+  },
+  "909": {
+    "sku": "AT8051A",
+    "sourceVariantId": "7487",
+    "dimensionsZh": "幅宽：88mm",
+    "compositionZh": "涤纶5.3% 人丝90.4% 金银线4.3%"
+  },
+  "910": {
+    "sku": "CM8051",
+    "sourceVariantId": "7488",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "金线：24%，人丝：20%，涤纶：56%"
+  },
+  "911": {
+    "sku": "MQRZ8051",
+    "sourceVariantId": "7606",
+    "dimensionsZh": "成品直径：70mm",
+    "compositionZh": "锦纶12.9% 棉纱36.6% 金银线18.5% 人丝30.1% 涤纶1.9%"
+  },
+  "912": {
+    "sku": "CM8051B",
+    "sourceVariantId": "7537",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "金线：22%，人丝：29%，涤纶：49%"
+  },
+  "913": {
+    "sku": "MK8051",
+    "sourceVariantId": "7517",
+    "dimensionsZh": "吊绳长：95mm/穗长：225mm",
+    "compositionZh": "涤纶0.2% 丙纶0.8% 人丝93.8% 针织圆带1.1% 棉纱3.5% 金银线0.5%"
+  },
+  "914": {
+    "sku": "MBR8051AY",
+    "sourceVariantId": "7563",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：395mm/总长：955.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.1% 人丝60.3% 针织圆带0.5% 棉纱36.8% 金银线2.1%"
+  },
+  "916": {
+    "sku": "AG204Z",
+    "sourceVariantId": "7628",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "涤纶11.4% 锦纶6.6% 棉纱8.9% 金银线73.1%"
+  },
+  "917": {
+    "sku": "VDFB8052B",
+    "sourceVariantId": "7629",
+    "dimensionsZh": "直径：3.2mm",
+    "compositionZh": "其它带类33.2% 涤纶1.5% 锦纶1.8% 棉纱37.8% 金银线25.7%"
+  },
+  "918": {
+    "sku": "AG204X",
+    "sourceVariantId": "7630",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "涤纶11.4% 锦纶6.6% 棉纱8.9% 金银线21.1% 人丝52.0%"
+  },
+  "919": {
+    "sku": "CM8053D",
+    "sourceVariantId": "15931",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "金线100%"
+  },
+  "920": {
+    "sku": "MB8053Y",
+    "sourceVariantId": "7714",
+    "dimensionsZh": "跨度：1000mm/脖长：75mm/穗长：365mm/总长：922.00mm",
+    "compositionZh": "涤纶0.2% 丙纶0.1% 人丝69.2% 棉纱30.4%"
+  },
+  "921": {
+    "sku": "ZBM8053",
+    "sourceVariantId": "7720",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "人丝37.2% 涤纶1.0% 棉纱61.8%"
+  },
+  "922": {
+    "sku": "MK8053",
+    "sourceVariantId": "7730",
+    "dimensionsZh": "吊绳长：80mm/穗长：135mm",
+    "compositionZh": "涤纶3.2% 人丝96.10%"
+  },
+  "923": {
+    "sku": "WR8053",
+    "sourceVariantId": "7737",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人棉45.8% 涤纶0.5% 人丝53.7%"
+  },
+  "924": {
+    "sku": "WR8053A",
+    "sourceVariantId": "7749",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人棉45.8% 涤纶0.5% 人丝53.7%"
+  },
+  "925": {
+    "sku": "WG8053F",
+    "sourceVariantId": "7755",
+    "dimensionsZh": "幅宽：22mm",
+    "compositionZh": "人棉47.6% 涤纶1.7% 人丝50.7%"
+  },
+  "926": {
+    "sku": "CM8053C",
+    "sourceVariantId": "15928",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "金线100%"
+  },
+  "1033": {
+    "sku": "WQ137L",
+    "sourceVariantId": "8279",
+    "dimensionsZh": "成品直径：160mm",
+    "compositionZh": "涤纶2.8% 棉纱49.0% 金银线48.3%"
+  },
+  "1034": {
+    "sku": "WQ166A",
+    "sourceVariantId": "8284",
+    "dimensionsZh": "成品直径：145mm",
+    "compositionZh": "涤纶5.0% 棉纱32.8% 人丝62.2%"
+  },
+  "1035": {
+    "sku": "WQ169C",
+    "sourceVariantId": "8287",
+    "dimensionsZh": "成品直径：120mm",
+    "compositionZh": "涤纶6.1% 棉纱19.0% 麻74.9%"
+  },
+  "1036": {
+    "sku": "WQ171F",
+    "sourceVariantId": "8288",
+    "dimensionsZh": "成品直径：95mm",
+    "compositionZh": "涤纶3.6% 棉纱48.5% 金银线47.8%"
+  },
+  "1037": {
+    "sku": "WQ69F",
+    "sourceVariantId": "8292",
+    "dimensionsZh": "成品直径：95mm",
+    "compositionZh": "涤纶4.3% 棉纱48.2% 金银线47.5%"
+  },
+  "1038": {
+    "sku": "WQ69H",
+    "sourceVariantId": "8295",
+    "dimensionsZh": "成品直径：135mm",
+    "compositionZh": "涤纶3.9% 棉纱7.1% 人丝89.0%"
+  },
+  "1039": {
+    "sku": "AC8052AY",
+    "sourceVariantId": "8297",
+    "dimensionsZh": "幅宽：47mm",
+    "compositionZh": "涤纶2.1% 人棉40.4% 金银线4.0% 特种纱53.5%"
+  },
+  "1040": {
+    "sku": "AT8052B",
+    "sourceVariantId": "8313",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "涤纶8.0% 人棉92.0%"
+  },
+  "1041": {
+    "sku": "BMFC8052",
+    "sourceVariantId": "8316",
+    "dimensionsZh": "直径：10.0mm",
+    "compositionZh": "其它带类10.4% 涤纶0.6% 腈纶32.0% 人棉57.0%"
+  },
+  "1042": {
+    "sku": "DB8052",
+    "sourceVariantId": "8328",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "人棉39.7% 涤纶1.0% 腈纶15.0% 棉纱44.3%"
+  },
+  "1043": {
+    "sku": "DBM8052",
+    "sourceVariantId": "8340",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "人棉59.7% 涤纶2.8% 锦纶2.5% 腈纶8.8% 棉纱26.2%"
+  },
+  "1044": {
+    "sku": "DR8052",
+    "sourceVariantId": "8342",
+    "dimensionsZh": "幅宽：71mm",
+    "compositionZh": "人棉84.5% 金银线15.5%"
+  },
+  "1045": {
+    "sku": "DR8052A",
+    "sourceVariantId": "8358",
+    "dimensionsZh": "幅宽：61mm",
+    "compositionZh": "人棉88.1% 金银线11.9%"
+  },
+  "1046": {
+    "sku": "DR8052F",
+    "sourceVariantId": "8364",
+    "dimensionsZh": "幅宽：42mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "1047": {
+    "sku": "DR8052G",
+    "sourceVariantId": "8371",
+    "dimensionsZh": "幅宽：83mm",
+    "compositionZh": "人丝8.5% 人棉91.5%"
+  },
+  "1048": {
+    "sku": "MB8052D",
+    "sourceVariantId": "8379",
+    "dimensionsZh": "跨度：900mm/脖长：70/90mm/穗长：250mm/总长：684.00mm",
+    "compositionZh": "涤纶0.4% 人棉46.4% 金银线6.0% 特种纱30.3% 腈纶4.2% 棉纱12.6%"
+  },
+  "1049": {
+    "sku": "WB8052Y",
+    "sourceVariantId": "8387",
+    "dimensionsZh": "跨度：900mm/脖长：65mm/穗长：195mm/总长：694.00mm",
+    "compositionZh": "涤纶1.4% 人棉50.5% 金银线4.9% 特种纱24.8% 腈纶4.6% 棉纱13.7%"
+  },
+  "1050": {
+    "sku": "WK8052",
+    "sourceVariantId": "8396",
+    "dimensionsZh": "吊绳长：50mm/穗长：76mm",
+    "compositionZh": "涤纶2.0% 腈纶21.6% 人棉54.3% 金银线3.0% 特种纱19.0%"
+  },
+  "1051": {
+    "sku": "ZB8052",
+    "sourceVariantId": "20093",
+    "dimensionsZh": "总长：940mm",
+    "compositionZh": "人棉38.1% 涤纶0.8% 腈纶15.4% 棉纱45.7%"
+  },
+  "1052": {
+    "sku": "DR8057A",
+    "sourceVariantId": "8420",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "人丝87.5% 涤纶12.5%"
+  },
+  "1053": {
+    "sku": "MK8057",
+    "sourceVariantId": "8427",
+    "dimensionsZh": "吊绳长：75mm/穗长：108mm",
+    "compositionZh": "涤纶1.8% 人丝98.2%"
+  },
+  "1054": {
+    "sku": "SBMY8057Y",
+    "sourceVariantId": "8428",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：430mm/总长：1034.00mm",
+    "compositionZh": "涤纶0.4% 人丝78.9% 腈纶5.2% 棉纱15.5%"
+  },
+  "1055": {
+    "sku": "SKMY8057",
+    "sourceVariantId": "8441",
+    "dimensionsZh": "吊绳长：75mm/穗长：225mm",
+    "compositionZh": "涤纶0.8% 人丝99.2%"
+  },
+  "1056": {
+    "sku": "WK8057",
+    "sourceVariantId": "8448",
+    "dimensionsZh": "吊绳长：65mm/穗长：92mm",
+    "compositionZh": "人丝100.0%"
+  },
+  "1057": {
+    "sku": "WKY8057B",
+    "sourceVariantId": "8451",
+    "dimensionsZh": "吊绳长：80mm/穗长：265mm",
+    "compositionZh": "涤纶2.2% 人丝90.8% 棉纱7.0%"
+  },
+  "1058": {
+    "sku": "WKY8057C",
+    "sourceVariantId": "8462",
+    "dimensionsZh": "吊绳长：80mm/穗长：285mm",
+    "compositionZh": "人丝98.8% 涤纶1.2%"
+  },
+  "1059": {
+    "sku": "WKY8057D",
+    "sourceVariantId": "8468",
+    "dimensionsZh": "吊绳长：75mm/穗长：260mm",
+    "compositionZh": "人丝99.5% 涤纶0.5%"
+  },
+  "1062": {
+    "sku": "ZT8057",
+    "sourceVariantId": "8488",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶15.9% 人棉34.0% 人丝50.1%"
+  },
+  "1085": {
+    "sku": "TBM8063Y",
+    "sourceVariantId": "13241",
+    "dimensionsZh": "跨度：900mm/脖长：70mm/穗长：375mm/总长：877.00mm",
+    "compositionZh": "人丝6.3%，棉纱13.9%，人棉1.7%，木模45.4%，超纤革32.7%"
+  },
+  "1086": {
+    "sku": "TBM8063AY",
+    "sourceVariantId": "13249",
+    "dimensionsZh": "跨度：900mm/脖长：70mm/穗长：410mm/总长：912.00mm",
+    "compositionZh": "人丝36.9%，人棉1.7%，棉纱13.8%，木模43%，金线2.3%,超纤革2.3%"
+  },
+  "1087": {
+    "sku": "TB8063A",
+    "sourceVariantId": "13255",
+    "dimensionsZh": "总长：800mm",
+    "compositionZh": "金属模50%，超纤革45%，人丝5%"
+  },
+  "1088": {
+    "sku": "CM8063F",
+    "sourceVariantId": "13259",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "超纤革85%，人丝15%"
+  },
+  "1089": {
+    "sku": "WXR8063F",
+    "sourceVariantId": "13280",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "超纤革55%，涤纶1%，人丝23%，人棉21%"
+  },
+  "1090": {
+    "sku": "WXR8063C",
+    "sourceVariantId": "13298",
+    "dimensionsZh": "幅宽：71mm",
+    "compositionZh": "超纤革55%，涤纶1%，金线12%，人丝10%，人棉22%"
+  },
+  "1091": {
+    "sku": "CM8063D",
+    "sourceVariantId": "13307",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "超纤革90%，人丝3%，金线7%"
+  },
+  "1092": {
+    "sku": "WXR8063L",
+    "sourceVariantId": "13316",
+    "dimensionsZh": "幅宽：91mm",
+    "compositionZh": "超纤革53%，涤纶1%，人丝24%，人棉22%"
+  },
+  "1093": {
+    "sku": "TBM8067Y",
+    "sourceVariantId": "13326",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：375mm/总长：937.00mm",
+    "compositionZh": "涤纶0.3% 人丝71.4% 棉纱28.3%"
+  },
+  "1094": {
+    "sku": "WXR8067B",
+    "sourceVariantId": "13348",
+    "dimensionsZh": "幅宽：69mm",
+    "compositionZh": "人丝77.5%，人棉22.2%；涤纶0.3%"
+  },
+  "1095": {
+    "sku": "WXR8067D",
+    "sourceVariantId": "13364",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝48.7%；人棉20.6%；涤纶0.3%；金线12.4%"
+  },
+  "1096": {
+    "sku": "WXR8067C",
+    "sourceVariantId": "13366",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝59.8%；人棉23.8%；涤纶0.4%；金线16%"
+  },
+  "1097": {
+    "sku": "ZR8067A",
+    "sourceVariantId": "13392",
+    "dimensionsZh": "幅宽：49.5mm",
+    "compositionZh": "人棉22.8% 金银线6.2% 人丝71.1%"
+  },
+  "1098": {
+    "sku": "WXR8067M",
+    "sourceVariantId": "13404",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝45.5%；人棉28.4%；涤纶0.4%；金线25.7%"
+  },
+  "1099": {
+    "sku": "ZG8067",
+    "sourceVariantId": "13419",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "人棉21.2% 金银线9.2% 人丝69.6%"
+  },
+  "1100": {
+    "sku": "SBM8065AY",
+    "sourceVariantId": "13425",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：400mm/总长：914.00mm",
+    "compositionZh": "涤纶0.4% 人丝81.4% 棉纱18.2%"
+  },
+  "1101": {
+    "sku": "SBM8065BY",
+    "sourceVariantId": "19484",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：445mm/总长：1005.00mm",
+    "compositionZh": "涤纶0.3% 人丝67.9% 棉纱31.8%"
+  },
+  "1102": {
+    "sku": "CBM8065Y",
+    "sourceVariantId": "13438",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：415mm/总长：929.00mm",
+    "compositionZh": "涤纶0.4% 人丝80.9% 棉纱18.7%"
+  },
+  "1103": {
+    "sku": "WG8065",
+    "sourceVariantId": "13442",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "人棉45.7% 涤纶2.1% 人丝52.3%"
+  },
+  "1104": {
+    "sku": "WR8065",
+    "sourceVariantId": "13458",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶69.3%，人棉30.7%"
+  },
+  "1105": {
+    "sku": "WXR8065",
+    "sourceVariantId": "13464",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝70.8%；人棉28.8%；涤纶0.4%"
+  },
+  "1106": {
+    "sku": "WXR8065A",
+    "sourceVariantId": "13484",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝72%；人棉27.7%；涤纶0.3%"
+  },
+  "1107": {
+    "sku": "WXR8065B",
+    "sourceVariantId": "13490",
+    "dimensionsZh": "幅宽：44mm",
+    "compositionZh": "人丝54.5%；人棉44.6%；涤纶0.9%；"
+  },
+  "1119": {
+    "sku": "TB8075",
+    "sourceVariantId": "13642",
+    "dimensionsZh": "总长：970mm",
+    "compositionZh": "涤纶0.3% 棉纱73.7% 金银线10.6% 人丝15.3%"
+  },
+  "1120": {
+    "sku": "TB8075C",
+    "sourceVariantId": "13656",
+    "dimensionsZh": "跨度：900mm/脖长：85mm/穗长：350mm/总长：865.00mm",
+    "compositionZh": "涤纶0.4% 针织圆带65.9% 腈纶12.1% 棉纱8.9% 人丝7.0% 金银线5.7%"
+  },
+  "1121": {
+    "sku": "SB8075Y",
+    "sourceVariantId": "13657",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：455mm/总长：1015.00mm",
+    "compositionZh": "涤纶0.3% 针织圆带75.3% 金银线4.6% 人丝5.0% 腈纶8.5% 棉纱6.3%"
+  },
+  "1122": {
+    "sku": "TB8075A",
+    "sourceVariantId": "13665",
+    "dimensionsZh": "总长：940mm",
+    "compositionZh": "涤纶0.3% 针织圆带77.1% 金银线20.8% 棉纱1.1% 人棉0.8%"
+  },
+  "1123": {
+    "sku": "DB8073",
+    "sourceVariantId": "13673",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "棉纱64.6% 人棉22.1% 人丝13.0% 涤纶0.3%"
+  },
+  "1124": {
+    "sku": "WXR8073W",
+    "sourceVariantId": "13679",
+    "dimensionsZh": "幅宽：89mm",
+    "compositionZh": "人棉58%，涤纶42%"
+  },
+  "1125": {
+    "sku": "WXR8073B",
+    "sourceVariantId": "13689",
+    "dimensionsZh": "幅宽：83mm",
+    "compositionZh": "人棉62.52%，涤纶37.48%"
+  },
+  "1126": {
+    "sku": "WXR8073C",
+    "sourceVariantId": "13693",
+    "dimensionsZh": "幅宽：78mm",
+    "compositionZh": "人棉53.7%，涤纶46.3%"
+  },
+  "1127": {
+    "sku": "WXR8073D",
+    "sourceVariantId": "13698",
+    "dimensionsZh": "幅宽：74mm",
+    "compositionZh": "人棉44.43%，涤纶55.57%"
+  },
+  "1128": {
+    "sku": "WXR8073Q",
+    "sourceVariantId": "13708",
+    "dimensionsZh": "幅宽：74mm",
+    "compositionZh": "人棉44.29%，涤纶55.71%"
+  },
+  "1130": {
+    "sku": "CM33",
+    "sourceVariantId": "13717",
+    "dimensionsZh": "2mm（直径）",
+    "compositionZh": "人丝100%"
+  },
+  "1131": {
+    "sku": "Y318A",
+    "sourceVariantId": "13733",
+    "dimensionsZh": "5.0/0",
+    "compositionZh": "其它带类96.9% 锦纶3.1%"
+  },
+  "1133": {
+    "sku": "Y52S",
+    "sourceVariantId": "13808",
+    "dimensionsZh": "6.0/0",
+    "compositionZh": "涤纶1.1% 棉纱36.7% 其它带类62.3%"
+  },
+  "1134": {
+    "sku": "Y8054S",
+    "sourceVariantId": "19485",
+    "dimensionsZh": "5.3/0",
+    "compositionZh": "涤纶0.7% 棉纱17.6% 其它带类81.7%"
+  },
+  "1137": {
+    "sku": "WR8074P",
+    "sourceVariantId": "13973",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶72.9% 金银线27.1%"
+  },
+  "1138": {
+    "sku": "DR8074F",
+    "sourceVariantId": "13878",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶74.8% 金银线25.2%"
+  },
+  "1139": {
+    "sku": "ZR8074C",
+    "sourceVariantId": "13846",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "金银线37.1% 涤纶62.9%"
+  },
+  "1140": {
+    "sku": "DG8074",
+    "sourceVariantId": "13860",
+    "dimensionsZh": "幅宽：32mm",
+    "compositionZh": "涤纶83.3% 金银线16.7%"
+  },
+  "1141": {
+    "sku": "DR8074C",
+    "sourceVariantId": "13862",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1142": {
+    "sku": "DR8074G",
+    "sourceVariantId": "13888",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶79.1% 金银线20.9%"
+  },
+  "1143": {
+    "sku": "DR8074N",
+    "sourceVariantId": "13892",
+    "dimensionsZh": "幅宽：43mm",
+    "compositionZh": "涤纶82.3% 金银线17.7%"
+  },
+  "1144": {
+    "sku": "DR8074Q",
+    "sourceVariantId": "13900",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶61.2% 金银线38.8%"
+  },
+  "1145": {
+    "sku": "DR8074R",
+    "sourceVariantId": "13916",
+    "dimensionsZh": "幅宽：68mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1146": {
+    "sku": "DR8074S",
+    "sourceVariantId": "13926",
+    "dimensionsZh": "幅宽：72mm",
+    "compositionZh": "涤纶59.2% 金银线40.8%"
+  },
+  "1147": {
+    "sku": "DR8074U",
+    "sourceVariantId": "13930",
+    "dimensionsZh": "幅宽：69mm",
+    "compositionZh": "涤纶57.6% 金银线42.4%"
+  },
+  "1148": {
+    "sku": "DR8074W",
+    "sourceVariantId": "13946",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶77.2% 金银线22.8%"
+  },
+  "1149": {
+    "sku": "WG8074",
+    "sourceVariantId": "13950",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1150": {
+    "sku": "WG8074A",
+    "sourceVariantId": "13959",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1151": {
+    "sku": "WR8074",
+    "sourceVariantId": "13969",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶96.8% 金银线3.2%"
+  },
+  "1152": {
+    "sku": "WXR8074A",
+    "sourceVariantId": "13985",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1153": {
+    "sku": "WXR8074H",
+    "sourceVariantId": "13997",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1154": {
+    "sku": "WXR8074K",
+    "sourceVariantId": "14005",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1155": {
+    "sku": "WXR8074Z",
+    "sourceVariantId": "14011",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1156": {
+    "sku": "ZR8074A",
+    "sourceVariantId": "14027",
+    "dimensionsZh": "幅宽：57mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1157": {
+    "sku": "ZR8074B",
+    "sourceVariantId": "14033",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶72.0% 金银线28.0%"
+  },
+  "1162": {
+    "sku": "ZB8074A",
+    "sourceVariantId": "14089",
+    "dimensionsZh": "总长：800mm",
+    "compositionZh": "人丝2.3% 超纤革97.7%"
+  },
+  "1163": {
+    "sku": "DB85",
+    "sourceVariantId": "14094",
+    "dimensionsZh": "总长：810mm",
+    "compositionZh": "人丝48.9% 涤纶1.0% 棉纱50.1%"
+  },
+  "1164": {
+    "sku": "DB8074C",
+    "sourceVariantId": "14097",
+    "dimensionsZh": "总长：800mm",
+    "compositionZh": "涤纶3.0% 棉纱58.1% 人丝38.9%"
+  },
+  "1165": {
+    "sku": "DB94B",
+    "sourceVariantId": "14102",
+    "dimensionsZh": "总长：660mm",
+    "compositionZh": "人丝28.3% 涤纶1.2% 棉纱70.6%"
+  },
+  "1166": {
+    "sku": "TB8056AY",
+    "sourceVariantId": "14115",
+    "dimensionsZh": "跨度：1000mm/脖长：60mm/穗长：505mm/总长：1049.00mm",
+    "compositionZh": "涤纶0.3% 人丝75.8% 金银线0.9% 棉纱23.0%"
+  },
+  "1167": {
+    "sku": "WXR8056B",
+    "sourceVariantId": "14118",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝41.4%，人棉33%，涤纶2%，金线23.6%"
+  },
+  "1168": {
+    "sku": "WXR8056",
+    "sourceVariantId": "14123",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝50.3%，人棉35.4%，涤纶2%，金线12.4%"
+  },
+  "1169": {
+    "sku": "WXR8056D",
+    "sourceVariantId": "14134",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝40%，人棉37.3%，涤纶0.7%，金线22%"
+  },
+  "1170": {
+    "sku": "WXR8056E",
+    "sourceVariantId": "14137",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝48.5%，人棉32%，涤纶2%，金线17.5%"
+  },
+  "1171": {
+    "sku": "WXR8056C",
+    "sourceVariantId": "14145",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝43%，人棉36.5%，涤纶2%，金线18.5%"
+  },
+  "1172": {
+    "sku": "MK183B",
+    "sourceVariantId": "14155",
+    "dimensionsZh": "吊绳长：90mm/穗长：190mm",
+    "compositionZh": "涤纶0.4% 人丝97.9% 金银线1.7%"
+  },
+  "1173": {
+    "sku": "MP170C",
+    "sourceVariantId": "20423",
+    "dimensionsZh": "圆盘直径：85mm,总长325mm",
+    "compositionZh": "涤纶0.9% 人丝88.5% 针织圆带10.7%"
+  },
+  "1174": {
+    "sku": "WK703",
+    "sourceVariantId": "14173",
+    "dimensionsZh": "吊绳长：55mm/穗长：232mm",
+    "compositionZh": "人丝74.9% 涤纶1.6% 针织圆带23.5%"
+  },
+  "1175": {
+    "sku": "WK703A",
+    "sourceVariantId": "14179",
+    "dimensionsZh": "吊绳长：80mm/穗长：195mm",
+    "compositionZh": "金银线1.5% 人丝98.2% 涤纶0.3%"
+  },
+  "1176": {
+    "sku": "WK703B",
+    "sourceVariantId": "14188",
+    "dimensionsZh": "吊绳长：80mm/穗长：192mm",
+    "compositionZh": "金银线1.5% 人丝98.2% 涤纶0.3%"
+  },
+  "1177": {
+    "sku": "WK703E",
+    "sourceVariantId": "14193",
+    "dimensionsZh": "吊绳长：80mm/穗长：218mm",
+    "compositionZh": "金银线1.5% 人丝98.5%"
+  },
+  "1178": {
+    "sku": "MK685C",
+    "sourceVariantId": "14209",
+    "dimensionsZh": "吊绳长：80mm/穗长：200mm",
+    "compositionZh": "涤纶2.1% 人丝97.9%"
+  },
+  "1189": {
+    "sku": "ZB8082",
+    "sourceVariantId": "14277",
+    "dimensionsZh": "总长：730mm",
+    "compositionZh": "涤纶3.7% 人丝49.7% 针织圆带46.6%"
+  },
+  "1190": {
+    "sku": "ZB8082A",
+    "sourceVariantId": "14279",
+    "dimensionsZh": "总长：650mm",
+    "compositionZh": "人丝41.9% 涤纶1.8% 棉纱56.4%"
+  },
+  "1191": {
+    "sku": "ZT8082E",
+    "sourceVariantId": "14280",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "涤纶10.3% 人丝53.3% 人棉36.3%"
+  },
+  "1192": {
+    "sku": "WXR8082F",
+    "sourceVariantId": "14283",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝66%，人棉32%，涤纶2%"
+  },
+  "1193": {
+    "sku": "WXR8082A",
+    "sourceVariantId": "14288",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝69%，人棉29%，涤纶2%"
+  },
+  "1194": {
+    "sku": "WXR8082G",
+    "sourceVariantId": "14294",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝73%，人棉25%，涤纶2%"
+  },
+  "1195": {
+    "sku": "WXR8082B",
+    "sourceVariantId": "14300",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝60%，人棉36%，涤纶4%"
+  },
+  "1196": {
+    "sku": "WXR8082E",
+    "sourceVariantId": "14306",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝62%，人棉33%，涤纶5%"
+  },
+  "1197": {
+    "sku": "WXR8082",
+    "sourceVariantId": "14310",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝50%，人棉34%，涤纶16%"
+  },
+  "1198": {
+    "sku": "WXR8082H",
+    "sourceVariantId": "14314",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝59%，人棉32%，绒布8%，涤纶1%"
+  },
+  "1199": {
+    "sku": "WXR8082D",
+    "sourceVariantId": "14320",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝70%，人棉28%，涤纶2%"
+  },
+  "1200": {
+    "sku": "DR8082",
+    "sourceVariantId": "14330",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "人丝78.0% 人棉22.0%"
+  },
+  "1201": {
+    "sku": "SB8078AY",
+    "sourceVariantId": "14334",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：400mm/总长：914.00mm",
+    "compositionZh": "涤纶0.3% 针织圆带82.1% 人丝17.5%"
+  },
+  "1202": {
+    "sku": "SB8078",
+    "sourceVariantId": "14339",
+    "dimensionsZh": "跨度：900mm/脖长：90mm/穗长：400mm/总长：924.00mm",
+    "compositionZh": "涤纶0.6% 人丝67.6% 金银线0.3% 针织圆带31.5%"
+  },
+  "1203": {
+    "sku": "DB8078",
+    "sourceVariantId": "14347",
+    "dimensionsZh": "总长：800mm",
+    "compositionZh": "人丝40.5% 金银线0.5% 涤纶1.4% 针织圆带57.6%"
+  },
+  "1204": {
+    "sku": "WXR8078D",
+    "sourceVariantId": "14358",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人丝65%，人棉31%，涤纶4%"
+  },
+  "1205": {
+    "sku": "WXR8078A",
+    "sourceVariantId": "14371",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝60%，人棉25%，涤纶15%"
+  },
+  "1206": {
+    "sku": "WXR8078B",
+    "sourceVariantId": "14375",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝58%，人棉27%，涤纶15%"
+  },
+  "1207": {
+    "sku": "WXR8084B",
+    "sourceVariantId": "14385",
+    "dimensionsZh": "幅宽：72mm",
+    "compositionZh": "人丝57%，人棉36%，涤纶2%，金属3%，塑料2%"
+  },
+  "1208": {
+    "sku": "WXR8084",
+    "sourceVariantId": "14405",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝63%，人棉33%，涤纶4%"
+  },
+  "1209": {
+    "sku": "SB8084Y",
+    "sourceVariantId": "14412",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：410mm/总长：940.00mm",
+    "compositionZh": "涤纶0.6% 人丝68.5% 棉纱27.3% 人棉3.6%"
+  },
+  "1210": {
+    "sku": "MB8084Y",
+    "sourceVariantId": "14416",
+    "dimensionsZh": "跨度：1000mm/脖长：70mm/穗长：410mm/总长：960.00mm",
+    "compositionZh": "涤纶1.7% 棉纱54.5% 人丝43.8%"
+  },
+  "1211": {
+    "sku": "MPZ8084",
+    "sourceVariantId": "14421",
+    "dimensionsZh": "圆盘直径：70mm，总长345mm",
+    "compositionZh": "涤纶0.9% 棉纱40.1% 人丝56.8% 锦纶2.1%"
+  },
+  "1212": {
+    "sku": "AT8084A",
+    "sourceVariantId": "14429",
+    "dimensionsZh": "幅宽：43mm",
+    "compositionZh": "涤纶25.4% 人丝52.9% 锦纶2.1% 棉纱11.5% 人棉8.1%"
+  },
+  "1213": {
+    "sku": "AT8084B",
+    "sourceVariantId": "14439",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "涤纶10.2% 人丝84.3% 锦纶0.5% 棉纱2.9% 人棉2.1%"
+  },
+  "1214": {
+    "sku": "AT8084",
+    "sourceVariantId": "14451",
+    "dimensionsZh": "幅宽：52mm",
+    "compositionZh": "涤纶18.5% 人丝65.4% 锦纶1.6% 棉纱8.5% 人棉6.0%"
+  },
+  "1215": {
+    "sku": "ZT8084",
+    "sourceVariantId": "14463",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶10.5% 人棉50.6% 人丝38.9%"
+  },
+  "1216": {
+    "sku": "ZT8084C",
+    "sourceVariantId": "14471",
+    "dimensionsZh": "幅宽：42mm",
+    "compositionZh": "涤纶24.9% 人棉41.4% 人丝33.7%"
+  },
+  "1217": {
+    "sku": "AE8084Y",
+    "sourceVariantId": "14477",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "涤纶5.0% 棉纱44.9% 人丝49.1% 锦纶0.2% 人棉0.7%"
+  },
+  "1218": {
+    "sku": "CM44",
+    "sourceVariantId": "14489",
+    "dimensionsZh": "幅宽：12mm",
+    "compositionZh": "涤纶26.6%；仿珍珠60.1%;玻璃珠13.3%"
+  },
+  "1219": {
+    "sku": "AG8054Y",
+    "sourceVariantId": "14495",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "涤纶7.4% 棉纱11.9% 其它带类80.7%"
+  },
+  "1220": {
+    "sku": "AG8054AY",
+    "sourceVariantId": "14502",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "涤纶0.3% 棉纱11.7% 锦纶1.2% 人丝7.4% 其它带类79.4%"
+  },
+  "1229": {
+    "sku": "VG7C",
+    "sourceVariantId": "14533",
+    "dimensionsZh": "幅宽：8.0mm",
+    "compositionZh": "人丝49.6% 涤纶50.4%"
+  },
+  "1238": {
+    "sku": "MB8090Y",
+    "sourceVariantId": "15631",
+    "dimensionsZh": "跨度：1200mm/脖长：65mm/穗长：475mm/总长：1120.00mm",
+    "compositionZh": "涤纶0.6% 人丝59.4% 金银线5.9% 棉纱34.1%"
+  },
+  "1239": {
+    "sku": "MB8090A",
+    "sourceVariantId": "15641",
+    "dimensionsZh": "跨度：1200mm/脖长：85/105mm/穗长：405mm/总长：985.00mm",
+    "compositionZh": "涤纶0.4% 人丝72.1% 金银线9.7% 棉纱8.7% 腈纶9.2%"
+  },
+  "1240": {
+    "sku": "CM8090",
+    "sourceVariantId": "15652",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶64%，金线24%，人丝12%"
+  },
+  "1241": {
+    "sku": "CM8090A",
+    "sourceVariantId": "15664",
+    "dimensionsZh": "幅宽：110mm",
+    "compositionZh": "涤纶56%，金线19.8%，人丝17.2%，铜7%"
+  },
+  "1242": {
+    "sku": "CM8090B",
+    "sourceVariantId": "15667",
+    "dimensionsZh": "幅宽：110mm",
+    "compositionZh": "涤纶62.2%，金线25.8%，人丝12%"
+  },
+  "1243": {
+    "sku": "CM8090C",
+    "sourceVariantId": "15686",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶62.3%，金线24%，人丝13.7%"
+  },
+  "1244": {
+    "sku": "MB8094Y",
+    "sourceVariantId": "15688",
+    "dimensionsZh": "跨度：900mm/穗长：180mm",
+    "compositionZh": "人丝55.8% 涤纶1.2% 锦纶0.1% 其它带类0.4% 腈纶10.7% 棉纱31.8%"
+  },
+  "1245": {
+    "sku": "MB8094BY",
+    "sourceVariantId": "15697",
+    "dimensionsZh": "跨度：900mm/脖长：65mm/穗长：410mm/总长：909.00mm",
+    "compositionZh": "涤纶0.8% 人丝79.9% 腈纶4.9% 棉纱14.5%"
+  },
+  "1246": {
+    "sku": "ZT8094Y",
+    "sourceVariantId": "15868",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶21.5% 人棉24.5% 人丝54.0%"
+  },
+  "1247": {
+    "sku": "WT8094Y",
+    "sourceVariantId": "15703",
+    "dimensionsZh": "幅宽：115mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1248": {
+    "sku": "ZT8094B",
+    "sourceVariantId": "15706",
+    "dimensionsZh": "幅宽：200mm",
+    "compositionZh": "涤纶8.1% 人棉28.1% 人丝63.8%"
+  },
+  "1257": {
+    "sku": "TB8094Y",
+    "sourceVariantId": "15780",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：402mm/总长：924.00mm",
+    "compositionZh": "涤纶0.3% 人丝67.1% 棉纱32.6%"
+  },
+  "1258": {
+    "sku": "TB8094AY",
+    "sourceVariantId": "15784",
+    "dimensionsZh": "跨度：900mm/脖长：60mm/穗长：455mm/总长：965.00mm",
+    "compositionZh": "涤纶0.5% 人丝74.0% 棉纱25.5%"
+  },
+  "1259": {
+    "sku": "CM8094D",
+    "sourceVariantId": "15788",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "超纤皮56%，真皮17%，人丝11%，铜 14%，涤纶2%"
+  },
+  "1260": {
+    "sku": "CM8094E",
+    "sourceVariantId": "15789",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "超纤皮64%，人丝10%，铜 23.3%，涤纶2.7%"
+  },
+  "1261": {
+    "sku": "CM8094A",
+    "sourceVariantId": "15793",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "超纤皮51%，人丝13%，铜 34%，涤纶2%"
+  },
+  "1262": {
+    "sku": "CM8094C",
+    "sourceVariantId": "15882",
+    "dimensionsZh": "幅宽：83mm",
+    "compositionZh": "超纤皮50%，人丝8%，铜 40%，涤纶2%"
+  },
+  "1263": {
+    "sku": "WXR8094",
+    "sourceVariantId": "15798",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "真皮60%，人丝23.2%，人棉14%，涤纶2%"
+  },
+  "1264": {
+    "sku": "WXR8094C",
+    "sourceVariantId": "15803",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "真皮20.6%，超纤皮15.6%，人丝41.6%，人棉20%，涤纶2.2%"
+  },
+  "1265": {
+    "sku": "WXR8094E",
+    "sourceVariantId": "15805",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "真皮32%，超纤皮24.5%，人丝23.5%，人棉18%，涤纶2%"
+  },
+  "1276": {
+    "sku": "MB8107Y",
+    "sourceVariantId": "16042",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：410mm/总长：966.00mm",
+    "compositionZh": "涤纶59.4% 棉纱36.8% 锦纶0.3% 人棉3.4%"
+  },
+  "1277": {
+    "sku": "ZB8107B",
+    "sourceVariantId": "16046",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "涤纶42.2% 棉纱57.8%"
+  },
+  "1278": {
+    "sku": "DR8107A",
+    "sourceVariantId": "16051",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "涤纶74.7% 棉纱25.3%"
+  },
+  "1279": {
+    "sku": "WXR8107",
+    "sourceVariantId": "16059",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "棉纱97.6% 涤纶2.4%"
+  },
+  "1280": {
+    "sku": "AL8107",
+    "sourceVariantId": "16062",
+    "dimensionsZh": "幅宽：32mm",
+    "compositionZh": "涤纶8.3% 棉纱91.7%"
+  },
+  "1281": {
+    "sku": "ZT8107",
+    "sourceVariantId": "16066",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶78.6% 棉纱21.4%"
+  },
+  "1282": {
+    "sku": "ZT8107A",
+    "sourceVariantId": "16072",
+    "dimensionsZh": "幅宽：88mm",
+    "compositionZh": "涤纶90.7% 棉纱9.3%"
+  },
+  "1283": {
+    "sku": "DB8106",
+    "sourceVariantId": "16076",
+    "dimensionsZh": "总长：1100mm",
+    "compositionZh": "人丝37.9% 涤纶0.5% 棉纱53.6% 金银线8.0%"
+  },
+  "1284": {
+    "sku": "ZB8106C",
+    "sourceVariantId": "16082",
+    "dimensionsZh": "总长：550mm",
+    "compositionZh": "涤纶0.9% 锦纶8.6% 人棉54.6% 人丝36.0%"
+  },
+  "1285": {
+    "sku": "WG8106Y",
+    "sourceVariantId": "16093",
+    "dimensionsZh": "幅宽：18.5mm",
+    "compositionZh": "涤纶0.5% 锦纶6.0% 棉纱49.8% 人丝38.3% 金银线5.3%"
+  },
+  "1286": {
+    "sku": "WXG8106",
+    "sourceVariantId": "16095",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "人丝：60%人棉：30%,涤纶网络：10%"
+  },
+  "1287": {
+    "sku": "WXG8106A",
+    "sourceVariantId": "16100",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "人丝：60%人棉：30%,涤纶网络：10%"
+  },
+  "1288": {
+    "sku": "WXG8106C",
+    "sourceVariantId": "16107",
+    "dimensionsZh": "幅宽：27mm",
+    "compositionZh": "人丝：55%，人棉：25%，金线：10，涤纶：10%"
+  },
+  "1289": {
+    "sku": "WXG8106E",
+    "sourceVariantId": "16113",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "人丝：60%，人棉：30%，涤纶：10%"
+  },
+  "1290": {
+    "sku": "AT1451",
+    "sourceVariantId": "16118",
+    "dimensionsZh": "幅宽：14mm",
+    "compositionZh": "锦纶7.3% 涤纶24.0% 人丝68.7%"
+  },
+  "1293": {
+    "sku": "Y8107",
+    "sourceVariantId": "16232",
+    "dimensionsZh": "325",
+    "compositionZh": "涤纶43.2% 棉纱56.8%"
+  },
+  "1298": {
+    "sku": "VG7CY",
+    "sourceVariantId": "16295",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "涤纶33.4% 锦纶0.3% 其它带类17.1% 人丝49.2%"
+  },
+  "1299": {
+    "sku": "DR447A",
+    "sourceVariantId": "16311",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "金银线23.3% 涤纶12.7% 人丝64.0%"
+  },
+  "1300": {
+    "sku": "DR623B",
+    "sourceVariantId": "16313",
+    "dimensionsZh": "幅宽：61mm",
+    "compositionZh": "人丝41.5% 人棉37.4% 金银线21.1%"
+  },
+  "1301": {
+    "sku": "DR700D",
+    "sourceVariantId": "16321",
+    "dimensionsZh": "幅宽：62mm",
+    "compositionZh": "人棉44.8% 人丝45.2% 金银线10.1%"
+  },
+  "1302": {
+    "sku": "ZR198P",
+    "sourceVariantId": "16334",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人丝85.6% 金银线14.4%"
+  },
+  "1303": {
+    "sku": "ZR211E",
+    "sourceVariantId": "16337",
+    "dimensionsZh": "幅宽：59mm",
+    "compositionZh": "人棉29.5% 金银线29.4% 人丝41.1%"
+  },
+  "1305": {
+    "sku": "CBJ1",
+    "sourceVariantId": "17930",
+    "dimensionsZh": "模直径50mm，杆85mm，底座直径30mm",
+    "compositionZh": "铁、铝合金、皮革"
+  },
+  "1306": {
+    "sku": "CM8108",
+    "sourceVariantId": "17349",
+    "dimensionsZh": "幅宽：44mm",
+    "compositionZh": "涤纶90.5%，亮片9.5%"
+  },
+  "1307": {
+    "sku": "CM8108D",
+    "sourceVariantId": "17350",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶85%，亮片15%"
+  },
+  "1308": {
+    "sku": "CM8108H",
+    "sourceVariantId": "17353",
+    "dimensionsZh": "幅宽：78mm",
+    "compositionZh": "涤纶94%，亮片6%"
+  },
+  "1309": {
+    "sku": "CM8108M",
+    "sourceVariantId": "17355",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "涤纶88%，亮片12%"
+  },
+  "1310": {
+    "sku": "CM8108K",
+    "sourceVariantId": "17357",
+    "dimensionsZh": "幅宽：74mm",
+    "compositionZh": "涤纶96.1%，仿珍珠3%，铁0.9%"
+  },
+  "1311": {
+    "sku": "CM8108Q",
+    "sourceVariantId": "17359",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "涤纶89%，亮片11%"
+  },
+  "1312": {
+    "sku": "CM8108T",
+    "sourceVariantId": "17362",
+    "dimensionsZh": "幅宽：73mm",
+    "compositionZh": "涤纶79.5%，亮片14%，仿珍珠5%，铁1.5%"
+  },
+  "1313": {
+    "sku": "CM8108S",
+    "sourceVariantId": "17363",
+    "dimensionsZh": "幅宽：67mm",
+    "compositionZh": "涤纶83.2%，亮片16.8%"
+  },
+  "1314": {
+    "sku": "CM8108R",
+    "sourceVariantId": "17367",
+    "dimensionsZh": "幅宽：106mm",
+    "compositionZh": "涤纶97.9%，仿珍珠2.1%"
+  },
+  "1315": {
+    "sku": "CM8108W",
+    "sourceVariantId": "17373",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "金线57.5%，涤纶27%，钻8.5%，仿珍珠4%，铁3%"
+  },
+  "1316": {
+    "sku": "CM8108L",
+    "sourceVariantId": "17375",
+    "dimensionsZh": "幅宽：74mm",
+    "compositionZh": "金线52.57%，涤纶26.26%，钻16.57%，仿珍珠3.1%铁1.5%"
+  },
+  "1317": {
+    "sku": "CM8108Z",
+    "sourceVariantId": "17377",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "金线66.7%，涤纶33.3%"
+  },
+  "1318": {
+    "sku": "Y8108Y",
+    "sourceVariantId": "17381",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "锦纶1.5% 涤纶6.2% 其它带类92.3%"
+  },
+  "1319": {
+    "sku": "ST8108",
+    "sourceVariantId": "17383",
+    "dimensionsZh": "幅宽：68mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1320": {
+    "sku": "ST8108A",
+    "sourceVariantId": "17385",
+    "dimensionsZh": "幅宽：92mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1321": {
+    "sku": "CG8108",
+    "sourceVariantId": "17387",
+    "dimensionsZh": "长：280mm,宽：190mm",
+    "compositionZh": "涤纶92%，仿珍珠7%，金属1%"
+  },
+  "1323": {
+    "sku": "CQZ8108",
+    "sourceVariantId": "17389",
+    "dimensionsZh": "成品直径：70mm",
+    "compositionZh": "锦纶8.0% 棉纱35.6% 人丝46.1% 涤纶3.2% 其它带类7.0%"
+  },
+  "1324": {
+    "sku": "CG8108B",
+    "sourceVariantId": "17393",
+    "dimensionsZh": "总长：750mm",
+    "compositionZh": "涤纶95%，仿珍珠4%，金属1%"
+  },
+  "1325": {
+    "sku": "MB8108Y",
+    "sourceVariantId": "17394",
+    "dimensionsZh": "跨度：920mm/脖长：50mm/穗长：340mm/总长：850.00mm",
+    "compositionZh": "涤纶0.9% 人丝62.7% 棉纱36.5%"
+  },
+  "1326": {
+    "sku": "MB8095Y",
+    "sourceVariantId": "17398",
+    "dimensionsZh": "跨度：900mm/脖长：70mm/穗长：320mm/总长：826.00mm",
+    "compositionZh": "涤纶0.7% 人丝81.0% 棉纱18.3%"
+  },
+  "1327": {
+    "sku": "MB8095AY",
+    "sourceVariantId": "17406",
+    "dimensionsZh": "跨度：600mm/脖长：45mm/穗长：210mm/总长：855.00mm",
+    "compositionZh": "涤纶0.6% 人丝84.7% 棉纱14.6%"
+  },
+  "1328": {
+    "sku": "MK8095",
+    "sourceVariantId": "17413",
+    "dimensionsZh": "吊绳长：80mm/穗长：130mm",
+    "compositionZh": "涤纶1.2% 人丝98.8%"
+  },
+  "1329": {
+    "sku": "AT8095B",
+    "sourceVariantId": "17423",
+    "dimensionsZh": "幅宽：32mm",
+    "compositionZh": "涤纶34.8% 人丝49.2% 人棉16.1%"
+  },
+  "1330": {
+    "sku": "WG8095K",
+    "sourceVariantId": "17435",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "人丝38.6%，人棉20.6%，钻40.8%"
+  },
+  "1331": {
+    "sku": "WG8095",
+    "sourceVariantId": "17443",
+    "dimensionsZh": "幅宽：35mm",
+    "compositionZh": "人丝33%，人棉21.7%，钻45.3%"
+  },
+  "1332": {
+    "sku": "WXR8095D",
+    "sourceVariantId": "17457",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "人丝46.4%，人棉32.3%，涤纶5.8%，钻15.5%"
+  },
+  "1333": {
+    "sku": "WXR8095B",
+    "sourceVariantId": "17465",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "人丝59.4%，人棉28.6%，涤纶5%，钻7%"
+  },
+  "1338": {
+    "sku": "MN65T",
+    "sourceVariantId": "17485",
+    "dimensionsZh": "总长：1080mm/跨度：900mm/穗长：90mm",
+    "compositionZh": "涤纶1.1% 人丝80.1% 锦纶0.9% 棉纱17.9%"
+  },
+  "1339": {
+    "sku": "MN8123",
+    "sourceVariantId": "17489",
+    "dimensionsZh": "总长：1060mm",
+    "compositionZh": "涤纶1.2% 人棉15.1% 人丝62.2% 棉纱21.5%"
+  },
+  "1341": {
+    "sku": "MN159A",
+    "sourceVariantId": "17500",
+    "dimensionsZh": "总长：1090mm/跨度：900mm/穗长：95mm",
+    "compositionZh": "人棉0.3% 人丝71.4% 涤纶0.4% 棉纱28.0%"
+  },
+  "1342": {
+    "sku": "MB1501FY",
+    "sourceVariantId": "17503",
+    "dimensionsZh": "吊绳长：600mm，穗长215mm，总长815mm",
+    "compositionZh": "涤纶1.0% 腈纶17.3% 人丝63.7% 锦纶0.7% 棉纱17.3%"
+  },
+  "1343": {
+    "sku": "MB1501LY",
+    "sourceVariantId": "17510",
+    "dimensionsZh": "吊绳长：600mm，穗长225mm，总长825mm",
+    "compositionZh": "涤纶0.5% 人丝74.9% 棉纱24.6%"
+  },
+  "1344": {
+    "sku": "MB1501NY",
+    "sourceVariantId": "17511",
+    "dimensionsZh": "吊绳长：600mm，穗长250mm，总长850mm",
+    "compositionZh": "涤纶0.7% 人丝77.9% 人丝77.9% 锦纶0.3% 棉纱21.0%"
+  },
+  "1345": {
+    "sku": "ZB8123B",
+    "sourceVariantId": "17516",
+    "dimensionsZh": "总长：570mm",
+    "compositionZh": "人丝49.4% 涤纶0.8% 针织圆带49.8%"
+  },
+  "1346": {
+    "sku": "ZB8123D",
+    "sourceVariantId": "17521",
+    "dimensionsZh": "总长：600mm",
+    "compositionZh": "涤纶2.9% 腈纶46.5% 人丝30.2% 针织圆带20.3%"
+  },
+  "1347": {
+    "sku": "ZB8123E",
+    "sourceVariantId": "17524",
+    "dimensionsZh": "总长：565mm",
+    "compositionZh": "人丝49.7% 涤纶3.7% 针织圆带46.6%"
+  },
+  "1348": {
+    "sku": "CBJ2",
+    "sourceVariantId": "17932",
+    "dimensionsZh": "模直径70，杆120mm，底座直径50mm",
+    "compositionZh": "铁、铝合金、皮革"
+  },
+  "1349": {
+    "sku": "CBJ3",
+    "sourceVariantId": "17934",
+    "dimensionsZh": "模直径70mm，杆120mm，底座直径50mm",
+    "compositionZh": "铁、铝合金、亚克力"
+  },
+  "1350": {
+    "sku": "CBJ4",
+    "sourceVariantId": "17935",
+    "dimensionsZh": "模直径70mm，杆110mm，底座直径45mm",
+    "compositionZh": "铁、铝合金、陶瓷、铜"
+  },
+  "1351": {
+    "sku": "CBJ5",
+    "sourceVariantId": "17936",
+    "dimensionsZh": "模直径75mm，杆110mm，底座45mm",
+    "compositionZh": "铁、铝合金、陶瓷、铜"
+  },
+  "1352": {
+    "sku": "CBJ6",
+    "sourceVariantId": "17937",
+    "dimensionsZh": "模直径25mm，杆95mm，底座30mm",
+    "compositionZh": "铁、铝合金"
+  },
+  "1353": {
+    "sku": "CBJ7",
+    "sourceVariantId": "17941",
+    "dimensionsZh": "模直径84mm，杆120mm，底座直径55mm",
+    "compositionZh": "铁、铝合金、树脂"
+  },
+  "1354": {
+    "sku": "CBJ8",
+    "sourceVariantId": "17944",
+    "dimensionsZh": "模直径85mm，杆120mm，底座55mm",
+    "compositionZh": "铁、铝合金、树脂"
+  },
+  "1355": {
+    "sku": "CBJ9",
+    "sourceVariantId": "17946",
+    "dimensionsZh": "模直径84mm，杆120mm，底座直径55mm",
+    "compositionZh": "铁、铝合金、树脂"
+  },
+  "1356": {
+    "sku": "CBJ10",
+    "sourceVariantId": "17939",
+    "dimensionsZh": "模直径40mm，杆125mm，底座直径30mm",
+    "compositionZh": "铁、铝合金、水晶"
+  },
+  "1357": {
+    "sku": "BJ1",
+    "sourceVariantId": "17947",
+    "dimensionsZh": "模直径53mm，杆135mm，底座44.5mm",
+    "compositionZh": "塑料模0.3% 铁质模34.3% 棉纱2.6% 人丝3.3% 木模59.4%"
+  },
+  "1358": {
+    "sku": "BJ2",
+    "sourceVariantId": "17951",
+    "dimensionsZh": "模直径55mm，杆135mm，底座44.5mm",
+    "compositionZh": "塑料模0.5% 铁质模48.6% 木模21.0% 麻29.9%"
+  },
+  "1359": {
+    "sku": "BJ3",
+    "sourceVariantId": "18137",
+    "dimensionsZh": "模直径95mm，杆110mm，底座直径44.5mm",
+    "compositionZh": "锦纶1.1% 棉纱5.0% 人丝11.2% 木模33.8% 塑料模0.7% 铁质模48.2%"
+  },
+  "1360": {
+    "sku": "BJ4",
+    "sourceVariantId": "17958",
+    "dimensionsZh": "模直径67mm，杆110mm，底座44.5mm",
+    "compositionZh": "玻璃模69.9% 塑料模0.4% 铁质模29.7%"
+  },
+  "1361": {
+    "sku": "CBJ11",
+    "sourceVariantId": "17959",
+    "dimensionsZh": "模直径93mm，杆120mm，底座直径28mm",
+    "compositionZh": "黄铜"
+  },
+  "1362": {
+    "sku": "CBJ12",
+    "sourceVariantId": "17960",
+    "dimensionsZh": "模直径100mm，杆130mm，底座直径28mm",
+    "compositionZh": "黄铜"
+  },
+  "1369": {
+    "sku": "BJ5",
+    "sourceVariantId": "17961",
+    "dimensionsZh": "模直径70mm,杆110mm,底座直径45mm",
+    "compositionZh": ""
+  },
+  "1370": {
+    "sku": "BJ6",
+    "sourceVariantId": "17966",
+    "dimensionsZh": "模直径75mm,杆110mm,底座直径45mm",
+    "compositionZh": ""
+  },
+  "1371": {
+    "sku": "MB8133Y",
+    "sourceVariantId": "17633",
+    "dimensionsZh": "跨度：900mm/脖长：65mm/穗长：300mm/总长：799.00mm",
+    "compositionZh": "涤纶1.0% 人丝56.6% 锦纶1.5% 人棉18.3% 棉纱22.5%"
+  },
+  "1372": {
+    "sku": "ZB8133",
+    "sourceVariantId": "17634",
+    "dimensionsZh": "总长：650mm",
+    "compositionZh": "涤纶2.0% 锦纶0.9% 人棉24.8% 腈纶16.2% 人丝17.3% 针织圆带38.7%"
+  },
+  "1378": {
+    "sku": "WXR8133D",
+    "sourceVariantId": "17702",
+    "dimensionsZh": "幅宽：71mm",
+    "compositionZh": "人棉50%，腈纶50%"
+  },
+  "1379": {
+    "sku": "ZR8133",
+    "sourceVariantId": "17722",
+    "dimensionsZh": "幅宽：42mm",
+    "compositionZh": "腈纶23.8% 棉纱49.5% 人丝15.7% 雪尼尔7.2% 人棉3.8%"
+  },
+  "1380": {
+    "sku": "ZXR8133A",
+    "sourceVariantId": "17732",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "1381": {
+    "sku": "AT8133",
+    "sourceVariantId": "17746",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶7.1% 腈纶64.3% 人丝7.6% 人棉21.1%"
+  },
+  "1382": {
+    "sku": "AT8133A",
+    "sourceVariantId": "17748",
+    "dimensionsZh": "幅宽：53mm",
+    "compositionZh": "涤纶8.7% 人棉51.6% 棉纱34.1% 人丝5.6%"
+  },
+  "1383": {
+    "sku": "MB8135BY",
+    "sourceVariantId": "17761",
+    "dimensionsZh": "跨度：1100mm/脖长：75mm/穗长：353mm/总长：958.00mm",
+    "compositionZh": "涤纶0.9% 人丝65.3% 人丝65.3% 棉纱33.8%"
+  },
+  "1384": {
+    "sku": "MB8135Y",
+    "sourceVariantId": "17771",
+    "dimensionsZh": "跨度：1100mm/脖长：70mm/穗长：395mm/总长：995.00mm",
+    "compositionZh": "涤纶0.4% 人丝66.1% 棉纱33.4% 锦纶0.1%"
+  },
+  "1387": {
+    "sku": "WXR8135Y",
+    "sourceVariantId": "17804",
+    "dimensionsZh": "幅宽：83mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1388": {
+    "sku": "Y8135A",
+    "sourceVariantId": "17808",
+    "dimensionsZh": "幅宽22mm",
+    "compositionZh": ""
+  },
+  "1389": {
+    "sku": "Y8135B",
+    "sourceVariantId": "17814",
+    "dimensionsZh": "幅宽46mm",
+    "compositionZh": ""
+  },
+  "1390": {
+    "sku": "Y8135C",
+    "sourceVariantId": "17822",
+    "dimensionsZh": "幅宽23mm",
+    "compositionZh": ""
+  },
+  "1391": {
+    "sku": "Y8135D",
+    "sourceVariantId": "17824",
+    "dimensionsZh": "幅宽64mm",
+    "compositionZh": ""
+  },
+  "1392": {
+    "sku": "Y8135Y",
+    "sourceVariantId": "17826",
+    "dimensionsZh": "幅宽105mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1393": {
+    "sku": "AT8135BY",
+    "sourceVariantId": "17838",
+    "dimensionsZh": "幅宽：43mm",
+    "compositionZh": "人丝60.1% 涤纶12.6% 锦纶12.1% 棉纱15.2%"
+  },
+  "1394": {
+    "sku": "AT8135DY",
+    "sourceVariantId": "17860",
+    "dimensionsZh": "幅宽：72mm",
+    "compositionZh": "人丝72.9% 涤纶8.0% 锦纶8.5% 棉纱10.6%"
+  },
+  "1395": {
+    "sku": "AT8135HY",
+    "sourceVariantId": "17862",
+    "dimensionsZh": "幅宽：57mm",
+    "compositionZh": "涤纶11.1% 人棉18.0% 人丝70.7% 锦纶0.3%"
+  },
+  "1396": {
+    "sku": "MQZ148B",
+    "sourceVariantId": "17875",
+    "dimensionsZh": "成品直径：53mm",
+    "compositionZh": "涤纶1.5% 其它带类98.5%"
+  },
+  "1397": {
+    "sku": "MQZ148F",
+    "sourceVariantId": "17880",
+    "dimensionsZh": "成品直径：45mm",
+    "compositionZh": "锦纶9.2% 棉纱26.5% 金银线64.4%"
+  },
+  "1398": {
+    "sku": "MQZ536K",
+    "sourceVariantId": "17883",
+    "dimensionsZh": "直径48mm",
+    "compositionZh": "涤纶2.5% 金银线97.5%"
+  },
+  "1399": {
+    "sku": "MQZ92K",
+    "sourceVariantId": "17890",
+    "dimensionsZh": "成品直径：45mm",
+    "compositionZh": "涤纶2.7% 人丝97.3%"
+  },
+  "1400": {
+    "sku": "WPZ277A",
+    "sourceVariantId": "17896",
+    "dimensionsZh": "圆盘直径：70mm，总长245mm",
+    "compositionZh": "人丝100.0%"
+  },
+  "1401": {
+    "sku": "WPZ277B",
+    "sourceVariantId": "17898",
+    "dimensionsZh": "圆盘直径：60mm，总长130mm",
+    "compositionZh": "人丝100.0%"
+  },
+  "1402": {
+    "sku": "WPZ277C",
+    "sourceVariantId": "17904",
+    "dimensionsZh": "吊绳长：25mm/穗长：120mm，总长205mm",
+    "compositionZh": "人丝63.3% 其它带类34.8% 涤纶1.9%"
+  },
+  "1403": {
+    "sku": "CG8135",
+    "sourceVariantId": "17906",
+    "dimensionsZh": "总长：630mm",
+    "compositionZh": ""
+  },
+  "1404": {
+    "sku": "ZB8100",
+    "sourceVariantId": "17912",
+    "dimensionsZh": "总长：1000mm",
+    "compositionZh": "涤纶0.3% 人丝35.4% 针织圆带64.3%"
+  },
+  "1405": {
+    "sku": "MB8100Y",
+    "sourceVariantId": "17918",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：440mm/总长：1002.00mm",
+    "compositionZh": "涤纶0.3% 人丝61.8% 针织圆带37.8%"
+  },
+  "1406": {
+    "sku": "SB8100Y",
+    "sourceVariantId": "17919",
+    "dimensionsZh": "跨度：1100mm/脖长：80mm/穗长：420mm/总长：1032.00mm",
+    "compositionZh": "涤纶0.3% 人丝66.0% 针织圆带33.7%"
+  },
+  "1413": {
+    "sku": "AG8133A",
+    "sourceVariantId": "18107",
+    "dimensionsZh": "幅宽：27mm",
+    "compositionZh": "涤纶8.1% 人棉38.9% 雪尼尔35.5% 人丝17.5%"
+  },
+  "1414": {
+    "sku": "AG8133B",
+    "sourceVariantId": "18013",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "涤纶7.6% 锦纶8.7% 棉纱26.7% 人丝27.5% 雪尼尔29.6%"
+  },
+  "1415": {
+    "sku": "CM8135D",
+    "sourceVariantId": "18023",
+    "dimensionsZh": "幅宽39mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1416": {
+    "sku": "CM8135F",
+    "sourceVariantId": "18033",
+    "dimensionsZh": "幅宽89mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1417": {
+    "sku": "DR8133",
+    "sourceVariantId": "18047",
+    "dimensionsZh": "幅宽：63mm",
+    "compositionZh": "雪尼尔33.7% 涤纶66.3%"
+  },
+  "1420": {
+    "sku": "WXR8133B",
+    "sourceVariantId": "18079",
+    "dimensionsZh": "幅宽：66mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "1421": {
+    "sku": "WXR8133C",
+    "sourceVariantId": "18101",
+    "dimensionsZh": "幅宽：66mm",
+    "compositionZh": "人棉100.0%"
+  },
+  "1422": {
+    "sku": "AG1209",
+    "sourceVariantId": "18109",
+    "dimensionsZh": "幅宽：10mm",
+    "compositionZh": "涤纶15.9% 腈纶84.1%"
+  },
+  "1423": {
+    "sku": "AG1209B",
+    "sourceVariantId": "18113",
+    "dimensionsZh": "幅宽：10mm",
+    "compositionZh": "涤纶25.0% 腈纶75.0%"
+  },
+  "1424": {
+    "sku": "CBJ13A",
+    "sourceVariantId": "18119",
+    "dimensionsZh": "模直径26mm杆95mm底座直径28.8mm",
+    "compositionZh": "铜100%"
+  },
+  "1425": {
+    "sku": "DT366A",
+    "sourceVariantId": "18130",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人棉31,人丝63 ,腈纶3 ,金线3"
+  },
+  "1427": {
+    "sku": "MB8138Y",
+    "sourceVariantId": "18142",
+    "dimensionsZh": "跨度：900mm/脖长：80mm/穗长：260mm/总长：771.00mm",
+    "compositionZh": "涤纶0.6% 棉纱98.7% 麻0.7%"
+  },
+  "1429": {
+    "sku": "AG8138",
+    "sourceVariantId": "18160",
+    "dimensionsZh": "幅宽：32mm",
+    "compositionZh": "涤纶12.5% 棉纱87.5%"
+  },
+  "1430": {
+    "sku": "AL8138",
+    "sourceVariantId": "18176",
+    "dimensionsZh": "幅宽：33mm",
+    "compositionZh": "涤纶7.2% 锦纶4.0% 麻37.8% 棉纱51.0%"
+  },
+  "1431": {
+    "sku": "AR8138",
+    "sourceVariantId": "18178",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "涤纶3.0% 锦纶0.1% 棉纱17.8% 麻79.2%"
+  },
+  "1432": {
+    "sku": "DR8138",
+    "sourceVariantId": "18182",
+    "dimensionsZh": "幅宽：85mm",
+    "compositionZh": "麻53.0% 棉纱47.0%"
+  },
+  "1433": {
+    "sku": "ZG8138B",
+    "sourceVariantId": "18198",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "棉纱51.7% 麻48.3%"
+  },
+  "1434": {
+    "sku": "ZXR8138A",
+    "sourceVariantId": "18214",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "棉纱54.4% 麻45.6%"
+  },
+  "1435": {
+    "sku": "ZXR8138D",
+    "sourceVariantId": "18220",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "棉纱70.6% 麻29.4%"
+  },
+  "1436": {
+    "sku": "ZG8138Y",
+    "sourceVariantId": "18228",
+    "dimensionsZh": "幅宽：23mm ,绳直径9mm",
+    "compositionZh": "涤纶0.2% 棉纱71.1% 人棉8.0% 麻20.6%"
+  },
+  "1437": {
+    "sku": "AT8138",
+    "sourceVariantId": "18240",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "棉纱88.4% 涤纶11.6%"
+  },
+  "1438": {
+    "sku": "AT8138A",
+    "sourceVariantId": "18242",
+    "dimensionsZh": "幅宽：41mm",
+    "compositionZh": "棉纱59.6% 涤纶15.5% 麻24.9%"
+  },
+  "1439": {
+    "sku": "AT8138B",
+    "sourceVariantId": "18262",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶5.3% 棉纱88.6% 麻6.0%"
+  },
+  "1440": {
+    "sku": "MK8138A",
+    "sourceVariantId": "18266",
+    "dimensionsZh": "吊绳长：20/80mm/穗长：133mm",
+    "compositionZh": "涤纶3.6% 棉纱90.6% 麻3.7% 锦纶0.4% 腈纶1.7%"
+  },
+  "1441": {
+    "sku": "DB8128",
+    "sourceVariantId": "18272",
+    "dimensionsZh": "总长：900mm",
+    "compositionZh": "涤纶7.6% 棉纱65.7% 人丝10.9% 其它带类15.8%"
+  },
+  "1442": {
+    "sku": "MB8128CY",
+    "sourceVariantId": "18278",
+    "dimensionsZh": "跨度：920mm/脖长：70mm/穗长：390mm/总长：902.00mm",
+    "compositionZh": "涤纶10.7% 人丝51.9% 其它带类3.8% 棉纱9.2% 针织圆带24.4%"
+  },
+  "1443": {
+    "sku": "AG8128A",
+    "sourceVariantId": "18294",
+    "dimensionsZh": "幅宽：27mm",
+    "compositionZh": "涤纶44.7% 麻32.6% 其它带类22.7%"
+  },
+  "1444": {
+    "sku": "AG8128B",
+    "sourceVariantId": "18302",
+    "dimensionsZh": "幅宽：28mm",
+    "compositionZh": "涤纶6.2% 其它带类31.7% 麻62.1%"
+  },
+  "1445": {
+    "sku": "AG8128C",
+    "sourceVariantId": "18312",
+    "dimensionsZh": "幅宽：22mm",
+    "compositionZh": "涤纶33.3% 其它带类48.9% 棉纱17.8%"
+  },
+  "1446": {
+    "sku": "AG8128D",
+    "sourceVariantId": "18326",
+    "dimensionsZh": "幅宽：7mm",
+    "compositionZh": "涤纶40.4% 其它带类38.2% 棉纱21.4%"
+  },
+  "1447": {
+    "sku": "AG8128L",
+    "sourceVariantId": "18332",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "锦纶2.3% 涤纶59.1% 麻19.8% 其它带类18.7%"
+  },
+  "1448": {
+    "sku": "AR8128B",
+    "sourceVariantId": "18354",
+    "dimensionsZh": "幅宽：67mm",
+    "compositionZh": "涤纶44.2% 其它带类13.9% 锦纶0.7% 棉纱34.6% 人丝6.6%"
+  },
+  "1449": {
+    "sku": "AR8128C",
+    "sourceVariantId": "18356",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶65.0% 其它带类35.0%"
+  },
+  "1450": {
+    "sku": "ZG8128A",
+    "sourceVariantId": "18370",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "麻76.2% 其它带类22.5% 人棉1.3%"
+  },
+  "1451": {
+    "sku": "ZR8128Y",
+    "sourceVariantId": "18380",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "涤纶2.6% 麻47.7% 人棉9.2% 锦纶1.3% 其它带类39.1%"
+  },
+  "1452": {
+    "sku": "AG8128MY",
+    "sourceVariantId": "18392",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "涤纶39.5% 锦纶0.2% 棉纱37.2% 其它带类23.2%"
+  },
+  "1453": {
+    "sku": "VDF8128A",
+    "sourceVariantId": "18404",
+    "dimensionsZh": "直径：6.0mm",
+    "compositionZh": "其它带类55.8% 涤纶0.6% 锦纶0.8% 棉纱32.2% 人丝10.6%"
+  },
+  "1454": {
+    "sku": "AT8128A",
+    "sourceVariantId": "18425",
+    "dimensionsZh": "幅宽：73mm",
+    "compositionZh": "涤纶36.4% 其它带类46.7% 棉纱16.9%"
+  },
+  "1455": {
+    "sku": "ZT8128",
+    "sourceVariantId": "18428",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶80.5% 其它带类7.3% 棉纱12.2%"
+  },
+  "1456": {
+    "sku": "MK8128A",
+    "sourceVariantId": "18440",
+    "dimensionsZh": "吊绳长：80mm/穗长：120mm",
+    "compositionZh": "涤纶8.3% 人丝85.8% 其它带类5.9%"
+  },
+  "1457": {
+    "sku": "MPZ8128",
+    "sourceVariantId": "18446",
+    "dimensionsZh": "成品直径：47mm",
+    "compositionZh": "涤纶70.5% 锦纶0.3% 腈纶9.9% 其它带类10.8% 人丝8.5%"
+  },
+  "1458": {
+    "sku": "MB8137A",
+    "sourceVariantId": "18452",
+    "dimensionsZh": "跨度：1000mm/脖长：70/110mm/穗长：300mm/总长：780.00mm",
+    "compositionZh": "棉纱42.1% 人丝53.1% 腈纶3.3% 涤纶1.1% 锦纶0.4% 锦纶0.4%"
+  },
+  "1459": {
+    "sku": "MB8137Y",
+    "sourceVariantId": "18458",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：390mm/总长：949.00mm",
+    "compositionZh": "涤纶0.7% 腈纶12.2% 棉纱48.0% 人丝39.0% 锦纶0.2% 锦纶0.2%"
+  },
+  "1460": {
+    "sku": "AG8137",
+    "sourceVariantId": "18468",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "涤纶3.5% 锦纶12.7% 人丝63.5% 棉纱20.3%"
+  },
+  "1461": {
+    "sku": "AG8137A",
+    "sourceVariantId": "18478",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "锦纶8.6% 棉纱33.8% 人丝57.6%"
+  },
+  "1462": {
+    "sku": "AG8137C",
+    "sourceVariantId": "18490",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "涤纶2.7% 锦纶9.0% 棉纱32.3% 人丝42.3% 人棉13.8%"
+  },
+  "1463": {
+    "sku": "XR8137",
+    "sourceVariantId": "18506",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "锦纶11.0% 棉纱45.0% 人丝44.0%"
+  },
+  "1464": {
+    "sku": "AC8137",
+    "sourceVariantId": "18512",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶1.3% 锦纶0.1% 人丝57.0% 人棉41.5%"
+  },
+  "1465": {
+    "sku": "AE8137Y",
+    "sourceVariantId": "18536",
+    "dimensionsZh": "幅宽：170mm",
+    "compositionZh": "涤纶3.7% 锦纶1.6% 棉纱46.0% 人丝48.7%"
+  },
+  "1466": {
+    "sku": "AT8137",
+    "sourceVariantId": "18552",
+    "dimensionsZh": "幅宽：101mm",
+    "compositionZh": "涤纶3.5% 腈纶25.2% 人丝64.1% 锦纶2.7% 棉纱4.3%"
+  },
+  "1467": {
+    "sku": "AT8137GY",
+    "sourceVariantId": "18562",
+    "dimensionsZh": "幅宽：148mm",
+    "compositionZh": "棉纱19.5% 人丝62.6% 涤纶6.5% 锦纶8.7% 针织圆带2.7% 锦纶3.4%"
+  },
+  "1468": {
+    "sku": "MK8137",
+    "sourceVariantId": "18572",
+    "dimensionsZh": "吊绳长：70mm/穗长：143mm",
+    "compositionZh": "涤纶2.1% 棉纱32.8% 人丝64.0% 人棉0.1% 锦纶0.9%"
+  },
+  "1469": {
+    "sku": "MQZ8137A",
+    "sourceVariantId": "18578",
+    "dimensionsZh": "成品直径：90mm",
+    "compositionZh": "锦纶8.7% 棉纱18.6% 人丝71.2% 涤纶1.6%"
+  },
+  "1470": {
+    "sku": "AT8137B",
+    "sourceVariantId": "18592",
+    "dimensionsZh": "幅宽：58mm",
+    "compositionZh": "涤纶3.4% 腈纶16.3% 人丝68.2% 棉纱6.9% 人棉1.9% 锦纶3.4%"
+  },
+  "1477": {
+    "sku": "BJ14",
+    "sourceVariantId": "18604",
+    "dimensionsZh": "模直径80-100mm杆115mm底座直径19.5mm",
+    "compositionZh": "玛瑙 黄铜"
+  },
+  "1478": {
+    "sku": "BJ15",
+    "sourceVariantId": "18605",
+    "dimensionsZh": "模直径80-100mm杆125mm底座直径19.5mm",
+    "compositionZh": "玛瑙 黄铜"
+  },
+  "1479": {
+    "sku": "BJ16",
+    "sourceVariantId": "18608",
+    "dimensionsZh": "模直径129mm杆155mm底座直径49mm",
+    "compositionZh": "树脂 铁"
+  },
+  "1480": {
+    "sku": "BJ17",
+    "sourceVariantId": "18609",
+    "dimensionsZh": "模直径125mm杆150mm底座直径49mm",
+    "compositionZh": "实木 铁"
+  },
+  "1481": {
+    "sku": "BJ19",
+    "sourceVariantId": "18610",
+    "dimensionsZh": "模直径79.5mm杆150mm底座直径49mm",
+    "compositionZh": "树脂 铁"
+  },
+  "1484": {
+    "sku": "AT1346G",
+    "sourceVariantId": "18623",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "腈纶75.6% 涤纶9.6% 人棉14.8%"
+  },
+  "1494": {
+    "sku": "BJ20",
+    "sourceVariantId": "18663",
+    "dimensionsZh": "模直径94mm杆139mm底座直径30mm",
+    "compositionZh": "树脂"
+  },
+  "1502": {
+    "sku": "AF8033Y",
+    "sourceVariantId": "18708",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶2.3% 人丝79.4% 棉纱7.6% 雪尼尔10.7%"
+  },
+  "1503": {
+    "sku": "AG8149",
+    "sourceVariantId": "18712",
+    "dimensionsZh": "幅宽：16mm",
+    "compositionZh": "涤纶12.7% 人丝75.7% 金银线11.6%"
+  },
+  "1504": {
+    "sku": "AG8149D",
+    "sourceVariantId": "18715",
+    "dimensionsZh": "整体幅宽：27mm，绳直径14mm",
+    "compositionZh": "涤纶14.1% 毛50.0% 人棉36.0%"
+  },
+  "1505": {
+    "sku": "AG8149F",
+    "sourceVariantId": "18719",
+    "dimensionsZh": "幅宽：11.5mm",
+    "compositionZh": "涤纶18.7% 锦纶8.0% 棉纱21.7% 人丝48.4% 金银线3.2%"
+  },
+  "1506": {
+    "sku": "AR8149",
+    "sourceVariantId": "18727",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶13.1% 腈纶86.9%"
+  },
+  "1507": {
+    "sku": "AT8149",
+    "sourceVariantId": "18733",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶24.4% 人棉75.6%"
+  },
+  "1508": {
+    "sku": "AT8149A",
+    "sourceVariantId": "18737",
+    "dimensionsZh": "幅宽：54mm",
+    "compositionZh": "涤纶8.5% 人丝75.7% 扁带15.8%"
+  },
+  "1509": {
+    "sku": "CM8149",
+    "sourceVariantId": "18743",
+    "dimensionsZh": "幅宽75mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1510": {
+    "sku": "CM8149A",
+    "sourceVariantId": "18749",
+    "dimensionsZh": "幅宽60mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1511": {
+    "sku": "DG240",
+    "sourceVariantId": "18751",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "人棉27.4% 人丝63.1% 金银线9.6%"
+  },
+  "1512": {
+    "sku": "MB8149",
+    "sourceVariantId": "18753",
+    "dimensionsZh": "跨度：920mm/脖长：80mm/穗长：200mm/总长：721.00mm",
+    "compositionZh": "涤纶0.6%人丝47.1%棉纱12.9%金银线3.8%针织圆带28.9%人棉2.8%雪尼尔3.9%"
+  },
+  "1513": {
+    "sku": "VMF229A",
+    "sourceVariantId": "18756",
+    "dimensionsZh": "直径：8.0mm",
+    "compositionZh": "其它带类10.6%涤纶0.5%锦纶0.6%棉纱60.9%人丝13.9%人棉3.5%雪尼尔10.1%"
+  },
+  "1514": {
+    "sku": "YE202A",
+    "sourceVariantId": "18762",
+    "dimensionsZh": "幅宽40mm",
+    "compositionZh": "涤纶4.0% 其它带类96.0%"
+  },
+  "1515": {
+    "sku": "ZG8149A",
+    "sourceVariantId": "18764",
+    "dimensionsZh": "幅宽：29mm",
+    "compositionZh": "特种纱83.1% 金银线6.6% 人棉10.3%"
+  },
+  "1516": {
+    "sku": "ZG968EY",
+    "sourceVariantId": "18770",
+    "dimensionsZh": "直径7.4mm",
+    "compositionZh": "涤纶0.8% 棉纱50.0% 人棉15.4% 人丝9.9% 金银线23.9%"
+  },
+  "1517": {
+    "sku": "AG8145AY",
+    "sourceVariantId": "18780",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶5.5% 锦纶19.7% 其它带类22.0% 棉纱17.3% 人丝35.5%"
+  },
+  "1518": {
+    "sku": "CM8145",
+    "sourceVariantId": "18794",
+    "dimensionsZh": "幅宽15mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1519": {
+    "sku": "CM8145A",
+    "sourceVariantId": "18802",
+    "dimensionsZh": "幅宽79mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1520": {
+    "sku": "CM8145B",
+    "sourceVariantId": "18814",
+    "dimensionsZh": "幅宽72mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1521": {
+    "sku": "CM8145C",
+    "sourceVariantId": "18818",
+    "dimensionsZh": "幅宽95mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1522": {
+    "sku": "MK8145A",
+    "sourceVariantId": "18827",
+    "dimensionsZh": "吊绳长：110mm/穗长：123mm",
+    "compositionZh": "涤纶5.4% 其它带类90.3% 人丝4.3%"
+  },
+  "1523": {
+    "sku": "SB8145Y",
+    "sourceVariantId": "18833",
+    "dimensionsZh": "跨度：1000mm/脖长：90mm/穗长：375mm/总长：945.00mm",
+    "compositionZh": "涤纶0.5% 人丝55.2% 棉纱33.2% 锦纶0.1% 人棉3.7% 雪尼尔7.3%"
+  },
+  "1524": {
+    "sku": "WQZ8145",
+    "sourceVariantId": "18838",
+    "dimensionsZh": "成品直径：118mm",
+    "compositionZh": "涤纶9.6% 人棉26.1% 人丝61.8% 锦纶2.1% 棉纱0.4%"
+  },
+  "1525": {
+    "sku": "WQZ8145A",
+    "sourceVariantId": "18843",
+    "dimensionsZh": "长245mm，宽115mm",
+    "compositionZh": "涤纶100.0%"
+  },
+  "1526": {
+    "sku": "WXR8145",
+    "sourceVariantId": "18848",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1527": {
+    "sku": "WXR8145B",
+    "sourceVariantId": "18862",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1528": {
+    "sku": "WXR8145C",
+    "sourceVariantId": "18868",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "涤纶100%"
+  },
+  "1529": {
+    "sku": "ZB8145",
+    "sourceVariantId": "18879",
+    "dimensionsZh": "总长：960mm",
+    "compositionZh": "涤纶21.2% 人棉22.8% 人丝53.9% 锦纶1.8% 棉纱0.3%"
+  },
+  "1530": {
+    "sku": "CM8146",
+    "sourceVariantId": "18885",
+    "dimensionsZh": "43mm",
+    "compositionZh": "人丝50%，涤纶50%"
+  },
+  "1531": {
+    "sku": "CQ8146",
+    "sourceVariantId": "18893",
+    "dimensionsZh": "成品直径：190mm",
+    "compositionZh": "涤纶3.8% 人丝96.1% 锦纶0.2%"
+  },
+  "1532": {
+    "sku": "DG8146",
+    "sourceVariantId": "18899",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "人棉41.6% 人丝58.4%"
+  },
+  "1533": {
+    "sku": "DT8146",
+    "sourceVariantId": "18921",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "涤纶9.0% 人棉36.8% 人丝54.1%"
+  },
+  "1534": {
+    "sku": "WPZ8146",
+    "sourceVariantId": "18923",
+    "dimensionsZh": "圆盘直径：140mm",
+    "compositionZh": "涤纶38.0% 人丝59.8% 锦纶2.2%"
+  },
+  "1535": {
+    "sku": "WQZ8146",
+    "sourceVariantId": "18929",
+    "dimensionsZh": "直径90mm",
+    "compositionZh": "涤纶14.3% 人丝82.7% 锦纶3.0%"
+  },
+  "1536": {
+    "sku": "WQZ8146A",
+    "sourceVariantId": "18936",
+    "dimensionsZh": "直径140mm",
+    "compositionZh": "涤纶14.3% 人丝82.7% 锦纶3.0%"
+  },
+  "1537": {
+    "sku": "Y8146",
+    "sourceVariantId": "18949",
+    "dimensionsZh": "幅宽90mm",
+    "compositionZh": "涤纶14.3% 人丝82.7% 锦纶3.0%"
+  },
+  "1538": {
+    "sku": "ZB8146",
+    "sourceVariantId": "18956",
+    "dimensionsZh": "总长：840mm",
+    "compositionZh": "涤纶44.5% 人丝53.5% 锦纶2.0%"
+  },
+  "1544": {
+    "sku": "AG8149A",
+    "sourceVariantId": "18975",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "涤纶10.0% 其它带类58.0% 特种纱32.0%"
+  },
+  "1545": {
+    "sku": "AV8149A",
+    "sourceVariantId": "18979",
+    "dimensionsZh": "幅宽：350mm",
+    "compositionZh": "锦纶0.1% 涤纶1.1% 针织圆带98.8%"
+  },
+  "1552": {
+    "sku": "AT1126A",
+    "sourceVariantId": "19112",
+    "dimensionsZh": "幅宽：37mm",
+    "compositionZh": "涤纶22.0% 人丝12.0% 棉纱10.8% 腈纶55.2%"
+  },
+  "1553": {
+    "sku": "AT1307H",
+    "sourceVariantId": "19125",
+    "dimensionsZh": "幅宽：49mm",
+    "compositionZh": "涤纶28.2% 棉纱50.8% 人丝21.0%"
+  },
+  "1554": {
+    "sku": "ZT1080",
+    "sourceVariantId": "19139",
+    "dimensionsZh": "幅宽：42mm",
+    "compositionZh": "涤纶85.2% 人丝9.6% 雪尼尔2.2% 棉纱3.0%"
+  },
+  "1555": {
+    "sku": "AT1061C",
+    "sourceVariantId": "19144",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "锦纶2.6% 腈纶66.8% 涤纶2.9% 人丝8.8% 雪尼尔6.2% 棉纱4.1% 人棉8.7%"
+  },
+  "1556": {
+    "sku": "ZG882H",
+    "sourceVariantId": "19149",
+    "dimensionsZh": "幅宽：15mm",
+    "compositionZh": "人丝39.1% 棉纱47.5% 腈纶13.3%"
+  },
+  "1557": {
+    "sku": "VDF76A",
+    "sourceVariantId": "19150",
+    "dimensionsZh": "直径：5.0mm",
+    "compositionZh": "其它带类23.5% 涤纶1.0% 锦纶1.3% 棉纱49.1% 人丝10.5% 雪尼尔14.5%"
+  },
+  "1558": {
+    "sku": "AC644A",
+    "sourceVariantId": "19170",
+    "dimensionsZh": "幅宽：25mm",
+    "compositionZh": "涤纶15.8% 锦纶0.4% 人丝17.0% 棉纱10.9% 雪尼尔4.9% 腈纶51.0%"
+  },
+  "1559": {
+    "sku": "AG1233",
+    "sourceVariantId": "19180",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "锦纶6.5% 棉纱18.6% 人丝24.4% 涤纶0.2% 雪尼尔50.4%"
+  },
+  "1560": {
+    "sku": "DR483",
+    "sourceVariantId": "19196",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "棉纱48.8% 人丝11.3% 腈纶29.2% 雪尼尔7.3% 人棉3.4%"
+  },
+  "1561": {
+    "sku": "DR482A",
+    "sourceVariantId": "19202",
+    "dimensionsZh": "幅宽：77mm",
+    "compositionZh": "棉纱61.2% 雪尼尔31.9% 人丝6.9%"
+  },
+  "1562": {
+    "sku": "DR837B",
+    "sourceVariantId": "19216",
+    "dimensionsZh": "幅宽：80mm",
+    "compositionZh": "腈纶45.8% 雪尼尔44.5% 人丝9.6%"
+  },
+  "1563": {
+    "sku": "ZR8105D",
+    "sourceVariantId": "19222",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "腈纶71.7% 涤纶7.5% 棉纱20.8%"
+  },
+  "1564": {
+    "sku": "ZC957EY",
+    "sourceVariantId": "19230",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶4.8% 针织圆带86.2% 人丝2.2% 雪尼尔1.9% 棉纱4.8%"
+  },
+  "1565": {
+    "sku": "WG87DY",
+    "sourceVariantId": "19240",
+    "dimensionsZh": "直径7.5mm",
+    "compositionZh": "涤纶1.5% 棉纱98.5%"
+  },
+  "1566": {
+    "sku": "WG87BY",
+    "sourceVariantId": "19258",
+    "dimensionsZh": "直径8mm",
+    "compositionZh": "涤纶1.0% 棉纱99.0%"
+  },
+  "1567": {
+    "sku": "WG87CY",
+    "sourceVariantId": "19268",
+    "dimensionsZh": "直径9mm",
+    "compositionZh": "涤纶0.6% 棉纱99.4%"
+  },
+  "1568": {
+    "sku": "BDF175M",
+    "sourceVariantId": "19278",
+    "dimensionsZh": "直径：5.0mm",
+    "compositionZh": "其它带类22.3% 涤纶1.0% 锦纶1.2% 棉纱32.9% 腈纶38.1% 雪尼尔4.5%"
+  },
+  "1569": {
+    "sku": "ZT8015N",
+    "sourceVariantId": "19288",
+    "dimensionsZh": "幅宽：68mm",
+    "compositionZh": "涤纶8.9% 人棉12.6% 人丝78.5%"
+  },
+  "1570": {
+    "sku": "ZT8015P",
+    "sourceVariantId": "19318",
+    "dimensionsZh": "幅宽：39mm",
+    "compositionZh": "涤纶15.7% 人丝62.7% 人棉21.6%"
+  },
+  "1571": {
+    "sku": "ZT8015L",
+    "sourceVariantId": "19326",
+    "dimensionsZh": "幅宽：42mm",
+    "compositionZh": "人丝75.2% 涤纶16.5% 人棉8.2%"
+  },
+  "1572": {
+    "sku": "ZT8015QY",
+    "sourceVariantId": "19348",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶5.3% 人丝91.6% 人棉3.1%"
+  },
+  "1573": {
+    "sku": "DT227",
+    "sourceVariantId": "19352",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "涤纶5.2% 腈纶10.8% 人丝79.5% 人棉4.5%"
+  },
+  "1574": {
+    "sku": "DT227AY",
+    "sourceVariantId": "19370",
+    "dimensionsZh": "幅宽：115mm",
+    "compositionZh": "涤纶6.2% 人丝87.1% 人棉6.7%"
+  },
+  "1575": {
+    "sku": "AT1411P",
+    "sourceVariantId": "19384",
+    "dimensionsZh": "幅宽：178mm",
+    "compositionZh": "涤纶6.3% 人丝91.8% 锦纶0.5% 棉纱1.4%"
+  },
+  "1576": {
+    "sku": "DG428",
+    "sourceVariantId": "19394",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "人丝84.8% 人棉15.2%"
+  },
+  "1577": {
+    "sku": "AE970ACY",
+    "sourceVariantId": "19408",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "涤纶3.4% 棉纱31.0% 人丝63.2% 锦纶2.4%"
+  },
+  "1578": {
+    "sku": "BMF461D",
+    "sourceVariantId": "19426",
+    "dimensionsZh": "直径：6.5mm",
+    "compositionZh": "其它带类11.6% 涤纶0.6% 锦纶0.7% 棉纱51.7% 人丝35.5%"
+  },
+  "1579": {
+    "sku": "ZG826C",
+    "sourceVariantId": "19438",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "棉纱35.9% 人丝64.1%"
+  },
+  "1580": {
+    "sku": "MB952TY",
+    "sourceVariantId": "19450",
+    "dimensionsZh": "跨度：1000mm/脖长：60mm/穗长：320mm/总长：860.00mm",
+    "compositionZh": "涤纶0.7% 棉纱50.9% 人丝48.3% 锦纶0.2%"
+  },
+  "1581": {
+    "sku": "MPZ952A",
+    "sourceVariantId": "19460",
+    "dimensionsZh": "圆盘直径：60mm",
+    "compositionZh": "涤纶1.3% 棉纱29.6% 人丝67.1% 锦纶2.0%"
+  },
+  "1583": {
+    "sku": "AC800CY",
+    "sourceVariantId": "19496",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "涤纶3.6% 其它带类7.3% 腈纶31.5% 棉纱30.6% 人棉27.0%"
+  },
+  "1584": {
+    "sku": "AC800Y",
+    "sourceVariantId": "19506",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "涤纶5.7% 锦纶0.1% 其它带类10.2% 腈纶84.0%"
+  },
+  "1585": {
+    "sku": "AC800BY",
+    "sourceVariantId": "19508",
+    "dimensionsZh": "幅宽：37mm",
+    "compositionZh": "涤纶9.5% 锦纶0.1% 人棉19.9% 腈纶70.5%"
+  },
+  "1594": {
+    "sku": "AE8155Y",
+    "sourceVariantId": "19617",
+    "dimensionsZh": "幅宽：120mm",
+    "compositionZh": "涤纶3.3% 人丝53.2% 棉纱36.4% 金银线7.1%"
+  },
+  "1595": {
+    "sku": "AT8155",
+    "sourceVariantId": "19627",
+    "dimensionsZh": "幅宽：200mm",
+    "compositionZh": "人丝94.2% 涤纶5.8%"
+  },
+  "1596": {
+    "sku": "AT8155A",
+    "sourceVariantId": "19639",
+    "dimensionsZh": "幅宽：97mm",
+    "compositionZh": "涤纶9.5% 人丝90.5%"
+  },
+  "1597": {
+    "sku": "AT8155B",
+    "sourceVariantId": "19651",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "涤纶56.5% 人棉11.5% 其它带类32.0%"
+  },
+  "1598": {
+    "sku": "DG8155AY",
+    "sourceVariantId": "19657",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "涤纶0.2% 棉纱47.9% 人丝34.6% 人棉17.3%"
+  },
+  "1599": {
+    "sku": "DR8155",
+    "sourceVariantId": "19675",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝65.8% 人棉34.2%"
+  },
+  "1600": {
+    "sku": "SB8155Y",
+    "sourceVariantId": "19686",
+    "dimensionsZh": "跨度：960mm/脖长：70mm/穗长：400mm/总长：934.00mm",
+    "compositionZh": "涤纶0.4% 人丝59.1% 针织圆带34.9% 金银线2.1% 人棉3.5%"
+  },
+  "1601": {
+    "sku": "SK8155",
+    "sourceVariantId": "19689",
+    "dimensionsZh": "吊绳长：100mm/穗长：172mm",
+    "compositionZh": "涤纶1.2% 人丝98.8%"
+  },
+  "1602": {
+    "sku": "WK8155",
+    "sourceVariantId": "19697",
+    "dimensionsZh": "吊绳长：50mm/穗长：168mm",
+    "compositionZh": "涤纶1.2% 人丝98.8%"
+  },
+  "1605": {
+    "sku": "ZG8155",
+    "sourceVariantId": "19707",
+    "dimensionsZh": "幅宽：18mm",
+    "compositionZh": "人丝54.3% 雪尼尔28.0% 人棉17.6%"
+  },
+  "1606": {
+    "sku": "ZT8155",
+    "sourceVariantId": "19713",
+    "dimensionsZh": "幅宽：60mm",
+    "compositionZh": "人丝68.3% 人棉31.7%"
+  },
+  "1607": {
+    "sku": "AG991DY",
+    "sourceVariantId": "19725",
+    "dimensionsZh": "幅宽：38mm",
+    "compositionZh": "涤纶4.7% 锦纶5.6% 其它带类12.6% 棉纱30% 人丝28% 金银线7.6% 人棉11%"
+  },
+  "1608": {
+    "sku": "AT8137BA",
+    "sourceVariantId": "19733",
+    "dimensionsZh": "幅宽：58mm",
+    "compositionZh": "涤纶5.9% 腈纶16.2% 人丝63.4% 棉纱7.0% 金银线4.2% 锦纶3.3%"
+  },
+  "1609": {
+    "sku": "AT8137C",
+    "sourceVariantId": "19741",
+    "dimensionsZh": "幅宽：101mm",
+    "compositionZh": "涤纶3.6% 腈纶25.5% 人丝60.4% 金银线3.4% 锦纶2.8% 棉纱4.4%"
+  },
+  "1610": {
+    "sku": "AT8137DY",
+    "sourceVariantId": "19743",
+    "dimensionsZh": "幅宽：78mm",
+    "compositionZh": "棉纱20.8% 金银线4.6% 人丝56.5% 涤纶5.9% 锦纶9.3% 针织圆带2.9%"
+  },
+  "1611": {
+    "sku": "MB8137DY",
+    "sourceVariantId": "19750",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：390mm/总长：949.00mm",
+    "compositionZh": "涤纶0.7% 腈纶12.3% 棉纱48.3% 人丝35.4% 金银线3% 锦纶0.2%"
+  },
+  "1613": {
+    "sku": "SB8154Y",
+    "sourceVariantId": "19757",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：340mm/总长：900.00mm",
+    "compositionZh": "人丝26.3% 毛23.3% 涤纶0.1% 棉纱50.2%"
+  },
+  "1614": {
+    "sku": "MPZ8154",
+    "sourceVariantId": "19761",
+    "dimensionsZh": "圆盘直径：85mm",
+    "compositionZh": "人丝56.9% 毛43.1%"
+  },
+  "1615": {
+    "sku": "DR8154AY",
+    "sourceVariantId": "19767",
+    "dimensionsZh": "幅宽：83mm",
+    "compositionZh": "涤纶0.3% 人丝22.6% 人棉32.0% 金银线3.2% 毛42.0%"
+  },
+  "1616": {
+    "sku": "ZR8154K",
+    "sourceVariantId": "19769",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "人丝78.1% 人棉21.9%"
+  },
+  "1617": {
+    "sku": "WR8154Y",
+    "sourceVariantId": "19775",
+    "dimensionsZh": "幅宽：65mm",
+    "compositionZh": "涤纶1.1% 人棉28.8% 人丝11.8% 毛58.3%"
+  },
+  "1618": {
+    "sku": "AV8154AY",
+    "sourceVariantId": "19785",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶2.7% 人丝82.1% 毛15.2%"
+  },
+  "1619": {
+    "sku": "AV8154Y",
+    "sourceVariantId": "19787",
+    "dimensionsZh": "幅宽：75mm",
+    "compositionZh": "涤纶9.0% 毛56.9% 人棉20.8% 金银线1.9% 人丝11.3%"
+  },
+  "1620": {
+    "sku": "AT8154AY",
+    "sourceVariantId": "19793",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "人丝64.6% 涤纶5.9% 毛29.5%"
+  },
+  "1621": {
+    "sku": "ZT8154Y",
+    "sourceVariantId": "19813",
+    "dimensionsZh": "幅宽：40mm",
+    "compositionZh": "涤纶3.8% 人棉16.2% 人丝15.4% 毛64.6%"
+  },
+  "1622": {
+    "sku": "AT8154BY",
+    "sourceVariantId": "19805",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人丝64.6% 涤纶5.9% 毛29.5%"
+  },
+  "1631": {
+    "sku": "MB8159Y",
+    "sourceVariantId": "19849",
+    "dimensionsZh": "跨度：900mm/脖长：55mm/穗长：298mm/总长：791.00mm",
+    "compositionZh": "涤纶1.7% 人丝76.0% 针织圆带22.3%"
+  },
+  "1632": {
+    "sku": "AT8159D",
+    "sourceVariantId": "19855",
+    "dimensionsZh": "幅宽：180mm",
+    "compositionZh": "涤纶2.9% 锦纶0.1% 针织圆带3.9% 人丝93.1%"
+  },
+  "1633": {
+    "sku": "AF8159Y",
+    "sourceVariantId": "19875",
+    "dimensionsZh": "幅宽：95mm",
+    "compositionZh": "涤纶4.0% 人丝85.2% 金银线10.8%"
+  },
+  "1634": {
+    "sku": "AV8159E",
+    "sourceVariantId": "19877",
+    "dimensionsZh": "幅宽：100mm",
+    "compositionZh": "涤纶8.9% 人丝91.1%"
+  },
+  "1635": {
+    "sku": "AV8159C",
+    "sourceVariantId": "19891",
+    "dimensionsZh": "幅宽：130mm",
+    "compositionZh": "涤纶3.5% 锦纶0.1% 针织圆带7.2% 扁带89.2%"
+  },
+  "1636": {
+    "sku": "AC8159A",
+    "sourceVariantId": "19901",
+    "dimensionsZh": "幅宽：30mm",
+    "compositionZh": "涤纶4.7% 人丝91.0% 金银线4.3%"
+  },
+  "1637": {
+    "sku": "DV8159",
+    "sourceVariantId": "19919",
+    "dimensionsZh": "幅宽：70mm",
+    "compositionZh": "人棉11.9% 人丝81.0% 涤纶7.1%"
+  },
+  "1638": {
+    "sku": "AG696A",
+    "sourceVariantId": "19925",
+    "dimensionsZh": "幅宽：26mm",
+    "compositionZh": "锦纶1.4% 涤纶7.8% 其它带类18.1% 人丝72.7%"
+  },
+  "1639": {
+    "sku": "AG247G",
+    "sourceVariantId": "19935",
+    "dimensionsZh": "幅宽：21mm",
+    "compositionZh": "涤纶21.4% 人丝57.2% 针织圆带21.4%"
+  },
+  "1640": {
+    "sku": "AG501F",
+    "sourceVariantId": "19945",
+    "dimensionsZh": "幅宽：20mm",
+    "compositionZh": "涤纶5.0% 锦纶2.2% 针织圆带20.9% 棉纱22.6% 人丝49.3%"
+  },
+  "1641": {
+    "sku": "ZDF11C",
+    "sourceVariantId": "20077",
+    "dimensionsZh": "直径：16mm",
+    "compositionZh": "人丝25.6% 人棉42.4% 雪尼尔32.0%"
+  },
+  "1642": {
+    "sku": "AT1264A",
+    "sourceVariantId": "20079",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "涤纶18.1% 针织圆带81.9%"
+  },
+  "1643": {
+    "sku": "AT1557",
+    "sourceVariantId": "19981",
+    "dimensionsZh": "幅宽：56mm",
+    "compositionZh": "涤纶26.5% 人丝59.7% 针织圆带13.8%"
+  },
+  "1644": {
+    "sku": "AT1526A",
+    "sourceVariantId": "19985",
+    "dimensionsZh": "幅宽：50mm",
+    "compositionZh": "涤纶6.8% 雪尼尔17.8% 针织圆带7.4% 人丝68.0%"
+  },
+  "1645": {
+    "sku": "AT1556",
+    "sourceVariantId": "19999",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "涤纶4.5% 人丝89.6% 锦纶0.2% 针织圆带5.7%"
+  },
+  "1646": {
+    "sku": "AT1559",
+    "sourceVariantId": "20005",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "针织圆带17.8% 涤纶32.3% 人丝49.9%"
+  },
+  "1647": {
+    "sku": "AT1558",
+    "sourceVariantId": "20019",
+    "dimensionsZh": "幅宽：63mm",
+    "compositionZh": "涤纶13.8% 腈纶21.8% 人丝36.6% 其它带类27.8%"
+  },
+  "1648": {
+    "sku": "AV807G",
+    "sourceVariantId": "20083",
+    "dimensionsZh": "幅宽：150mm",
+    "compositionZh": "涤纶3.0% 针织圆带97.0%"
+  },
+  "1649": {
+    "sku": "AV814",
+    "sourceVariantId": "20037",
+    "dimensionsZh": "幅宽：160mm",
+    "compositionZh": "涤纶6.7% 人丝93.3%"
+  },
+  "1650": {
+    "sku": "AT1557BY",
+    "sourceVariantId": "20087",
+    "dimensionsZh": "幅宽：67mm",
+    "compositionZh": "涤纶10.8% 其它带类63.6% 人丝18.6% 针织圆带7.0%"
+  },
+  "1659": {
+    "sku": "CM8135A",
+    "sourceVariantId": "20099",
+    "dimensionsZh": "62",
+    "compositionZh": ""
+  },
+  "1660": {
+    "sku": "JD7",
+    "sourceVariantId": "20101",
+    "dimensionsZh": "370",
+    "compositionZh": ""
+  },
+  "1661": {
+    "sku": "JD8",
+    "sourceVariantId": "20102",
+    "dimensionsZh": "390",
+    "compositionZh": ""
+  },
+  "1662": {
+    "sku": "JD5",
+    "sourceVariantId": "20103",
+    "dimensionsZh": "280*280",
+    "compositionZh": ""
+  },
+  "1663": {
+    "sku": "BUF24A",
+    "sourceVariantId": "20112",
+    "dimensionsZh": "直径：11.0mm",
+    "compositionZh": "其它带类9.0% 涤纶0.6% 棉纱48.3% 扁带29.5% 人丝12.7%"
+  },
+  "1678": {
+    "sku": "MB8164Y",
+    "sourceVariantId": "20160",
+    "dimensionsZh": "跨度：1000mm/脖长：80mm/穗长：340mm/总长：900.00mm",
+    "compositionZh": "涤纶0.5% 人棉14.7% 腈纶65.1% 人丝0.3% 棉纱19.5%"
+  },
+  "1679": {
+    "sku": "MK8164",
+    "sourceVariantId": "20165",
+    "dimensionsZh": "吊绳长：100mm/穗长：138mm",
+    "compositionZh": "涤纶2.1% 人棉24.7% 腈纶73.3%"
+  },
+  "1680": {
+    "sku": "AT8164K",
+    "sourceVariantId": "20168",
+    "dimensionsZh": "幅宽：46mm",
+    "compositionZh": "棉纱33.6% 人棉60.1% 涤纶6.3%"
+  },
+  "1681": {
+    "sku": "AT8164CY",
+    "sourceVariantId": "20180",
+    "dimensionsZh": "幅宽：90mm",
+    "compositionZh": "涤纶11.6% 棉纱88.4%"
+  },
+  "1682": {
+    "sku": "AT8164HY",
+    "sourceVariantId": "20184",
+    "dimensionsZh": "幅宽：64mm",
+    "compositionZh": "涤纶17.5% 棉纱82.5%"
+  },
+  "1683": {
+    "sku": "AT8164G",
+    "sourceVariantId": "20192",
+    "dimensionsZh": "幅宽：55mm",
+    "compositionZh": "涤纶6.2% 锦纶0.6% 棉纱67.6% 腈纶25.6%"
+  },
+  "1684": {
+    "sku": "AG8164C",
+    "sourceVariantId": "20200",
+    "dimensionsZh": "幅宽：19mm",
+    "compositionZh": "涤纶10.4% 锦纶2.9% 棉纱86.8%"
+  },
+  "1685": {
+    "sku": "AG8164B",
+    "sourceVariantId": "20214",
+    "dimensionsZh": "幅宽：17mm",
+    "compositionZh": "涤纶12.7% 棉纱37.6% 人棉49.6%"
+  },
+  "1686": {
+    "sku": "DG8164A",
+    "sourceVariantId": "20218",
+    "dimensionsZh": "幅宽：36mm",
+    "compositionZh": "棉纱56.6% 腈纶43.4%"
+  },
+  "1687": {
+    "sku": "ZC8164",
+    "sourceVariantId": "20224",
+    "dimensionsZh": "幅宽：44mm",
+    "compositionZh": "腈纶70.7% 涤纶5.5% 棉纱23.8%"
+  },
+  "1688": {
+    "sku": "AC8164A",
+    "sourceVariantId": "20238",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶4.1% 棉纱43.3% 腈纶52.6%"
+  },
+  "1689": {
+    "sku": "BMF8164",
+    "sourceVariantId": "20244",
+    "dimensionsZh": "直径：7.0mm",
+    "compositionZh": "其它带类11.9% 涤纶0.6% 锦纶0.7% 棉纱28.1% 人棉36.9% 雪尼尔21.7%"
+  },
+  "1690": {
+    "sku": "WG8164A",
+    "sourceVariantId": "20248",
+    "dimensionsZh": "幅宽：10mm",
+    "compositionZh": "人棉10.2% 涤纶1.3% 棉纱88.5%"
+  },
+  "1758": {
+    "sku": "AC610K",
+    "sourceVariantId": "20415",
+    "dimensionsZh": "幅宽：45mm",
+    "compositionZh": "涤纶2.1% 锦纶0.2% 人棉97.6%"
+  },
+  "sample-20058": {
+    "sku": "YK-DL-46-01",
+    "sourceVariantId": "20058",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19700": {
+    "sku": "YK-DL-37-01",
+    "sourceVariantId": "19700",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-20057": {
+    "sku": "YK-DL-45-01",
+    "sourceVariantId": "20057",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19815": {
+    "sku": "YK-DL-39-01",
+    "sourceVariantId": "19815",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19531": {
+    "sku": "Y-DL-222-01",
+    "sourceVariantId": "19531",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-20055": {
+    "sku": "Y-DL-227-01",
+    "sourceVariantId": "20055",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-20257": {
+    "sku": "YK-DL-53-01",
+    "sourceVariantId": "20257",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-18968": {
+    "sku": "YK-DL-29-01",
+    "sourceVariantId": "18968",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19699": {
+    "sku": "Y-DL-225-01",
+    "sourceVariantId": "19699",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19528": {
+    "sku": "YK-DL-31-01",
+    "sourceVariantId": "19528",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19521": {
+    "sku": "YK-DL-30-01",
+    "sourceVariantId": "19521",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19518": {
+    "sku": "YK-DL-26-01",
+    "sourceVariantId": "19518",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19524": {
+    "sku": "YK-DL-32-01",
+    "sourceVariantId": "19524",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19816": {
+    "sku": "YK-DL-38-01",
+    "sourceVariantId": "19816",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-20056": {
+    "sku": "Y-DL-228-01",
+    "sourceVariantId": "20056",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  },
+  "sample-19519": {
+    "sku": "YK-DL-25-01",
+    "sourceVariantId": "19519",
+    "dimensionsZh": "",
+    "compositionZh": ""
+  }
+}

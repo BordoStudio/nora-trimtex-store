@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: nora-trimtex-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./server/Dockerfile
+    dockerContext: .
+    healthCheckPath: /ready
+    initialDeployHook: node dist/scripts/import-migration.js
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: DATABASE_URL
+        sync: false
+      - key: DATABASE_POOL_SIZE
+        value: 5
+      - key: CORS_ORIGINS
+        sync: false
+      - key: ASSETS_PUBLIC_URL
+        sync: false
+      - key: INTERNAL_API_KEY
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: NOTIFICATION_FROM_EMAIL
+        sync: false
+      - key: NOTIFICATION_TO_EMAIL
+        value: info@noratrim.com
+      - key: STOREFRONT_URL
+        sync: false
+      - key: ADMIN_URL
+        value: https://admin.noratrim.com
+      - key: AUTH_SESSION_DAYS
+        value: 30
+      - key: PRIVACY_IP_SALT
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: info@noratrim.com
+      - key: ADMIN_BOOTSTRAP_PASSWORD
+        sync: false

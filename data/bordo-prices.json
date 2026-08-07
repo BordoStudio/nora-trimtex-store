@@ -1,0 +1,567 @@
+{
+  "importedAt": "2026-07-17T22:02:58.896Z",
+  "currency": "USD",
+  "count": 56,
+  "prices": [
+    {
+      "sku": "AE8137Y",
+      "priceUsd": 27,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 52,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AE8155Y",
+      "priceUsd": 12.5,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 106,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AE956B",
+      "priceUsd": 9,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 120,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AE996Y",
+      "priceUsd": 23,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 141,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AR8128B",
+      "priceUsd": 6,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 56,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT1451",
+      "priceUsd": 4.5,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 15,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "AT8084B",
+      "priceUsd": 14,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 219,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8128A",
+      "priceUsd": 13,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 19,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8133",
+      "priceUsd": 7,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 63,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8133A",
+      "priceUsd": 7,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 69,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8135DY",
+      "priceUsd": 16,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 187,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8135HY",
+      "priceUsd": 14,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 181,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8137GY",
+      "priceUsd": 33,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 28,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8149",
+      "priceUsd": 10,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 57,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AT8149A",
+      "priceUsd": 8,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 164,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "AV8149A",
+      "priceUsd": 27,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 123,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "CM8149",
+      "priceUsd": 5,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 62,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "DG8155AY",
+      "priceUsd": 5.5,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 86,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "DT8146",
+      "priceUsd": 15,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 95,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB520A",
+      "priceUsd": 32,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 115,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB520CY",
+      "priceUsd": 12,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 110,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB520Y",
+      "priceUsd": 12,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 109,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB8029Y",
+      "priceUsd": 22,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 263,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB8084Y",
+      "priceUsd": 46,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 183,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB8095AY",
+      "priceUsd": 17,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 31,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB8095Y",
+      "priceUsd": 24,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 21,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB8108Y",
+      "priceUsd": 24,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 90,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB8133Y",
+      "priceUsd": 15,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 237,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB8137DY",
+      "priceUsd": 35,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 135,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB8149",
+      "priceUsd": 32,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 89,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB942AY",
+      "priceUsd": 22,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 205,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB943Y",
+      "priceUsd": 27,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 6,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB952TY",
+      "priceUsd": 25,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 160,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB970Y",
+      "priceUsd": 26,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 52,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB982A",
+      "priceUsd": 21,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 149,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MB996A",
+      "priceUsd": 41,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 65,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MB996Y",
+      "priceUsd": 21,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 172,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MBR8051AY",
+      "priceUsd": 20,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 186,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "MBR8051Y",
+      "priceUsd": 24,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 96,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MK8053",
+      "priceUsd": 7,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 275,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MK970",
+      "priceUsd": 14,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 270,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "MK996A",
+      "priceUsd": 10,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 266,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "NF89",
+      "priceUsd": 10,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 108,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "SB8078AY",
+      "priceUsd": 25,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 246,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "SB8084Y",
+      "priceUsd": 22,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 107,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "SBM991AY",
+      "priceUsd": 30,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 42,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "TBM8045A",
+      "priceUsd": 34,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 228,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "WG87DY",
+      "priceUsd": 3,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 76,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "WXR8063C",
+      "priceUsd": 7,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 46,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "WXR8065B",
+      "priceUsd": 9,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 54,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "WXR8084",
+      "priceUsd": 12,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 38,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "WXR8084B",
+      "priceUsd": 11,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 34,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "ZBM8053",
+      "priceUsd": 16,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист1",
+        "row": 292,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "ZT8021C",
+      "priceUsd": 9.4,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 137,
+        "match": "perceptual"
+      }
+    },
+    {
+      "sku": "ZT8043C",
+      "priceUsd": 15,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист2",
+        "row": 127,
+        "match": "exact"
+      }
+    },
+    {
+      "sku": "ZT955D",
+      "priceUsd": 7.5,
+      "source": {
+        "workbook": "Электронный каталог фурнитуры ВОRDO.xlsx",
+        "sheet": "Лист3",
+        "row": 17,
+        "match": "perceptual"
+      }
+    }
+  ]
+}

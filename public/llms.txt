@@ -1,0 +1,15 @@
+# Nora TrimTex
+
+Nora TrimTex is a multilingual catalogue and online ordering service for curtain trimmings: tassels, wall hooks, rosettes, fringes, decorative borders, braids and cords for interior projects.
+
+## Languages
+- English: /en
+- German: /de
+- Ukrainian: /uk
+- Russian: /ru
+
+## Main sections
+- Product catalogue: /en/catalog
+- Product pages: /en/product/{product-slug}
+
+Products are identified by stable article numbers (SKU). Product pages show visual colour variants, availability status and a B2B order workflow. Wholesale prices are private and are only displayed to authenticated trade partners.

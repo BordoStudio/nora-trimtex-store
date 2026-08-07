@@ -1,0 +1,36 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { ProductCard } from "@/components/ProductCard";
+import { categoryIds } from "@/data/categories";
+import { getCatalogProducts } from "@/lib/catalog-api";
+import { getDictionary, isLocale } from "@/lib/i18n";
+import { notFound } from "next/navigation";
+import { jsonLd, siteUrl } from "@/lib/site";
+import { hasTradeAccess } from "@/lib/trade-session";
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  const t = getDictionary(locale);
+  const tradeAccess = await hasTradeAccess();
+  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: tradeAccess });
+  const faq = {
+    ru: [["Можно заказать образцы цветов?", "Да. Выберите цвет на странице товара, добавьте его в корзину и отправьте B2B-заказ."], ["Вы поставляете товары по Европе?", "Да. Срок, наличие и стоимость доставки подтверждаются в персональном предложении."], ["Где посмотреть оптовые цены?", "Оптовые цены доступны партнёрам после входа в Trade-раздел. Позиции без фиксированной цены рассчитываются по объёму и условиям поставки."]],
+    uk: [["Чи можна замовити зразки кольорів?", "Так. Оберіть колір на сторінці товару, додайте його до кошика та надішліть B2B-замовлення."], ["Ви постачаєте товари по Європі?", "Так. Термін, наявність і вартість доставки підтверджуються в персональній пропозиції."], ["Де переглянути оптові ціни?", "Оптові ціни доступні партнерам після входу до Trade-розділу. Позиції без фіксованої ціни розраховуються за обсягом та умовами постачання."]],
+    de: [["Kann ich Farbmuster bestellen?", "Ja. Wählen Sie die Farbe auf der Produktseite, legen Sie sie in den Warenkorb und senden Sie die B2B-Anfrage."], ["Liefern Sie innerhalb Europas?", "Ja. Lieferzeit, Verfügbarkeit und Versandkosten werden im persönlichen Angebot bestätigt."], ["Wo sehe ich die Großhandelspreise?", "Großhandelspreise sind nach Anmeldung im Trade-Bereich für Partner sichtbar. Artikel ohne Festpreis werden nach Menge und Lieferbedingungen kalkuliert."]],
+    en: [["Can I order colour samples?", "Yes. Select a colour on the product page, add it to the cart and submit the B2B order request."], ["Do you supply projects across Europe?", "Yes. Lead time, availability and shipping cost are confirmed in your personal quotation."], ["Where can I see wholesale prices?", "Wholesale prices are available to partners after signing in to the Trade area. Articles without a fixed price are quoted by quantity and delivery terms."]],
+  }[locale];
+  const organization = { "@context": "https://schema.org", "@type": "OnlineStore", "@id": `${siteUrl}/#organization`, name: "Nora TrimTex", url: siteUrl, logo: `${siteUrl}/icon.svg`, description: "Curtain trimmings and decorative textile accessories for interior projects.", areaServed: "Europe", knowsLanguage: ["en", "de", "uk", "ru"] };
+  return <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organization) }} />
+    <section className="hero">
+      <div className="hero-copy"><p className="eyebrow">{t.hero.eyebrow}</p><h1>{t.hero.title}</h1><p className="hero-body">{t.hero.body}</p><div className="hero-actions"><Link className="button primary" href={`/${locale}/catalog`}>{t.hero.primary}</Link><Link className="text-link" href={`/${locale}/catalog`}>{t.hero.secondary}</Link></div></div>
+      <div className="hero-image"><div className="hero-caption"><span>{locale === "ru" ? "ФУРНИТУРА ДЛЯ ШТОР" : locale === "uk" ? "ФУРНІТУРА ДЛЯ ШТОР" : locale === "de" ? "VORHANGZUBEHÖR" : "CURTAIN TRIMMINGS"}</span><span>2026</span></div></div>
+    </section>
+    <section id="craft" className="section category-section"><div className="section-heading"><p className="eyebrow">01 · {locale === "ru" ? "ПО ТИПУ ФУРНИТУРЫ" : locale === "uk" ? "ЗА ТИПОМ ФУРНІТУРИ" : locale === "de" ? "NACH ZUBEHÖRART" : "BY TRIMMING TYPE"}</p><h2>{t.home.categories}</h2></div><div className="category-grid">{categoryIds.slice(0,8).map((id, index) => <Link key={id} href={`/${locale}/catalog?category=${id}`} className={`category-tile tile-${index + 1}`}><span>0{index + 1}</span><h3>{t.categories[id]}</h3><ArrowRight size={20} /></Link>)}</div></section>
+    <section className="section latest-section"><div className="section-heading split"><div><p className="eyebrow">02 · {locale === "ru" ? "НОВИНКИ" : locale === "uk" ? "НОВИНКИ" : locale === "de" ? "NEUHEITEN" : "NEW ARRIVALS"}</p><h2>{t.home.latest}</h2></div><p>{t.home.latestBody}</p></div><div className="product-grid home-products">{products.slice(0,8).map((product) => <ProductCard key={product.id} product={product} locale={locale} />)}</div><div className="center"><Link className="button outline" href={`/${locale}/catalog`}>{t.home.viewAll}<ArrowRight size={18} /></Link></div></section>
+    <section className="process-section"><div className="process-visual"><span>NORA<br />TRIMTEX</span></div><div className="process-copy"><p className="eyebrow">03 · {locale === "ru" ? "КАК ЭТО РАБОТАЕТ" : locale === "uk" ? "ЯК ЦЕ ПРАЦЮЄ" : locale === "de" ? "SO FUNKTIONIERT ES" : "HOW IT WORKS"}</p><h2>{t.home.process}</h2><p>{t.home.processBody}</p><ol><li><span>01</span><div><h3>{t.home.step1}</h3><p>{t.home.step1Body}</p></div></li><li><span>02</span><div><h3>{t.home.step2}</h3><p>{t.home.step2Body}</p></div></li><li><span>03</span><div><h3>{t.home.step3}</h3><p>{t.home.step3Body}</p></div></li></ol></div></section>
+    <section id="trade" className="trade-banner"><p className="eyebrow">{locale === "ru" ? "РЕГИСТРАЦИЯ" : locale === "uk" ? "РЕЄСТРАЦІЯ" : locale === "de" ? "REGISTRIERUNG" : "REGISTRATION"}</p><h2>{locale === "ru" ? "Создайте аккаунт Nora TrimTex." : locale === "uk" ? "Створіть обліковий запис Nora TrimTex." : locale === "de" ? "Erstellen Sie Ihr Nora TrimTex Konto." : "Create your Nora TrimTex account."}</h2><p>{locale === "ru" ? "Сохраняйте корзину, оформляйте заказы и получайте актуальную информацию по наличию." : locale === "uk" ? "Зберігайте кошик, оформлюйте замовлення та отримуйте актуальну інформацію про наявність." : locale === "de" ? "Speichern Sie Ihren Warenkorb, senden Sie Bestellungen und erhalten Sie aktuelle Verfügbarkeitsinformationen." : "Save your basket, place order requests and receive current availability information."}</p><Link className="button light" href={`/${locale}/account/register`}>{t.nav.trade}<ArrowRight size={18} /></Link></section>
+    <section className="section faq-section"><div className="section-heading split"><div><p className="eyebrow">04 · FAQ</p><h2>{locale === "ru" ? "Вопросы о фурнитуре" : locale === "uk" ? "Питання про фурнітуру" : locale === "de" ? "Fragen zum Vorhangzubehör" : "Questions about trimmings"}</h2></div><p>{locale === "ru" ? "Как выбрать цвет, получить образец и оформить заказ." : locale === "uk" ? "Як обрати колір, отримати зразок і оформити замовлення." : locale === "de" ? "Farben auswählen, Muster erhalten und bestellen." : "How to choose a colour, receive a sample and place an order."}</p></div><div className="faq-list">{faq.map(([question, answer]) => <details key={question}><summary>{question}</summary><p>{answer}</p></details>)}</div></section>
+  </>;
+}

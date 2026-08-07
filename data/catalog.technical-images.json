@@ -1,0 +1,2564 @@
+{
+  "2": [],
+  "3": [],
+  "4": [],
+  "6": [],
+  "9": [],
+  "10": [],
+  "12": [],
+  "14": [],
+  "16": [],
+  "18": [],
+  "20": [],
+  "22": [],
+  "51": [],
+  "55": [],
+  "71": [],
+  "74": [],
+  "77": [],
+  "79": [],
+  "99": [],
+  "103": [],
+  "105": [],
+  "106": [],
+  "116": [],
+  "118": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/118-dimensions.jpg"
+    }
+  ],
+  "119": [],
+  "120": [],
+  "121": [],
+  "124": [],
+  "128": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/128-dimensions.jpg"
+    }
+  ],
+  "129": [],
+  "130": [],
+  "131": [],
+  "132": [],
+  "134": [],
+  "136": [],
+  "145": [],
+  "146": [],
+  "147": [],
+  "148": [],
+  "149": [],
+  "150": [],
+  "151": [],
+  "152": [],
+  "153": [],
+  "154": [],
+  "155": [],
+  "156": [],
+  "157": [],
+  "159": [],
+  "160": [],
+  "164": [],
+  "168": [],
+  "169": [],
+  "170": [],
+  "171": [],
+  "172": [],
+  "173": [],
+  "174": [],
+  "175": [],
+  "176": [],
+  "177": [],
+  "178": [],
+  "180": [],
+  "182": [],
+  "183": [],
+  "184": [],
+  "185": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/185-dimensions.jpg"
+    }
+  ],
+  "186": [],
+  "188": [],
+  "189": [],
+  "190": [],
+  "193": [],
+  "194": [],
+  "196": [],
+  "198": [],
+  "200": [],
+  "201": [],
+  "202": [],
+  "203": [],
+  "204": [],
+  "206": [],
+  "207": [],
+  "208": [],
+  "209": [],
+  "210": [],
+  "211": [],
+  "212": [],
+  "216": [],
+  "217": [],
+  "221": [],
+  "227": [],
+  "229": [],
+  "233": [],
+  "234": [],
+  "236": [],
+  "237": [],
+  "238": [],
+  "239": [],
+  "240": [],
+  "241": [],
+  "242": [],
+  "243": [],
+  "244": [],
+  "245": [],
+  "246": [],
+  "248": [],
+  "249": [],
+  "251": [],
+  "252": [],
+  "253": [],
+  "254": [],
+  "255": [],
+  "258": [],
+  "259": [],
+  "264": [],
+  "267": [],
+  "268": [],
+  "269": [],
+  "270": [],
+  "271": [],
+  "272": [],
+  "273": [],
+  "274": [],
+  "275": [],
+  "276": [],
+  "277": [],
+  "278": [],
+  "284": [],
+  "287": [],
+  "288": [],
+  "292": [],
+  "295": [],
+  "311": [],
+  "312": [],
+  "313": [],
+  "314": [],
+  "315": [],
+  "316": [],
+  "318": [],
+  "319": [],
+  "320": [],
+  "323": [],
+  "325": [],
+  "327": [],
+  "328": [],
+  "330": [],
+  "331": [],
+  "333": [],
+  "334": [],
+  "335": [],
+  "336": [],
+  "337": [],
+  "338": [],
+  "339": [],
+  "340": [],
+  "342": [],
+  "345": [],
+  "347": [],
+  "348": [],
+  "351": [],
+  "357": [],
+  "358": [],
+  "363": [],
+  "364": [],
+  "365": [],
+  "366": [],
+  "367": [],
+  "368": [],
+  "370": [],
+  "371": [],
+  "372": [],
+  "373": [],
+  "375": [],
+  "376": [],
+  "377": [],
+  "378": [],
+  "379": [],
+  "381": [],
+  "382": [],
+  "383": [],
+  "385": [],
+  "386": [],
+  "387": [],
+  "388": [],
+  "389": [],
+  "390": [],
+  "392": [],
+  "394": [],
+  "396": [],
+  "398": [],
+  "399": [],
+  "400": [],
+  "401": [],
+  "403": [],
+  "404": [],
+  "405": [],
+  "406": [],
+  "407": [],
+  "408": [],
+  "409": [],
+  "411": [],
+  "415": [],
+  "416": [],
+  "417": [],
+  "418": [],
+  "419": [],
+  "420": [],
+  "421": [],
+  "422": [],
+  "423": [],
+  "424": [],
+  "425": [],
+  "428": [],
+  "429": [],
+  "431": [],
+  "432": [],
+  "435": [],
+  "436": [],
+  "437": [],
+  "438": [],
+  "439": [],
+  "440": [],
+  "441": [],
+  "442": [],
+  "443": [],
+  "444": [],
+  "445": [],
+  "446": [],
+  "447": [],
+  "448": [],
+  "449": [],
+  "450": [],
+  "451": [],
+  "452": [],
+  "453": [],
+  "455": [],
+  "456": [],
+  "457": [],
+  "458": [],
+  "459": [],
+  "460": [],
+  "461": [],
+  "462": [],
+  "463": [],
+  "464": [],
+  "465": [],
+  "466": [],
+  "467": [],
+  "468": [],
+  "469": [],
+  "470": [],
+  "471": [],
+  "472": [],
+  "473": [],
+  "474": [],
+  "475": [],
+  "476": [],
+  "477": [],
+  "479": [],
+  "481": [],
+  "482": [],
+  "483": [],
+  "484": [],
+  "485": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/485-dimensions.jpg"
+    }
+  ],
+  "486": [],
+  "487": [],
+  "488": [],
+  "489": [],
+  "490": [],
+  "491": [],
+  "492": [],
+  "493": [],
+  "494": [],
+  "496": [],
+  "497": [],
+  "498": [],
+  "499": [],
+  "500": [],
+  "501": [],
+  "502": [],
+  "507": [],
+  "509": [],
+  "510": [],
+  "511": [],
+  "512": [],
+  "513": [],
+  "514": [],
+  "515": [],
+  "518": [],
+  "520": [],
+  "523": [],
+  "524": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/524-dimensions.jpg"
+    }
+  ],
+  "525": [],
+  "528": [],
+  "529": [],
+  "530": [],
+  "531": [],
+  "532": [],
+  "533": [],
+  "534": [],
+  "535": [],
+  "536": [],
+  "537": [],
+  "538": [],
+  "539": [],
+  "540": [],
+  "541": [],
+  "542": [],
+  "543": [],
+  "544": [],
+  "545": [],
+  "546": [],
+  "547": [],
+  "548": [],
+  "549": [],
+  "550": [],
+  "551": [],
+  "553": [],
+  "554": [],
+  "555": [],
+  "556": [],
+  "557": [],
+  "558": [],
+  "560": [],
+  "561": [],
+  "563": [],
+  "564": [],
+  "565": [],
+  "566": [],
+  "567": [],
+  "568": [],
+  "569": [],
+  "570": [],
+  "572": [],
+  "573": [],
+  "574": [],
+  "575": [],
+  "576": [],
+  "577": [],
+  "579": [],
+  "580": [],
+  "581": [],
+  "583": [],
+  "584": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/584-dimensions.jpg"
+    }
+  ],
+  "585": [],
+  "586": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/586-dimensions.jpg"
+    }
+  ],
+  "587": [],
+  "588": [],
+  "589": [],
+  "590": [],
+  "591": [],
+  "599": [],
+  "600": [],
+  "603": [],
+  "609": [],
+  "610": [],
+  "611": [],
+  "612": [],
+  "613": [],
+  "614": [],
+  "615": [],
+  "616": [],
+  "617": [],
+  "618": [],
+  "619": [],
+  "620": [],
+  "626": [],
+  "633": [],
+  "645": [],
+  "648": [],
+  "649": [],
+  "650": [],
+  "651": [],
+  "652": [],
+  "653": [],
+  "657": [],
+  "660": [],
+  "666": [],
+  "667": [],
+  "670": [],
+  "671": [],
+  "672": [],
+  "673": [],
+  "674": [],
+  "675": [],
+  "676": [],
+  "677": [],
+  "678": [],
+  "679": [],
+  "680": [],
+  "681": [],
+  "682": [],
+  "683": [],
+  "684": [],
+  "685": [],
+  "686": [],
+  "687": [],
+  "688": [],
+  "689": [],
+  "690": [],
+  "691": [],
+  "692": [],
+  "693": [],
+  "694": [],
+  "696": [],
+  "697": [],
+  "698": [],
+  "699": [],
+  "700": [],
+  "701": [],
+  "702": [],
+  "703": [],
+  "704": [],
+  "705": [],
+  "706": [],
+  "707": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/707-dimensions.jpg"
+    }
+  ],
+  "708": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/708-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/708-sewing.jpg"
+    }
+  ],
+  "709": [],
+  "710": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/710-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/710-sewing.jpg"
+    }
+  ],
+  "711": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/711-dimensions.jpg"
+    }
+  ],
+  "712": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/712-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/712-sewing.jpg"
+    }
+  ],
+  "713": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/713-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/713-sewing.jpg"
+    }
+  ],
+  "714": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/714-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/714-sewing.jpg"
+    }
+  ],
+  "715": [],
+  "716": [],
+  "717": [],
+  "718": [],
+  "719": [],
+  "720": [],
+  "721": [],
+  "722": [],
+  "723": [],
+  "724": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/724-dimensions.jpg"
+    }
+  ],
+  "727": [],
+  "758": [],
+  "760": [],
+  "765": [],
+  "767": [],
+  "780": [],
+  "781": [],
+  "788": [],
+  "790": [],
+  "791": [],
+  "792": [],
+  "824": [],
+  "825": [],
+  "828": [],
+  "830": [],
+  "831": [],
+  "832": [],
+  "835": [],
+  "839": [],
+  "846": [],
+  "847": [],
+  "848": [],
+  "849": [],
+  "855": [],
+  "856": [],
+  "857": [],
+  "858": [],
+  "859": [],
+  "860": [],
+  "861": [],
+  "868": [],
+  "869": [],
+  "870": [],
+  "874": [],
+  "875": [],
+  "876": [],
+  "902": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/902-dimensions.jpg"
+    }
+  ],
+  "903": [],
+  "904": [],
+  "905": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/905-dimensions.jpg"
+    }
+  ],
+  "906": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/906-dimensions.jpg"
+    }
+  ],
+  "907": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/907-dimensions.jpg"
+    }
+  ],
+  "908": [],
+  "909": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/909-dimensions.jpg"
+    }
+  ],
+  "910": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/910-dimensions.jpg"
+    }
+  ],
+  "911": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/911-dimensions.jpg"
+    }
+  ],
+  "912": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/912-dimensions.jpg"
+    }
+  ],
+  "913": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/913-dimensions.jpg"
+    }
+  ],
+  "914": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/914-dimensions.jpg"
+    }
+  ],
+  "916": [],
+  "917": [],
+  "918": [],
+  "919": [],
+  "920": [],
+  "921": [],
+  "922": [],
+  "923": [],
+  "924": [],
+  "925": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/925-dimensions.jpg"
+    }
+  ],
+  "926": [],
+  "1033": [],
+  "1034": [],
+  "1035": [],
+  "1036": [],
+  "1037": [],
+  "1038": [],
+  "1039": [],
+  "1040": [],
+  "1041": [],
+  "1042": [],
+  "1043": [],
+  "1044": [],
+  "1045": [],
+  "1046": [],
+  "1047": [],
+  "1048": [],
+  "1049": [],
+  "1050": [],
+  "1051": [],
+  "1052": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1052-dimensions.jpg"
+    }
+  ],
+  "1053": [],
+  "1054": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1054-dimensions.jpg"
+    }
+  ],
+  "1055": [],
+  "1056": [],
+  "1057": [],
+  "1058": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1058-dimensions.jpg"
+    }
+  ],
+  "1059": [],
+  "1062": [],
+  "1085": [],
+  "1086": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1086-dimensions.jpg"
+    }
+  ],
+  "1087": [],
+  "1088": [],
+  "1089": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1089-dimensions.jpg"
+    }
+  ],
+  "1090": [],
+  "1091": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1091-dimensions.jpg"
+    }
+  ],
+  "1092": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1092-dimensions.jpg"
+    }
+  ],
+  "1093": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1093-dimensions.jpg"
+    }
+  ],
+  "1094": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1094-dimensions.jpg"
+    }
+  ],
+  "1095": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1095-dimensions.jpg"
+    }
+  ],
+  "1096": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1096-dimensions.jpg"
+    }
+  ],
+  "1097": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1097-dimensions.jpg"
+    }
+  ],
+  "1098": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1098-dimensions.jpg"
+    }
+  ],
+  "1099": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1099-dimensions.jpg"
+    }
+  ],
+  "1100": [],
+  "1101": [],
+  "1102": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1102-dimensions.jpg"
+    }
+  ],
+  "1103": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1103-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1103-sewing.jpg"
+    }
+  ],
+  "1104": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1104-dimensions.jpg"
+    }
+  ],
+  "1105": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1105-dimensions.jpg"
+    }
+  ],
+  "1106": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1106-dimensions.jpg"
+    }
+  ],
+  "1107": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1107-dimensions.jpg"
+    }
+  ],
+  "1119": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1119-dimensions.jpg"
+    }
+  ],
+  "1120": [],
+  "1121": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1121-dimensions.jpg"
+    }
+  ],
+  "1122": [],
+  "1123": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1123-dimensions.jpg"
+    }
+  ],
+  "1124": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1124-dimensions.jpg"
+    }
+  ],
+  "1125": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1125-dimensions.jpg"
+    }
+  ],
+  "1126": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1126-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1126-sewing.jpg"
+    }
+  ],
+  "1127": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1127-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1127-sewing.jpg"
+    }
+  ],
+  "1128": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1128-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1128-sewing.jpg"
+    }
+  ],
+  "1130": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1130-dimensions.jpg"
+    }
+  ],
+  "1131": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1131-dimensions.jpg"
+    }
+  ],
+  "1133": [],
+  "1134": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1134-dimensions.jpg"
+    }
+  ],
+  "1137": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1137-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1137-sewing.jpg"
+    }
+  ],
+  "1138": [],
+  "1139": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1139-dimensions.jpg"
+    }
+  ],
+  "1140": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1140-dimensions.jpg"
+    }
+  ],
+  "1141": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1141-dimensions.jpg"
+    }
+  ],
+  "1142": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1142-dimensions.jpg"
+    }
+  ],
+  "1143": [],
+  "1144": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1144-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1144-sewing.jpg"
+    }
+  ],
+  "1145": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1145-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1145-sewing.jpg"
+    }
+  ],
+  "1146": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1146-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1146-sewing.jpg"
+    }
+  ],
+  "1147": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1147-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1147-sewing.jpg"
+    }
+  ],
+  "1148": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1148-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1148-sewing.jpg"
+    }
+  ],
+  "1149": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1149-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1149-sewing.jpg"
+    }
+  ],
+  "1150": [],
+  "1151": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1151-dimensions.jpg"
+    }
+  ],
+  "1152": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1152-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1152-sewing.jpg"
+    }
+  ],
+  "1153": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1153-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1153-sewing.jpg"
+    }
+  ],
+  "1154": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1154-dimensions.jpg"
+    }
+  ],
+  "1155": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1155-dimensions.jpg"
+    }
+  ],
+  "1156": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1156-dimensions.jpg"
+    }
+  ],
+  "1157": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1157-dimensions.jpg"
+    }
+  ],
+  "1162": [],
+  "1163": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1163-dimensions.jpg"
+    }
+  ],
+  "1164": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1164-dimensions.jpg"
+    }
+  ],
+  "1165": [],
+  "1166": [],
+  "1167": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1167-dimensions.jpg"
+    }
+  ],
+  "1168": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1168-dimensions.jpg"
+    }
+  ],
+  "1169": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1169-dimensions.jpg"
+    }
+  ],
+  "1170": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1170-dimensions.jpg"
+    }
+  ],
+  "1171": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1171-dimensions.jpg"
+    }
+  ],
+  "1172": [],
+  "1173": [],
+  "1174": [],
+  "1175": [],
+  "1176": [],
+  "1177": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1177-dimensions.jpg"
+    }
+  ],
+  "1178": [],
+  "1189": [],
+  "1190": [],
+  "1191": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1191-dimensions.jpg"
+    }
+  ],
+  "1192": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1192-dimensions.jpg"
+    }
+  ],
+  "1193": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1193-dimensions.jpg"
+    }
+  ],
+  "1194": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1194-dimensions.jpg"
+    }
+  ],
+  "1195": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1195-dimensions.jpg"
+    }
+  ],
+  "1196": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1196-dimensions.jpg"
+    }
+  ],
+  "1197": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1197-dimensions.jpg"
+    }
+  ],
+  "1198": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1198-dimensions.jpg"
+    }
+  ],
+  "1199": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1199-dimensions.jpg"
+    }
+  ],
+  "1200": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1200-dimensions.jpg"
+    }
+  ],
+  "1201": [],
+  "1202": [],
+  "1203": [],
+  "1204": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1204-dimensions.jpg"
+    }
+  ],
+  "1205": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1205-dimensions.jpg"
+    }
+  ],
+  "1206": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1206-dimensions.jpg"
+    }
+  ],
+  "1207": [],
+  "1208": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1208-dimensions.jpg"
+    }
+  ],
+  "1209": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1209-dimensions.jpg"
+    }
+  ],
+  "1210": [],
+  "1211": [],
+  "1212": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1212-dimensions.jpg"
+    }
+  ],
+  "1213": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1213-dimensions.jpg"
+    }
+  ],
+  "1214": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1214-dimensions.jpg"
+    }
+  ],
+  "1215": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1215-dimensions.jpg"
+    }
+  ],
+  "1216": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1216-dimensions.jpg"
+    }
+  ],
+  "1217": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1217-dimensions.jpg"
+    }
+  ],
+  "1218": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1218-dimensions.jpg"
+    }
+  ],
+  "1219": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1219-dimensions.jpg"
+    }
+  ],
+  "1220": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1220-dimensions.jpg"
+    }
+  ],
+  "1229": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1229-dimensions.jpg"
+    }
+  ],
+  "1238": [],
+  "1239": [],
+  "1240": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1240-dimensions.jpg"
+    }
+  ],
+  "1241": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1241-dimensions.jpg"
+    }
+  ],
+  "1242": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1242-dimensions.jpg"
+    }
+  ],
+  "1243": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1243-dimensions.jpg"
+    }
+  ],
+  "1244": [],
+  "1245": [],
+  "1246": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1246-dimensions.jpg"
+    }
+  ],
+  "1247": [],
+  "1248": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1248-dimensions.jpg"
+    }
+  ],
+  "1257": [],
+  "1258": [],
+  "1259": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1259-dimensions.jpg"
+    }
+  ],
+  "1260": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1260-dimensions.jpg"
+    }
+  ],
+  "1261": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1261-dimensions.jpg"
+    }
+  ],
+  "1262": [],
+  "1263": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1263-dimensions.jpg"
+    }
+  ],
+  "1264": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1264-dimensions.jpg"
+    }
+  ],
+  "1265": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1265-dimensions.jpg"
+    }
+  ],
+  "1276": [],
+  "1277": [],
+  "1278": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1278-dimensions.jpg"
+    }
+  ],
+  "1279": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1279-dimensions.jpg"
+    }
+  ],
+  "1280": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1280-dimensions.jpg"
+    }
+  ],
+  "1281": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1281-dimensions.jpg"
+    }
+  ],
+  "1282": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1282-dimensions.jpg"
+    }
+  ],
+  "1283": [],
+  "1284": [],
+  "1285": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1285-dimensions.jpg"
+    }
+  ],
+  "1286": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1286-dimensions.jpg"
+    }
+  ],
+  "1287": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1287-dimensions.jpg"
+    }
+  ],
+  "1288": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1288-dimensions.jpg"
+    }
+  ],
+  "1289": [],
+  "1290": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1290-dimensions.jpg"
+    }
+  ],
+  "1293": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1293-dimensions.jpg"
+    }
+  ],
+  "1298": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1298-dimensions.jpg"
+    }
+  ],
+  "1299": [],
+  "1300": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1300-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1300-sewing.jpg"
+    }
+  ],
+  "1301": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1301-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1301-sewing.jpg"
+    }
+  ],
+  "1302": [
+    {
+      "kind": "sewing",
+      "image": "products/technical/1302-sewing.jpg"
+    }
+  ],
+  "1303": [
+    {
+      "kind": "sewing",
+      "image": "products/technical/1303-sewing.jpg"
+    }
+  ],
+  "1305": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1305-dimensions.jpg"
+    }
+  ],
+  "1306": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1306-dimensions.jpg"
+    }
+  ],
+  "1307": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1307-dimensions.jpg"
+    }
+  ],
+  "1308": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1308-dimensions.jpg"
+    }
+  ],
+  "1309": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1309-dimensions.jpg"
+    }
+  ],
+  "1310": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1310-dimensions.jpg"
+    }
+  ],
+  "1311": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1311-dimensions.jpg"
+    }
+  ],
+  "1312": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1312-dimensions.jpg"
+    }
+  ],
+  "1313": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1313-dimensions.jpg"
+    }
+  ],
+  "1314": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1314-dimensions.jpg"
+    }
+  ],
+  "1315": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1315-dimensions.jpg"
+    }
+  ],
+  "1316": [],
+  "1317": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1317-dimensions.jpg"
+    }
+  ],
+  "1318": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1318-dimensions.jpg"
+    }
+  ],
+  "1319": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1319-dimensions.jpg"
+    }
+  ],
+  "1320": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1320-dimensions.jpg"
+    }
+  ],
+  "1321": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1321-dimensions.jpg"
+    }
+  ],
+  "1323": [],
+  "1324": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1324-dimensions.jpg"
+    }
+  ],
+  "1325": [],
+  "1326": [],
+  "1327": [],
+  "1328": [],
+  "1329": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1329-dimensions.jpg"
+    }
+  ],
+  "1330": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1330-dimensions.jpg"
+    }
+  ],
+  "1331": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1331-dimensions.jpg"
+    }
+  ],
+  "1332": [],
+  "1333": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1333-dimensions.jpg"
+    }
+  ],
+  "1338": [],
+  "1339": [],
+  "1341": [],
+  "1342": [],
+  "1343": [],
+  "1344": [],
+  "1345": [],
+  "1346": [],
+  "1347": [],
+  "1348": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1348-dimensions.jpg"
+    }
+  ],
+  "1349": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1349-dimensions.jpg"
+    }
+  ],
+  "1350": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1350-dimensions.jpg"
+    }
+  ],
+  "1351": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1351-dimensions.jpg"
+    }
+  ],
+  "1352": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1352-dimensions.jpg"
+    }
+  ],
+  "1353": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1353-dimensions.jpg"
+    }
+  ],
+  "1354": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1354-dimensions.jpg"
+    }
+  ],
+  "1355": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1355-dimensions.jpg"
+    }
+  ],
+  "1356": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1356-dimensions.jpg"
+    }
+  ],
+  "1357": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1357-dimensions.jpg"
+    }
+  ],
+  "1358": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1358-dimensions.jpg"
+    }
+  ],
+  "1359": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1359-dimensions.jpg"
+    }
+  ],
+  "1360": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1360-dimensions.jpg"
+    }
+  ],
+  "1361": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1361-dimensions.jpg"
+    }
+  ],
+  "1362": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1362-dimensions.jpg"
+    }
+  ],
+  "1369": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1369-dimensions.jpg"
+    }
+  ],
+  "1370": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1370-dimensions.jpg"
+    }
+  ],
+  "1371": [],
+  "1372": [],
+  "1378": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1378-dimensions.jpg"
+    }
+  ],
+  "1379": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1379-dimensions.jpg"
+    }
+  ],
+  "1380": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1380-dimensions.jpg"
+    }
+  ],
+  "1381": [],
+  "1382": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1382-dimensions.jpg"
+    }
+  ],
+  "1383": [],
+  "1384": [],
+  "1387": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1387-dimensions.jpg"
+    }
+  ],
+  "1388": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1388-dimensions.jpg"
+    }
+  ],
+  "1389": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1389-dimensions.jpg"
+    }
+  ],
+  "1390": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1390-dimensions.jpg"
+    }
+  ],
+  "1391": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1391-dimensions.jpg"
+    }
+  ],
+  "1392": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1392-dimensions.jpg"
+    }
+  ],
+  "1393": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1393-dimensions.jpg"
+    }
+  ],
+  "1394": [],
+  "1395": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1395-dimensions.jpg"
+    }
+  ],
+  "1396": [],
+  "1397": [],
+  "1398": [],
+  "1399": [],
+  "1400": [],
+  "1401": [],
+  "1402": [],
+  "1403": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1403-dimensions.jpg"
+    }
+  ],
+  "1404": [],
+  "1405": [],
+  "1406": [],
+  "1413": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1413-dimensions.jpg"
+    }
+  ],
+  "1414": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1414-dimensions.jpg"
+    }
+  ],
+  "1415": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1415-dimensions.jpg"
+    }
+  ],
+  "1416": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1416-dimensions.jpg"
+    }
+  ],
+  "1417": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1417-dimensions.jpg"
+    }
+  ],
+  "1420": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1420-dimensions.jpg"
+    }
+  ],
+  "1421": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1421-dimensions.jpg"
+    }
+  ],
+  "1422": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1422-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1422-sewing.jpg"
+    }
+  ],
+  "1423": [
+    {
+      "kind": "sewing",
+      "image": "products/technical/1423-sewing.jpg"
+    }
+  ],
+  "1424": [],
+  "1425": [],
+  "1427": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1427-dimensions.jpg"
+    }
+  ],
+  "1429": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1429-dimensions.jpg"
+    }
+  ],
+  "1430": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1430-dimensions.jpg"
+    }
+  ],
+  "1431": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1431-dimensions.jpg"
+    }
+  ],
+  "1432": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1432-dimensions.jpg"
+    }
+  ],
+  "1433": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1433-dimensions.jpg"
+    }
+  ],
+  "1434": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1434-dimensions.jpg"
+    }
+  ],
+  "1435": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1435-dimensions.jpg"
+    }
+  ],
+  "1436": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1436-dimensions.jpg"
+    }
+  ],
+  "1437": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1437-dimensions.jpg"
+    }
+  ],
+  "1438": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1438-dimensions.jpg"
+    }
+  ],
+  "1439": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1439-dimensions.jpg"
+    }
+  ],
+  "1440": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1440-dimensions.jpg"
+    }
+  ],
+  "1441": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1441-dimensions.jpg"
+    }
+  ],
+  "1442": [],
+  "1443": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1443-dimensions.jpg"
+    }
+  ],
+  "1444": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1444-dimensions.jpg"
+    }
+  ],
+  "1445": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1445-dimensions.jpg"
+    }
+  ],
+  "1446": [],
+  "1447": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1447-dimensions.jpg"
+    }
+  ],
+  "1448": [],
+  "1449": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1449-dimensions.jpg"
+    }
+  ],
+  "1450": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1450-dimensions.jpg"
+    }
+  ],
+  "1451": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1451-dimensions.jpg"
+    }
+  ],
+  "1452": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1452-dimensions.jpg"
+    }
+  ],
+  "1453": [],
+  "1454": [],
+  "1455": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1455-dimensions.jpg"
+    }
+  ],
+  "1456": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1456-dimensions.jpg"
+    }
+  ],
+  "1457": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1457-dimensions.jpg"
+    }
+  ],
+  "1458": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1458-dimensions.jpg"
+    }
+  ],
+  "1459": [],
+  "1460": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1460-dimensions.jpg"
+    }
+  ],
+  "1461": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1461-dimensions.jpg"
+    }
+  ],
+  "1462": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1462-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1462-sewing.jpg"
+    }
+  ],
+  "1463": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1463-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1463-sewing.jpg"
+    }
+  ],
+  "1464": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1464-dimensions.jpg"
+    }
+  ],
+  "1465": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1465-dimensions.jpg"
+    }
+  ],
+  "1466": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1466-dimensions.jpg"
+    }
+  ],
+  "1467": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1467-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1467-sewing.jpg"
+    }
+  ],
+  "1468": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1468-dimensions.jpg"
+    }
+  ],
+  "1469": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1469-dimensions.jpg"
+    }
+  ],
+  "1470": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1470-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1470-sewing.jpg"
+    }
+  ],
+  "1477": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1477-dimensions.jpg"
+    }
+  ],
+  "1478": [],
+  "1479": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1479-dimensions.jpg"
+    }
+  ],
+  "1480": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1480-dimensions.jpg"
+    }
+  ],
+  "1481": [],
+  "1484": [],
+  "1494": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1494-dimensions.jpg"
+    }
+  ],
+  "1502": [],
+  "1503": [],
+  "1504": [],
+  "1505": [],
+  "1506": [],
+  "1507": [],
+  "1508": [],
+  "1509": [],
+  "1510": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1510-dimensions.jpg"
+    }
+  ],
+  "1511": [],
+  "1512": [],
+  "1513": [],
+  "1514": [],
+  "1515": [],
+  "1516": [],
+  "1517": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1517-dimensions.jpg"
+    }
+  ],
+  "1518": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1518-dimensions.jpg"
+    }
+  ],
+  "1519": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1519-dimensions.jpg"
+    }
+  ],
+  "1520": [],
+  "1521": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1521-dimensions.jpg"
+    }
+  ],
+  "1522": [],
+  "1523": [],
+  "1524": [],
+  "1525": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1525-dimensions.jpg"
+    }
+  ],
+  "1526": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1526-dimensions.jpg"
+    }
+  ],
+  "1527": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1527-dimensions.jpg"
+    }
+  ],
+  "1528": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1528-dimensions.jpg"
+    }
+  ],
+  "1529": [],
+  "1530": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1530-dimensions.jpg"
+    }
+  ],
+  "1531": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1531-dimensions.jpg"
+    }
+  ],
+  "1532": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1532-dimensions.jpg"
+    }
+  ],
+  "1533": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1533-dimensions.jpg"
+    }
+  ],
+  "1534": [],
+  "1535": [],
+  "1536": [],
+  "1537": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1537-dimensions.jpg"
+    }
+  ],
+  "1538": [],
+  "1544": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1544-dimensions.jpg"
+    }
+  ],
+  "1545": [],
+  "1552": [],
+  "1553": [],
+  "1554": [],
+  "1555": [],
+  "1556": [],
+  "1557": [],
+  "1558": [],
+  "1559": [],
+  "1560": [],
+  "1561": [],
+  "1562": [],
+  "1563": [],
+  "1564": [],
+  "1565": [],
+  "1566": [],
+  "1567": [],
+  "1568": [],
+  "1569": [],
+  "1570": [],
+  "1571": [],
+  "1572": [],
+  "1573": [],
+  "1574": [],
+  "1575": [],
+  "1576": [],
+  "1577": [],
+  "1578": [],
+  "1579": [],
+  "1580": [],
+  "1581": [],
+  "1583": [],
+  "1584": [],
+  "1585": [],
+  "1594": [],
+  "1595": [],
+  "1596": [],
+  "1597": [],
+  "1598": [],
+  "1599": [],
+  "1600": [],
+  "1601": [],
+  "1602": [],
+  "1605": [],
+  "1606": [],
+  "1607": [],
+  "1608": [],
+  "1609": [],
+  "1610": [],
+  "1611": [],
+  "1613": [],
+  "1614": [],
+  "1615": [],
+  "1616": [],
+  "1617": [],
+  "1618": [],
+  "1619": [],
+  "1620": [],
+  "1621": [],
+  "1622": [],
+  "1631": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1631-dimensions.jpg"
+    }
+  ],
+  "1632": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1632-dimensions.jpg"
+    }
+  ],
+  "1633": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1633-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1633-sewing.jpg"
+    }
+  ],
+  "1634": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1634-dimensions.jpg"
+    }
+  ],
+  "1635": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1635-dimensions.jpg"
+    }
+  ],
+  "1636": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1636-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1636-sewing.jpg"
+    }
+  ],
+  "1637": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1637-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1637-sewing.jpg"
+    }
+  ],
+  "1638": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1638-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1638-sewing.jpg"
+    }
+  ],
+  "1639": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1639-dimensions.jpg"
+    }
+  ],
+  "1640": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1640-dimensions.jpg"
+    }
+  ],
+  "1641": [],
+  "1642": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1642-dimensions.jpg"
+    }
+  ],
+  "1643": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1643-dimensions.jpg"
+    }
+  ],
+  "1644": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1644-dimensions.jpg"
+    }
+  ],
+  "1645": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1645-dimensions.jpg"
+    }
+  ],
+  "1646": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1646-dimensions.jpg"
+    }
+  ],
+  "1647": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1647-dimensions.jpg"
+    }
+  ],
+  "1648": [],
+  "1649": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1649-dimensions.jpg"
+    }
+  ],
+  "1650": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1650-dimensions.jpg"
+    }
+  ],
+  "1659": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1659-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1659-sewing.jpg"
+    }
+  ],
+  "1660": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1660-dimensions.jpg"
+    }
+  ],
+  "1661": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1661-dimensions.jpg"
+    }
+  ],
+  "1662": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1662-dimensions.jpg"
+    }
+  ],
+  "1663": [],
+  "1678": [],
+  "1679": [],
+  "1680": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1680-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1680-sewing.jpg"
+    }
+  ],
+  "1681": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1681-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1681-sewing.jpg"
+    }
+  ],
+  "1682": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1682-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1682-sewing.jpg"
+    }
+  ],
+  "1683": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1683-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1683-sewing.jpg"
+    }
+  ],
+  "1684": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1684-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1684-sewing.jpg"
+    }
+  ],
+  "1685": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1685-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1685-sewing.jpg"
+    }
+  ],
+  "1686": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1686-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1686-sewing.jpg"
+    }
+  ],
+  "1687": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1687-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1687-sewing.jpg"
+    }
+  ],
+  "1688": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1688-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1688-sewing.jpg"
+    }
+  ],
+  "1689": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1689-dimensions.jpg"
+    }
+  ],
+  "1690": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1690-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1690-sewing.jpg"
+    }
+  ],
+  "1758": [
+    {
+      "kind": "dimensions",
+      "image": "products/technical/1758-dimensions.jpg"
+    },
+    {
+      "kind": "sewing",
+      "image": "products/technical/1758-sewing.jpg"
+    }
+  ],
+  "sample-18968": [],
+  "sample-19518": [],
+  "sample-19519": [],
+  "sample-19521": [],
+  "sample-19524": [],
+  "sample-19528": [],
+  "sample-19531": [],
+  "sample-19699": [],
+  "sample-19700": [],
+  "sample-19815": [],
+  "sample-19816": [],
+  "sample-20055": [],
+  "sample-20056": [],
+  "sample-20057": [],
+  "sample-20058": [],
+  "sample-20257": []
+}
