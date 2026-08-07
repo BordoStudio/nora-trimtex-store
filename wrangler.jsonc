@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "nora-trimtex",
+  "main": ".open-next/worker.js",
+  "workers_dev": true,
+  "compatibility_date": "2026-08-04",
+  "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "noratrim.com/*", "zone_name": "noratrim.com" },
+    { "pattern": "www.noratrim.com/*", "zone_name": "noratrim.com" }
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "CATALOG_API_URL": "https://nora-trimtex-api.onrender.com",
+    "CATALOG_FALLBACK": "true",
+    "NEXT_PUBLIC_API_URL": "https://nora-trimtex-api.onrender.com",
+    "NEXT_PUBLIC_ASSETS_URL": "https://assets.noratrim.com"
+  }
+}
