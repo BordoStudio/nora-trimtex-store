@@ -6,7 +6,7 @@ COPY server/package.json server/package.json
 RUN pnpm install --frozen-lockfile
 COPY server server
 RUN pnpm --dir server build
-RUN pnpm deploy --filter @nora-trimtex/api --prod /api
+RUN pnpm deploy --legacy --filter @nora-trimtex/api --prod /api
 RUN cp -R server/dist /api/dist
 
 FROM node:22-alpine AS runtime
