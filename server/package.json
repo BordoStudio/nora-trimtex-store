@@ -1,0 +1,31 @@
+{
+  "name": "@nora-trimtex/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/start.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/start.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "NODE_ENV=test DATABASE_URL=postgresql://test:test@127.0.0.1:5432/test INTERNAL_API_KEY=test-internal-api-key-000000000000 node --import tsx --test src/**/*.test.ts",
+    "migrate": "tsx src/scripts/migrate.ts",
+    "seed": "tsx src/scripts/seed.ts",
+    "import:migration": "tsx src/scripts/import-migration.ts",
+    "upload:assets": "tsx src/scripts/upload-assets.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@fastify/cors": "latest",
+    "@fastify/helmet": "latest",
+    "@fastify/rate-limit": "latest",
+    "fastify": "latest",
+    "postgres": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "tsx": "latest",
+    "typescript": "^5.9.3"
+  }
+}
