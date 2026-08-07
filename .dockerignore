@@ -1,0 +1,10 @@
+node_modules
+.next
+server/dist
+.git
+.env*
+deploy/api.env
+deploy/.env
+data/migration
+public/products
+*.log
