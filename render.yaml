@@ -7,7 +7,6 @@ services:
     dockerfilePath: ./server/Dockerfile
     dockerContext: .
     healthCheckPath: /ready
-    initialDeployHook: node dist/scripts/import-migration.js
     autoDeployTrigger: commit
     envVars:
       - key: NODE_ENV
