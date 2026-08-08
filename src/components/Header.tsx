@@ -20,6 +20,7 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileCatalogOpen, setMobileCatalogOpen] = useState(false);
   const [accountOpen, setAccountOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Product[]>([]);
@@ -37,6 +38,7 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
       setCatalogOpen(false);
       setSearchOpen(false);
       setMobileOpen(false);
+      setMobileCatalogOpen(false);
       setAccountOpen(false);
     });
     return () => window.cancelAnimationFrame(frame);
@@ -62,6 +64,7 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
         setCatalogOpen(false);
         setSearchOpen(false);
         setMobileOpen(false);
+        setMobileCatalogOpen(false);
         setAccountOpen(false);
       }
     };
@@ -83,6 +86,10 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
     setAccountOpen(false);
   };
 
+  const localeLabels: Record<Locale, string> = { ru: "РУС", uk: "УКР", de: "DE", en: "EN" };
+  const localePath = (item: Locale) => `/${item}${pathname.replace(/^\/(en|de|uk|ru)/, "")}`;
+  const closeMobile = () => { setMobileOpen(false); setMobileCatalogOpen(false); };
+
   return <>
     <header className="site-header">
       <Link className="brand" href={`/${locale}`} aria-label={a11y.home}>
@@ -91,18 +98,17 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
       <nav className="main-nav" aria-label={a11y.navigation}>
         <Link href={`/${locale}`}>{t.nav.home}</Link>
         <button type="button" className={catalogOpen ? "nav-trigger active" : "nav-trigger"} onClick={toggleCatalog} aria-expanded={catalogOpen}> {t.nav.catalog}<ChevronDown size={13} /></button>
-        <Link href={`/${locale}/catalog?sort=new`}>{t.home.latest}</Link>
         <Link href={`/${locale}/about`}>{t.nav.story}</Link>
         <Link href={`/${locale}/account/register`}>{tradeAccess ? <BadgeCheck size={14} /> : <UserRound size={13} />}{t.nav.trade}</Link>
       </nav>
       <div className="header-actions">
         <button type="button" className="search-trigger" aria-label={t.nav.search} onClick={() => { setSearchOpen(true); setCatalogOpen(false); setAccountOpen(false); }}><Search size={18} /><span>{t.nav.search}</span></button>
         <div className="locale-switcher" aria-label={a11y.language}>
-          {locales.map((item) => <Link key={item} className={item === locale ? "active" : ""} href={`/${item}${pathname.replace(/^\/(en|de|uk|ru)/, "")}`}>{item}</Link>)}
+          {locales.map((item) => <Link key={item} aria-current={item === locale ? "page" : undefined} title={item.toUpperCase()} className={item === locale ? "active" : ""} href={localePath(item)}>{localeLabels[item]}</Link>)}
         </div>
         <button type="button" className="account-button" onClick={() => { setAccountOpen(true); setCatalogOpen(false); setSearchOpen(false); }} aria-label={a11y.account}><UserRound size={18} /><span className="account-label">{a11y.login}</span></button>
         <button type="button" className="bag-button" data-cart-target onClick={() => dispatch(setCartOpen(true))} aria-label={t.nav.samples}><ShoppingBag size={19} /><span>{count}</span></button>
-        <button type="button" className="menu-button" onClick={() => setMobileOpen((open) => !open)} aria-expanded={mobileOpen} aria-label={a11y.menu}>{mobileOpen ? <X /> : <Menu />}</button>
+        <button type="button" className="menu-button" onClick={() => { setMobileOpen((open) => !open); setCatalogOpen(false); setSearchOpen(false); setAccountOpen(false); }} aria-expanded={mobileOpen} aria-label={a11y.menu}>{mobileOpen ? <X /> : <Menu />}</button>
       </div>
     </header>
 
@@ -124,14 +130,18 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
 
     {accountOpen && <div className="search-layer" onClick={() => setAccountOpen(false)}><AccountPanel locale={locale} onClose={() => setAccountOpen(false)} /></div>}
 
-    {mobileOpen && <div className="mobile-menu">
-      <Link onClick={() => setMobileOpen(false)} href={`/${locale}`}>{t.nav.home}</Link>
-      <Link onClick={() => setMobileOpen(false)} href={`/${locale}/catalog`}>{t.nav.catalog}<ChevronDown /></Link>
-      <Link onClick={() => setMobileOpen(false)} href={`/${locale}/catalog?sort=new`}>{t.home.latest}</Link>
-      <Link onClick={() => setMobileOpen(false)} href={`/${locale}/about`}>{t.nav.story}</Link>
-      <Link className="mobile-register-link" onClick={() => setMobileOpen(false)} href={`/${locale}/account/register`}>{tradeAccess ? <BadgeCheck /> : <UserRound />}{t.nav.trade}</Link>
-      <button type="button" onClick={() => { setMobileOpen(false); setSearchOpen(true); }}><Search />{t.nav.search}</button>
-      <div>{locales.map((item) => <Link onClick={() => setMobileOpen(false)} key={item} className={item === locale ? "active" : ""} href={`/${item}${pathname.replace(/^\/(en|de|uk|ru)/, "")}`}>{item}</Link>)}</div>
+    {mobileOpen && <div className="mobile-menu" aria-label={a11y.navigation}>
+      <div className="mobile-menu-heading"><span>{t.nav.catalog}</span><small>{localeLabels[locale]}</small></div>
+      <Link onClick={closeMobile} href={`/${locale}`}>{t.nav.home}<ArrowRight /></Link>
+      <button type="button" className={mobileCatalogOpen ? "mobile-catalog-trigger active" : "mobile-catalog-trigger"} onClick={(event) => { event.stopPropagation(); setMobileCatalogOpen((open) => !open); }} aria-expanded={mobileCatalogOpen}>{t.nav.catalog}<ChevronDown /></button>
+      {mobileCatalogOpen && <div className="mobile-category-list">
+        <Link onClick={closeMobile} href={`/${locale}/catalog`}>{t.catalog.all}<ArrowRight size={15} /></Link>
+        {categoryIds.map((id) => <Link onClick={closeMobile} key={id} href={`/${locale}/catalog?category=${id}`}>{t.categories[id]}<ArrowRight size={15} /></Link>)}
+      </div>}
+      <Link onClick={closeMobile} href={`/${locale}/about`}>{t.nav.story}<ArrowRight /></Link>
+      <Link className="mobile-register-link" onClick={closeMobile} href={`/${locale}/account/register`}>{tradeAccess ? <BadgeCheck /> : <UserRound />}{t.nav.trade}<ArrowRight /></Link>
+      <button type="button" onClick={() => { closeMobile(); setSearchOpen(true); }}><Search />{t.nav.search}<ArrowRight /></button>
+      <div className="mobile-locales" aria-label={a11y.language}>{locales.map((item) => <Link onClick={closeMobile} key={item} aria-current={item === locale ? "page" : undefined} className={item === locale ? "active" : ""} href={localePath(item)}>{localeLabels[item]}</Link>)}</div>
     </div>}
   </>;
 }

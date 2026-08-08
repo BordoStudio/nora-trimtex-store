@@ -1,4 +1,5 @@
-export const locales = ["en", "de", "uk", "ru"] as const;
+// Keep the language picker in the business-priority order used across the site.
+export const locales = ["ru", "uk", "de", "en"] as const;
 export type Locale = (typeof locales)[number];
 
 export const isLocale = (value: string): value is Locale => locales.includes(value as Locale);
