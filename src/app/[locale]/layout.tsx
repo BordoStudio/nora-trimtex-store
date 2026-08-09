@@ -7,7 +7,7 @@ import { CartDrawer } from "@/components/CartDrawer";
 import { ContactChat } from "@/components/ContactChat";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { languageAlternates, siteUrl } from "@/lib/site";
-import { hasTradeAccess } from "@/lib/trade-session";
+import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
 import { BrandLogo } from "@/components/BrandLogo";
 
 // Render localized storefront pages on request. This avoids the Next.js 16
@@ -36,12 +36,12 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
-  const tradeAccess = await hasTradeAccess();
+  const partnerPricingAccess = await hasPartnerPricingAccess();
   const footerLinks = {
     en: { about: "About", catalog: "Catalogue", privacy: "Privacy" },
     de: { about: "Über uns", catalog: "Katalog", privacy: "Datenschutz" },
     uk: { about: "Про бренд", catalog: "Каталог", privacy: "Конфіденційність" },
     ru: { about: "О бренде", catalog: "Каталог", privacy: "Конфиденциальность" },
   }[locale];
-  return <Providers><Header locale={locale} tradeAccess={tradeAccess} /><main>{children}</main><footer className="site-footer"><div className="brand footer-brand"><BrandLogo footer /></div><p>{t.footer.note}</p><nav className="footer-nav"><Link href={`/${locale}/about`}>{footerLinks.about}</Link><Link href={`/${locale}/catalog`}>{footerLinks.catalog}</Link><Link href={`/${locale}/privacy`}>{footerLinks.privacy}</Link></nav><span>{t.footer.legal}</span></footer><CartDrawer locale={locale} tradeAccess={tradeAccess} /><ContactChat locale={locale} /></Providers>;
+  return <Providers><Header locale={locale} /><main>{children}</main><footer className="site-footer"><div className="brand footer-brand"><BrandLogo footer /></div><p>{t.footer.note}</p><nav className="footer-nav"><Link href={`/${locale}/about`}>{footerLinks.about}</Link><Link href={`/${locale}/catalog`}>{footerLinks.catalog}</Link><Link href={`/${locale}/privacy`}>{footerLinks.privacy}</Link></nav><span>{t.footer.legal}</span></footer><CartDrawer locale={locale} partnerPricingAccess={partnerPricingAccess} /><ContactChat locale={locale} /></Providers>;
 }

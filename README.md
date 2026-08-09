@@ -123,7 +123,7 @@ Before connecting the final Cloudflare domain, rebuild with final `NEXT_PUBLIC_S
 
 ## Accounts and administration
 
-The account button contains sign-in plus separate retail and partner registration forms. Retail accounts become active after email verification. Partner accounts move to `pending_approval` after verification and receive wholesale access only after an administrator approves them.
+The account button contains sign-in plus separate retail and partner registration forms. Retail accounts become active after email verification. Partner accounts move to `pending_approval` after verification and see partner prices only after an administrator approves them. There is no shared access password or separate login area.
 
 Set `RESEND_API_KEY` and a verified `NOTIFICATION_FROM_EMAIL` to deliver confirmation and approval emails. Set `ADMIN_EMAIL` and `ADMIN_BOOTSTRAP_PASSWORD` on the API service to bootstrap the administrator. The password is never committed to this repository.
 

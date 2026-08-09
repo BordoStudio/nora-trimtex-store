@@ -104,7 +104,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
       <div className="product-detail-copy">
         <p className="eyebrow">{categoryName}</p>
         <h1>{product.sku}</h1>
-        <p className="product-detail-price">{product.tradePriceHidden ? <a href={`/${locale}/trade/login`}>{t.product.tradePrice}</a> : product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>
+        <p className="product-detail-price">{product.tradePriceHidden ? t.product.partnerPrice : product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>
         <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : product.availability === "preorder" ? t.product.preorder : t.product.availabilityOnRequest}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</p>
         <div className="product-facts"><span><Layers3 />{formatColourways(locale, variants.length)}</span><span><ShieldCheck />{copy.quality}</span><span><Box />{copy.samples}</span></div>
         <p className="product-description">{copy.description}</p>

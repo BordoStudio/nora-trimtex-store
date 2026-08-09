@@ -9,7 +9,7 @@ import { SampleCatalogDetail } from "@/components/SampleCatalogDetail";
 import { getCatalogProductBySlug, getCatalogProducts } from "@/lib/catalog-api";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
-import { hasTradeAccess } from "@/lib/trade-session";
+import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
 import samplePageSeed from "../../../../../data/catalog.sample-pages.json";
 
 const seoDescriptions = {
@@ -51,10 +51,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ProductPage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams: Promise<{ variant?: string }> }) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
-  const tradeAccess = await hasTradeAccess();
-  const product = await getCatalogProductBySlug(locale, slug, tradeAccess);
+  const partnerPricingAccess = await hasPartnerPricingAccess();
+  const product = await getCatalogProductBySlug(locale, slug, partnerPricingAccess);
   if (!product) notFound();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: tradeAccess });
+  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: partnerPricingAccess });
   const t = getDictionary(locale);
   const copy = {
     ru: { quality: "Премиальное качество", samples: "Образцы доступны", description: "Фурнитура для оформления штор и интерьерного текстиля. Посмотрите доступные варианты, изучите фактуру и добавьте изделие или образец в корзину. Размер, состав и наличие подтверждаются для выбранного варианта.", dimensions: "РАЗМЕРЫ", composition: "СОСТАВ", collection: "КАТЕГОРИЯ", delivery: "ПОСТАВКА", deliveryValue: "Срок подтверждается при заказе", more: "ПОХОЖАЯ ФУРНИТУРА" },

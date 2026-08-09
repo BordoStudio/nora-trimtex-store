@@ -336,7 +336,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 /* Nora TrimTex — rounded editorial atelier */
 :root { --ink:#30221b; --forest:#271b16; --cream:#efe3d2; --paper:#fffaf3; --sage:#d8c4aa; --clay:#7b5942; --gold:#a58b6c; --gold-deep:#6f5742; --gold-edge:#80684f; --gold-mid:#b69e80; --gold-light:#d9cbb7; --gold-pale:#eee6da; --gold-metal:linear-gradient(180deg,#e5dbcc 0%,#c9b89f 52%,#aa9172 100%); --gold-metal-hover:linear-gradient(180deg,#ece3d6 0%,#d1c0a8 52%,#b29a7b 100%); --gold-soft:linear-gradient(180deg,#e4d9c9 0%,#c8b59a 54%,#a98f70 100%); --gold-soft-hover:linear-gradient(180deg,#ebe1d3 0%,#d0bfa6 54%,#b19879 100%); --gold-button-border:#94795d; --line:rgba(48,34,27,.14); --radius-page:36px; --radius-card:24px; --shadow-control:inset 0 1px 1px rgba(255,252,245,.62),inset 0 -4px 7px rgba(66,47,32,.14),0 4px 0 var(--gold-edge),0 10px 20px rgba(66,47,32,.14); --shadow-control-hover:inset 0 1px 1px rgba(255,252,245,.72),inset 0 -4px 7px rgba(66,47,32,.12),0 6px 0 var(--gold-edge),0 15px 28px rgba(66,47,32,.17); }
 body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba(255,250,243,.86),transparent 30%),radial-gradient(circle at 100% 32%,rgba(170,135,84,.09),transparent 25%); }
-.site-header { width:calc(100% - 36px); height:72px; margin:12px 18px 0; padding:0 22px; grid-template-columns:260px 1fr 310px; top:12px; border:1px solid rgba(255,255,255,.72); border-radius:24px; box-shadow:0 16px 45px rgba(48,34,27,.1); }
+.site-header { width:calc(100% - 36px); height:72px; margin:12px 18px 0; padding:0 22px; grid-template-columns:minmax(180px,260px) minmax(0,1fr) minmax(max-content,310px); top:12px; border:1px solid rgba(255,255,255,.72); border-radius:24px; box-shadow:0 16px 45px rgba(48,34,27,.1); }
 .brand { gap:11px; font-size:14px; letter-spacing:.2em; }.brand small { color:var(--gold); }.brand-mark { width:42px; height:42px; border:0; border-radius:12px; background:transparent; }
 .main-nav { height:72px; gap:8px; }.main-nav a,.nav-trigger { min-height:40px; padding:0 15px; border-radius:999px; transition:background .2s,color .2s; }.main-nav a:after,.nav-trigger:after { display:none; }.main-nav a:hover,.nav-trigger:hover,.nav-trigger.active { background:var(--cream); }
 .header-actions { gap:7px; }.search-trigger,.account-button,.bag-button,.menu-button { min-width:40px; min-height:40px; justify-content:center; }.locale-switcher { gap:4px; padding-left:10px; }.locale-switcher a { width:28px; height:28px; display:grid; place-items:center; border-radius:50%; }.locale-switcher a.active { background:var(--cream); }
@@ -446,7 +446,7 @@ body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba
 .image-zoom-counter { position:absolute; left:20px; bottom:25px; z-index:5; color:#fffaf3; font:500 11px/1 var(--sans); font-variant-numeric:tabular-nums; letter-spacing:.14em; }
 
 @media (max-width:1000px) {
-  .site-header { grid-template-columns:1fr auto; }.main-nav { display:none; }.menu-button { display:grid; }.locale-switcher,.search-trigger span { display:none; }.account-button { display:flex; }.account-label { display:inline; font-size:10px; letter-spacing:.02em; }.mobile-menu { display:flex; }.mega-menu { grid-template-columns:1fr 1fr; }.mega-intro,.mega-feature { display:none; }
+  .site-header { grid-template-columns:minmax(0,1fr) auto; }.main-nav { display:none; }.menu-button { display:grid; }.locale-switcher,.search-trigger span { display:none; }.account-button { display:flex; }.account-label { display:none; }.mobile-menu { display:flex; }.mega-menu { grid-template-columns:1fr 1fr; }.mega-intro,.mega-feature { display:none; }
   .hero { grid-template-columns:1fr; }.hero-copy { padding:10vh 7vw 8vh; }.hero-image { margin:0 5vw 6vw; min-height:56vw; }.scroll-cue { display:none; }
   .category-grid { grid-template-columns:repeat(2,1fr); }.product-grid,.sample-catalog-grid { grid-template-columns:repeat(3,1fr); }.process-section { grid-template-columns:1fr; }.process-visual { min-height:600px; }.product-detail,.sample-catalog-hero { grid-template-columns:1fr; }.sample-catalog-cover { min-height:68vw; }.sample-catalog-hero-copy { padding:48px 7vw 54px; }.product-detail-image { min-height:70vw; }.product-detail-copy { padding:50px 6vw; }
 }
@@ -489,6 +489,7 @@ body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba
 .mobile-menu-heading small { color:var(--ink); font-size:9px; letter-spacing:.1em; opacity:.55; }
 .mobile-menu > a,.mobile-menu > button { width:100%; flex:0 0 auto; gap:12px; padding:0 8px; border-bottom:1px solid var(--line); text-align:left; }
 .mobile-menu > a svg,.mobile-menu > button svg:last-child { margin-left:auto; width:17px; }
+.mobile-menu > button.mobile-login-link svg:first-child { width:18px; }
 .mobile-catalog-trigger.active { color:var(--clay); background:rgba(185,149,83,.1); }
 .mobile-category-list { display:flex !important; flex-direction:column !important; gap:0 !important; width:100%; padding:6px 0 8px !important; border-bottom:1px solid var(--line); text-transform:none !important; font-size:inherit !important; }
 .mobile-category-list a { display:flex; align-items:center; justify-content:space-between; min-height:38px; padding:0 8px 0 24px; border-bottom:1px solid rgba(68,49,33,.08); font:400 16px/1.2 var(--serif); }
@@ -497,3 +498,11 @@ body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba
 .mobile-locales { display:flex !important; align-items:center; gap:7px !important; width:100%; padding:18px 4px 4px !important; border-top:0; text-transform:uppercase !important; font-size:9px !important; }
 .mobile-locales a { min-width:48px; min-height:32px; display:grid; place-items:center; border:1px solid var(--line); border-radius:999px; opacity:.55; }
 .mobile-locales a.active { opacity:1; border-color:var(--gold-edge); background:var(--gold-soft); box-shadow:inset 0 1px white,0 2px 0 var(--gold-edge); }
+
+/* Header labels collapse before controls can collide, while the account icon remains visible. */
+@media (max-width:1240px) {
+  .site-header { grid-template-columns:minmax(170px,230px) minmax(0,1fr) auto; }
+  .account-label,.search-trigger span { display:none; }
+  .header-actions { gap:6px; }
+  .locale-switcher { padding-left:8px; }
+}

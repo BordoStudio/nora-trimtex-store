@@ -4,7 +4,7 @@ import { CatalogClient } from "@/components/CatalogClient";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { getCatalogProducts } from "@/lib/catalog-api";
 import { languageAlternates, siteUrl } from "@/lib/site";
-import { hasTradeAccess } from "@/lib/trade-session";
+import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
 
 const descriptions = {
   en: "Shop curtain tassels, wall hooks, rosettes, fringes, piping, braids and cords with clear article numbers and colourways.",
@@ -33,7 +33,7 @@ export default async function CatalogPage({ params, searchParams }: { params: Pr
   const { category } = await searchParams;
   const t = getDictionary(locale);
   const intro = category === "samples" ? sampleIntro[locale] : { eyebrow: t.catalog.eyebrow, title: t.catalog.title, body: t.catalog.body };
-  const tradeAccess = await hasTradeAccess();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: tradeAccess });
+  const partnerPricingAccess = await hasPartnerPricingAccess();
+  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: partnerPricingAccess });
   return <section className={`catalog-page${category === "samples" ? " samples-page" : ""}`}><header className="catalog-intro"><p className="eyebrow">{intro.eyebrow}</p><h1>{intro.title}</h1><p>{intro.body}</p></header><CatalogClient locale={locale} initialProducts={products} /></section>;
 }

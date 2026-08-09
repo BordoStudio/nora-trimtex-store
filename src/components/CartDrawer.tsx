@@ -10,7 +10,7 @@ import type { RootState } from "@/store";
 import { clearCart, decrementItem, incrementItem, removeSample, setCartOpen } from "@/store/cartSlice";
 import { getDictionary, type Locale } from "@/lib/i18n";
 
-export function CartDrawer({ locale, tradeAccess = false }: { locale: Locale; tradeAccess?: boolean }) {
+export function CartDrawer({ locale, partnerPricingAccess = false }: { locale: Locale; partnerPricingAccess?: boolean }) {
   const { items, open } = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
   const t = getDictionary(locale);
@@ -24,8 +24,8 @@ export function CartDrawer({ locale, tradeAccess = false }: { locale: Locale; tr
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", country: "", city: "", address: "", postcode: "", notes: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [orderId, setOrderId] = useState("");
-  const pricedSubtotal = tradeAccess ? items.reduce((sum, item) => sum + (item.tradePriceHidden ? 0 : item.priceUsd ?? 0) * item.quantity, 0) : 0;
-  const hasUnpricedItems = !tradeAccess || items.some((item) => item.tradePriceHidden || item.priceUsd === undefined);
+  const pricedSubtotal = partnerPricingAccess ? items.reduce((sum, item) => sum + (item.tradePriceHidden ? 0 : item.priceUsd ?? 0) * item.quantity, 0) : 0;
+  const hasUnpricedItems = !partnerPricingAccess || items.some((item) => item.tradePriceHidden || item.priceUsd === undefined);
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const formatItems = (count: number) => {
     if (locale === "ru") {
@@ -86,7 +86,7 @@ export function CartDrawer({ locale, tradeAccess = false }: { locale: Locale; tr
         {step === "cart" && (items.length === 0 ? <div className="empty-cart"><PackageOpen /><p>{t.samples.empty}</p><button className="button outline" onClick={close}>{copy.continue}</button></div> : <>
           <div className="drawer-items">{items.map((item) => <div className="drawer-item" key={item.lineId}>
             <Link className="drawer-item-image" href={`/${locale}/product/${item.slug}`} onClick={() => dispatch(setCartOpen(false))}><img src={item.image} alt={item.sku} width="96" height="112" loading="lazy" onError={(event) => { event.currentTarget.onerror = null; event.currentTarget.src = "/brand/product-placeholder.svg"; }} /></Link>
-            <div className="drawer-item-copy"><small>ART. {item.sku}</small><strong>{item.name}</strong>{item.variantLabel && <span className="cart-variant">{item.variantLabel}</span>}<span className="cart-item-price">{!tradeAccess || item.tradePriceHidden ? t.product.tradePrice : item.priceUsd !== undefined ? `${formatUsd(item.priceUsd)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(item.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</span><div className="quantity-control"><button type="button" onClick={() => dispatch(decrementItem(item.lineId))} aria-label={copy.decrease}><Minus /></button><b>{item.quantity}</b><button type="button" onClick={() => dispatch(incrementItem(item.lineId))} aria-label={copy.increase}><Plus /></button></div></div>
+            <div className="drawer-item-copy"><small>ART. {item.sku}</small><strong>{item.name}</strong>{item.variantLabel && <span className="cart-variant">{item.variantLabel}</span>}<span className="cart-item-price">{!partnerPricingAccess || item.tradePriceHidden ? t.product.partnerPrice : item.priceUsd !== undefined ? `${formatUsd(item.priceUsd)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(item.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</span><div className="quantity-control"><button type="button" onClick={() => dispatch(decrementItem(item.lineId))} aria-label={copy.decrease}><Minus /></button><b>{item.quantity}</b><button type="button" onClick={() => dispatch(incrementItem(item.lineId))} aria-label={copy.increase}><Plus /></button></div></div>
             <button className="drawer-remove" aria-label={copy.remove} onClick={() => dispatch(removeSample(item.lineId))}><Trash2 size={17} /></button>
           </div>)}</div>
           <div className="cart-summary"><div className="cart-total"><span>{t.samples.subtotal}</span><strong>{formatUsd(pricedSubtotal)}</strong>{hasUnpricedItems && <small>{t.samples.includesOnRequest}</small>}</div><button className="button primary wide" onClick={() => setStep("checkout")}>{copy.proceed}<ArrowRight /></button><button className="cart-continue" onClick={close}>{copy.continue}</button></div>

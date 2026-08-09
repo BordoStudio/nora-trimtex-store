@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, ChevronDown, Menu, Search, ShoppingBag, UserRound, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, Search, ShoppingBag, UserRound, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ import { locales, type Locale, getDictionary } from "@/lib/i18n";
 import { AccountPanel } from "@/components/AccountPanel";
 import { BrandLogo } from "@/components/BrandLogo";
 
-export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeAccess?: boolean }) {
+export function Header({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const pathname = usePathname();
   const [catalogOpen, setCatalogOpen] = useState(false);
@@ -99,7 +99,7 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
         <Link href={`/${locale}`}>{t.nav.home}</Link>
         <button type="button" className={catalogOpen ? "nav-trigger active" : "nav-trigger"} onClick={toggleCatalog} aria-expanded={catalogOpen}> {t.nav.catalog}<ChevronDown size={13} /></button>
         <Link href={`/${locale}/about`}>{t.nav.story}</Link>
-        <Link href={`/${locale}/account/register`}>{tradeAccess ? <BadgeCheck size={14} /> : <UserRound size={13} />}{t.nav.trade}</Link>
+        <Link href={`/${locale}/account/register`}><UserRound size={13} />{t.nav.trade}</Link>
       </nav>
       <div className="header-actions">
         <button type="button" className="search-trigger" aria-label={t.nav.search} onClick={() => { setSearchOpen(true); setCatalogOpen(false); setAccountOpen(false); }}><Search size={18} /><span>{t.nav.search}</span></button>
@@ -139,7 +139,8 @@ export function Header({ locale, tradeAccess = false }: { locale: Locale; tradeA
         {categoryIds.map((id) => <Link onClick={closeMobile} key={id} href={`/${locale}/catalog?category=${id}`}>{t.categories[id]}<ArrowRight size={15} /></Link>)}
       </div>}
       <Link onClick={closeMobile} href={`/${locale}/about`}>{t.nav.story}<ArrowRight /></Link>
-      <Link className="mobile-register-link" onClick={closeMobile} href={`/${locale}/account/register`}>{tradeAccess ? <BadgeCheck /> : <UserRound />}{t.nav.trade}<ArrowRight /></Link>
+      <button type="button" className="mobile-login-link" onClick={() => { closeMobile(); setAccountOpen(true); }}><UserRound />{a11y.login}<ArrowRight /></button>
+      <Link className="mobile-register-link" onClick={closeMobile} href={`/${locale}/account/register`}><UserRound />{t.nav.trade}<ArrowRight /></Link>
       <button type="button" onClick={() => { closeMobile(); setSearchOpen(true); }}><Search />{t.nav.search}<ArrowRight /></button>
       <div className="mobile-locales" aria-label={a11y.language}>{locales.map((item) => <Link onClick={closeMobile} key={item} aria-current={item === locale ? "page" : undefined} className={item === locale ? "active" : ""} href={localePath(item)}>{localeLabels[item]}</Link>)}</div>
     </div>}

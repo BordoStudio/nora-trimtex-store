@@ -6,19 +6,19 @@ import { getCatalogProducts } from "@/lib/catalog-api";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 import { jsonLd, siteUrl } from "@/lib/site";
-import { hasTradeAccess } from "@/lib/trade-session";
+import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
-  const tradeAccess = await hasTradeAccess();
-  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: tradeAccess });
+  const partnerPricingAccess = await hasPartnerPricingAccess();
+  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: partnerPricingAccess });
   const faq = {
-    ru: [["Можно заказать образцы цветов?", "Да. Выберите цвет на странице товара, добавьте его в корзину и отправьте B2B-заказ."], ["Вы поставляете товары по Европе?", "Да. Срок, наличие и стоимость доставки подтверждаются в персональном предложении."], ["Где посмотреть оптовые цены?", "Оптовые цены доступны партнёрам после входа в Trade-раздел. Позиции без фиксированной цены рассчитываются по объёму и условиям поставки."]],
-    uk: [["Чи можна замовити зразки кольорів?", "Так. Оберіть колір на сторінці товару, додайте його до кошика та надішліть B2B-замовлення."], ["Ви постачаєте товари по Європі?", "Так. Термін, наявність і вартість доставки підтверджуються в персональній пропозиції."], ["Де переглянути оптові ціни?", "Оптові ціни доступні партнерам після входу до Trade-розділу. Позиції без фіксованої ціни розраховуються за обсягом та умовами постачання."]],
-    de: [["Kann ich Farbmuster bestellen?", "Ja. Wählen Sie die Farbe auf der Produktseite, legen Sie sie in den Warenkorb und senden Sie die B2B-Anfrage."], ["Liefern Sie innerhalb Europas?", "Ja. Lieferzeit, Verfügbarkeit und Versandkosten werden im persönlichen Angebot bestätigt."], ["Wo sehe ich die Großhandelspreise?", "Großhandelspreise sind nach Anmeldung im Trade-Bereich für Partner sichtbar. Artikel ohne Festpreis werden nach Menge und Lieferbedingungen kalkuliert."]],
-    en: [["Can I order colour samples?", "Yes. Select a colour on the product page, add it to the cart and submit the B2B order request."], ["Do you supply projects across Europe?", "Yes. Lead time, availability and shipping cost are confirmed in your personal quotation."], ["Where can I see wholesale prices?", "Wholesale prices are available to partners after signing in to the Trade area. Articles without a fixed price are quoted by quantity and delivery terms."]],
+    ru: [["Можно заказать образцы цветов?", "Да. Выберите цвет на странице товара, добавьте его в корзину и отправьте запрос."], ["Вы поставляете товары по Европе?", "Да. Срок, наличие и стоимость доставки подтверждаются в персональном предложении."], ["Где посмотреть оптовые цены?", "Оптовые цены видны подтверждённым партнёрам после входа в обычный аккаунт. Позиции без фиксированной цены рассчитываются по объёму и условиям поставки."]],
+    uk: [["Чи можна замовити зразки кольорів?", "Так. Оберіть колір на сторінці товару, додайте його до кошика та надішліть запит."], ["Ви постачаєте товари по Європі?", "Так. Термін, наявність і вартість доставки підтверджуються в персональній пропозиції."], ["Де переглянути оптові ціни?", "Оптові ціни доступні підтвердженим партнерам після входу до звичайного акаунта. Позиції без фіксованої ціни розраховуються за обсягом та умовами постачання."]],
+    de: [["Kann ich Farbmuster bestellen?", "Ja. Wählen Sie die Farbe auf der Produktseite, legen Sie sie in den Warenkorb und senden Sie eine Anfrage."], ["Liefern Sie innerhalb Europas?", "Ja. Lieferzeit, Verfügbarkeit und Versandkosten werden im persönlichen Angebot bestätigt."], ["Wo sehe ich die Großhandelspreise?", "Großhandelspreise sehen bestätigte Partner nach der Anmeldung in ihrem normalen Konto. Artikel ohne Festpreis werden nach Menge und Lieferbedingungen kalkuliert."]],
+    en: [["Can I order colour samples?", "Yes. Select a colour on the product page, add it to the cart and submit an enquiry."], ["Do you supply projects across Europe?", "Yes. Lead time, availability and shipping cost are confirmed in your personal quotation."], ["Where can I see wholesale prices?", "Approved partners see wholesale prices after signing in to their regular account. Articles without a fixed price are quoted by quantity and delivery terms."]],
   }[locale];
   const organization = { "@context": "https://schema.org", "@type": "OnlineStore", "@id": `${siteUrl}/#organization`, name: "Nora TrimTex", url: siteUrl, logo: `${siteUrl}/icon.svg`, description: "Curtain trimmings and decorative textile accessories for interior projects.", areaServed: "Europe", knowsLanguage: ["ru", "uk", "de", "en"] };
   return <>

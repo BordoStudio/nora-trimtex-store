@@ -63,12 +63,16 @@ export function ImageZoomViewer({
   const dragStart = useRef({ pointerX: 0, pointerY: 0, imageX: 0, imageY: 0 });
   const gesture = useRef({ pointerId: -1, startX: 0, startY: 0, active: false });
   const suppressBackdropClick = useRef(false);
+  const lastTap = useRef(0);
+  const viewportWidth = typeof window === "undefined" ? 0 : window.innerWidth;
+  const isSwiping = scale === 1 && (Math.abs(swipeOffset.x) > 0 || Math.abs(swipeOffset.y) > 0 || settling);
 
   const resetView = useCallback(() => {
     setScale(1);
     setOffset({ x: 0, y: 0 });
     setSwipeOffset({ x: 0, y: 0 });
     setSettling(false);
+    gesture.current.active = false;
   }, []);
   const closeViewer = useCallback(() => {
     resetView();
@@ -151,6 +155,17 @@ export function ImageZoomViewer({
       const y = event.clientY - gesture.current.startY;
       gesture.current.active = false;
       window.setTimeout(() => { suppressBackdropClick.current = false; }, 0);
+      const distance = Math.hypot(x, y);
+      if (distance < 12 && (event.target as HTMLElement).closest(".image-zoom-media")) {
+        const now = Date.now();
+        if (now - lastTap.current < 300) {
+          setZoom(scale === 1 ? 2.25 : 1);
+          lastTap.current = 0;
+        } else {
+          lastTap.current = now;
+        }
+        return;
+      }
       if (Math.abs(y) > 85 && Math.abs(y) > Math.abs(x) * 1.05) {
         setSettling(true);
         setSwipeOffset({ x: 0, y: Math.sign(y) * window.innerHeight });
@@ -194,14 +209,14 @@ export function ImageZoomViewer({
         onPointerUp={endDrag}
         onPointerCancel={cancelDrag}
       >
-        {scale === 1 && previousSrc && <div className="image-zoom-slide is-neighbor" style={{ transform: `translate3d(calc(-100% + ${swipeOffset.x}px), 0, 0)` }}><div className="image-zoom-media"><img src={previousSrc} alt="" draggable={false} /></div></div>}
+        {isSwiping && previousSrc && <div className="image-zoom-slide is-neighbor" aria-hidden="true" style={{ transform: `translate3d(${-viewportWidth + swipeOffset.x}px, 0, 0)` }}><div className="image-zoom-media"><img src={previousSrc} alt="" draggable={false} /></div></div>}
         <div className="image-zoom-slide is-current" style={{ transform: `translate3d(${scale > 1 ? 0 : swipeOffset.x}px, ${scale > 1 ? 0 : swipeOffset.y}px, 0)`, opacity: scale === 1 ? Math.max(.25, 1 - Math.abs(swipeOffset.y) / 420) : 1 }}>
           <div className="image-zoom-media" onClick={(event) => event.stopPropagation()} onDoubleClick={() => setZoom(scale === 1 ? 2.25 : 1)} style={{ transform: `translate3d(${scale > 1 ? offset.x : 0}px, ${scale > 1 ? offset.y : 0}px, 0) scale(${scale})` }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={src} alt={alt} draggable={false} />
           </div>
         </div>
-        {scale === 1 && nextSrc && <div className="image-zoom-slide is-neighbor" style={{ transform: `translate3d(calc(100% + ${swipeOffset.x}px), 0, 0)` }}><div className="image-zoom-media"><img src={nextSrc} alt="" draggable={false} /></div></div>}
+        {isSwiping && nextSrc && <div className="image-zoom-slide is-neighbor" aria-hidden="true" style={{ transform: `translate3d(${viewportWidth + swipeOffset.x}px, 0, 0)` }}><div className="image-zoom-media"><img src={nextSrc} alt="" draggable={false} /></div></div>}
       </div>
 
       <button className="zoom-close" type="button" onClick={(event) => { event.stopPropagation(); closeViewer(); }} aria-label={labels.close}><X /></button>
