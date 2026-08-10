@@ -37,7 +37,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
   const initialIndex = Math.max(0, variants.findIndex((variant) => variant.id === initialVariantId));
   const [selectedId, setSelectedId] = useState(variants[initialIndex].id);
   const [activeImage, setActiveImage] = useState(initialIndex);
-  const [lightbox, setLightbox] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [added, setAdded] = useState(false);
   const selectedIndex = Math.max(0, variants.findIndex((variant) => variant.id === selectedId));
   const selected = variants[selectedIndex];
@@ -50,14 +50,18 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
     image: item.image,
     kind: item.kind,
   }));
-  const gallery = [...colourGallery, ...dimensionGallery, ...technicalGallery];
-  const visibleImage = gallery[activeImage] || gallery[0];
-  const imageLabel = visibleImage.kind === "dimensions" ? l.dimensionsPhoto : visibleImage.kind === "sewing" ? l.sewingPhoto : `${l.colour} ${activeImage + 1}`;
+  const detailGallery = [...dimensionGallery, ...technicalGallery].filter((item, index, all) =>
+    all.findIndex((entry) => entry.image === item.image) === index,
+  );
+  const lightboxGallery = [...colourGallery, ...detailGallery];
+  const visibleImage = colourGallery[activeImage] || colourGallery[0];
+  const viewerImage = lightboxIndex === null ? undefined : lightboxGallery[lightboxIndex];
+  const imageLabel = visibleImage ? `${l.colour} ${activeImage + 1}` : product.name;
 
   const chooseVariant = (id: string) => {
     setSelectedId(id);
     const variant = variants.find((item) => item.id === id);
-    const imageIndex = gallery.findIndex((item) => item.kind === "colour" && item.image === variant?.image);
+    const imageIndex = colourGallery.findIndex((item) => item.image === variant?.image);
     if (imageIndex >= 0) setActiveImage(imageIndex);
     const url = new URL(window.location.href);
     url.searchParams.set("variant", id);
@@ -84,20 +88,21 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
     window.setTimeout(() => setAdded(false), 1_400);
   };
 
-  const move = (direction: number) => setActiveImage((value) => (value + direction + gallery.length) % gallery.length);
+  const moveViewer = (direction: number) => setLightboxIndex((value) => {
+    if (value === null) return null;
+    return (value + direction + lightboxGallery.length) % lightboxGallery.length;
+  });
 
   return <>
     <section className="product-detail">
       <div className="product-gallery">
-        <button className="product-detail-image" onClick={() => setLightbox(true)} aria-label={l.enlarge}>
+        <button className="product-detail-image" onClick={() => setLightboxIndex(activeImage)} aria-label={l.enlarge}>
           <Image src={visibleImage.image} alt={`${product.name} — ${imageLabel}`} fill priority quality={95} sizes="(max-width: 900px) 100vw, 58vw" />
           <ImageZoomMark label={l.enlarge} />
         </button>
-        {gallery.length > 1 && <div className="gallery-thumbs" aria-label={l.choose}>
-          {gallery.map((item, index) => <button key={item.id} className={`${index === activeImage ? "active" : ""}${item.kind !== "colour" ? " is-dimensions" : ""}`} onClick={() => { setActiveImage(index); if (item.kind === "colour") chooseVariant(item.id); }} aria-label={item.kind === "dimensions" ? l.dimensionsPhoto : item.kind === "sewing" ? l.sewingPhoto : `${l.colour} ${index + 1}`} title={item.kind === "dimensions" ? l.dimensionsPhoto : item.kind === "sewing" ? l.sewingPhoto : `${l.colour} ${index + 1}`}>
+        {colourGallery.length > 1 && <div className="gallery-thumbs" aria-label={l.choose}>
+          {colourGallery.map((item, index) => <button key={item.id} className={index === activeImage ? "active" : ""} onClick={() => { setActiveImage(index); chooseVariant(item.id); }} aria-label={`${l.colour} ${index + 1}`} title={`${l.colour} ${index + 1}`}>
             <Image src={item.image} alt="" fill sizes="90px" />
-            {item.kind === "dimensions" && <span><Ruler /></span>}
-            {item.kind === "sewing" && <span><Scissors /></span>}
           </button>)}
         </div>}
       </div>
@@ -115,17 +120,30 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
         <dl className="product-specifications"><div><dt>{copy.dimensions}</dt><dd>{product.dimensions}</dd></div><div><dt>{copy.composition}</dt><dd>{product.composition}</dd></div><div><dt>{copy.collection}</dt><dd>{categoryName}</dd></div><div><dt>{copy.delivery}</dt><dd>{copy.deliveryValue}</dd></div></dl>
       </div>
     </section>
+    {detailGallery.length > 0 && <section className="product-detail-media" aria-label={l.dimensionsPhoto}>
+      {detailGallery.map((item, index) => {
+        const label = item.kind === "sewing" ? l.sewingPhoto : l.dimensionsPhoto;
+        const Icon = item.kind === "sewing" ? Scissors : Ruler;
+        return <figure key={item.id}>
+          <figcaption><Icon />{label}</figcaption>
+          <button onClick={() => setLightboxIndex(colourGallery.length + index)} aria-label={`${l.enlarge}: ${label}`}>
+            <Image src={item.image} alt={`${product.name} — ${label}`} width={1400} height={1400} sizes="(max-width: 900px) 100vw, 1200px" quality={95} />
+            <ImageZoomMark label={l.enlarge} />
+          </button>
+        </figure>;
+      })}
+    </section>}
     <ImageZoomViewer
-      src={visibleImage.image}
-      alt={`${product.name} — ${imageLabel}`}
-      open={lightbox}
-      onClose={() => setLightbox(false)}
+      src={viewerImage?.image || visibleImage.image}
+      alt={`${product.name} — ${viewerImage?.kind === "sewing" ? l.sewingPhoto : viewerImage?.kind === "dimensions" ? l.dimensionsPhoto : imageLabel}`}
+      open={lightboxIndex !== null}
+      onClose={() => setLightboxIndex(null)}
       labels={zoomLabels[locale]}
-      onPrevious={gallery.length > 1 ? () => move(-1) : undefined}
-      onNext={gallery.length > 1 ? () => move(1) : undefined}
-      previousSrc={gallery.length > 1 ? gallery[(activeImage - 1 + gallery.length) % gallery.length].image : undefined}
-      nextSrc={gallery.length > 1 ? gallery[(activeImage + 1) % gallery.length].image : undefined}
-      counter={gallery.length > 1 ? `${activeImage + 1} / ${gallery.length}` : undefined}
+      onPrevious={lightboxGallery.length > 1 ? () => moveViewer(-1) : undefined}
+      onNext={lightboxGallery.length > 1 ? () => moveViewer(1) : undefined}
+      previousSrc={lightboxIndex !== null && lightboxGallery.length > 1 ? lightboxGallery[(lightboxIndex - 1 + lightboxGallery.length) % lightboxGallery.length].image : undefined}
+      nextSrc={lightboxIndex !== null && lightboxGallery.length > 1 ? lightboxGallery[(lightboxIndex + 1) % lightboxGallery.length].image : undefined}
+      counter={lightboxIndex !== null && lightboxGallery.length > 1 ? `${lightboxIndex + 1} / ${lightboxGallery.length}` : undefined}
     />
   </>;
 }
