@@ -33,13 +33,18 @@ export async function getCatalogProducts(
 
     // The database remains the source of truth. Keep the independently
     // curated sample catalogues visible while older database imports are
-    // being completed, without replacing or duplicating API products.
+    // being completed, without replacing or duplicating API products. The
+    // local import also preserves the exact product sequence from the
+    // original catalogue; database update timestamps must not reshuffle it.
     const query = options.search?.trim().toLowerCase();
     const localProducts = getSeedProducts(locale)
       .filter((product) => !query || `${product.sku} ${product.name}`.toLowerCase().includes(query))
       .map((product) => options.includePrices ? product : ({ ...product, priceUsd: undefined, tradePriceHidden: true }));
+    const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
     const apiIds = new Set(apiProducts.map((product) => product.id));
-    return [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))].slice(0, options.limit || 100);
+    return [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
+      .sort((left, right) => (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER))
+      .slice(0, options.limit || 100);
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();
