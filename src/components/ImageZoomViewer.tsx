@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Minus, Plus, RotateCcw, X, ZoomIn } from "lucide-react";
-import { useCallback, useEffect, useRef, useState, type PointerEvent, type WheelEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type PointerEvent } from "react";
 import { createPortal } from "react-dom";
 
 type ZoomLabels = {
@@ -61,8 +61,8 @@ export function ImageZoomViewer({
   const [swipeOffset, setSwipeOffset] = useState({ x: 0, y: 0 });
   const [settling, setSettling] = useState(false);
   const dragStart = useRef({ pointerX: 0, pointerY: 0, imageX: 0, imageY: 0 });
-  const gesture = useRef({ pointerId: -1, startX: 0, startY: 0, active: false });
-  const suppressBackdropClick = useRef(false);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const gesture = useRef({ pointerId: -1, startX: 0, startY: 0, active: false, startedOnMedia: false });
   const lastTap = useRef(0);
   const viewportWidth = typeof window === "undefined" ? 0 : window.innerWidth;
   const isSwiping = scale === 1 && (Math.abs(swipeOffset.x) > 0 || Math.abs(swipeOffset.y) > 0 || settling);
@@ -113,21 +113,41 @@ export function ImageZoomViewer({
     };
   }, [closeViewer, goNext, goPrevious, open]);
 
+  useEffect(() => {
+    const stage = stageRef.current;
+    if (!open || !stage) return;
+    const handleWheel = (event: globalThis.WheelEvent) => {
+      event.preventDefault();
+      setScale((current) => {
+        const next = Math.max(1, Math.min(5, current + (event.deltaY < 0 ? 0.3 : -0.3)));
+        if (next === 1) setOffset({ x: 0, y: 0 });
+        return next;
+      });
+    };
+    stage.addEventListener("wheel", handleWheel, { passive: false });
+    return () => stage.removeEventListener("wheel", handleWheel);
+  }, [open]);
+
   const setZoom = (next: number) => {
     const normalized = Math.max(1, Math.min(5, next));
     setScale(normalized);
     if (normalized === 1) setOffset({ x: 0, y: 0 });
   };
 
-  const handleWheel = (event: WheelEvent<HTMLDivElement>) => {
-    event.preventDefault();
-    setZoom(scale + (event.deltaY < 0 ? 0.3 : -0.3));
-  };
-
   const beginDrag = (event: PointerEvent<HTMLDivElement>) => {
-    event.currentTarget.setPointerCapture(event.pointerId);
+    const startedOnMedia = Boolean((event.target as HTMLElement).closest(".image-zoom-media"));
+    if (!startedOnMedia) {
+      gesture.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, active: true, startedOnMedia: false };
+      return;
+    }
     if (scale <= 1) {
-      gesture.current = { pointerId: event.pointerId, startX: event.clientX, startY: event.clientY, active: true };
+      gesture.current = {
+        pointerId: event.pointerId,
+        startX: event.clientX,
+        startY: event.clientY,
+        active: true,
+        startedOnMedia: true,
+      };
       return;
     }
     dragStart.current = { pointerX: event.clientX, pointerY: event.clientY, imageX: offset.x, imageY: offset.y };
@@ -138,11 +158,14 @@ export function ImageZoomViewer({
     if (scale <= 1 && gesture.current.active && gesture.current.pointerId === event.pointerId) {
       const x = event.clientX - gesture.current.startX;
       const y = event.clientY - gesture.current.startY;
-      if (Math.abs(x) > 5 || Math.abs(y) > 5) suppressBackdropClick.current = true;
+      if ((Math.abs(x) > 5 || Math.abs(y) > 5) && !event.currentTarget.hasPointerCapture(event.pointerId)) {
+        event.currentTarget.setPointerCapture(event.pointerId);
+      }
       setSwipeOffset({ x, y });
       return;
     }
     if (!dragging) return;
+    if (!event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.setPointerCapture(event.pointerId);
     setOffset({
       x: dragStart.current.imageX + event.clientX - dragStart.current.pointerX,
       y: dragStart.current.imageY + event.clientY - dragStart.current.pointerY,
@@ -150,13 +173,13 @@ export function ImageZoomViewer({
   };
 
   const endDrag = (event: PointerEvent<HTMLDivElement>) => {
-    if (scale <= 1 && gesture.current.active && gesture.current.pointerId === event.pointerId) {
+    if (gesture.current.active && gesture.current.pointerId === event.pointerId) {
       const x = event.clientX - gesture.current.startX;
       const y = event.clientY - gesture.current.startY;
+      const startedOnMedia = gesture.current.startedOnMedia;
       gesture.current.active = false;
-      window.setTimeout(() => { suppressBackdropClick.current = false; }, 0);
       const distance = Math.hypot(x, y);
-      if (distance < 12 && (event.target as HTMLElement).closest(".image-zoom-media")) {
+      if (distance < 12 && startedOnMedia) {
         const now = Date.now();
         if (now - lastTap.current < 300) {
           setZoom(scale === 1 ? 2.25 : 1);
@@ -164,6 +187,10 @@ export function ImageZoomViewer({
         } else {
           lastTap.current = now;
         }
+        return;
+      }
+      if (distance < 12) {
+        closeViewer();
         return;
       }
       if (Math.abs(y) > 85 && Math.abs(y) > Math.abs(x) * 1.05) {
@@ -192,14 +219,10 @@ export function ImageZoomViewer({
   if (!open || typeof document === "undefined") return null;
 
   return createPortal(
-    <div className="image-zoom-overlay" role="dialog" aria-modal="true" aria-label={labels.zoomIn}>
+    <div className="image-zoom-overlay" role="dialog" aria-modal="true" aria-label={labels.zoomIn} onClick={(event) => { if (event.target === event.currentTarget) closeViewer(); }}>
       <div
+        ref={stageRef}
         className={`image-zoom-stage${scale > 1 ? " is-zoomed" : ""}${dragging ? " is-dragging" : ""}${settling ? " is-settling" : ""}`}
-        onClick={(event) => {
-          if (suppressBackdropClick.current) { suppressBackdropClick.current = false; return; }
-          if (event.target === event.currentTarget) closeViewer();
-        }}
-        onWheel={handleWheel}
         onPointerDown={(event) => {
           // Navigation/close/toolbar controls must never start a swipe gesture.
           if ((event.target as HTMLElement).closest("button")) return;

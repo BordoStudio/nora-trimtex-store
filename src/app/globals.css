@@ -427,7 +427,7 @@ body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba
 .image-zoom-mark svg { width:17px; height:17px; stroke-width:1.8; }
 .image-zoom-overlay { position:fixed; inset:0; z-index:1000; overflow:hidden; background:rgba(19,13,9,.94); animation:layer-in .2s ease-out; }
 .image-zoom-overlay:before { content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 42%,rgba(255,246,228,.08),transparent 52%); pointer-events:none; }
-.image-zoom-stage { position:absolute; inset:0; display:grid; place-items:center; padding:72px 76px 92px; overflow:hidden; cursor:default; touch-action:none; user-select:none; }
+.image-zoom-stage { position:absolute; inset:0; display:grid; place-items:center; padding:72px 76px 92px; overflow:hidden; cursor:default; touch-action:none; user-select:none; pointer-events:none; }
 .image-zoom-slide { position:absolute; inset:0; display:grid; place-items:center; padding:72px 76px 92px; pointer-events:none; will-change:transform,opacity; }
 .image-zoom-stage.is-settling .image-zoom-slide { transition:transform .24s cubic-bezier(.22,.72,.2,1),opacity .21s ease; }
 .image-zoom-media { display:grid; place-items:center; max-width:min(92vw,1600px); max-height:calc(100dvh - 140px); cursor:zoom-in; pointer-events:auto; transform-origin:center; transition:transform .2s cubic-bezier(.22,.8,.22,1),opacity .2s ease; }

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Nora TrimTex",
   description: "Curtain trimmings, tassels, wall hooks, rosettes, fringes, piping, braids and cords for interior projects.",
   applicationName: "Nora TrimTex",
+  manifest: "/manifest.webmanifest",
   category: "Curtain trimmings and accessories",
   openGraph: { type: "website", siteName: "Nora TrimTex", images: [{ url: "/brand/hero.jpg", width: 1920, height: 560, alt: "Nora TrimTex curtain trimmings" }] },
   twitter: { card: "summary_large_image", images: ["/brand/hero.jpg"] },
