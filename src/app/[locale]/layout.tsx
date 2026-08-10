@@ -21,14 +21,21 @@ const descriptions = {
   ru: "Фурнитура для штор: кисти, настенные крючки, розетки, бахрома, бордюры, тесьмы и шнуры для интерьерных проектов.",
 };
 
+const homeTitles = {
+  en: "Nora TrimTex — Curtain trimmings",
+  de: "Nora TrimTex — Vorhangzubehör",
+  uk: "Nora TrimTex — Фурнітура для штор",
+  ru: "Nora TrimTex — Фурнитура для штор",
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
-    title: { default: "Nora TrimTex", template: "%s · Nora TrimTex" },
+    title: { default: homeTitles[locale], template: "%s · Nora TrimTex" },
     description: descriptions[locale],
     alternates: { canonical: `${siteUrl}/${locale}`, languages: languageAlternates() },
-    openGraph: { locale, url: `${siteUrl}/${locale}`, title: "Nora TrimTex", description: descriptions[locale] },
+    openGraph: { locale, url: `${siteUrl}/${locale}`, title: homeTitles[locale], description: descriptions[locale] },
   };
 }
 
@@ -43,5 +50,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     uk: { about: "Про бренд", catalog: "Каталог", privacy: "Конфіденційність" },
     ru: { about: "О бренде", catalog: "Каталог", privacy: "Конфиденциальность" },
   }[locale];
-  return <Providers><Header locale={locale} /><main>{children}</main><footer className="site-footer"><div className="brand footer-brand"><BrandLogo footer /></div><p>{t.footer.note}</p><nav className="footer-nav"><Link href={`/${locale}/about`}>{footerLinks.about}</Link><Link href={`/${locale}/catalog`}>{footerLinks.catalog}</Link><Link href={`/${locale}/privacy`}>{footerLinks.privacy}</Link></nav><span>{t.footer.legal}</span></footer><CartDrawer locale={locale} partnerPricingAccess={partnerPricingAccess} /><ContactChat locale={locale} /></Providers>;
+  return <>
+    <script
+      dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(locale)}` }}
+    />
+    <Providers><Header locale={locale} /><main>{children}</main><footer className="site-footer"><div className="brand footer-brand"><BrandLogo footer /></div><p>{t.footer.note}</p><nav className="footer-nav"><Link href={`/${locale}/about`}>{footerLinks.about}</Link><Link href={`/${locale}/catalog`}>{footerLinks.catalog}</Link><Link href={`/${locale}/privacy`}>{footerLinks.privacy}</Link></nav><span>{t.footer.legal}</span></footer><CartDrawer locale={locale} partnerPricingAccess={partnerPricingAccess} /><ContactChat locale={locale} /></Providers>
+  </>;
 }

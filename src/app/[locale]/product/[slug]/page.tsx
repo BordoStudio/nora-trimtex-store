@@ -12,12 +12,16 @@ import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
 import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
 import samplePageSeed from "../../../../../data/catalog.sample-pages.json";
 
-const seoDescriptions = {
-  ru: "Фурнитура для штор: кисти, бахрома, бордюры, тесьмы, шнуры, настенные крючки и розетки. Цветовые варианты, образцы и заказ для интерьерных проектов.",
-  uk: "Фурнітура для штор: китиці, бахрома, канти, тасьма, шнури, настінні гачки й розетки. Кольорові варіанти, зразки та замовлення для інтер’єрних проєктів.",
-  de: "Vorhangzubehör: Quasten, Fransen, Paspeln, Borten, Kordeln, Wandhaken und Rosetten. Farbvarianten, Muster und Bestellung für Interior-Projekte.",
-  en: "Curtain trimmings: tassels, fringes, piping, braids, cords, wall hooks and rosettes. Colourways, samples and ordering for interior projects.",
-};
+function productDescription(locale: "ru" | "uk" | "de" | "en", product: { sku: string; name: string; dimensions?: string; composition?: string }, category: string) {
+  const details = [product.dimensions, product.composition].filter(Boolean).join(" · ");
+  const text = {
+    ru: `${category} ${product.sku}: ${product.name}. ${details}. Цветовые варианты, наличие и заказ в Nora TrimTex.`,
+    uk: `${category} ${product.sku}: ${product.name}. ${details}. Кольорові варіанти, наявність і замовлення в Nora TrimTex.`,
+    de: `${category} ${product.sku}: ${product.name}. ${details}. Farbvarianten, Verfügbarkeit und Bestellung bei Nora TrimTex.`,
+    en: `${category} ${product.sku}: ${product.name}. ${details}. Colourways, availability and ordering from Nora TrimTex.`,
+  }[locale];
+  return text.replace(/\.\s*\./g, ".").slice(0, 300);
+}
 
 const excludedSampleTextPages = new Set([
   "/products/sample-pages/20057/02.jpg",
@@ -37,14 +41,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) return {};
   const product = await getCatalogProductBySlug(locale, slug, false);
   if (!product) return {};
+  const description = productDescription(locale, product, getDictionary(locale).categories[product.categoryId]);
   const title = `${product.sku} — ${product.name}`;
   const path = `/product/${product.slug}`;
   return {
     title,
-    description: seoDescriptions[locale],
+    description,
     alternates: { canonical: `${siteUrl}/${locale}${path}`, languages: languageAlternates(path) },
-    openGraph: { type: "website", url: `${siteUrl}/${locale}${path}`, title, description: seoDescriptions[locale], images: product.variants.slice(0, 4).map((variant) => ({ url: variant.image, alt: `${product.name} — ${product.sku}` })) },
-    twitter: { card: "summary_large_image", title, description: seoDescriptions[locale], images: [product.image] },
+    openGraph: { type: "website", url: `${siteUrl}/${locale}${path}`, title, description, images: product.variants.slice(0, 4).map((variant) => ({ url: variant.image, alt: `${product.name} — ${product.sku}` })) },
+    twitter: { card: "summary_large_image", title, description, images: [product.image] },
   };
 }
 
@@ -66,6 +71,7 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   const requestedVariant = (await searchParams).variant;
   const initialVariantId = product.variants.some((variant) => variant.id === requestedVariant) ? requestedVariant : product.variants[0]?.id;
   const productUrl = `${siteUrl}/${locale}/product/${product.slug}`;
+  const seoDescription = productDescription(locale, product, t.categories[product.categoryId]);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -73,11 +79,17 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
         "@type": "ProductGroup",
         "@id": `${productUrl}#product`,
         name: `${product.sku} — ${product.name}`,
-        description: copy.description,
+        description: seoDescription,
         productGroupID: product.sku,
         sku: product.sku,
         brand: { "@type": "Brand", name: "Nora TrimTex" },
         category: t.categories[product.categoryId],
+        ...(product.composition ? { material: product.composition } : {}),
+        additionalProperty: [
+          ...(product.dimensions ? [{ "@type": "PropertyValue", name: copy.dimensions, value: product.dimensions }] : []),
+          ...(product.composition ? [{ "@type": "PropertyValue", name: copy.composition, value: product.composition }] : []),
+          { "@type": "PropertyValue", name: copy.quality, value: copy.quality },
+        ],
         image: product.variants.map((variant) => new URL(variant.image, siteUrl).href),
         url: productUrl,
         variesBy: "https://schema.org/color",

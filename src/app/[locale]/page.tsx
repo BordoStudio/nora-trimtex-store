@@ -20,9 +20,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     de: [["Kann ich Farbmuster bestellen?", "Ja. Wählen Sie die Farbe auf der Produktseite, legen Sie sie in den Warenkorb und senden Sie eine Anfrage."], ["Liefern Sie innerhalb Europas?", "Ja. Lieferzeit, Verfügbarkeit und Versandkosten werden im persönlichen Angebot bestätigt."], ["Wo sehe ich die Großhandelspreise?", "Großhandelspreise sehen bestätigte Partner nach der Anmeldung in ihrem normalen Konto. Artikel ohne Festpreis werden nach Menge und Lieferbedingungen kalkuliert."]],
     en: [["Can I order colour samples?", "Yes. Select a colour on the product page, add it to the cart and submit an enquiry."], ["Do you supply projects across Europe?", "Yes. Lead time, availability and shipping cost are confirmed in your personal quotation."], ["Where can I see wholesale prices?", "Approved partners see wholesale prices after signing in to their regular account. Articles without a fixed price are quoted by quantity and delivery terms."]],
   }[locale];
-  const organization = { "@context": "https://schema.org", "@type": "OnlineStore", "@id": `${siteUrl}/#organization`, name: "Nora TrimTex", url: siteUrl, logo: `${siteUrl}/icon.svg`, description: "Curtain trimmings and decorative textile accessories for interior projects.", areaServed: "Europe", knowsLanguage: ["ru", "uk", "de", "en"] };
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "OnlineStore",
+        "@id": `${siteUrl}/#organization`,
+        name: "Nora TrimTex",
+        legalName: "Nora TrimTex",
+        url: siteUrl,
+        logo: `${siteUrl}/icon-512.png`,
+        image: `${siteUrl}/brand/hero.jpg`,
+        email: "info@noratrim.com",
+        description: "Curtain trimmings and decorative textile accessories for interior projects.",
+        areaServed: { "@type": "Place", name: "Europe" },
+        knowsLanguage: ["ru", "uk", "de", "en"],
+        contactPoint: { "@type": "ContactPoint", contactType: "customer service", email: "info@noratrim.com", availableLanguage: ["Russian", "Ukrainian", "German", "English"] },
+      },
+      { "@type": "WebSite", "@id": `${siteUrl}/#website`, name: "Nora TrimTex", url: siteUrl, publisher: { "@id": `${siteUrl}/#organization` }, inLanguage: ["ru", "uk", "de", "en"] },
+      { "@type": "FAQPage", mainEntity: faq.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
+    ],
+  };
   return <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organization) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
     <section className="hero">
       <div className="hero-copy"><p className="eyebrow">{t.hero.eyebrow}</p><h1>{t.hero.title}</h1><p className="hero-body">{t.hero.body}</p><div className="hero-actions"><Link className="button primary" href={`/${locale}/catalog`}>{t.hero.primary}</Link><Link className="text-link" href={`/${locale}/catalog`}>{t.hero.secondary}</Link></div></div>
       <div className="hero-image"><div className="hero-caption"><span>{locale === "ru" ? "ФУРНИТУРА ДЛЯ ШТОР" : locale === "uk" ? "ФУРНІТУРА ДЛЯ ШТОР" : locale === "de" ? "VORHANGZUBEHÖR" : "CURTAIN TRIMMINGS"}</span><span>2026</span></div></div>

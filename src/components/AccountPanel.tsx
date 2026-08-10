@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import { useEffect, useState, type FormEvent } from "react";
-import { CheckCircle2, LoaderCircle, LogOut, X } from "lucide-react";
+import { CheckCircle2, Eye, EyeOff, LoaderCircle, LogOut, X } from "lucide-react";
 import type { Locale } from "@/lib/i18n";
 
 type User = { email: string; role: "retail" | "partner" | "admin"; firstName: string; lastName: string };
 type LoginIssue = "" | "not_found" | "pending" | "invalid" | "error";
 
 const copy = {
-  ru: { title: "Войти", email: "Email", password: "Пароль", submit: "Войти", register: "Регистрация", noAccount: "Нет аккаунта?", notFound: "Аккаунт с этим email не найден.", registerEmail: "Зарегистрироваться с этим email", pending: "Аккаунт ещё не активирован или ожидает подтверждения.", invalid: "Неверный email или пароль.", error: "Не удалось войти. Попробуйте ещё раз.", logout: "Выйти", close: "Закрыть" },
-  uk: { title: "Увійти", email: "Email", password: "Пароль", submit: "Увійти", register: "Реєстрація", noAccount: "Немає акаунта?", notFound: "Акаунт із цим email не знайдено.", registerEmail: "Зареєструватися з цим email", pending: "Акаунт ще не активовано або очікує підтвердження.", invalid: "Невірний email або пароль.", error: "Не вдалося увійти. Спробуйте ще раз.", logout: "Вийти", close: "Закрити" },
-  de: { title: "Anmelden", email: "E-Mail", password: "Passwort", submit: "Anmelden", register: "Registrieren", noAccount: "Noch kein Konto?", notFound: "Für diese E-Mail wurde kein Konto gefunden.", registerEmail: "Mit dieser E-Mail registrieren", pending: "Das Konto ist noch nicht aktiv oder wartet auf Bestätigung.", invalid: "E-Mail oder Passwort ist falsch.", error: "Anmeldung fehlgeschlagen. Bitte erneut versuchen.", logout: "Abmelden", close: "Schließen" },
-  en: { title: "Sign in", email: "Email", password: "Password", submit: "Sign in", register: "Register", noAccount: "No account yet?", notFound: "No account was found for this email.", registerEmail: "Register with this email", pending: "The account is not active yet or is awaiting confirmation.", invalid: "Incorrect email or password.", error: "Could not sign in. Please try again.", logout: "Sign out", close: "Close" },
+  ru: { title: "Войти", email: "Email", password: "Пароль", showPassword: "Показать пароль", hidePassword: "Скрыть пароль", submit: "Войти", register: "Регистрация", noAccount: "Нет аккаунта?", notFound: "Аккаунт с этим email не найден.", registerEmail: "Зарегистрироваться с этим email", pending: "Аккаунт ещё не активирован или ожидает подтверждения.", invalid: "Неверный email или пароль.", error: "Не удалось войти. Попробуйте ещё раз.", logout: "Выйти", close: "Закрыть" },
+  uk: { title: "Увійти", email: "Email", password: "Пароль", showPassword: "Показати пароль", hidePassword: "Сховати пароль", submit: "Увійти", register: "Реєстрація", noAccount: "Немає акаунта?", notFound: "Акаунт із цим email не знайдено.", registerEmail: "Зареєструватися з цим email", pending: "Акаунт ще не активовано або очікує підтвердження.", invalid: "Невірний email або пароль.", error: "Не вдалося увійти. Спробуйте ще раз.", logout: "Вийти", close: "Закрити" },
+  de: { title: "Anmelden", email: "E-Mail", password: "Passwort", showPassword: "Passwort anzeigen", hidePassword: "Passwort ausblenden", submit: "Anmelden", register: "Registrieren", noAccount: "Noch kein Konto?", notFound: "Für diese E-Mail wurde kein Konto gefunden.", registerEmail: "Mit dieser E-Mail registrieren", pending: "Das Konto ist noch nicht aktiv oder wartet auf Bestätigung.", invalid: "E-Mail oder Passwort ist falsch.", error: "Anmeldung fehlgeschlagen. Bitte erneut versuchen.", logout: "Abmelden", close: "Schließen" },
+  en: { title: "Sign in", email: "Email", password: "Password", showPassword: "Show password", hidePassword: "Hide password", submit: "Sign in", register: "Register", noAccount: "No account yet?", notFound: "No account was found for this email.", registerEmail: "Register with this email", pending: "The account is not active yet or is awaiting confirmation.", invalid: "Incorrect email or password.", error: "Could not sign in. Please try again.", logout: "Sign out", close: "Close" },
 } as const;
 
 export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () => void }) {
@@ -21,6 +21,7 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
   const [busy, setBusy] = useState(false);
   const [issue, setIssue] = useState<LoginIssue>("");
   const [email, setEmail] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => { void fetch("/api/account/me").then(async (response) => { if (response.ok) setUser((await response.json()).data.user); }).catch(() => undefined); }, []);
 
@@ -53,7 +54,7 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
     {user ? <div className="account-profile"><CheckCircle2 /><strong>{user.firstName} {user.lastName}</strong><p>{user.email}</p><small>{user.role}</small><button className="button outline" onClick={async () => { await fetch("/api/account/logout", { method: "POST" }); window.location.reload(); }}><LogOut size={16} />{t.logout}</button></div> : <>
       <form className="account-form" onSubmit={submit}>
         <label>{t.email}<input name="email" type="email" required autoComplete="email" value={email} onChange={(event) => { setEmail(event.target.value); setIssue(""); }} /></label>
-        <label>{t.password}<input name="password" type="password" minLength={10} required autoComplete="current-password" onChange={() => setIssue("")} /></label>
+        <label>{t.password}<span className="password-input"><input name="password" type={showPassword ? "text" : "password"} minLength={10} required autoComplete="current-password" onChange={() => setIssue("")} /><button type="button" aria-label={showPassword ? t.hidePassword : t.showPassword} aria-pressed={showPassword} title={showPassword ? t.hidePassword : t.showPassword} onClick={() => setShowPassword((value) => !value)}>{showPassword ? <EyeOff /> : <Eye />}</button></span></label>
         {issueText && <div className={`account-message${issue === "not_found" ? " is-not-found" : ""}`} role="alert"><p>{issueText}</p>{issue === "not_found" && <Link className="button primary wide" href={registerHref} onClick={onClose}>{t.registerEmail}</Link>}</div>}
         <button className="button primary wide" disabled={busy}>{busy && <LoaderCircle className="spin" size={17} />}{t.submit}</button>
       </form>

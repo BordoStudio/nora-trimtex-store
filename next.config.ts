@@ -27,7 +27,11 @@ const nextConfig: NextConfig = {
     staticGenerationMinPagesPerWorker: 1000,
   },
   async headers() {
-    return [{
+    const languageHeaders = (["ru", "uk", "de", "en"] as const).map((locale) => ({
+      source: `/${locale}/:path*`,
+      headers: [{ key: "Content-Language", value: locale }],
+    }));
+    return [...languageHeaders, {
       source: "/:path*",
       headers: [
         { key: "X-Content-Type-Options", value: "nosniff" },

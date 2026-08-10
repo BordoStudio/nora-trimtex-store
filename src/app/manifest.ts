@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Nora TrimTex",
     short_name: "Nora TrimTex",
     description: "Curtain trimmings, tassels, wall hooks, rosettes, fringes, piping, braids and cords for interior projects.",
-    start_url: "/en",
+    start_url: "/",
     display: "standalone",
     background_color: "#fffaf3",
     theme_color: "#30221b",

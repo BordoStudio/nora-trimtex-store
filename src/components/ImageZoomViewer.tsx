@@ -209,6 +209,8 @@ export function ImageZoomViewer({
         onPointerUp={endDrag}
         onPointerCancel={cancelDrag}
       >
+        {/* Native images preserve intrinsic dimensions while the viewer pans and scales them. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         {isSwiping && previousSrc && <div className="image-zoom-slide is-neighbor" aria-hidden="true" style={{ transform: `translate3d(${-viewportWidth + swipeOffset.x}px, 0, 0)` }}><div className="image-zoom-media"><img src={previousSrc} alt="" draggable={false} /></div></div>}
         <div className="image-zoom-slide is-current" style={{ transform: `translate3d(${scale > 1 ? 0 : swipeOffset.x}px, ${scale > 1 ? 0 : swipeOffset.y}px, 0)`, opacity: scale === 1 ? Math.max(.25, 1 - Math.abs(swipeOffset.y) / 420) : 1 }}>
           <div className="image-zoom-media" onClick={(event) => event.stopPropagation()} onDoubleClick={() => setZoom(scale === 1 ? 2.25 : 1)} style={{ transform: `translate3d(${scale > 1 ? offset.x : 0}px, ${scale > 1 ? offset.y : 0}px, 0) scale(${scale})` }}>
@@ -216,6 +218,7 @@ export function ImageZoomViewer({
             <img src={src} alt={alt} draggable={false} />
           </div>
         </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         {isSwiping && nextSrc && <div className="image-zoom-slide is-neighbor" aria-hidden="true" style={{ transform: `translate3d(${viewportWidth + swipeOffset.x}px, 0, 0)` }}><div className="image-zoom-media"><img src={nextSrc} alt="" draggable={false} /></div></div>}
       </div>
 

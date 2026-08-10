@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { CatalogClient } from "@/components/CatalogClient";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { getCatalogProducts } from "@/lib/catalog-api";
-import { languageAlternates, siteUrl } from "@/lib/site";
+import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
 import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
+import { categoryIds, type CategoryId } from "@/data/categories";
 
 const descriptions = {
   en: "Shop curtain tassels, wall hooks, rosettes, fringes, piping, braids and cords with clear article numbers and colourways.",
@@ -20,11 +21,23 @@ const sampleIntro = {
   ru: { eyebrow: "КАТАЛОГИ ОБРАЗЦОВ", title: "Коллекции, которые можно увидеть вживую.", body: "Книги образцов, презентационные карты и боксы коллекций в раскладке оригинального каталога. Откройте комплект или добавьте его к заказу." },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+const categoryBody = {
+  en: (name: string) => `Explore ${name.toLocaleLowerCase("en")} for curtains and interior textiles. Compare article numbers, colourways, dimensions and availability.`,
+  de: (name: string) => `Entdecken Sie ${name} für Vorhänge und textile Raumgestaltung. Vergleichen Sie Artikel, Farben, Maße und Verfügbarkeit.`,
+  uk: (name: string) => `Перегляньте ${name.toLocaleLowerCase("uk")} для штор та інтер’єрного текстилю. Порівнюйте артикули, кольори, розміри й наявність.`,
+  ru: (name: string) => `Посмотрите ${name.toLocaleLowerCase("ru")} для штор и интерьерного текстиля. Сравнивайте артикулы, цвета, размеры и наличие.`,
+};
+
+export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ category?: string }> }): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
-  const title = getDictionary(locale).catalog.title;
-  return { title, description: descriptions[locale], alternates: { canonical: `${siteUrl}/${locale}/catalog`, languages: languageAlternates("/catalog") }, openGraph: { url: `${siteUrl}/${locale}/catalog`, title, description: descriptions[locale] } };
+  const requestedCategory = (await searchParams).category;
+  const category = categoryIds.includes(requestedCategory as CategoryId) ? requestedCategory as CategoryId : undefined;
+  const dictionary = getDictionary(locale);
+  const title = category ? `${dictionary.categories[category]} — ${dictionary.catalog.title}` : dictionary.catalog.title;
+  const path = category ? `/catalog?category=${category}` : "/catalog";
+  const description = category ? `${dictionary.categories[category]}. ${descriptions[locale]}` : descriptions[locale];
+  return { title, description, alternates: { canonical: `${siteUrl}/${locale}${path}`, languages: languageAlternates(path) }, openGraph: { url: `${siteUrl}/${locale}${path}`, title, description } };
 }
 
 export default async function CatalogPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ category?: string }> }) {
@@ -32,8 +45,29 @@ export default async function CatalogPage({ params, searchParams }: { params: Pr
   if (!isLocale(locale)) notFound();
   const { category } = await searchParams;
   const t = getDictionary(locale);
-  const intro = category === "samples" ? sampleIntro[locale] : { eyebrow: t.catalog.eyebrow, title: t.catalog.title, body: t.catalog.body };
+  const selectedCategory = categoryIds.includes(category as CategoryId) ? category as CategoryId : undefined;
+  const intro = selectedCategory === "samples"
+    ? sampleIntro[locale]
+    : selectedCategory
+      ? { eyebrow: t.catalog.eyebrow, title: t.categories[selectedCategory], body: categoryBody[locale](t.categories[selectedCategory]) }
+      : { eyebrow: t.catalog.eyebrow, title: t.catalog.title, body: t.catalog.body };
   const partnerPricingAccess = await hasPartnerPricingAccess();
   const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: partnerPricingAccess });
-  return <section className={`catalog-page${category === "samples" ? " samples-page" : ""}`}><header className="catalog-intro"><p className="eyebrow">{intro.eyebrow}</p><h1>{intro.title}</h1><p>{intro.body}</p></header><CatalogClient locale={locale} initialProducts={products} /></section>;
+  const listedProducts = selectedCategory ? products.filter((product) => product.categoryId === selectedCategory) : products;
+  const path = selectedCategory ? `/catalog?category=${selectedCategory}` : "/catalog";
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${siteUrl}/${locale}${path}#collection`,
+    name: intro.title,
+    description: intro.body,
+    url: `${siteUrl}/${locale}${path}`,
+    inLanguage: locale,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: listedProducts.length,
+      itemListElement: listedProducts.slice(0, 36).map((product, index) => ({ "@type": "ListItem", position: index + 1, name: `${product.sku} — ${product.name}`, url: `${siteUrl}/${locale}/product/${product.slug}` })),
+    },
+  };
+  return <section className={`catalog-page${selectedCategory === "samples" ? " samples-page" : ""}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} /><header className="catalog-intro"><p className="eyebrow">{intro.eyebrow}</p><h1>{intro.title}</h1><p>{intro.body}</p></header><CatalogClient locale={locale} initialProducts={products} /></section>;
 }

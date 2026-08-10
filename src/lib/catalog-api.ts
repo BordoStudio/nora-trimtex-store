@@ -28,7 +28,18 @@ export async function getCatalogProducts(
       next: { revalidate: 300 },
     });
     if (!response.ok) throw new Error(`Catalog API responded with ${response.status}`);
-    return ((await response.json()) as CatalogResponse).data.map((product) => ({ ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [], tradePriceHidden: !options.includePrices }));
+    const apiProducts = ((await response.json()) as CatalogResponse).data.map((product) => ({ ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [], tradePriceHidden: !options.includePrices }));
+    if (options.featured) return apiProducts;
+
+    // The database remains the source of truth. Keep the independently
+    // curated sample catalogues visible while older database imports are
+    // being completed, without replacing or duplicating API products.
+    const query = options.search?.trim().toLowerCase();
+    const localProducts = getSeedProducts(locale)
+      .filter((product) => !query || `${product.sku} ${product.name}`.toLowerCase().includes(query))
+      .map((product) => options.includePrices ? product : ({ ...product, priceUsd: undefined, tradePriceHidden: true }));
+    const apiIds = new Set(apiProducts.map((product) => product.id));
+    return [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))].slice(0, options.limit || 100);
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();

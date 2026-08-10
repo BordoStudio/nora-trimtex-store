@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: "Curtain trimmings, tassels, wall hooks, rosettes, fringes, piping, braids and cords for interior projects.",
   applicationName: "Nora TrimTex",
   category: "Curtain trimmings and accessories",
-  openGraph: { type: "website", siteName: "Nora TrimTex", images: [{ url: "/brand/hero.jpg", width: 1600, height: 1200, alt: "Nora TrimTex curtain trimmings" }] },
+  openGraph: { type: "website", siteName: "Nora TrimTex", images: [{ url: "/brand/hero.jpg", width: 1920, height: 560, alt: "Nora TrimTex curtain trimmings" }] },
   twitter: { card: "summary_large_image", images: ["/brand/hero.jpg"] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };
