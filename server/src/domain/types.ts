@@ -27,7 +27,10 @@ export type ProductDocument = {
   featured: boolean;
   isNew: boolean;
   attributes: Record<string, string | number | boolean>;
+  /** Legacy partner price kept for backwards compatibility with existing imports. */
   priceUsd?: number;
+  retailPriceUsd?: number;
+  partnerPriceUsd?: number;
   createdAt: Date;
   updatedAt: Date;
 };
@@ -40,6 +43,7 @@ export type OrderDocument = {
   items: Array<{ productId: string; sku: string; name?: string; slug?: string; categoryId?: string; variantId?: string; variantLabel?: string; unitPriceUsd?: number; quantity: number }>;
   pricedSubtotalUsd: number;
   status: "received" | "quoted" | "confirmed" | "paid" | "cancelled";
+  guestId?: string;
   createdAt: Date;
   updatedAt: Date;
 };
@@ -60,6 +64,7 @@ export type SampleRequestDocument = {
   items: Array<{ productId: string; sku: string; variantId?: string; quantity: number }>;
   notes?: string;
   status: "new" | "contacted" | "quoted" | "closed";
+  guestId?: string;
   createdAt: Date;
   updatedAt: Date;
 };

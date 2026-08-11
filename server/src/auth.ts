@@ -129,6 +129,8 @@ export async function ensureAdminUser(db: MongoDatabase): Promise<void> {
         passwordHash,
         role: "admin",
         status: "active",
+        firstName: "Администратор",
+        lastName: "",
         emailVerifiedAt: now,
         partnerDiscountPercent: 0,
         updatedAt: now,
@@ -136,8 +138,6 @@ export async function ensureAdminUser(db: MongoDatabase): Promise<void> {
       $setOnInsert: {
         id: randomUUID(),
         email,
-        firstName: "Nora",
-        lastName: "Administrator",
         locale: "ru",
         createdAt: now,
       },

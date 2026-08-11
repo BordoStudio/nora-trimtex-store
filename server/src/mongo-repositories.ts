@@ -66,11 +66,11 @@ export class MongoOrderRepository implements OrderRepository {
   async create(document: OrderDocument): Promise<void> {
     const ids = [...new Set(document.items.map((item) => item.productId))];
     const rows = await this.db.collection<ProductDocument>("products")
-      .find({ id: { $in: ids }, status: "active" }, { projection: { _id: 0, id: 1, sku: 1, priceUsd: 1, variants: 1 } })
+      .find({ id: { $in: ids }, status: "active" }, { projection: { _id: 0, id: 1, sku: 1, priceUsd: 1, partnerPriceUsd: 1, variants: 1 } })
       .toArray();
     const products = new Map(rows.map((row) => [row.id, {
       sku: row.sku,
-      priceUsd: row.priceUsd,
+      priceUsd: row.partnerPriceUsd ?? row.priceUsd,
       variantIds: new Set(row.variants.map((variant) => variant.id)),
     }]));
     if (products.size !== ids.length || document.items.some((item) => {

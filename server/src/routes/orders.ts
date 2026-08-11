@@ -71,6 +71,7 @@ export function orderRoutes(repository: OrderRepository): FastifyPluginAsync {
         items: request.body.items,
         pricedSubtotalUsd: 0,
         status: "received",
+        guestId: String(request.headers["x-guest-id"] || "").match(/^[A-Za-z0-9_-]{16,80}$/)?.[0],
         createdAt: now,
         updatedAt: now,
       };

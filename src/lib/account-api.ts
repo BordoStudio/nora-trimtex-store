@@ -13,6 +13,15 @@ export async function accountRequest(path: string, init: RequestInit = {}, withS
   return fetch(`${backendUrl()}${path}`, { ...init, headers, cache: "no-store" });
 }
 
+export function visitorHeaders(request: Request) {
+  const headers = new Headers({ "content-type": "application/json" });
+  for (const name of ["x-guest-id", "x-guest-referrer", "x-guest-page", "cf-ipcountry", "cf-region", "cf-ipcity", "cf-connecting-ip", "user-agent", "referer"]) {
+    const value = request.headers.get(name);
+    if (value) headers.set(name, value);
+  }
+  return headers;
+}
+
 export const accountCookieOptions = {
   httpOnly: true,
   sameSite: "lax" as const,

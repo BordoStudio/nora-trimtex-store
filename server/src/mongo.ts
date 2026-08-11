@@ -48,6 +48,18 @@ export async function initializeMongo(db: MongoDatabase): Promise<void> {
       { key: { expiresAt: 1 }, expireAfterSeconds: 0, name: "tokens_ttl" },
     ]),
     db.collection("carts").createIndex({ userId: 1 }, { unique: true, name: "carts_user_unique" }),
+    db.collection("guestCarts").createIndexes([
+      { key: { guestId: 1 }, unique: true, name: "guest_carts_visitor_unique" },
+      { key: { updatedAt: -1 }, name: "guest_carts_updated" },
+    ]),
+    db.collection("guestSessions").createIndexes([
+      { key: { id: 1 }, unique: true, name: "guests_id_unique" },
+      { key: { lastSeenAt: -1 }, name: "guests_last_seen" },
+    ]),
+    db.collection("guestMessages").createIndexes([
+      { key: { id: 1 }, unique: true, name: "guest_messages_id_unique" },
+      { key: { guestId: 1, createdAt: -1 }, name: "guest_messages_visitor" },
+    ]),
     db.collection("orders").createIndexes([
       { key: { orderNumber: 1 }, unique: true, name: "orders_number_unique" },
       { key: { "customer.email": 1, createdAt: -1 }, name: "orders_customer" },

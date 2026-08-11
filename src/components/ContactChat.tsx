@@ -4,6 +4,7 @@ import { Check, MessageCircle, Send, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import type { Locale } from "@/lib/i18n";
+import { getGuestId, guestHeaders } from "@/lib/guest";
 
 const copy = {
   en: { title: "Ask your question", name: "Name (optional)", contact: "Email or phone for a reply", message: "Your question", send: "Send", sending: "Sending…", sent: "Your question has been sent.", again: "Ask another question", error: "Message not sent. Please try again.", open: "Ask a question", close: "Close" },
@@ -35,8 +36,8 @@ export function ContactChat({ locale }: { locale: Locale }) {
     try {
       const response = await fetch("/api/chat", {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ name: data.get("name"), contact: data.get("contact"), message: data.get("message"), website: data.get("website"), locale, page: pathname }),
+        headers: guestHeaders(pathname),
+        body: JSON.stringify({ guestId: getGuestId(), name: data.get("name"), contact: data.get("contact"), message: data.get("message"), website: data.get("website"), locale, page: pathname }),
       });
       if (!response.ok) throw new Error("chat_failed");
       form.reset();
