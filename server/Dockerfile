@@ -9,12 +9,12 @@ COPY data data
 RUN pnpm --dir server build
 RUN pnpm deploy --legacy --filter @nora-trimtex/api --prod /api
 RUN cp -R server/dist /api/dist
-RUN cp -R data /api/data
 
 FROM node:22-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=build /api ./
+COPY --from=build /app/data ./data
 USER node
 EXPOSE 4000
 CMD ["node", "dist/start.js"]
