@@ -5,6 +5,5 @@ server/dist
 .env*
 deploy/api.env
 deploy/.env
-data/migration
 public/products
 *.log
