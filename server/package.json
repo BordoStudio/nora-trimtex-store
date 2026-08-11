@@ -8,9 +8,9 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/start.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "NODE_ENV=test DATABASE_URL=postgresql://test:test@127.0.0.1:5432/test INTERNAL_API_KEY=test-internal-api-key-000000000000 node --import tsx --test src/**/*.test.ts",
-    "migrate": "tsx src/scripts/migrate.ts",
-    "seed": "tsx src/scripts/seed.ts",
+    "test": "NODE_ENV=test MONGODB_URI=mongodb://127.0.0.1:27017 MONGODB_DATABASE=nora_trimtex_test INTERNAL_API_KEY=test-internal-api-key-000000000000 node --import tsx --test src/**/*.test.ts",
+    "migrate": "tsx src/scripts/import-migration.ts",
+    "seed": "tsx src/scripts/import-migration.ts",
     "import:migration": "tsx src/scripts/import-migration.ts",
     "upload:assets": "tsx src/scripts/upload-assets.ts"
   },
@@ -20,7 +20,7 @@
     "@fastify/helmet": "latest",
     "@fastify/rate-limit": "latest",
     "fastify": "latest",
-    "postgres": "latest",
+    "mongodb": "latest",
     "zod": "latest"
   },
   "devDependencies": {

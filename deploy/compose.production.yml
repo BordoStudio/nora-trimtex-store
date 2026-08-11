@@ -1,0 +1,69 @@
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: Dockerfile.web
+      args:
+        NEXT_PUBLIC_API_URL: https://${API_DOMAIN}
+        NEXT_PUBLIC_ASSETS_URL: https://${ASSETS_DOMAIN}
+        NEXT_PUBLIC_SITE_URL: https://${SITE_DOMAIN}
+        CATALOG_API_URL: http://api:4000
+    restart: unless-stopped
+    environment:
+      CATALOG_API_URL: http://api:4000
+      NEXT_PUBLIC_API_URL: https://${API_DOMAIN}
+      CATALOG_FALLBACK: "false"
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY}
+      WHOLESALE_ACCESS_PASSWORD: ${WHOLESALE_ACCESS_PASSWORD}
+      WHOLESALE_SESSION_SECRET: ${WHOLESALE_SESSION_SECRET}
+      PRIVACY_IP_SALT: ${PRIVACY_IP_SALT}
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      NOTIFICATION_FROM_EMAIL: ${NOTIFICATION_FROM_EMAIL}
+      NOTIFICATION_TO_EMAIL: ${NOTIFICATION_TO_EMAIL}
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [nora]
+
+  api:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+    restart: unless-stopped
+    env_file: api.env
+    environment:
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY}
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      NOTIFICATION_FROM_EMAIL: ${NOTIFICATION_FROM_EMAIL}
+      NOTIFICATION_TO_EMAIL: ${NOTIFICATION_TO_EMAIL}
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:4000/ready"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+    networks: [nora]
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+      API_DOMAIN: ${API_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [web, api]
+    networks: [nora]
+
+networks:
+  nora:
+
+volumes:
+  caddy_data:
+  caddy_config:

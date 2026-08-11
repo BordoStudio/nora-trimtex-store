@@ -5,7 +5,7 @@ import type {
   SampleRequestDocument,
   OrderDocument,
 } from "./domain/types.js";
-import type { Database } from "./db.js";
+import type { MongoDatabase } from "./mongo.js";
 
 export type ProductListQuery = {
   locale: Locale;
@@ -37,7 +37,7 @@ export interface OrderRepository {
 }
 
 export type AppServices = {
-  db?: Database;
+  db?: MongoDatabase;
   databaseHealth: () => Promise<void>;
   catalog: CatalogRepository;
   sampleRequests: SampleRequestRepository;

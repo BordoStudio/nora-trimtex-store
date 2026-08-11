@@ -1,0 +1,15 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "nora-trimtex-assets",
+  "main": "./r2-assets-worker.ts",
+  "compatibility_date": "2026-08-04",
+  "observability": {
+    "enabled": true
+  },
+  "r2_buckets": [
+    {
+      "binding": "ASSETS",
+      "bucket_name": "nora-trimtex-assets"
+    }
+  ]
+}

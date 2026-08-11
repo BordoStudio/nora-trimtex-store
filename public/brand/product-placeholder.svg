@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Nora TrimTex</title>
+  <desc id="desc">Product image is being prepared</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4efe6"/>
+      <stop offset="1" stop-color="#ded3c2"/>
+    </linearGradient>
+    <pattern id="weave" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M0 11h22M11 0v22" stroke="#4a382a" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#background)"/>
+  <rect width="1200" height="1200" fill="url(#weave)"/>
+  <circle cx="600" cy="520" r="190" fill="none" stroke="#704933" stroke-width="2" opacity=".42"/>
+  <path d="M522 638V402h45l111 154V402h48v236h-45L570 484v154z" fill="#38271f"/>
+  <text x="600" y="795" text-anchor="middle" fill="#38271f" font-family="Georgia, serif" font-size="47" letter-spacing="8">NORA</text>
+  <text x="600" y="848" text-anchor="middle" fill="#704933" font-family="Arial, sans-serif" font-size="20" letter-spacing="6">TRIMTEX</text>
+  <text x="600" y="930" text-anchor="middle" fill="#6e6259" font-family="Arial, sans-serif" font-size="20" letter-spacing="2">IMAGE IN PREPARATION</text>
+</svg>

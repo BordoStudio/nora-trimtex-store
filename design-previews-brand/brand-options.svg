@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1600" viewBox="0 0 1800 1600">
+  <defs>
+    <style>
+      .title{font:600 24px Arial,sans-serif;letter-spacing:4px;fill:#402a20}.name{font:400 58px Didot,'Bodoni 72',Georgia,serif;letter-spacing:8px;fill:#35231b}.sub{font:500 15px Arial,sans-serif;letter-spacing:5px;fill:#9b7650}.note{font:400 18px Arial,sans-serif;fill:#806c5e}.num{font:600 15px Arial,sans-serif;letter-spacing:3px;fill:#a9874c}.gold{stroke:#ad8950;fill:none}.brown{stroke:#422b21;fill:none}.forest{stroke:#253b31;fill:none}.cream{fill:#fbf7f0}.dark{fill:#2e201a}.goldfill{fill:#ad8950}.brownfill{fill:#422b21}.forestfill{fill:#253b31}
+    </style>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4a3324" flood-opacity=".10"/></filter>
+  </defs>
+  <rect width="1800" height="1600" fill="#eee6db"/>
+  <text x="70" y="75" class="title">NORA TRIMTEX · BRAND DIRECTIONS</text>
+  <text x="1730" y="75" text-anchor="end" class="sub">FAVICON · MARK · WORDMARK</text>
+
+  <!-- OPTION 1 -->
+  <g transform="translate(60 120)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">01 · EDITORIAL NT</text>
+    <g transform="translate(175 90)">
+      <path d="M0 185V5L145 185V5" class="brown" stroke-width="13"/>
+      <path d="M43 5H183M113 5V185" class="gold" stroke-width="12"/>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Изящная журнальная монограмма</text>
+    <text x="34" y="490" class="note">Самый fashion-премиальный вариант</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="28" fill="#fff"/><path d="M28 84V28L82 84V28" class="brown" stroke-width="7"/><path d="M43 28H95M69 28V84" class="gold" stroke-width="6"/></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="28" class="dark"/><path d="M28 84V28L82 84V28" stroke="#f6ede2" fill="none" stroke-width="7"/><path d="M43 28H95M69 28V84" class="gold" stroke-width="6"/></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><rect x="16" y="15" width="32" height="32" rx="8" fill="#f5eee4"/><path d="M22 40V22L40 40V22" class="brown" stroke-width="3"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+
+  <!-- OPTION 2 -->
+  <g transform="translate(635 120)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">02 · TASSEL N</text>
+    <g transform="translate(155 78)">
+      <path d="M25 175V35L185 175V35" class="gold" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M10 182h30l-5 48H15zM170 182h30l-5 48h-20z" class="goldfill"/>
+      <path d="M13 193h24M173 193h24" stroke="#fbf7f0" stroke-width="3"/>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Буква N собрана из шнура и кистей</text>
+    <text x="34" y="490" class="note">Сразу понятно, чем занимается бренд</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="28" fill="#fff"/><path d="M28 76V34L84 76V34" class="gold" stroke-width="9" stroke-linecap="round"/><path d="M22 80h13l-2 18h-9zM78 80h13l-2 18h-9z" class="goldfill"/></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="28" class="dark"/><path d="M28 76V34L84 76V34" stroke="#d2ae69" fill="none" stroke-width="9" stroke-linecap="round"/><path d="M22 80h13l-2 18h-9zM78 80h13l-2 18h-9z" fill="#d2ae69"/></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><rect x="16" y="15" width="32" height="32" rx="8" fill="#f5eee4"/><path d="M22 39V23L42 39V23" class="gold" stroke-width="3"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+
+  <!-- OPTION 3 -->
+  <g transform="translate(1210 120)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">03 · ATELIER ARCH</text>
+    <g transform="translate(160 78)">
+      <path d="M15 235V105C15-15 195-15 195 105V235" class="forest" stroke-width="12"/>
+      <path d="M105 40v78" class="gold" stroke-width="6"/>
+      <circle cx="105" cy="124" r="13" class="goldfill"/>
+      <path d="M83 143h44l-7 78H90z" class="goldfill"/><path d="M91 161h28M90 177h30" stroke="#fbf7f0" stroke-width="3"/>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Архитектурная арка и центральная кисть</text>
+    <text x="34" y="490" class="note">Лучше всего подходит интерьерному бренду</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="28" fill="#fff"/><path d="M26 91V52C26 14 86 14 86 52V91" class="forest" stroke-width="6"/><path d="M56 35v26" class="gold" stroke-width="3"/><circle cx="56" cy="65" r="5" class="goldfill"/><path d="M47 72h18l-3 18H50z" class="goldfill"/></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="28" class="forestfill"/><path d="M26 91V52C26 14 86 14 86 52V91" stroke="#f6ede2" fill="none" stroke-width="6"/><path d="M56 35v26" stroke="#d2ae69" stroke-width="3"/><circle cx="56" cy="65" r="5" fill="#d2ae69"/><path d="M47 72h18l-3 18H50z" fill="#d2ae69"/></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><rect x="16" y="15" width="32" height="32" rx="8" fill="#f5eee4"/><path d="M21 42V30C21 18 43 18 43 30V42" class="forest" stroke-width="2"/><path d="M32 25v11" class="gold" stroke-width="2"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+
+  <!-- OPTION 4 -->
+  <g transform="translate(60 845)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">04 · BRAIDED SEAL</text>
+    <g transform="translate(168 85)">
+      <circle cx="95" cy="95" r="83" class="brown" stroke-width="15" stroke-dasharray="22 7"/>
+      <circle cx="95" cy="95" r="62" class="gold" stroke-width="2"/>
+      <text x="95" y="112" text-anchor="middle" font-family="Didot,Georgia,serif" font-size="66" fill="#422b21">NT</text>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Круглая плетёная печать</text>
+    <text x="34" y="490" class="note">Хорошо работает на упаковке и образцах</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="56" fill="#fff"/><circle cx="56" cy="56" r="35" class="brown" stroke-width="7" stroke-dasharray="10 4"/><text x="56" y="68" text-anchor="middle" font-family="Georgia" font-size="31" fill="#422b21">NT</text></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="56" class="dark"/><circle cx="56" cy="56" r="35" stroke="#d2ae69" fill="none" stroke-width="7" stroke-dasharray="10 4"/><text x="56" y="68" text-anchor="middle" font-family="Georgia" font-size="31" fill="#f6ede2">NT</text></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><circle cx="32" cy="31" r="16" class="brown" stroke-width="3" stroke-dasharray="5 2"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+
+  <!-- OPTION 5 -->
+  <g transform="translate(635 845)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">05 · FRINGE FAN</text>
+    <g transform="translate(155 92)">
+      <path d="M25 25H205" class="gold" stroke-width="14" stroke-linecap="round"/>
+      <path d="M38 40l20 160M65 40l20 165M92 40l20 170M119 40l-2 172M146 40l-25 170M173 40l-48 165M200 40l-73 160" class="gold" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Абстрактный веер из нитей бахромы</text>
+    <text x="34" y="490" class="note">Самый современный и декоративный знак</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="28" fill="#fff"/><path d="M24 28H88" class="gold" stroke-width="7"/><path d="M31 36l12 50M43 36l12 53M56 36v55M69 36L57 89M81 36L59 86" class="gold" stroke-width="5" stroke-linecap="round"/></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="28" class="dark"/><path d="M24 28H88" stroke="#d2ae69" stroke-width="7"/><path d="M31 36l12 50M43 36l12 53M56 36v55M69 36L57 89M81 36L59 86" stroke="#d2ae69" fill="none" stroke-width="5" stroke-linecap="round"/></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><path d="M18 20H46M22 24l6 23M29 24l5 25M36 24v25M43 24l-8 23" class="gold" stroke-width="3"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+
+  <!-- OPTION 6 -->
+  <g transform="translate(1210 845)" filter="url(#soft)">
+    <rect width="530" height="680" rx="36" class="cream"/>
+    <text x="34" y="48" class="num">06 · NEEDLE LINE</text>
+    <g transform="translate(158 88)">
+      <path d="M20 205V22l175 183V22" class="forest" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M8 208c62 42 121-95 207-22" class="gold" stroke-width="5" stroke-linecap="round"/>
+      <ellipse cx="58" cy="187" rx="14" ry="5" transform="rotate(-34 58 187)" class="gold" stroke-width="4"/>
+    </g>
+    <text x="265" y="345" text-anchor="middle" class="name" font-size="48">NORA</text>
+    <text x="265" y="385" text-anchor="middle" class="sub">TRIMTEX</text>
+    <line x1="70" y1="420" x2="460" y2="420" stroke="#d9cbb9"/>
+    <text x="34" y="462" class="note">Минимальная N и линия нити</text>
+    <text x="34" y="490" class="note">Самый лёгкий и цифровой вариант</text>
+    <g transform="translate(34 525)"><rect width="112" height="112" rx="28" fill="#fff"/><path d="M26 85V28l60 57V28" class="forest" stroke-width="6"/><path d="M20 87c23 16 45-30 72-8" class="gold" stroke-width="3"/></g>
+    <g transform="translate(160 525)"><rect width="112" height="112" rx="28" class="forestfill"/><path d="M26 85V28l60 57V28" stroke="#f6ede2" fill="none" stroke-width="6"/><path d="M20 87c23 16 45-30 72-8" stroke="#d2ae69" fill="none" stroke-width="3"/></g>
+    <g transform="translate(304 540)"><rect width="192" height="62" rx="18" fill="#fff"/><rect x="16" y="15" width="32" height="32" rx="8" fill="#f5eee4"/><path d="M22 41V21l20 20V21" class="forest" stroke-width="3"/><text x="62" y="39" font-family="Arial" font-size="17" fill="#594338">Nora TrimTex</text></g>
+  </g>
+</svg>

@@ -21,7 +21,8 @@
     "migration:legacy": "node scripts/import-china-catalog.mjs",
     "import:tassel-dimensions": "node scripts/import-tassel-dimensions.mjs",
     "import:technical-images": "node scripts/import-product-technical-images.mjs",
-    "test:cart-browser": "node scripts/test-cart-browser.mjs"
+    "test:cart-browser": "node scripts/test-cart-browser.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@reduxjs/toolkit": "latest",
