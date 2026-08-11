@@ -6,9 +6,9 @@ import { cookies } from "next/headers";
  * Prices are available only to a signed-in, approved partner or administrator.
  * There is deliberately no shared password, access code or parallel session.
  */
-export async function hasPartnerPricingAccess() {
+export async function getPartnerPricingContext() {
   const token = (await cookies()).get("nora-account-session")?.value;
-  if (!token) return false;
+  if (!token) return { hasAccess: false, discountPercent: 0 };
 
   try {
     const api = process.env.CATALOG_API_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:4001";
@@ -16,10 +16,18 @@ export async function hasPartnerPricingAccess() {
       headers: { authorization: `Bearer ${token}` },
       cache: "no-store",
     });
-    if (!response.ok) return false;
+    if (!response.ok) return { hasAccess: false, discountPercent: 0 };
     const user = (await response.json())?.data?.user;
-    return user?.status === "active" && (user.role === "partner" || user.role === "admin");
+    const hasAccess = user?.status === "active" && (user.role === "partner" || user.role === "admin");
+    const discountPercent = hasAccess && user.role === "partner"
+      ? Math.min(80, Math.max(0, Number(user.partnerDiscountPercent) || 0))
+      : 0;
+    return { hasAccess, discountPercent };
   } catch {
-    return false;
+    return { hasAccess: false, discountPercent: 0 };
   }
+}
+
+export async function hasPartnerPricingAccess() {
+  return (await getPartnerPricingContext()).hasAccess;
 }

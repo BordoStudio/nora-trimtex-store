@@ -4,7 +4,7 @@ import { CatalogClient } from "@/components/CatalogClient";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { getCatalogProducts } from "@/lib/catalog-api";
 import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
-import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
+import { getPartnerPricingContext } from "@/lib/partner-pricing";
 import { categoryIds, type CategoryId } from "@/data/categories";
 
 const descriptions = {
@@ -51,8 +51,8 @@ export default async function CatalogPage({ params, searchParams }: { params: Pr
     : selectedCategory
       ? { eyebrow: t.catalog.eyebrow, title: t.categories[selectedCategory], body: categoryBody[locale](t.categories[selectedCategory]) }
       : { eyebrow: t.catalog.eyebrow, title: t.catalog.title, body: t.catalog.body };
-  const partnerPricingAccess = await hasPartnerPricingAccess();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: partnerPricingAccess });
+  const pricing = await getPartnerPricingContext();
+  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: pricing.hasAccess, discountPercent: pricing.discountPercent });
   const listedProducts = selectedCategory ? products.filter((product) => product.categoryId === selectedCategory) : products;
   const path = selectedCategory ? `/catalog?category=${selectedCategory}` : "/catalog";
   const structuredData = {

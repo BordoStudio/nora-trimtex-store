@@ -17,6 +17,7 @@ export type AuthUser = {
   lastName: string;
   company?: string;
   emailVerifiedAt?: Date;
+  partnerDiscountPercent: number;
 };
 
 export const normalizeEmail = (value: string) => value.trim().toLowerCase();
@@ -48,7 +49,8 @@ export async function getSessionUser(db: Database, request: FastifyRequest): Pro
   const rows = await db<AuthUser[]>`
     select u.id, u.email, u.role, u.status,
       u.first_name as "firstName", u.last_name as "lastName", u.company,
-      u.email_verified_at as "emailVerifiedAt"
+      u.email_verified_at as "emailVerifiedAt",
+      u.partner_discount_percent::float as "partnerDiscountPercent"
     from auth_sessions s join users u on u.id = s.user_id
     where s.token_hash = ${hashToken(token)} and s.expires_at > now()
     limit 1
@@ -73,9 +75,13 @@ export async function createSession(db: Database, userId: string, request: Fasti
   const token = issueToken();
   const expiresAt = new Date(Date.now() + config.AUTH_SESSION_DAYS * 86_400_000);
   await db`
-    insert into auth_sessions (user_id, token_hash, expires_at, user_agent, ip_hash)
+    insert into auth_sessions (user_id, token_hash, expires_at, user_agent, ip_hash, country_code, region, city, referrer)
     values (${userId}, ${hashToken(token)}, ${expiresAt}, ${String(request.headers["user-agent"] || "").slice(0, 500)},
-      ${hashToken(`${config.PRIVACY_IP_SALT}:${request.ip}`)})
+      ${hashToken(`${config.PRIVACY_IP_SALT}:${request.ip}`)},
+      ${String(request.headers["cf-ipcountry"] || "").slice(0, 8) || null},
+      ${String(request.headers["cf-region"] || "").slice(0, 120) || null},
+      ${String(request.headers["cf-ipcity"] || "").slice(0, 120) || null},
+      ${String(request.headers.referer || "").slice(0, 500) || null})
   `;
   return { token, expiresAt };
 }

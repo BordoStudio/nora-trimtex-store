@@ -144,6 +144,34 @@ const migrations = [
       create index if not exists orders_user_idx on orders (user_id, created_at desc);
     `,
   },
+  {
+    version: "0004_admin_pricing_and_audit",
+    sql: `
+      alter table users
+        add column if not exists partner_discount_percent numeric(5,2) not null default 0
+        check (partner_discount_percent >= 0 and partner_discount_percent <= 80);
+
+      alter table auth_sessions add column if not exists country_code text;
+      alter table auth_sessions add column if not exists region text;
+      alter table auth_sessions add column if not exists city text;
+      alter table auth_sessions add column if not exists referrer text;
+
+      create table if not exists connected_accounts (
+        id uuid primary key default gen_random_uuid(),
+        user_id uuid not null references users(id) on delete cascade,
+        provider text not null,
+        provider_email text,
+        display_name text,
+        created_at timestamptz not null default now(),
+        unique (user_id, provider)
+      );
+
+      create index if not exists connected_accounts_user_idx
+        on connected_accounts (user_id, created_at desc);
+      create index if not exists auth_sessions_recent_idx
+        on auth_sessions (created_at desc);
+    `,
+  },
 ] as const;
 
 export async function runMigrations(db: Database): Promise<void> {

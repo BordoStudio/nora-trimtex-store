@@ -9,7 +9,7 @@ import { SampleCatalogDetail } from "@/components/SampleCatalogDetail";
 import { getCatalogProductBySlug, getCatalogProducts } from "@/lib/catalog-api";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
-import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
+import { getPartnerPricingContext } from "@/lib/partner-pricing";
 import samplePageSeed from "../../../../../data/catalog.sample-pages.json";
 
 function productDescription(locale: "ru" | "uk" | "de" | "en", product: { sku: string; name: string; dimensions?: string; composition?: string }, category: string) {
@@ -56,10 +56,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ProductPage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams: Promise<{ variant?: string }> }) {
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
-  const partnerPricingAccess = await hasPartnerPricingAccess();
-  const product = await getCatalogProductBySlug(locale, slug, partnerPricingAccess);
+  const pricing = await getPartnerPricingContext();
+  const product = await getCatalogProductBySlug(locale, slug, pricing.hasAccess, pricing.discountPercent);
   if (!product) notFound();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: partnerPricingAccess });
+  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: pricing.hasAccess, discountPercent: pricing.discountPercent });
   const t = getDictionary(locale);
   const copy = {
     ru: { quality: "Премиальное качество", samples: "Образцы доступны", description: "Фурнитура для оформления штор и интерьерного текстиля. Посмотрите доступные варианты, изучите фактуру и добавьте изделие или образец в корзину. Размер, состав и наличие подтверждаются для выбранного варианта.", dimensions: "РАЗМЕРЫ", composition: "СОСТАВ", collection: "КАТЕГОРИЯ", delivery: "ПОСТАВКА", deliveryValue: "Срок подтверждается при заказе", more: "ПОХОЖАЯ ФУРНИТУРА" },

@@ -6,14 +6,14 @@ import { getCatalogProducts } from "@/lib/catalog-api";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
 import { jsonLd, siteUrl } from "@/lib/site";
-import { hasPartnerPricingAccess } from "@/lib/partner-pricing";
+import { getPartnerPricingContext } from "@/lib/partner-pricing";
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
-  const partnerPricingAccess = await hasPartnerPricingAccess();
-  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: partnerPricingAccess });
+  const pricing = await getPartnerPricingContext();
+  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: pricing.hasAccess, discountPercent: pricing.discountPercent });
   const faq = {
     ru: [["Можно заказать образцы цветов?", "Да. Выберите цвет на странице товара, добавьте его в корзину и отправьте запрос."], ["Вы поставляете товары по Европе?", "Да. Срок, наличие и стоимость доставки подтверждаются в персональном предложении."], ["Где посмотреть оптовые цены?", "Оптовые цены видны подтверждённым партнёрам после входа в обычный аккаунт. Позиции без фиксированной цены рассчитываются по объёму и условиям поставки."]],
     uk: [["Чи можна замовити зразки кольорів?", "Так. Оберіть колір на сторінці товару, додайте його до кошика та надішліть запит."], ["Ви постачаєте товари по Європі?", "Так. Термін, наявність і вартість доставки підтверджуються в персональній пропозиції."], ["Де переглянути оптові ціни?", "Оптові ціни доступні підтвердженим партнерам після входу до звичайного акаунта. Позиції без фіксованої ціни розраховуються за обсягом та умовами постачання."]],

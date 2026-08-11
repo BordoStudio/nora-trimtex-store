@@ -38,6 +38,6 @@ services:
       - key: PRIVACY_IP_SALT
         generateValue: true
       - key: ADMIN_EMAIL
-        value: info@noratrim.com
+        value: bordo.studio1@gmail.com
       - key: ADMIN_BOOTSTRAP_PASSWORD
         sync: false
