@@ -62,6 +62,7 @@ export function sampleRequestRoutes(repository: SampleRequestRepository): Fastif
         items: request.body.items,
         notes: request.body.notes,
         status: "new",
+        guestId: String(request.headers["x-guest-id"] || "").match(/^[A-Za-z0-9_-]{16,80}$/)?.[0],
         createdAt: now,
         updatedAt: now,
       };

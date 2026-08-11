@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "@/store";
 import { clearCart, decrementItem, incrementItem, removeSample, setCartOpen } from "@/store/cartSlice";
 import { getDictionary, type Locale } from "@/lib/i18n";
+import { guestHeaders } from "@/lib/guest";
 
 export function CartDrawer({ locale, partnerPricingAccess = false }: { locale: Locale; partnerPricingAccess?: boolean }) {
   const { items, open } = useSelector((state: RootState) => state.cart);
@@ -57,10 +58,9 @@ export function CartDrawer({ locale, partnerPricingAccess = false }: { locale: L
     event.preventDefault();
     setStatus("sending");
     try {
-      const endpoint = process.env.NEXT_PUBLIC_API_URL ? `${process.env.NEXT_PUBLIC_API_URL}/api/v1/orders` : "/api/orders";
-      const response = await fetch(endpoint, {
+      const response = await fetch("/api/orders", {
         method: "POST",
-        headers: { "content-type": "application/json" },
+        headers: guestHeaders(),
         body: JSON.stringify({ locale, customer: form, pricedSubtotalUsd: pricedSubtotal, items: items.map(({ id, sku, name, slug, categoryId, variantId, variantLabel, priceUsd, quantity }) => ({ productId: id, sku, name, slug, categoryId, variantId, variantLabel, unitPriceUsd: priceUsd, quantity })) }),
       });
       if (!response.ok) throw new Error("Request failed");

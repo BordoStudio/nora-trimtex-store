@@ -10,6 +10,7 @@ import { orderRoutes } from "./routes/orders.js";
 import { authRoutes } from "./routes/auth.js";
 import { cartRoutes } from "./routes/cart.js";
 import { adminRoutes } from "./routes/admin.js";
+import { guestRoutes } from "./routes/guests.js";
 import type { AppServices } from "./repositories.js";
 
 export async function buildApp(services: AppServices) {
@@ -36,6 +37,7 @@ export async function buildApp(services: AppServices) {
   if (services.db) {
     await app.register(authRoutes(services.db));
     await app.register(cartRoutes(services.db));
+    await app.register(guestRoutes(services.db));
     await app.register(adminRoutes(services.db));
   }
 
