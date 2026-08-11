@@ -21,7 +21,7 @@ const schema = z.object({
   AUTH_SESSION_DAYS: z.coerce.number().int().min(1).max(365).default(30),
   PRIVACY_IP_SALT: z.string().min(16).default("development-only-change-me"),
   ADMIN_EMAIL: z.string().email().optional(),
-  ADMIN_BOOTSTRAP_PASSWORD: z.string().min(12).optional(),
+  ADMIN_BOOTSTRAP_PASSWORD: z.string().min(10).optional(),
 });
 
 export const config = schema.parse(process.env);
