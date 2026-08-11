@@ -501,7 +501,7 @@ body { background:#e8ddce; background-image:radial-gradient(circle at 15% 0,rgba
 .mobile-menu-heading small { color:var(--ink); font-size:9px; letter-spacing:.1em; opacity:.55; }
 .mobile-menu > a,.mobile-menu > button { width:100%; flex:0 0 auto; gap:12px; padding:0 8px; border-bottom:1px solid var(--line); text-align:left; }
 .mobile-menu > a svg,.mobile-menu > button svg:last-child { margin-left:auto; width:17px; }
-.mobile-menu > button.mobile-login-link svg:first-child { width:18px; }
+.mobile-register-link svg:first-child { width:18px; }
 .mobile-catalog-trigger.active { color:var(--clay); background:rgba(185,149,83,.1); }
 .mobile-category-list { display:flex !important; flex-direction:column !important; gap:0 !important; width:100%; padding:6px 0 8px !important; border-bottom:1px solid var(--line); text-transform:none !important; font-size:inherit !important; }
 .mobile-category-list a { display:flex; align-items:center; justify-content:space-between; min-height:38px; padding:0 8px 0 24px; border-bottom:1px solid rgba(68,49,33,.08); font:400 16px/1.2 var(--serif); }
