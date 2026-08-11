@@ -117,11 +117,13 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   const samplePagesRaw = product.categoryId === "samples"
     ? (samplePageSeed as Record<string, string[]>)[product.id] || []
     : [];
-  const samplePages = (product.sku.startsWith("Y-DL-")
+  const filteredSamplePages = (product.sku.startsWith("Y-DL-")
     ? samplePagesRaw.slice(3, -4)
     : product.sku.startsWith("YK-DL-")
       ? samplePagesRaw.slice(1, -4)
       : samplePagesRaw).filter((page) => !excludedSampleTextPages.has(page));
+  const sampleAssetsBase = process.env.NEXT_PUBLIC_ASSETS_URL?.replace(/\/$/, "");
+  const samplePages = filteredSamplePages.map((page) => sampleAssetsBase ? `${sampleAssetsBase}${page}` : page);
 
   return <main className="product-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
