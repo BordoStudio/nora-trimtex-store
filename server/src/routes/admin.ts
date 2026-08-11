@@ -1,53 +1,83 @@
 import type { FastifyPluginAsync } from "fastify";
-import type { Database } from "../db.js";
-import { requireAdmin } from "../auth.js";
+import type { MongoDatabase } from "../mongo.js";
+import { requireAdmin, type UserRecord } from "../auth.js";
 import { sendEmail } from "../email.js";
+import type { OrderDocument, ProductDocument } from "../domain/types.js";
 
-export function adminRoutes(db: Database): FastifyPluginAsync {
+const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+type CartRecord = { userId: string; items: unknown[]; countryCode?: string; userAgent?: string; updatedAt: Date };
+type SessionRecord = { userId: string; countryCode?: string; region?: string; city?: string; userAgent?: string; referrer?: string; createdAt: Date; lastSeenAt: Date };
+type ConnectedAccountRecord = { userId: string; provider: string; providerEmail?: string; displayName?: string; createdAt: Date };
+
+const publicUser = (user: UserRecord) => {
+  const { passwordHash: _passwordHash, _id: _idValue, ...safe } = user as UserRecord & { _id?: unknown };
+  return safe;
+};
+
+export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
   return async (app) => {
     app.get<{ Querystring: { status?: string; role?: string; q?: string; search?: string } }>("/api/v1/admin/users", async (request) => {
       await requireAdmin(db, request);
-      const status = request.query.status || null;
-      const role = request.query.role || null;
-      const searchValue = request.query.q || request.query.search;
-      const search = searchValue?.trim() ? `%${searchValue.trim()}%` : null;
-      const users = await db<Array<Record<string, unknown>>>`
-        select u.id, u.email, u.role, u.status, u.first_name as "firstName", u.last_name as "lastName",
-          u.phone, u.company, u.country, u.city, u.email_verified_at as "emailVerifiedAt",
-          u.last_login_at as "lastLoginAt", u.created_at as "createdAt",
-          u.partner_discount_percent::float as "partnerDiscountPercent",
-          jsonb_array_length(coalesce(c.items, '[]'::jsonb)) as "cartItems", c.updated_at as "cartUpdatedAt",
-          (select count(*)::int from orders o where lower(o.customer ->> 'email') = u.email) as "orders"
-        from users u left join carts c on c.user_id = u.id
-        where (${status}::text is null or u.status = ${status}) and (${role}::text is null or u.role = ${role})
-          and (${search}::text is null or u.email ilike ${search} or u.first_name ilike ${search} or u.last_name ilike ${search} or coalesce(u.company, '') ilike ${search})
-        order by case when u.status = 'pending_approval' then 0 else 1 end, u.created_at desc limit 500
-      `;
-      return { data: { items: users } };
+      const filter: Record<string, unknown> = {};
+      if (request.query.status) filter.status = request.query.status;
+      if (request.query.role) filter.role = request.query.role;
+      const searchValue = (request.query.q || request.query.search)?.trim();
+      if (searchValue) {
+        const pattern = new RegExp(escapeRegex(searchValue), "i");
+        filter.$or = [{ email: pattern }, { firstName: pattern }, { lastName: pattern }, { company: pattern }];
+      }
+      const users = await db.collection<UserRecord>("users").find(filter, { projection: { passwordHash: 0 } }).sort({ createdAt: -1 }).limit(500).toArray();
+      users.sort((a, b) => Number(b.status === "pending_approval") - Number(a.status === "pending_approval"));
+      const userIds = users.map((user) => user.id);
+      const emails = users.map((user) => user.email);
+      const [carts, orderCounts] = await Promise.all([
+        db.collection<CartRecord>("carts").find({ userId: { $in: userIds } }, { projection: { _id: 0 } }).toArray(),
+        db.collection<OrderDocument>("orders").aggregate<{ _id: string; count: number }>([
+          { $match: { "customer.email": { $in: emails } } },
+          { $group: { _id: { $toLower: "$customer.email" }, count: { $sum: 1 } } },
+        ]).toArray(),
+      ]);
+      const cartsByUser = new Map(carts.map((cart) => [cart.userId, cart]));
+      const ordersByEmail = new Map(orderCounts.map((entry) => [entry._id, entry.count]));
+      return { data: { items: users.map((user) => {
+        const cart = cartsByUser.get(user.id);
+        return {
+          ...publicUser(user),
+          cartItems: cart?.items.length ?? 0,
+          cartUpdatedAt: cart?.updatedAt,
+          orders: ordersByEmail.get(user.email.toLowerCase()) ?? 0,
+        };
+      }) } };
     });
 
     app.get<{ Params: { id: string } }>("/api/v1/admin/users/:id", async (request, reply) => {
       await requireAdmin(db, request);
-      const users = await db<Array<Record<string, unknown>>>`select id, email, role, status, first_name as "firstName", last_name as "lastName", phone, company, country, city, locale, email_verified_at as "emailVerifiedAt", approved_at as "approvedAt", last_login_at as "lastLoginAt", created_at as "createdAt", partner_discount_percent::float as "partnerDiscountPercent" from users where id = ${request.params.id}`;
-      if (!users[0]) return reply.code(404).send({ error: "not_found" });
-      const carts = await db`select items, country_code as "countryCode", user_agent as "userAgent", updated_at as "updatedAt" from carts where user_id = ${request.params.id}`;
-      const orders = await db`select order_number as "orderNumber", items, status, priced_subtotal_usd as "subtotal", created_at as "createdAt" from orders where lower(customer ->> 'email') = ${String(users[0].email).toLowerCase()} order by created_at desc`;
-      const sessions = await db`select country_code as "countryCode", region, city, user_agent as "userAgent", referrer, last_seen_at as "lastSeenAt", created_at as "createdAt" from auth_sessions where user_id = ${request.params.id} order by last_seen_at desc limit 30`;
-      const connectedAccounts = await db`select provider, provider_email as "providerEmail", display_name as "displayName", created_at as "createdAt" from connected_accounts where user_id = ${request.params.id} order by created_at desc`;
-      return { data: { user: users[0], cart: carts[0] ?? { items: [] }, orders, sessions, connectedAccounts } };
+      const user = await db.collection<UserRecord>("users").findOne({ id: request.params.id });
+      if (!user) return reply.code(404).send({ error: "not_found" });
+      const [cart, orders, sessions, connectedAccounts] = await Promise.all([
+        db.collection<CartRecord>("carts").findOne({ userId: user.id }, { projection: { _id: 0 } }),
+        db.collection<OrderDocument>("orders").find({ "customer.email": user.email }, { projection: { _id: 0 } }).sort({ createdAt: -1 }).toArray(),
+        db.collection<SessionRecord>("authSessions").find({ userId: user.id }, { projection: { _id: 0, tokenHash: 0, ipHash: 0 } }).sort({ lastSeenAt: -1 }).limit(30).toArray(),
+        db.collection<ConnectedAccountRecord>("connectedAccounts").find({ userId: user.id }, { projection: { _id: 0, userId: 0 } }).sort({ createdAt: -1 }).toArray(),
+      ]);
+      return { data: { user: publicUser(user), cart: cart ?? { items: [] }, orders, sessions, connectedAccounts } };
     });
 
     app.patch<{ Params: { id: string }; Body: { action?: "approve" | "reject" | "disable"; status?: "active" | "rejected" | "disabled" } }>("/api/v1/admin/users/:id/status", async (request, reply) => {
       const admin = await requireAdmin(db, request);
       const action = request.body?.action || (request.body?.status === "active" ? "approve" : request.body?.status === "rejected" ? "reject" : request.body?.status === "disabled" ? "disable" : undefined);
       if (!action || !["approve", "reject", "disable"].includes(action)) return reply.code(400).send({ error: "invalid_action" });
-      const rows = await db<{ email: string; firstName: string; locale: string; role: string }[]>`select email, first_name as "firstName", locale, role from users where id = ${request.params.id}`;
-      const user = rows[0];
+      const user = await db.collection<UserRecord>("users").findOne({ id: request.params.id });
       if (!user) return reply.code(404).send({ error: "not_found" });
       if (action === "approve" && user.role !== "partner") return reply.code(400).send({ error: "not_partner" });
       const status = action === "approve" ? "active" : action === "reject" ? "rejected" : "disabled";
-      await db`update users set status = ${status}, approved_at = ${action === "approve" ? new Date() : null}, approved_by = ${action === "approve" ? admin.id : null}, updated_at = now() where id = ${request.params.id}`;
-      if (action === "approve") await sendEmail({ to: user.email, subject: "Nora TrimTex — partner account approved", text: `Hello ${user.firstName}, your Nora TrimTex partner account is approved. You can now sign in and view wholesale prices.`, idempotencyKey: `partner-approved-${request.params.id}` }).catch(() => false);
+      const now = new Date();
+      await db.collection<UserRecord>("users").updateOne(
+        { id: user.id },
+        { $set: { status, approvedAt: action === "approve" ? now : undefined, approvedBy: action === "approve" ? admin.id : undefined, updatedAt: now } },
+      );
+      if (action === "approve") await sendEmail({ to: user.email, subject: "Nora TrimTex — partner account approved", text: `Hello ${user.firstName}, your Nora TrimTex partner account is approved. You can now sign in and view wholesale prices.`, idempotencyKey: `partner-approved-${user.id}` }).catch(() => false);
       return { data: { status } };
     });
 
@@ -55,26 +85,26 @@ export function adminRoutes(db: Database): FastifyPluginAsync {
       await requireAdmin(db, request);
       const discount = Number(request.body?.partnerDiscountPercent);
       if (!Number.isFinite(discount) || discount < 0 || discount > 80) return reply.code(400).send({ error: "invalid_discount" });
-      const rows = await db<{ id: string }[]>`update users set partner_discount_percent = ${discount}, updated_at = now() where id = ${request.params.id} and role = 'partner' returning id`;
-      if (!rows[0]) return reply.code(404).send({ error: "partner_not_found" });
+      const result = await db.collection<UserRecord>("users").updateOne({ id: request.params.id, role: "partner" }, { $set: { partnerDiscountPercent: discount, updatedAt: new Date() } });
+      if (!result.matchedCount) return reply.code(404).send({ error: "partner_not_found" });
       return { data: { partnerDiscountPercent: discount } };
     });
 
     app.get<{ Querystring: { q?: string; page?: string } }>("/api/v1/admin/products", async (request) => {
       await requireAdmin(db, request);
-      const search = request.query.q?.trim() ? `%${request.query.q.trim()}%` : null;
+      const filter: Record<string, unknown> = {};
+      if (request.query.q?.trim()) {
+        const pattern = new RegExp(escapeRegex(request.query.q.trim()), "i");
+        filter.$or = [{ sku: pattern }, { "names.ru": pattern }, { "names.en": pattern }];
+      }
       const page = Math.max(1, Number(request.query.page || 1));
       const limit = 100;
-      const offset = (page - 1) * limit;
-      const items = await db<Array<Record<string, unknown>>>`
-        select p.id, p.sku, p.slug, p.category_id as "categoryId", p.names,
-          p.price_usd::float as "priceUsd", p.status, p.primary_image_key as "imageKey", p.updated_at as "updatedAt"
-        from products p
-        where (${search}::text is null or p.sku ilike ${search} or coalesce(p.names ->> 'ru', p.names ->> 'en', '') ilike ${search})
-        order by p.sku asc limit ${limit} offset ${offset}
-      `;
-      const totals = await db<{ total: number }[]>`select count(*)::int as total from products p where (${search}::text is null or p.sku ilike ${search} or coalesce(p.names ->> 'ru', p.names ->> 'en', '') ilike ${search})`;
-      return { data: { items, page, total: totals[0]?.total ?? 0 } };
+      const collection = db.collection<ProductDocument>("products");
+      const [items, total] = await Promise.all([
+        collection.find(filter, { projection: { _id: 0, id: 1, sku: 1, slug: 1, categoryId: 1, names: 1, priceUsd: 1, status: 1, primaryImageKey: 1, updatedAt: 1 } }).sort({ sku: 1 }).skip((page - 1) * limit).limit(limit).toArray(),
+        collection.countDocuments(filter),
+      ]);
+      return { data: { items: items.map(({ primaryImageKey, ...item }) => ({ ...item, imageKey: primaryImageKey })), page, total } };
     });
 
     app.patch<{ Params: { id: string }; Body: { priceUsd?: number | null } }>("/api/v1/admin/products/:id/price", async (request, reply) => {
@@ -82,21 +112,19 @@ export function adminRoutes(db: Database): FastifyPluginAsync {
       const raw = request.body?.priceUsd;
       const price = raw === null || raw === undefined ? null : Number(raw);
       if (price !== null && (!Number.isFinite(price) || price < 0 || price > 1_000_000)) return reply.code(400).send({ error: "invalid_price" });
-      const rows = await db<{ id: string }[]>`update products set price_usd = ${price}, updated_at = now() where id = ${request.params.id} returning id`;
-      if (!rows[0]) return reply.code(404).send({ error: "product_not_found" });
+      const result = price === null
+        ? await db.collection<ProductDocument>("products").updateOne({ id: request.params.id }, { $unset: { priceUsd: "" }, $set: { updatedAt: new Date() } })
+        : await db.collection<ProductDocument>("products").updateOne({ id: request.params.id }, { $set: { priceUsd: price, updatedAt: new Date() } });
+      if (!result.matchedCount) return reply.code(404).send({ error: "product_not_found" });
       return { data: { priceUsd: price } };
     });
 
     app.get("/api/v1/admin/activity", async (request) => {
       await requireAdmin(db, request);
-      const sessions = await db`
-        select s.user_id as "userId", u.email, u.first_name as "firstName", u.last_name as "lastName",
-          s.country_code as "countryCode", s.region, s.city, s.user_agent as "userAgent", s.referrer,
-          s.created_at as "createdAt", s.last_seen_at as "lastSeenAt"
-        from auth_sessions s join users u on u.id = s.user_id
-        order by s.last_seen_at desc limit 200
-      `;
-      return { data: { sessions } };
+      const sessions = await db.collection<SessionRecord>("authSessions").find({}, { projection: { _id: 0, tokenHash: 0, ipHash: 0 } }).sort({ lastSeenAt: -1 }).limit(200).toArray();
+      const users = await db.collection<UserRecord>("users").find({ id: { $in: [...new Set(sessions.map((session) => session.userId))] } }, { projection: { _id: 0, id: 1, email: 1, firstName: 1, lastName: 1 } }).toArray();
+      const usersById = new Map(users.map((user) => [user.id, user]));
+      return { data: { sessions: sessions.map((session) => ({ ...session, ...usersById.get(session.userId) })) } };
     });
   };
 }

@@ -1,20 +1,20 @@
 import { buildApp } from "./app.js";
-import { checkDatabase, closeDatabase, connectDatabase } from "./db.js";
+import { closeMongo, connectMongo, initializeMongo } from "./mongo.js";
 import { config } from "./config.js";
-import { runMigrations } from "./migrations.js";
-import { createPostgresServices } from "./postgres-repositories.js";
+import { createMongoServices } from "./mongo-repositories.js";
 import { ensureAdminUser } from "./auth.js";
+import { bootstrapCatalog } from "./bootstrap-catalog.js";
 
-const db = connectDatabase();
-await checkDatabase(db);
-await runMigrations(db);
+const db = await connectMongo();
+await initializeMongo(db);
+await bootstrapCatalog(db);
 await ensureAdminUser(db);
-const app = await buildApp(createPostgresServices(db));
+const app = await buildApp(createMongoServices(db));
 
 const shutdown = async (signal: string) => {
   app.log.info({ signal }, "Shutting down");
   await app.close();
-  await closeDatabase();
+  await closeMongo();
   process.exit(0);
 };
 

@@ -1,7 +1,6 @@
 import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { closeDatabase, connectDatabase } from "../db.js";
-import { runMigrations } from "../migrations.js";
+import { closeMongo, connectMongo, initializeMongo } from "../mongo.js";
 import type { ProductDocument } from "../domain/types.js";
 import { categorySeed } from "../domain/categories.js";
 
@@ -48,52 +47,32 @@ const sampleProducts: MigrationProduct[] = sampleSource.map((product) => ({
   localImage: product.primaryImageKey.replace(/^products\//, ""),
 }));
 const products = [...source.products, ...sampleProducts];
-const db = connectDatabase();
-await runMigrations(db);
+const db = await connectMongo();
+await initializeMongo(db);
+const now = new Date();
 
-for (const category of categorySeed) {
-  await db`
-    insert into categories (id, slug, names, sort_order, active)
-    values (${category.id}, ${category.slug}, ${db.json(category.names)}, ${category.sortOrder}, ${category.active})
-    on conflict (id) do update set
-      slug = excluded.slug,
-      names = excluded.names,
-      sort_order = excluded.sort_order,
-      active = excluded.active
-  `;
+if (categorySeed.length) {
+  await db.collection("categories").bulkWrite(categorySeed.map((category) => ({
+    updateOne: {
+      filter: { id: category.id },
+      update: { $set: category },
+      upsert: true,
+    },
+  })), { ordered: false });
 }
 
-for (const product of products) {
-  await db`
-    insert into products (
-      id, sku, slug, category_id, status, names, descriptions, primary_image_key,
-      media, variants, variant_count, tags, featured, is_new, attributes, price_usd
-    ) values (
-      ${product.id}, ${product.sku}, ${product.slug}, ${product.categoryId}, ${product.status},
-      ${db.json(product.names)}, ${product.descriptions ? db.json(product.descriptions) : null},
-      ${product.primaryImageKey}, ${db.json(product.media)}, ${db.json(product.variants)},
-      ${product.variantCount}, ${product.tags}, ${product.featured}, ${product.isNew},
-      ${db.json(product.attributes)}, ${product.priceUsd ?? null}
-    )
-    on conflict (id) do update set
-      sku = excluded.sku,
-      slug = excluded.slug,
-      category_id = excluded.category_id,
-      status = excluded.status,
-      names = excluded.names,
-      descriptions = excluded.descriptions,
-      primary_image_key = excluded.primary_image_key,
-      media = excluded.media,
-      variants = excluded.variants,
-      variant_count = excluded.variant_count,
-      tags = excluded.tags,
-      featured = excluded.featured,
-      is_new = excluded.is_new,
-      attributes = excluded.attributes,
-      price_usd = excluded.price_usd,
-      updated_at = now()
-  `;
+if (products.length) {
+  await db.collection<ProductDocument>("products").bulkWrite(products.map(({ localImage: _localImage, ...product }) => ({
+    updateOne: {
+      filter: { id: product.id },
+      update: {
+        $set: { ...product, updatedAt: now },
+        $setOnInsert: { createdAt: now },
+      },
+      upsert: true,
+    },
+  })), { ordered: false });
 }
 
-console.log(`Imported ${products.length} migrated products into PostgreSQL`);
-await closeDatabase();
+console.log(`Imported ${products.length} migrated products into MongoDB`);
+await closeMongo();
