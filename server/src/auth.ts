@@ -122,7 +122,8 @@ export async function ensureAdminUser(db: MongoDatabase): Promise<void> {
   const email = normalizeEmail(config.ADMIN_EMAIL);
   const passwordHash = await hashPassword(config.ADMIN_BOOTSTRAP_PASSWORD);
   const now = new Date();
-  await db.collection<UserRecord>("users").updateOne(
+  const users = db.collection<UserRecord>("users");
+  await users.updateOne(
     { email },
     {
       $set: {
@@ -144,4 +145,18 @@ export async function ensureAdminUser(db: MongoDatabase): Promise<void> {
     },
     { upsert: true },
   );
+
+  // ADMIN_EMAIL is the canonical administrator identity. Remove obsolete
+  // bootstrap administrators after an address change so the previous email
+  // can no longer be used to access the dashboard.
+  const obsoleteAdmins = await users
+    .find({ role: "admin", email: { $ne: email } }, { projection: { id: 1 } })
+    .toArray();
+  if (obsoleteAdmins.length > 0) {
+    const obsoleteIds = obsoleteAdmins.map((admin) => admin.id);
+    await Promise.all([
+      users.deleteMany({ id: { $in: obsoleteIds } }),
+      db.collection<SessionRecord>("authSessions").deleteMany({ userId: { $in: obsoleteIds } }),
+    ]);
+  }
 }
