@@ -28,7 +28,7 @@ services:
       - key: RESEND_API_KEY
         sync: false
       - key: NOTIFICATION_FROM_EMAIL
-        sync: false
+        value: "Nora TrimTex <info@noratrim.com>"
       - key: NOTIFICATION_TO_EMAIL
         value: info@noratrim.com
       - key: STOREFRONT_URL

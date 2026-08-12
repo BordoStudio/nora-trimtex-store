@@ -1,9 +1,10 @@
-import { randomUUID } from "node:crypto";
+import { randomInt, randomUUID } from "node:crypto";
 import type { FastifyPluginAsync } from "fastify";
 import type { MongoDatabase } from "../mongo.js";
 import { config } from "../config.js";
-import { createSession, getSessionUser, hashPassword, hashToken, issueToken, normalizeEmail, verifyPassword, type AccountRole, type UserRecord } from "../auth.js";
+import { createSession, getSessionUser, hashPassword, hashToken, normalizeEmail, verifyPassword, type AccountRole, type UserRecord } from "../auth.js";
 import { sendEmail, sendOwnerNotification } from "../email.js";
+import { verificationEmail } from "../email-templates.js";
 
 type RegisterBody = {
   accountType: "retail" | "partner";
@@ -30,12 +31,29 @@ type AuthTokenRecord = {
   createdAt: Date;
 };
 
-const copy = {
-  ru: { subject: "Подтвердите email — Nora TrimTex", hello: "Здравствуйте", action: "Подтвердить email", note: "Ссылка действует 24 часа." },
-  uk: { subject: "Підтвердьте email — Nora TrimTex", hello: "Вітаємо", action: "Підтвердити email", note: "Посилання діє 24 години." },
-  de: { subject: "E-Mail bestätigen — Nora TrimTex", hello: "Guten Tag", action: "E-Mail bestätigen", note: "Der Link ist 24 Stunden gültig." },
-  en: { subject: "Confirm your email — Nora TrimTex", hello: "Hello", action: "Confirm email", note: "This link is valid for 24 hours." },
-} as const;
+const verificationCode = () => String(randomInt(100_000, 1_000_000));
+
+async function issueVerificationCode(db: MongoDatabase, user: Pick<UserRecord, "id" | "role" | "email" | "firstName" | "locale">) {
+  const now = new Date();
+  const code = verificationCode();
+  const recordId = randomUUID();
+  await db.collection<AuthTokenRecord>("authTokens").updateMany(
+    { userId: user.id, purpose: "verify_email", usedAt: { $exists: false } },
+    { $set: { usedAt: now } },
+  );
+  await db.collection<AuthTokenRecord>("authTokens").insertOne({
+    id: recordId,
+    userId: user.id,
+    role: user.role,
+    email: user.email,
+    tokenHash: hashToken(code),
+    purpose: "verify_email",
+    expiresAt: new Date(now.getTime() + 15 * 60_000),
+    createdAt: now,
+  });
+  const message = verificationEmail(user.locale, user.firstName, code);
+  await sendEmail({ to: user.email, ...message, idempotencyKey: `verify-${recordId}` });
+}
 
 export function authRoutes(db: MongoDatabase): FastifyPluginAsync {
   return async (app) => {
@@ -69,33 +87,17 @@ export function authRoutes(db: MongoDatabase): FastifyPluginAsync {
         updatedAt: now,
       };
       await db.collection<UserRecord>("users").insertOne(user);
-      const token = issueToken();
-      await db.collection<AuthTokenRecord>("authTokens").insertOne({
-        id: randomUUID(),
-        userId,
-        role: body.accountType,
-        email,
-        tokenHash: hashToken(token),
-        purpose: "verify_email",
-        expiresAt: new Date(now.getTime() + 86_400_000),
-        createdAt: now,
-      });
-      const text = copy[body.locale];
-      const link = `${config.STOREFRONT_URL}/${body.locale}/account/verify?token=${encodeURIComponent(token)}`;
-      await sendEmail({
-        to: email,
-        subject: text.subject,
-        text: `${text.hello}, ${body.firstName}!\n\n${text.action}: ${link}\n\n${text.note}`,
-        html: `<p>${text.hello}, ${body.firstName}!</p><p><a href="${link}" style="display:inline-block;padding:13px 22px;border-radius:999px;background:#b99553;color:#30221b;text-decoration:none">${text.action}</a></p><p>${text.note}</p>`,
-        idempotencyKey: `verify-${userId}`,
-      });
-      return reply.code(201).send({ data: { status: "email_pending" } });
+      await issueVerificationCode(db, user);
+      return reply.code(201).send({ data: { status: "email_pending", email, accountType: body.accountType } });
     });
 
-    app.post<{ Body: { token: string } }>("/api/v1/auth/verify-email", async (request, reply) => {
+    app.post<{ Body: { token?: string; email?: string; code?: string } }>("/api/v1/auth/verify-email", { config: { rateLimit: { max: 8, timeWindow: "10 minutes" } } }, async (request, reply) => {
       const now = new Date();
+      const credential = request.body?.code?.trim() || request.body?.token?.trim() || "";
+      const email = request.body?.email ? normalizeEmail(request.body.email) : undefined;
+      if (!credential || (request.body?.code && !/^\d{6}$/.test(credential))) return reply.code(400).send({ error: "invalid_or_expired_token" });
       const record = await db.collection<AuthTokenRecord>("authTokens").findOneAndUpdate(
-        { tokenHash: hashToken(request.body?.token || ""), purpose: "verify_email", usedAt: { $exists: false }, expiresAt: { $gt: now } },
+        { tokenHash: hashToken(credential), purpose: "verify_email", usedAt: { $exists: false }, expiresAt: { $gt: now }, ...(email ? { email } : {}) },
         { $set: { usedAt: now } },
         { returnDocument: "before" },
       );
@@ -109,6 +111,14 @@ export function authRoutes(db: MongoDatabase): FastifyPluginAsync {
         await sendOwnerNotification({ subject: "[Nora TrimTex] New partner approval", text: `Partner ${record.email} confirmed the email and is waiting for approval.\n${config.ADMIN_URL}`, idempotencyKey: `partner-${record.userId}` }).catch(() => false);
       }
       return { data: { status: nextStatus } };
+    });
+
+    app.post<{ Body: { email?: string } }>("/api/v1/auth/resend-verification", { config: { rateLimit: { max: 3, timeWindow: "15 minutes" } } }, async (request, reply) => {
+      const email = normalizeEmail(request.body?.email || "");
+      if (!email) return reply.code(400).send({ error: "invalid_email" });
+      const user = await db.collection<UserRecord>("users").findOne({ email, status: "email_pending" });
+      if (user) await issueVerificationCode(db, user);
+      return { data: { sent: true } };
     });
 
     app.post<{ Body: { email: string; password: string } }>("/api/v1/auth/login", { config: { rateLimit: { max: 10, timeWindow: "10 minutes" } } }, async (request, reply) => {

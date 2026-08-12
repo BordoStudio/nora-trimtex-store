@@ -2,7 +2,8 @@ import { randomUUID } from "node:crypto";
 import type { FastifyPluginAsync } from "fastify";
 import { locales, type Locale, type OrderDocument } from "../domain/types.js";
 import type { OrderRepository } from "../repositories.js";
-import { sendOwnerNotification } from "../email.js";
+import { sendEmail, sendOwnerNotification } from "../email.js";
+import { orderConfirmationEmail } from "../email-templates.js";
 
 type OrderBody = {
   locale: Locale;
@@ -86,7 +87,17 @@ export function orderRoutes(repository: OrderRepository): FastifyPluginAsync {
         "",
         ...request.body.items.map((item) => `${item.sku}${item.variantLabel ? ` · ${item.variantLabel}` : ""} × ${item.quantity}`),
       ].join("\n");
-      await sendOwnerNotification({ subject: `[Nora TrimTex] New order ${orderNumber}`, text: notification, idempotencyKey: `order-${orderNumber}` }).catch((error) => request.log.error(error, "Order notification failed"));
+      const customerMessage = orderConfirmationEmail(
+        request.body.locale,
+        request.body.customer,
+        orderNumber,
+        request.body.items.reduce((sum, item) => sum + item.quantity, 0),
+      );
+      const results = await Promise.allSettled([
+        sendOwnerNotification({ subject: `[Nora TrimTex] New order ${orderNumber}`, text: notification, replyTo: request.body.customer.email, idempotencyKey: `order-owner-${orderNumber}` }),
+        sendEmail({ to: request.body.customer.email, ...customerMessage, idempotencyKey: `order-customer-${orderNumber}` }),
+      ]);
+      results.forEach((result, index) => { if (result.status === "rejected") request.log.error(result.reason, index === 0 ? "Owner order notification failed" : "Customer order confirmation failed"); });
       return reply.code(201).send({ data: { id: orderNumber, status: document.status } });
     });
   };
