@@ -22,10 +22,10 @@ const sampleIntro = {
 };
 
 const categoryBody = {
-  en: (name: string) => `Explore ${name.toLocaleLowerCase("en")} for curtains and interior textiles. Compare article numbers, colourways, dimensions and availability.`,
-  de: (name: string) => `Entdecken Sie ${name} für Vorhänge und textile Raumgestaltung. Vergleichen Sie Artikel, Farben, Maße und Verfügbarkeit.`,
-  uk: (name: string) => `Перегляньте ${name.toLocaleLowerCase("uk")} для штор та інтер’єрного текстилю. Порівнюйте артикули, кольори, розміри й наявність.`,
-  ru: (name: string) => `Посмотрите ${name.toLocaleLowerCase("ru")} для штор и интерьерного текстиля. Сравнивайте артикулы, цвета, размеры и наличие.`,
+  en: (name: string) => `Explore ${name.toLocaleLowerCase("en")} for curtains and interior textiles. Check availability.`,
+  de: (name: string) => `Entdecken Sie ${name} für Vorhänge und textile Raumgestaltung. Verfügbarkeit prüfen.`,
+  uk: (name: string) => `Перегляньте ${name.toLocaleLowerCase("uk")} для штор та інтер’єрного текстилю. Дізнавайтеся про наявність.`,
+  ru: (name: string) => `Посмотрите ${name.toLocaleLowerCase("ru")} для штор и интерьерного текстиля. Узнавайте наличие.`,
 };
 
 export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ category?: string }> }): Promise<Metadata> {
