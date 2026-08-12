@@ -12,20 +12,20 @@ export function ProductCard({ product, locale }: { product: Product; locale: Loc
   const [zoomed, setZoomed] = useState(false);
 
   return <article className="product-card">
-    <div className="product-image-wrap">
-      <Link className="product-image-link" href={`/${locale}/product/${product.slug}`} aria-label={`${product.sku} — ${product.name}`}>
+    <Link className="product-card-link" href={`/${locale}/product/${product.slug}`} aria-label={`${product.sku} — ${product.name}`}>
+      <div className="product-image-wrap">
         <Image src={product.image} alt={product.name} fill sizes="(max-width: 700px) 50vw, 25vw" quality={90} />
-      </Link>
-      <ImageZoomButton className="is-card" label={zoomLabels[locale].zoomIn} onClick={() => setZoomed(true)} />
-      {product.isNew && <span className="new-badge">{t.product.new}</span>}
-    </div>
-    <Link className="product-meta" href={`/${locale}/product/${product.slug}`}>
+        {product.isNew && <span className="new-badge">{t.product.new}</span>}
+      </div>
+      <div className="product-meta">
       <div><small>{t.categories[product.categoryId]}</small><h3>{product.sku}</h3></div>
       <span>{formatColourways(locale, product.variantCount)}</span>
+      </div>
+      <span className="original-name">{product.name}</span>
+      <span className={`product-stock is-${product.availability}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : product.availability === "preorder" ? t.product.preorder : t.product.availabilityOnRequest}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</span>
+      <span className="product-price">{product.tradePriceHidden ? t.product.partnerPrice : product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</span>
     </Link>
-    <Link className="original-name" href={`/${locale}/product/${product.slug}`}>{product.name}</Link>
-    <p className={`product-stock is-${product.availability}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : product.availability === "preorder" ? t.product.preorder : t.product.availabilityOnRequest}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</p>
-    <p className="product-price">{product.tradePriceHidden ? t.product.partnerPrice : product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>
+    <ImageZoomButton className="is-card" label={zoomLabels[locale].zoomIn} onClick={() => setZoomed(true)} />
     <ImageZoomViewer src={product.image} alt={`${product.sku} — ${product.name}`} open={zoomed} onClose={() => setZoomed(false)} labels={zoomLabels[locale]} />
   </article>;
 }
