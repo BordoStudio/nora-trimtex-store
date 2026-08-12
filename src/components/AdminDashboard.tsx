@@ -139,5 +139,5 @@ function AdminLogin() {
     const response = await fetch("/api/account/login", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
     if (response.ok) location.reload(); else setError("Неверные данные или нет доступа администратора.");
   }
-  return <form className="admin-login" onSubmit={submit}><span>NORA TRIMTEX</span><h1>Администратор</h1><label>Email<input name="email" type="email" required defaultValue="bordo.studio1@gmail.com" autoComplete="username" /></label><label>Пароль<input name="password" type="password" required autoComplete="current-password" /></label>{error && <p>{error}</p>}<button className="button primary">Войти</button></form>;
+  return <form className="admin-login" onSubmit={submit}><span>NORA TRIMTEX</span><h1>Администратор</h1><label>Email<input name="email" type="email" required defaultValue="tabankovych@gmail.com" autoComplete="username" /></label><label>Пароль<input name="password" type="password" required autoComplete="current-password" /></label>{error && <p>{error}</p>}<button className="button primary">Войти</button></form>;
 }

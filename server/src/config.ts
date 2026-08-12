@@ -16,7 +16,7 @@ const schema = z.object({
   R2_BUCKET: z.string().default("nora-trimtex-assets"),
   RESEND_API_KEY: z.string().optional(),
   NOTIFICATION_FROM_EMAIL: z.string().default("Nora TrimTex <info@noratrim.com>"),
-  NOTIFICATION_TO_EMAIL: z.string().email().default("bordo.studio1@gmail.com"),
+  NOTIFICATION_TO_EMAIL: z.string().email().default("tabankovych@gmail.com"),
   STOREFRONT_URL: z.string().url().default("http://localhost:4000"),
   ADMIN_URL: z.string().url().default("http://localhost:4000/admin"),
   AUTH_SESSION_DAYS: z.coerce.number().int().min(1).max(365).default(30),
