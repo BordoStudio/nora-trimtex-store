@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useCallback, useEffect, useState } from "react";
-import { Check, LoaderCircle, MapPin, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, UserRoundCheck, UserX } from "lucide-react";
+import { Check, Eye, EyeOff, LoaderCircle, MapPin, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, UserRoundCheck, UserX } from "lucide-react";
 
 type AdminUser = {
   id: string; email: string; role: string; status: string; firstName: string; lastName: string;
@@ -134,10 +134,11 @@ function GuestList({ guests }: { guests: Guest[] }) {
 
 function AdminLogin() {
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault(); const body = Object.fromEntries(new FormData(event.currentTarget));
     const response = await fetch("/api/account/login", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
     if (response.ok) location.reload(); else setError("Неверные данные или нет доступа администратора.");
   }
-  return <form className="admin-login" onSubmit={submit}><span>NORA TRIMTEX</span><h1>Администратор</h1><label>Email<input name="email" type="email" required defaultValue="tabankovych@gmail.com" autoComplete="username" /></label><label>Пароль<input name="password" type="password" required autoComplete="current-password" /></label>{error && <p>{error}</p>}<button className="button primary">Войти</button></form>;
+  return <form className="admin-login" onSubmit={submit}><span>NORA TRIMTEX</span><h1>Администратор</h1><label>Email<input name="email" type="email" required defaultValue="tabankovych@gmail.com" autoComplete="username" /></label><label>Пароль<span className="password-input"><input name="password" type={showPassword ? "text" : "password"} required autoComplete="current-password" /><button type="button" aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"} aria-pressed={showPassword} title={showPassword ? "Скрыть пароль" : "Показать пароль"} onClick={() => setShowPassword((value) => !value)}>{showPassword ? <EyeOff /> : <Eye />}</button></span></label>{error && <p>{error}</p>}<button className="button primary">Войти</button></form>;
 }
