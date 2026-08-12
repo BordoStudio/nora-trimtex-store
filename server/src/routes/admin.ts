@@ -2,6 +2,8 @@ import type { FastifyPluginAsync } from "fastify";
 import type { MongoDatabase } from "../mongo.js";
 import { requireAdmin, type UserRecord } from "../auth.js";
 import { sendEmail } from "../email.js";
+import { partnerDecisionEmail } from "../email-templates.js";
+import { config } from "../config.js";
 import type { OrderDocument, ProductDocument } from "../domain/types.js";
 import { publicAssetUrl } from "../storage/r2.js";
 import type { GuestMessageRecord, GuestSessionRecord } from "./guests.js";
@@ -80,7 +82,11 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
         { id: user.id },
         { $set: { status, approvedAt: action === "approve" ? now : undefined, approvedBy: action === "approve" ? admin.id : undefined, updatedAt: now } },
       );
-      if (action === "approve") await sendEmail({ to: user.email, subject: "Nora TrimTex — partner account approved", text: `Hello ${user.firstName}, your Nora TrimTex partner account is approved. You can now sign in and view wholesale prices.`, idempotencyKey: `partner-approved-${user.id}` }).catch(() => false);
+      if (action === "approve" || action === "reject") {
+        const message = partnerDecisionEmail(user.locale, user.firstName, action === "approve", `${config.STOREFRONT_URL}/${user.locale}`);
+        await sendEmail({ to: user.email, ...message, idempotencyKey: `partner-${action}-${user.id}` })
+          .catch((error) => request.log.error(error, "Partner decision email failed"));
+      }
       return { data: { status } };
     });
 

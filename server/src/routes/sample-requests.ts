@@ -2,6 +2,8 @@ import { randomUUID } from "node:crypto";
 import type { FastifyPluginAsync } from "fastify";
 import { locales, type Locale, type SampleRequestDocument } from "../domain/types.js";
 import type { SampleRequestRepository } from "../repositories.js";
+import { sendEmail, sendOwnerNotification } from "../email.js";
+import { sampleConfirmationEmail } from "../email-templates.js";
 
 type SampleRequestBody = {
   locale: Locale;
@@ -67,6 +69,27 @@ export function sampleRequestRoutes(repository: SampleRequestRepository): Fastif
         updatedAt: now,
       };
       await repository.create(document);
+      const ownerText = [
+        `New Nora TrimTex sample request ${requestNumber}`,
+        `Customer: ${request.body.customer.name}`,
+        `Email: ${request.body.customer.email}`,
+        `Phone: ${request.body.customer.phone || "—"}`,
+        `Company: ${request.body.customer.company || "—"}`,
+        request.body.notes ? `Notes: ${request.body.notes}` : "",
+        "",
+        ...request.body.items.map((item) => `${item.sku}${item.variantId ? ` · ${item.variantId}` : ""} × ${item.quantity}`),
+      ].filter(Boolean).join("\n");
+      const customerMessage = sampleConfirmationEmail(
+        request.body.locale,
+        request.body.customer.name,
+        requestNumber,
+        request.body.items.reduce((sum, item) => sum + item.quantity, 0),
+      );
+      const results = await Promise.allSettled([
+        sendOwnerNotification({ subject: `[Nora TrimTex] New sample request ${requestNumber}`, text: ownerText, replyTo: request.body.customer.email, idempotencyKey: `sample-owner-${requestNumber}` }),
+        sendEmail({ to: request.body.customer.email, ...customerMessage, idempotencyKey: `sample-customer-${requestNumber}` }),
+      ]);
+      results.forEach((result, index) => { if (result.status === "rejected") request.log.error(result.reason, index === 0 ? "Owner sample notification failed" : "Customer sample confirmation failed"); });
       return reply.code(201).send({ data: { requestNumber, status: document.status } });
     });
   };

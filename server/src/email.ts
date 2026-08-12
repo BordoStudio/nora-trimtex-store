@@ -1,6 +1,6 @@
 import { config } from "./config.js";
 
-type EmailMessage = { to: string; subject: string; text: string; html?: string; idempotencyKey: string };
+type EmailMessage = { to: string; subject: string; text: string; html?: string; idempotencyKey: string; replyTo?: string };
 type Notification = Omit<EmailMessage, "to">;
 
 export async function sendEmail(message: EmailMessage) {
@@ -19,6 +19,7 @@ export async function sendEmail(message: EmailMessage) {
       subject: message.subject,
       text: message.text,
       ...(message.html ? { html: message.html } : {}),
+      ...(message.replyTo ? { reply_to: message.replyTo } : {}),
     }),
   });
   if (!response.ok) throw new Error(`Notification provider returned ${response.status}`);
