@@ -30,7 +30,7 @@ services:
       - key: NOTIFICATION_FROM_EMAIL
         value: "Nora TrimTex <info@noratrim.com>"
       - key: NOTIFICATION_TO_EMAIL
-        value: info@noratrim.com
+        value: bordo.studio1@gmail.com
       - key: STOREFRONT_URL
         sync: false
       - key: ADMIN_URL
