@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import type { Locale } from "@/lib/i18n";
 import { getGuestId, guestHeaders } from "@/lib/guest";
+import { OPEN_CONTACT_CHAT_EVENT } from "@/lib/contact-chat";
 
 const copy = {
   en: { title: "Ask your question", name: "Name (optional)", contact: "Email or phone for a reply", message: "Your question", send: "Send", sending: "Sending…", sent: "Your question has been sent.", again: "Ask another question", error: "Message not sent. Please try again.", open: "Ask a question", close: "Close" },
@@ -17,6 +18,7 @@ export function ContactChat({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const t = copy[locale];
   const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const dialog = useRef<HTMLDivElement>(null);
 
@@ -27,6 +29,17 @@ export function ContactChat({ locale }: { locale: Locale }) {
     window.setTimeout(() => dialog.current?.querySelector<HTMLTextAreaElement>("textarea")?.focus(), 80);
     return () => window.removeEventListener("keydown", close);
   }, [open]);
+
+  useEffect(() => {
+    const openWithMessage = (event: Event) => {
+      const detail = (event as CustomEvent<{ message?: string }>).detail;
+      setMessage(detail?.message?.trim() || "");
+      setStatus("idle");
+      setOpen(true);
+    };
+    window.addEventListener(OPEN_CONTACT_CHAT_EVENT, openWithMessage);
+    return () => window.removeEventListener(OPEN_CONTACT_CHAT_EVENT, openWithMessage);
+  }, []);
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -41,6 +54,7 @@ export function ContactChat({ locale }: { locale: Locale }) {
       });
       if (!response.ok) throw new Error("chat_failed");
       form.reset();
+      setMessage("");
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -58,7 +72,7 @@ export function ContactChat({ locale }: { locale: Locale }) {
       <div className="chat-body">
         {status === "sent" ? <div className="chat-success" role="status"><Check /><p>{t.sent}</p><button className="button secondary" type="button" onClick={() => setStatus("idle")}>{t.again}</button></div> : <form onSubmit={submit}>
           <input name="website" tabIndex={-1} autoComplete="off" className="chat-honeypot" aria-hidden="true" />
-          <textarea name="message" required minLength={3} maxLength={1500} rows={5} aria-label={t.message} placeholder={t.message} />
+          <textarea name="message" required minLength={3} maxLength={1500} rows={5} aria-label={t.message} placeholder={t.message} value={message} onChange={(event) => setMessage(event.target.value)} />
           <input name="contact" required minLength={5} maxLength={200} autoComplete="email" aria-label={t.contact} placeholder={t.contact} />
           <input name="name" maxLength={120} autoComplete="name" aria-label={t.name} placeholder={t.name} />
           <button className="button primary wide" disabled={status === "sending"}>{status === "sending" ? t.sending : t.send}<Send /></button>

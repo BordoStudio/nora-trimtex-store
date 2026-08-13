@@ -10,6 +10,7 @@ import { addSample, setCartOpen } from "@/store/cartSlice";
 import { flyToCart } from "@/lib/flyToCart";
 import { notifyCartAddition } from "@/lib/cart-notifications";
 import { ImageZoomMark, ImageZoomViewer, zoomLabels } from "@/components/ImageZoomViewer";
+import { openContactChat } from "@/lib/contact-chat";
 
 type DetailCopy = {
   quality: string;
@@ -109,8 +110,8 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
       <div className="product-detail-copy">
         <p className="eyebrow">{categoryName}</p>
         <h1>{product.sku}</h1>
-        <p className="product-detail-price">{product.tradePriceHidden ? t.product.partnerPrice : product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>
-        <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : product.availability === "preorder" ? t.product.preorder : t.product.availabilityOnRequest}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</p>
+        {!product.tradePriceHidden && <p className="product-detail-price">{product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>}
+        {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong> {t.product.availabilityOnRequest}</button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</p>}
         <div className="product-facts"><span><Layers3 />{formatColourways(locale, variants.length)}</span><span><ShieldCheck />{copy.quality}</span><span><Box />{copy.samples}</span></div>
         <p className="product-description">{copy.description}</p>
         <div className="product-actions">

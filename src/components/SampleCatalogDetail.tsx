@@ -10,6 +10,7 @@ import { notifyCartAddition } from "@/lib/cart-notifications";
 import { getDictionary, type Locale } from "@/lib/i18n";
 import { addSample, setCartOpen } from "@/store/cartSlice";
 import { ImageZoomButton, ImageZoomMark, ImageZoomViewer, zoomLabels } from "@/components/ImageZoomViewer";
+import { openContactChat } from "@/lib/contact-chat";
 
 const copy = {
   ru: {
@@ -100,7 +101,7 @@ export function SampleCatalogDetail({ product, locale, pages }: { product: Produ
         <h2>{l.intro}</h2>
         <p>{l.body}</p>
         <div className="sample-catalog-summary"><BookOpen /><span>{pages.length} {l.pages}</span></div>
-        <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : product.availability === "preorder" ? t.product.preorder : t.product.availabilityOnRequest}</p>
+        {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong> {t.product.availabilityOnRequest}</button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}</p>}
         <div className="product-actions">
           <button className="button primary" onClick={add}>{added ? <Check /> : <Plus />}{added ? l.added : l.add}</button>
           <button className="button outline" onClick={() => dispatch(setCartOpen(true))}><ShoppingBag />{t.nav.samples}</button>

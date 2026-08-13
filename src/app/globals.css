@@ -208,6 +208,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .product-stock:before,.product-availability:before { content:""; flex:none; width:7px; height:7px; border-radius:50%; background:#9d7738; box-shadow:0 0 0 3px rgba(157,119,56,.12); }
 .product-stock.is-in_stock:before,.product-availability.is-in_stock:before { background:#2f7953; box-shadow:0 0 0 3px rgba(47,121,83,.12); }
 .product-stock.is-low_stock:before,.product-availability.is-low_stock:before { background:#b27623; }.product-stock.is-preorder:before,.product-availability.is-preorder:before { background:#87679c; }
+.availability-chat-button { padding:0; border:0; background:transparent; color:inherit; font:inherit; text-align:left; cursor:pointer; }
+.availability-chat-button:hover { color:var(--clay); text-decoration:underline; text-underline-offset:3px; }
+.availability-chat-button:focus-visible { outline:2px solid var(--gold-button-border); outline-offset:4px; border-radius:4px; }
 .product-page { margin:18px; padding:36px 4vw 110px; overflow:hidden; border-radius:var(--radius-page); background:var(--paper); }
 .product-back { display:inline-flex; align-items:center; gap:9px; margin-bottom:28px; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
 .product-back svg { width:16px; }
