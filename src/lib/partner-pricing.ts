@@ -3,12 +3,12 @@ import "server-only";
 import { cookies } from "next/headers";
 
 /**
- * Prices are available only to a signed-in, approved partner or administrator.
- * There is deliberately no shared password, access code or parallel session.
+ * Everyone sees the client price. Signed-in approved partners and administrators
+ * receive the designer/partner tier; there is no shared access code.
  */
 export async function getPartnerPricingContext() {
   const token = (await cookies()).get("nora-account-session")?.value;
-  if (!token) return { hasAccess: false, discountPercent: 0 };
+  if (!token) return { hasAccess: false, priceTier: "retail" as const, discountPercent: 0 };
 
   try {
     const api = process.env.CATALOG_API_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:4001";
@@ -16,15 +16,15 @@ export async function getPartnerPricingContext() {
       headers: { authorization: `Bearer ${token}` },
       cache: "no-store",
     });
-    if (!response.ok) return { hasAccess: false, discountPercent: 0 };
+    if (!response.ok) return { hasAccess: false, priceTier: "retail" as const, discountPercent: 0 };
     const user = (await response.json())?.data?.user;
     const hasAccess = user?.status === "active" && (user.role === "partner" || user.role === "admin");
     const discountPercent = hasAccess && user.role === "partner"
       ? Math.min(80, Math.max(0, Number(user.partnerDiscountPercent) || 0))
       : 0;
-    return { hasAccess, discountPercent };
+    return { hasAccess, priceTier: hasAccess ? "partner" as const : "retail" as const, discountPercent };
   } catch {
-    return { hasAccess: false, discountPercent: 0 };
+    return { hasAccess: false, priceTier: "retail" as const, discountPercent: 0 };
   }
 }
 

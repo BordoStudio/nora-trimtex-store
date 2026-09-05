@@ -63,14 +63,18 @@ export class MongoSampleRequestRepository implements SampleRequestRepository {
 export class MongoOrderRepository implements OrderRepository {
   constructor(private readonly db: MongoDatabase) {}
 
-  async create(document: OrderDocument): Promise<void> {
+  async create(document: OrderDocument, pricing: { tier: "retail" | "partner"; discountPercent: number } = { tier: "retail", discountPercent: 0 }): Promise<void> {
     const ids = [...new Set(document.items.map((item) => item.productId))];
     const rows = await this.db.collection<ProductDocument>("products")
-      .find({ id: { $in: ids }, status: "active" }, { projection: { _id: 0, id: 1, sku: 1, priceUsd: 1, partnerPriceUsd: 1, variants: 1 } })
+      .find({ id: { $in: ids }, status: "active" }, { projection: { _id: 0, id: 1, sku: 1, priceUsd: 1, retailPriceUsd: 1, partnerPriceUsd: 1, variants: 1 } })
       .toArray();
     const products = new Map(rows.map((row) => [row.id, {
       sku: row.sku,
-      priceUsd: row.partnerPriceUsd ?? row.priceUsd,
+      priceUsd: (() => {
+        const partnerPrice = row.partnerPriceUsd ?? row.priceUsd;
+        const basePrice = pricing.tier === "partner" ? partnerPrice : row.retailPriceUsd ?? (partnerPrice === undefined ? undefined : partnerPrice * 2);
+        return basePrice === undefined ? undefined : Number((basePrice * (1 - pricing.discountPercent / 100)).toFixed(2));
+      })(),
       variantIds: new Set(row.variants.map((variant) => variant.id)),
     }]));
     if (products.size !== ids.length || document.items.some((item) => {

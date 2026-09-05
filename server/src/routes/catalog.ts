@@ -12,6 +12,7 @@ type ProductQuery = {
   limit?: string;
   sort?: "newest" | "sku";
   featured?: "true" | "false";
+  priceTier?: "retail" | "partner";
 };
 
 const normalizeLocale = (value?: string): Locale => locales.includes(value as Locale) ? value as Locale : "en";
@@ -23,7 +24,14 @@ function availability(product: ProductDocument) {
   return { availability: availableQuantity > 5 ? "in_stock" as const : availableQuantity > 0 ? "low_stock" as const : "preorder" as const, availableQuantity };
 }
 
-function serializeProductSummary(product: ProductDocument, locale: Locale, includePrice = false) {
+function productPrice(product: ProductDocument, priceTier: "retail" | "partner") {
+  const partnerPrice = product.partnerPriceUsd ?? product.priceUsd;
+  return priceTier === "partner"
+    ? partnerPrice
+    : product.retailPriceUsd ?? (partnerPrice === undefined ? undefined : partnerPrice * 2);
+}
+
+function serializeProductSummary(product: ProductDocument, locale: Locale, priceTier?: "retail" | "partner") {
   return {
     id: product.id,
     sku: product.sku,
@@ -34,15 +42,15 @@ function serializeProductSummary(product: ProductDocument, locale: Locale, inclu
     variantCount: product.variantCount,
     isNew: product.isNew,
     ...availability(product),
-    ...(includePrice && product.priceUsd !== undefined ? { priceUsd: product.priceUsd } : {}),
+    ...(priceTier && productPrice(product, priceTier) !== undefined ? { priceUsd: productPrice(product, priceTier) } : {}),
   };
 }
 
-function serializeProductDetail(product: ProductDocument, locale: Locale, includePrice = false) {
+function serializeProductDetail(product: ProductDocument, locale: Locale, priceTier?: "retail" | "partner") {
   const dimensions = typeof product.attributes.dimensions === "string" ? product.attributes.dimensions : undefined;
   const composition = typeof product.attributes.composition === "string" ? product.attributes.composition : undefined;
   return {
-    ...serializeProductSummary(product, locale, includePrice),
+    ...serializeProductSummary(product, locale, priceTier),
     description: product.descriptions?.[locale] || product.descriptions?.en,
     variants: product.variants.map((variant) => ({
       id: variant.id,
@@ -67,6 +75,7 @@ export function catalogRoutes(repository: CatalogRepository): FastifyPluginAsync
             limit: { type: "string", pattern: "^[0-9]+$" },
             sort: { type: "string", enum: ["newest", "sku"] },
             featured: { type: "string", enum: ["true", "false"] },
+            priceTier: { type: "string", enum: ["retail", "partner"] },
           },
           additionalProperties: false,
         },
@@ -74,6 +83,7 @@ export function catalogRoutes(repository: CatalogRepository): FastifyPluginAsync
     }, async (request) => {
       const locale = normalizeLocale(request.query.locale);
       const includePrice = Boolean(config.INTERNAL_API_KEY && request.headers["x-internal-api-key"] === config.INTERNAL_API_KEY);
+      const priceTier = includePrice ? request.query.priceTier || "retail" : undefined;
       const page = Math.max(1, Number(request.query.page || 1));
       const limit = Math.min(1_000, Math.max(1, Number(request.query.limit || 24)));
       const { items, total } = await repository.listProducts({
@@ -87,21 +97,22 @@ export function catalogRoutes(repository: CatalogRepository): FastifyPluginAsync
       });
 
       return {
-        data: items.map((item) => serializeProductSummary(item, locale, includePrice)),
+        data: items.map((item) => serializeProductSummary(item, locale, priceTier)),
         pagination: { page, limit, total, pages: Math.ceil(total / limit) },
       };
     });
 
-    app.get<{ Params: { slug: string }; Querystring: { locale?: Locale } }>("/api/v1/catalog/products/:slug", {
+    app.get<{ Params: { slug: string }; Querystring: { locale?: Locale; priceTier?: "retail" | "partner" } }>("/api/v1/catalog/products/:slug", {
       schema: {
         params: { type: "object", required: ["slug"], properties: { slug: { type: "string", maxLength: 160 } } },
-        querystring: { type: "object", properties: { locale: { type: "string", enum: [...locales] } }, additionalProperties: false },
+        querystring: { type: "object", properties: { locale: { type: "string", enum: [...locales] }, priceTier: { type: "string", enum: ["retail", "partner"] } }, additionalProperties: false },
       },
     }, async (request, reply) => {
       const product = await repository.findProductBySlug(request.params.slug);
       if (!product) return reply.code(404).send({ error: "product_not_found" });
       const includePrice = Boolean(config.INTERNAL_API_KEY && request.headers["x-internal-api-key"] === config.INTERNAL_API_KEY);
-      return { data: serializeProductDetail(product, normalizeLocale(request.query.locale), includePrice) };
+      const priceTier = includePrice ? request.query.priceTier || "retail" : undefined;
+      return { data: serializeProductDetail(product, normalizeLocale(request.query.locale), priceTier) };
     });
 
     app.get<{ Querystring: { locale?: Locale } }>("/api/v1/catalog/categories", {

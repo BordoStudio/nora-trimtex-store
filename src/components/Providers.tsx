@@ -7,7 +7,9 @@ import { makeStore } from "@/store";
 import { hydrateCart } from "@/store/cartSlice";
 import { getGuestId, guestHeaders } from "@/lib/guest";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+type PriceTier = "retail" | "partner";
+
+export function Providers({ children, priceTier }: { children: React.ReactNode; priceTier: PriceTier }) {
   const [store] = useState(makeStore);
   const pathname = usePathname();
   useEffect(() => {
@@ -44,6 +46,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     let syncTimer: number | undefined;
     return store.subscribe(() => {
       const safeItems = store.getState().cart.items.map((item) => {
+        if (priceTier === "retail") return item;
         const safeItem = { ...item, tradePriceHidden: true };
         delete safeItem.priceUsd;
         return safeItem;
@@ -52,6 +55,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
       window.clearTimeout(syncTimer);
       syncTimer = window.setTimeout(() => { void fetch("/api/account/cart", { method: "PUT", headers: guestHeaders(), body: JSON.stringify({ items: safeItems, locale: location.pathname.split("/")[1] || "en" }) }); }, 500);
     });
-  }, [store]);
+  }, [priceTier, store]);
   return <Provider store={store}>{children}</Provider>;
 }

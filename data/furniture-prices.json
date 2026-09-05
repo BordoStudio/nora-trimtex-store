@@ -1,0 +1,5625 @@
+{
+  "source": "Фурнитура сайт.xlsx",
+  "sheet": "Лист1",
+  "currency": "USD",
+  "rule": "Цена для клиентов = цена для дизайнеров × 2",
+  "counts": {
+    "sourceRowsWithPrices": 494,
+    "uniqueSourceSkus": 486,
+    "matchedSiteSkus": 437,
+    "catalogProductsUpdated": 437,
+    "migrationProductsUpdated": 437,
+    "unmatchedSourceSkus": 49,
+    "conflictingSourceSkus": 1
+  },
+  "conflicts": [
+    {
+      "kept": {
+        "sku": "MK8128A",
+        "designerPriceUsd": 5,
+        "row": 207,
+        "block": "основной прайс",
+        "priority": 0
+      },
+      "ignored": {
+        "sku": "MK8128A",
+        "designerPriceUsd": 4.5,
+        "row": 9,
+        "block": "Bottega / Medici",
+        "priority": 2
+      },
+      "rule": "При конфликте приоритет у основного прайса A:B."
+    }
+  ],
+  "unmatched": [
+    {
+      "sku": "AG959BY",
+      "designerPriceUsd": 7.6,
+      "row": 35,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AG998",
+      "designerPriceUsd": 2,
+      "row": 44,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AR8021",
+      "designerPriceUsd": 7.4,
+      "row": 45,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AT8021",
+      "designerPriceUsd": 14.9,
+      "row": 57,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AT8021A",
+      "designerPriceUsd": 9.7,
+      "row": 58,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AT962",
+      "designerPriceUsd": 16,
+      "row": 65,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AT994",
+      "designerPriceUsd": 22.6,
+      "row": 79,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "AT996L",
+      "designerPriceUsd": 12.2,
+      "row": 82,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BM182C",
+      "designerPriceUsd": 1.4,
+      "row": 97,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BM8021",
+      "designerPriceUsd": 0.6,
+      "row": 100,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BM904",
+      "designerPriceUsd": 0.9,
+      "row": 101,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BU993",
+      "designerPriceUsd": 6.8,
+      "row": 111,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "DR669",
+      "designerPriceUsd": 6.4,
+      "row": 140,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "DR906",
+      "designerPriceUsd": 3.6,
+      "row": 150,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "MB8021AY",
+      "designerPriceUsd": 17.7,
+      "row": 164,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "MB974AY",
+      "designerPriceUsd": 43.7,
+      "row": 185,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "MK8001A",
+      "designerPriceUsd": 2,
+      "row": 198,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "MP942",
+      "designerPriceUsd": 14,
+      "row": 219,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "SBM990AY",
+      "designerPriceUsd": 21.2,
+      "row": 235,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "VM8001",
+      "designerPriceUsd": 1.1,
+      "row": 254,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "VM8005",
+      "designerPriceUsd": 1.6,
+      "row": 255,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "VM959",
+      "designerPriceUsd": 3.2,
+      "row": 256,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WP8021",
+      "designerPriceUsd": 3.5,
+      "row": 286,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WPZ8021",
+      "designerPriceUsd": 3.7,
+      "row": 287,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ132H",
+      "designerPriceUsd": 6,
+      "row": 290,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ132K",
+      "designerPriceUsd": 6.2,
+      "row": 291,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ137E",
+      "designerPriceUsd": 21.1,
+      "row": 294,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ170",
+      "designerPriceUsd": 13,
+      "row": 309,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ170A",
+      "designerPriceUsd": 13.5,
+      "row": 310,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ170B",
+      "designerPriceUsd": 12.2,
+      "row": 311,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ170C",
+      "designerPriceUsd": 12.7,
+      "row": 312,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ171",
+      "designerPriceUsd": 5.3,
+      "row": 313,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WQ69B",
+      "designerPriceUsd": 1.3,
+      "row": 316,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WR974",
+      "designerPriceUsd": 6,
+      "row": 330,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WRY8032A",
+      "designerPriceUsd": 10.1,
+      "row": 332,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WRY8057",
+      "designerPriceUsd": 4.8,
+      "row": 333,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WRY8057A",
+      "designerPriceUsd": 5.7,
+      "row": 334,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXR156",
+      "designerPriceUsd": 10.9,
+      "row": 337,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXR156B",
+      "designerPriceUsd": 12.6,
+      "row": 338,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXR982",
+      "designerPriceUsd": 20,
+      "row": 376,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXR99",
+      "designerPriceUsd": 17.6,
+      "row": 382,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXT8001",
+      "designerPriceUsd": 12.2,
+      "row": 384,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "WXV8001Y",
+      "designerPriceUsd": 9,
+      "row": 385,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "ZB8021A",
+      "designerPriceUsd": 9.3,
+      "row": 402,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "ZC8015Y",
+      "designerPriceUsd": 6.5,
+      "row": 406,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "ZR905",
+      "designerPriceUsd": 3.8,
+      "row": 418,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "MPZ964",
+      "designerPriceUsd": 6.2,
+      "row": 458,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BM964",
+      "designerPriceUsd": 1.2,
+      "row": 469,
+      "block": "основной прайс",
+      "priority": 0
+    },
+    {
+      "sku": "BU964",
+      "designerPriceUsd": 2.1,
+      "row": 470,
+      "block": "основной прайс",
+      "priority": 0
+    }
+  ],
+  "prices": [
+    {
+      "sku": "AC451CY",
+      "sourceSku": "AC451CY",
+      "designerPriceUsd": 6.6,
+      "clientPriceUsd": 13.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 6,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC55E",
+      "sourceSku": "AC55E",
+      "designerPriceUsd": 4.9,
+      "clientPriceUsd": 9.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 7,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC8001",
+      "sourceSku": "AC8001",
+      "designerPriceUsd": 3.5,
+      "clientPriceUsd": 7,
+      "source": {
+        "sheet": "Лист1",
+        "row": 8,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC8021Y",
+      "sourceSku": "AC8021Y",
+      "designerPriceUsd": 2.3,
+      "clientPriceUsd": 4.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 9,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC8052AY",
+      "sourceSku": "AC8052AY",
+      "designerPriceUsd": 5.7,
+      "clientPriceUsd": 11.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 10,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC8137",
+      "sourceSku": "AC8137",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 38,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC942Y",
+      "sourceSku": "AC942Y",
+      "designerPriceUsd": 8.5,
+      "clientPriceUsd": 17,
+      "source": {
+        "sheet": "Лист1",
+        "row": 11,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC959Y",
+      "sourceSku": "AC959Y",
+      "designerPriceUsd": 10.5,
+      "clientPriceUsd": 21,
+      "source": {
+        "sheet": "Лист1",
+        "row": 12,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AC993",
+      "sourceSku": "AC993",
+      "designerPriceUsd": 22.6,
+      "clientPriceUsd": 45.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 13,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE8084Y",
+      "sourceSku": "AE8084Y",
+      "designerPriceUsd": 28,
+      "clientPriceUsd": 56,
+      "source": {
+        "sheet": "Лист1",
+        "row": 16,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE8137Y",
+      "sourceSku": "AE8137Y",
+      "designerPriceUsd": 27,
+      "clientPriceUsd": 54,
+      "source": {
+        "sheet": "Лист1",
+        "row": 39,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE942Y",
+      "sourceSku": "AE942Y",
+      "designerPriceUsd": 11.4,
+      "clientPriceUsd": 22.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 14,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE964Y",
+      "sourceSku": "AE964Y",
+      "designerPriceUsd": 17.3,
+      "clientPriceUsd": 34.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 467,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE970Y",
+      "sourceSku": "AE970Y",
+      "designerPriceUsd": 25.2,
+      "clientPriceUsd": 50.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 15,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE981",
+      "sourceSku": "AE981",
+      "designerPriceUsd": 6.7,
+      "clientPriceUsd": 13.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 16,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE993",
+      "sourceSku": "AE993",
+      "designerPriceUsd": 40.7,
+      "clientPriceUsd": 81.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 17,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE993A",
+      "sourceSku": "AE993A",
+      "designerPriceUsd": 13.1,
+      "clientPriceUsd": 26.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 18,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AE996Y",
+      "sourceSku": "AE996Y",
+      "designerPriceUsd": 22.5,
+      "clientPriceUsd": 45,
+      "source": {
+        "sheet": "Лист1",
+        "row": 19,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG1014A",
+      "sourceSku": "AG1014A",
+      "designerPriceUsd": 1.5,
+      "clientPriceUsd": 3,
+      "source": {
+        "sheet": "Лист1",
+        "row": 20,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG204V",
+      "sourceSku": "AG204V",
+      "designerPriceUsd": 1,
+      "clientPriceUsd": 2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 21,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG204X",
+      "sourceSku": "AG204X",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 22,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG204Z",
+      "sourceSku": "AG204Z",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 23,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG653",
+      "sourceSku": "AG653",
+      "designerPriceUsd": 0.7,
+      "clientPriceUsd": 1.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 24,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG705A",
+      "sourceSku": "AG705A",
+      "designerPriceUsd": 5.6,
+      "clientPriceUsd": 11.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 25,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8001A",
+      "sourceSku": "AG8001A",
+      "designerPriceUsd": 1,
+      "clientPriceUsd": 2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 26,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8029",
+      "sourceSku": "AG8029",
+      "designerPriceUsd": 1,
+      "clientPriceUsd": 2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 27,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128A",
+      "sourceSku": "AG8128A",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 14,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128B",
+      "sourceSku": "AG8128B",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 13,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128C",
+      "sourceSku": "AG8128C",
+      "designerPriceUsd": 3.5,
+      "clientPriceUsd": 7,
+      "source": {
+        "sheet": "Лист1",
+        "row": 16,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128D",
+      "sourceSku": "AG8128D",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 17,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128L",
+      "sourceSku": "AG8128L",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 12,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8128MY",
+      "sourceSku": "AG8128MY",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 21,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8137",
+      "sourceSku": "AG8137",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 34,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8137A",
+      "sourceSku": "AG8137A",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 35,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG8137C",
+      "sourceSku": "AG8137C",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 36,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG914A",
+      "sourceSku": "AG914A",
+      "designerPriceUsd": 2.1,
+      "clientPriceUsd": 4.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 28,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG942",
+      "sourceSku": "AG942",
+      "designerPriceUsd": 1.7,
+      "clientPriceUsd": 3.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 30,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG959",
+      "sourceSku": "AG959",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 31,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG959A",
+      "sourceSku": "AG959A",
+      "designerPriceUsd": 4.2,
+      "clientPriceUsd": 8.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 32,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG959CY",
+      "sourceSku": "AG959CY",
+      "designerPriceUsd": 6.6,
+      "clientPriceUsd": 13.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 36,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG964",
+      "sourceSku": "AG964",
+      "designerPriceUsd": 3.7,
+      "clientPriceUsd": 7.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 463,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG970",
+      "sourceSku": "AG970",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 37,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG972",
+      "sourceSku": "AG972",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 38,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG974",
+      "sourceSku": "AG974",
+      "designerPriceUsd": 1.5,
+      "clientPriceUsd": 3,
+      "source": {
+        "sheet": "Лист1",
+        "row": 40,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG990",
+      "sourceSku": "AG990",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 41,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG996A",
+      "sourceSku": "AG996A",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 42,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AG996B",
+      "sourceSku": "AG996B",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 43,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AH964Y",
+      "sourceSku": "AH964Y",
+      "designerPriceUsd": 15.4,
+      "clientPriceUsd": 30.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 468,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR8029A",
+      "sourceSku": "AR8029A",
+      "designerPriceUsd": 4.2,
+      "clientPriceUsd": 8.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 46,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR8029B",
+      "sourceSku": "AR8029B",
+      "designerPriceUsd": 4.2,
+      "clientPriceUsd": 8.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 47,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR8128B",
+      "sourceSku": "AR8128B",
+      "designerPriceUsd": 6,
+      "clientPriceUsd": 12,
+      "source": {
+        "sheet": "Лист1",
+        "row": 18,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR8128C",
+      "sourceSku": "AR8128C",
+      "designerPriceUsd": 6.5,
+      "clientPriceUsd": 13,
+      "source": {
+        "sheet": "Лист1",
+        "row": 20,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR959",
+      "sourceSku": "AR959",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 48,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR970Y",
+      "sourceSku": "AR970Y",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 49,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR972Y",
+      "sourceSku": "AR972Y",
+      "designerPriceUsd": 4.3,
+      "clientPriceUsd": 8.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 50,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR974",
+      "sourceSku": "AR974",
+      "designerPriceUsd": 3.1,
+      "clientPriceUsd": 6.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 51,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AR990",
+      "sourceSku": "AR990",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 52,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT1175",
+      "sourceSku": "AT1175",
+      "designerPriceUsd": 17.8,
+      "clientPriceUsd": 35.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 53,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8001B",
+      "sourceSku": "AT8001B",
+      "designerPriceUsd": 6.3,
+      "clientPriceUsd": 12.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 54,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8001C",
+      "sourceSku": "AT8001C",
+      "designerPriceUsd": 10.2,
+      "clientPriceUsd": 20.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 55,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8001G",
+      "sourceSku": "AT8001G",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 56,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8029",
+      "sourceSku": "AT8029",
+      "designerPriceUsd": 18.6,
+      "clientPriceUsd": 37.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 59,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8029A",
+      "sourceSku": "AT8029A",
+      "designerPriceUsd": 6.3,
+      "clientPriceUsd": 12.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 60,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8051A",
+      "sourceSku": "AT8051A",
+      "designerPriceUsd": 7.7,
+      "clientPriceUsd": 15.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 61,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8052B",
+      "sourceSku": "AT8052B",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 62,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8084",
+      "sourceSku": "AT8084",
+      "designerPriceUsd": 18,
+      "clientPriceUsd": 36,
+      "source": {
+        "sheet": "Лист1",
+        "row": 11,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8084A",
+      "sourceSku": "AT8084A",
+      "designerPriceUsd": 14,
+      "clientPriceUsd": 28,
+      "source": {
+        "sheet": "Лист1",
+        "row": 9,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8084B",
+      "sourceSku": "AT8084B",
+      "designerPriceUsd": 13,
+      "clientPriceUsd": 26,
+      "source": {
+        "sheet": "Лист1",
+        "row": 10,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8128A",
+      "sourceSku": "AT8128A",
+      "designerPriceUsd": 15,
+      "clientPriceUsd": 30,
+      "source": {
+        "sheet": "Лист1",
+        "row": 11,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8137",
+      "sourceSku": "AT8137",
+      "designerPriceUsd": 18,
+      "clientPriceUsd": 36,
+      "source": {
+        "sheet": "Лист1",
+        "row": 32,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8137B",
+      "sourceSku": "AT8137B",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 31,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT8137GY",
+      "sourceSku": "AT8137GY",
+      "designerPriceUsd": 33,
+      "clientPriceUsd": 66,
+      "source": {
+        "sheet": "Лист1",
+        "row": 33,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT942BY",
+      "sourceSku": "AT942BY",
+      "designerPriceUsd": 12,
+      "clientPriceUsd": 24,
+      "source": {
+        "sheet": "Лист1",
+        "row": 63,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT942D",
+      "sourceSku": "AT942D",
+      "designerPriceUsd": 20,
+      "clientPriceUsd": 40,
+      "source": {
+        "sheet": "Лист1",
+        "row": 64,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT962A",
+      "sourceSku": "AT962A",
+      "designerPriceUsd": 17,
+      "clientPriceUsd": 34,
+      "source": {
+        "sheet": "Лист1",
+        "row": 66,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT964",
+      "sourceSku": "AT964",
+      "designerPriceUsd": 16.8,
+      "clientPriceUsd": 33.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 460,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT964A",
+      "sourceSku": "AT964A",
+      "designerPriceUsd": 23.1,
+      "clientPriceUsd": 46.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 461,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT964B",
+      "sourceSku": "AT964B",
+      "designerPriceUsd": 13.1,
+      "clientPriceUsd": 26.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 462,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT970",
+      "sourceSku": "AT970",
+      "designerPriceUsd": 40,
+      "clientPriceUsd": 80,
+      "source": {
+        "sheet": "Лист1",
+        "row": 67,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT970A",
+      "sourceSku": "AT970A",
+      "designerPriceUsd": 20,
+      "clientPriceUsd": 40,
+      "source": {
+        "sheet": "Лист1",
+        "row": 68,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT974A",
+      "sourceSku": "AT974A",
+      "designerPriceUsd": 11.7,
+      "clientPriceUsd": 23.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 69,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT974C",
+      "sourceSku": "AT974C",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 70,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT982",
+      "sourceSku": "AT982",
+      "designerPriceUsd": 6.6,
+      "clientPriceUsd": 13.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 71,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT982A",
+      "sourceSku": "AT982A",
+      "designerPriceUsd": 23.3,
+      "clientPriceUsd": 46.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 73,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT990A",
+      "sourceSku": "AT990A",
+      "designerPriceUsd": 18,
+      "clientPriceUsd": 36,
+      "source": {
+        "sheet": "Лист1",
+        "row": 74,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT990B",
+      "sourceSku": "AT990B",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 75,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT990C",
+      "sourceSku": "AT990C",
+      "designerPriceUsd": 12,
+      "clientPriceUsd": 24,
+      "source": {
+        "sheet": "Лист1",
+        "row": 76,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT996A",
+      "sourceSku": "AT996A",
+      "designerPriceUsd": 7.1,
+      "clientPriceUsd": 14.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 80,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT996C",
+      "sourceSku": "AT996C",
+      "designerPriceUsd": 14,
+      "clientPriceUsd": 28,
+      "source": {
+        "sheet": "Лист1",
+        "row": 81,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AT996M",
+      "sourceSku": "AT996M",
+      "designerPriceUsd": 16.5,
+      "clientPriceUsd": 33,
+      "source": {
+        "sheet": "Лист1",
+        "row": 83,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ATR8051",
+      "sourceSku": "ATR8051",
+      "designerPriceUsd": 19,
+      "clientPriceUsd": 38,
+      "source": {
+        "sheet": "Лист1",
+        "row": 84,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV8001Y",
+      "sourceSku": "AV8001Y",
+      "designerPriceUsd": 13.1,
+      "clientPriceUsd": 26.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 85,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV8005AY",
+      "sourceSku": "AV8005AY",
+      "designerPriceUsd": 12.2,
+      "clientPriceUsd": 24.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 86,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV8029",
+      "sourceSku": "AV8029",
+      "designerPriceUsd": 2.9,
+      "clientPriceUsd": 5.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 87,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV964",
+      "sourceSku": "AV964",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 464,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV990Y",
+      "sourceSku": "AV990Y",
+      "designerPriceUsd": 13.2,
+      "clientPriceUsd": 26.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 88,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "AV996AY",
+      "sourceSku": "AV996AY",
+      "designerPriceUsd": 17,
+      "clientPriceUsd": 34,
+      "source": {
+        "sheet": "Лист1",
+        "row": 89,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BD117",
+      "sourceSku": "BD117",
+      "designerPriceUsd": 2.2,
+      "clientPriceUsd": 4.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 90,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BD182A",
+      "sourceSku": "BD182A",
+      "designerPriceUsd": 0.7,
+      "clientPriceUsd": 1.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 91,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BD990",
+      "sourceSku": "BD990",
+      "designerPriceUsd": 0.9,
+      "clientPriceUsd": 1.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 92,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BDFB117",
+      "sourceSku": "BDFB117",
+      "designerPriceUsd": 2.4,
+      "clientPriceUsd": 4.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 93,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BDFB180",
+      "sourceSku": "BDFB180",
+      "designerPriceUsd": 0.6,
+      "clientPriceUsd": 1.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 94,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BDFB182A",
+      "sourceSku": "BDFB182A",
+      "designerPriceUsd": 0.8,
+      "clientPriceUsd": 1.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 95,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BDFB990",
+      "sourceSku": "BDFB990",
+      "designerPriceUsd": 1,
+      "clientPriceUsd": 2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 96,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BM182D",
+      "sourceSku": "BM182D",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 98,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BM182G",
+      "sourceSku": "BM182G",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 99,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFB182G",
+      "sourceSku": "BMFB182G",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 102,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFB8021",
+      "sourceSku": "BMFB8021",
+      "designerPriceUsd": 0.8,
+      "clientPriceUsd": 1.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 103,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFB904",
+      "sourceSku": "BMFB904",
+      "designerPriceUsd": 1.1,
+      "clientPriceUsd": 2.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 104,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFB964",
+      "sourceSku": "BMFB964",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 465,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFB980A",
+      "sourceSku": "BMFB980A",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 105,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFC182C",
+      "sourceSku": "BMFC182C",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 106,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFC182D",
+      "sourceSku": "BMFC182D",
+      "designerPriceUsd": 1.8,
+      "clientPriceUsd": 3.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 107,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFC8052",
+      "sourceSku": "BMFC8052",
+      "designerPriceUsd": 1.7,
+      "clientPriceUsd": 3.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 108,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BMFC980",
+      "sourceSku": "BMFC980",
+      "designerPriceUsd": 2.4,
+      "clientPriceUsd": 4.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 109,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BU177",
+      "sourceSku": "BU177",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 110,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BUFC177",
+      "sourceSku": "BUFC177",
+      "designerPriceUsd": 1.8,
+      "clientPriceUsd": 3.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 112,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BUFC964",
+      "sourceSku": "BUFC964",
+      "designerPriceUsd": 2.1,
+      "clientPriceUsd": 4.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 466,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BUFC971",
+      "sourceSku": "BUFC971",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 113,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "BUFC993",
+      "sourceSku": "BUFC993",
+      "designerPriceUsd": 7.1,
+      "clientPriceUsd": 14.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 114,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CBM8065Y",
+      "sourceSku": "CBM8065Y",
+      "designerPriceUsd": 24.2,
+      "clientPriceUsd": 48.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 115,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8051",
+      "sourceSku": "CM8051",
+      "designerPriceUsd": 14.8,
+      "clientPriceUsd": 29.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 116,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8051A",
+      "sourceSku": "CM8051A",
+      "designerPriceUsd": 14.8,
+      "clientPriceUsd": 29.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 117,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8051B",
+      "sourceSku": "CM8051B",
+      "designerPriceUsd": 21.1,
+      "clientPriceUsd": 42.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 118,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8051C",
+      "sourceSku": "CM8051C",
+      "designerPriceUsd": 10.5,
+      "clientPriceUsd": 21,
+      "source": {
+        "sheet": "Лист1",
+        "row": 119,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8053C",
+      "sourceSku": "CM8053C",
+      "designerPriceUsd": 12.2,
+      "clientPriceUsd": 24.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 120,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8053D",
+      "sourceSku": "CM8053D",
+      "designerPriceUsd": 12.2,
+      "clientPriceUsd": 24.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 121,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8063D",
+      "sourceSku": "CM8063D",
+      "designerPriceUsd": 14.4,
+      "clientPriceUsd": 28.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 122,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "CM8063F",
+      "sourceSku": "CM8063F",
+      "designerPriceUsd": 11.6,
+      "clientPriceUsd": 23.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 123,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DB8001",
+      "sourceSku": "DB8001",
+      "designerPriceUsd": 6.1,
+      "clientPriceUsd": 12.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 124,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DB8052",
+      "sourceSku": "DB8052",
+      "designerPriceUsd": 4.4,
+      "clientPriceUsd": 8.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 125,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DB8074C",
+      "sourceSku": "DB8074C",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 126,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DB8128",
+      "sourceSku": "DB8128",
+      "designerPriceUsd": 23,
+      "clientPriceUsd": 46,
+      "source": {
+        "sheet": "Лист1",
+        "row": 7,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DBM8052",
+      "sourceSku": "DBM8052",
+      "designerPriceUsd": 8.1,
+      "clientPriceUsd": 16.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 127,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DBM974",
+      "sourceSku": "DBM974",
+      "designerPriceUsd": 33.8,
+      "clientPriceUsd": 67.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 128,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DG274",
+      "sourceSku": "DG274",
+      "designerPriceUsd": 3.9,
+      "clientPriceUsd": 7.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 129,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DG8015",
+      "sourceSku": "DG8015",
+      "designerPriceUsd": 4.4,
+      "clientPriceUsd": 8.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 130,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DG906",
+      "sourceSku": "DG906",
+      "designerPriceUsd": 2.4,
+      "clientPriceUsd": 4.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 131,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DG981",
+      "sourceSku": "DG981",
+      "designerPriceUsd": 6.5,
+      "clientPriceUsd": 13,
+      "source": {
+        "sheet": "Лист1",
+        "row": 132,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DG993",
+      "sourceSku": "DG993",
+      "designerPriceUsd": 8.1,
+      "clientPriceUsd": 16.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 133,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR227D",
+      "sourceSku": "DR227D",
+      "designerPriceUsd": 5.3,
+      "clientPriceUsd": 10.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 134,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR257H",
+      "sourceSku": "DR257H",
+      "designerPriceUsd": 4.7,
+      "clientPriceUsd": 9.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 135,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR291A",
+      "sourceSku": "DR291A",
+      "designerPriceUsd": 3.9,
+      "clientPriceUsd": 7.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 136,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR312A",
+      "sourceSku": "DR312A",
+      "designerPriceUsd": 4.5,
+      "clientPriceUsd": 9,
+      "source": {
+        "sheet": "Лист1",
+        "row": 138,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR324D",
+      "sourceSku": "DR324D",
+      "designerPriceUsd": 4.5,
+      "clientPriceUsd": 9,
+      "source": {
+        "sheet": "Лист1",
+        "row": 139,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8001A",
+      "sourceSku": "DR8001A",
+      "designerPriceUsd": 7.2,
+      "clientPriceUsd": 14.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 141,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8005A",
+      "sourceSku": "DR8005A",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 142,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8005B",
+      "sourceSku": "DR8005B",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 143,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8029",
+      "sourceSku": "DR8029",
+      "designerPriceUsd": 7.1,
+      "clientPriceUsd": 14.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 144,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8052",
+      "sourceSku": "DR8052",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 145,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8052A",
+      "sourceSku": "DR8052A",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 146,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8052F",
+      "sourceSku": "DR8052F",
+      "designerPriceUsd": 8.4,
+      "clientPriceUsd": 16.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 147,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8052G",
+      "sourceSku": "DR8052G",
+      "designerPriceUsd": 5.7,
+      "clientPriceUsd": 11.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 148,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR8057A",
+      "sourceSku": "DR8057A",
+      "designerPriceUsd": 6.5,
+      "clientPriceUsd": 13,
+      "source": {
+        "sheet": "Лист1",
+        "row": 149,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR930",
+      "sourceSku": "DR930",
+      "designerPriceUsd": 3.9,
+      "clientPriceUsd": 7.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 151,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR930C",
+      "sourceSku": "DR930C",
+      "designerPriceUsd": 5.4,
+      "clientPriceUsd": 10.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 152,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DR955A",
+      "sourceSku": "DR955A",
+      "designerPriceUsd": 3.5,
+      "clientPriceUsd": 7,
+      "source": {
+        "sheet": "Лист1",
+        "row": 153,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DT981",
+      "sourceSku": "DT981",
+      "designerPriceUsd": 32,
+      "clientPriceUsd": 64,
+      "source": {
+        "sheet": "Лист1",
+        "row": 154,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DT981AY",
+      "sourceSku": "DT981AY",
+      "designerPriceUsd": 17,
+      "clientPriceUsd": 34,
+      "source": {
+        "sheet": "Лист1",
+        "row": 155,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "DV8015Y",
+      "sourceSku": "DV8015Y",
+      "designerPriceUsd": 36.1,
+      "clientPriceUsd": 72.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 156,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB520A",
+      "sourceSku": "MB520A",
+      "designerPriceUsd": 31.3,
+      "clientPriceUsd": 62.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 157,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB520Y",
+      "sourceSku": "MB520Y",
+      "designerPriceUsd": 12,
+      "clientPriceUsd": 24,
+      "source": {
+        "sheet": "Лист1",
+        "row": 158,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8001A",
+      "sourceSku": "MB8001A",
+      "designerPriceUsd": 22.5,
+      "clientPriceUsd": 45,
+      "source": {
+        "sheet": "Лист1",
+        "row": 160,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8001Y",
+      "sourceSku": "MB8001Y",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 161,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8015A",
+      "sourceSku": "MB8015A",
+      "designerPriceUsd": 68,
+      "clientPriceUsd": 136,
+      "source": {
+        "sheet": "Лист1",
+        "row": 162,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8015Y",
+      "sourceSku": "MB8015Y",
+      "designerPriceUsd": 58,
+      "clientPriceUsd": 116,
+      "source": {
+        "sheet": "Лист1",
+        "row": 163,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8021Y",
+      "sourceSku": "MB8021Y",
+      "designerPriceUsd": 13,
+      "clientPriceUsd": 26,
+      "source": {
+        "sheet": "Лист1",
+        "row": 165,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8029Y",
+      "sourceSku": "MB8029Y",
+      "designerPriceUsd": 17,
+      "clientPriceUsd": 34,
+      "source": {
+        "sheet": "Лист1",
+        "row": 166,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8032AY",
+      "sourceSku": "MB8032AY",
+      "designerPriceUsd": 19.4,
+      "clientPriceUsd": 38.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 167,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8032Y",
+      "sourceSku": "MB8032Y",
+      "designerPriceUsd": 19.4,
+      "clientPriceUsd": 38.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 168,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8044AY",
+      "sourceSku": "MB8044AY",
+      "designerPriceUsd": 27.4,
+      "clientPriceUsd": 54.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 169,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8044BY",
+      "sourceSku": "MB8044BY",
+      "designerPriceUsd": 20.1,
+      "clientPriceUsd": 40.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 170,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8044Y",
+      "sourceSku": "MB8044Y",
+      "designerPriceUsd": 25.1,
+      "clientPriceUsd": 50.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 171,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8052D",
+      "sourceSku": "MB8052D",
+      "designerPriceUsd": 17.7,
+      "clientPriceUsd": 35.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 172,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8053Y",
+      "sourceSku": "MB8053Y",
+      "designerPriceUsd": 23,
+      "clientPriceUsd": 46,
+      "source": {
+        "sheet": "Лист1",
+        "row": 173,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8084Y",
+      "sourceSku": "MB8084Y",
+      "designerPriceUsd": 46,
+      "clientPriceUsd": 92,
+      "source": {
+        "sheet": "Лист1",
+        "row": 7,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8094Y",
+      "sourceSku": "MB8094Y",
+      "designerPriceUsd": 32.2,
+      "clientPriceUsd": 64.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 20,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8095AY",
+      "sourceSku": "MB8095AY",
+      "designerPriceUsd": 17,
+      "clientPriceUsd": 34,
+      "source": {
+        "sheet": "Лист1",
+        "row": 174,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8095Y",
+      "sourceSku": "MB8095Y",
+      "designerPriceUsd": 24,
+      "clientPriceUsd": 48,
+      "source": {
+        "sheet": "Лист1",
+        "row": 175,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8128CY",
+      "sourceSku": "MB8128CY",
+      "designerPriceUsd": 22,
+      "clientPriceUsd": 44,
+      "source": {
+        "sheet": "Лист1",
+        "row": 6,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8137A",
+      "sourceSku": "MB8137A",
+      "designerPriceUsd": 45,
+      "clientPriceUsd": 90,
+      "source": {
+        "sheet": "Лист1",
+        "row": 27,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB8137Y",
+      "sourceSku": "MB8137Y",
+      "designerPriceUsd": 34,
+      "clientPriceUsd": 68,
+      "source": {
+        "sheet": "Лист1",
+        "row": 28,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB942",
+      "sourceSku": "MB942",
+      "designerPriceUsd": 62,
+      "clientPriceUsd": 124,
+      "source": {
+        "sheet": "Лист1",
+        "row": 176,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB942AY",
+      "sourceSku": "MB942AY",
+      "designerPriceUsd": 22,
+      "clientPriceUsd": 44,
+      "source": {
+        "sheet": "Лист1",
+        "row": 177,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB943Y",
+      "sourceSku": "МВ943Y",
+      "designerPriceUsd": 26.3,
+      "clientPriceUsd": 52.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 178,
+        "block": "основной прайс"
+      },
+      "match": "lookalike-normalized"
+    },
+    {
+      "sku": "MB962",
+      "sourceSku": "MB962",
+      "designerPriceUsd": 39.1,
+      "clientPriceUsd": 78.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 179,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB962AY",
+      "sourceSku": "MB962AY",
+      "designerPriceUsd": 35.6,
+      "clientPriceUsd": 71.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 180,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB970A",
+      "sourceSku": "MB970A",
+      "designerPriceUsd": 71,
+      "clientPriceUsd": 142,
+      "source": {
+        "sheet": "Лист1",
+        "row": 181,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB970Y",
+      "sourceSku": "MB970Y",
+      "designerPriceUsd": 26,
+      "clientPriceUsd": 52,
+      "source": {
+        "sheet": "Лист1",
+        "row": 183,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB973Y",
+      "sourceSku": "MB973Y",
+      "designerPriceUsd": 33.5,
+      "clientPriceUsd": 67,
+      "source": {
+        "sheet": "Лист1",
+        "row": 184,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB974Y",
+      "sourceSku": "MB974Y",
+      "designerPriceUsd": 27.4,
+      "clientPriceUsd": 54.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 186,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB975B",
+      "sourceSku": "MB975B",
+      "designerPriceUsd": 201.4,
+      "clientPriceUsd": 402.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 187,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB982A",
+      "sourceSku": "MB982A",
+      "designerPriceUsd": 20.9,
+      "clientPriceUsd": 41.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 189,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB982Y",
+      "sourceSku": "MB982Y",
+      "designerPriceUsd": 24.4,
+      "clientPriceUsd": 48.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 190,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB993Y",
+      "sourceSku": "MB993Y",
+      "designerPriceUsd": 160,
+      "clientPriceUsd": 320,
+      "source": {
+        "sheet": "Лист1",
+        "row": 191,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB996A",
+      "sourceSku": "MB996A",
+      "designerPriceUsd": 41,
+      "clientPriceUsd": 82,
+      "source": {
+        "sheet": "Лист1",
+        "row": 192,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MB996Y",
+      "sourceSku": "MB996Y",
+      "designerPriceUsd": 21,
+      "clientPriceUsd": 42,
+      "source": {
+        "sheet": "Лист1",
+        "row": 193,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MBR8051AY",
+      "sourceSku": "MBR8051AY",
+      "designerPriceUsd": 20,
+      "clientPriceUsd": 40,
+      "source": {
+        "sheet": "Лист1",
+        "row": 194,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MBR8051Y",
+      "sourceSku": "MBR8051Y",
+      "designerPriceUsd": 24,
+      "clientPriceUsd": 48,
+      "source": {
+        "sheet": "Лист1",
+        "row": 195,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MBR964Y",
+      "sourceSku": "MBR964Y",
+      "designerPriceUsd": 41.2,
+      "clientPriceUsd": 82.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 456,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MBS971Y",
+      "sourceSku": "MBS971Y",
+      "designerPriceUsd": 112,
+      "clientPriceUsd": 224,
+      "source": {
+        "sheet": "Лист1",
+        "row": 196,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MBS981Y",
+      "sourceSku": "MBS981Y",
+      "designerPriceUsd": 65,
+      "clientPriceUsd": 130,
+      "source": {
+        "sheet": "Лист1",
+        "row": 197,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8015",
+      "sourceSku": "MK8015",
+      "designerPriceUsd": 11.7,
+      "clientPriceUsd": 23.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 199,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8015D",
+      "sourceSku": "MK8015D",
+      "designerPriceUsd": 2.7,
+      "clientPriceUsd": 5.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 200,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8029",
+      "sourceSku": "MK8029",
+      "designerPriceUsd": 5,
+      "clientPriceUsd": 10,
+      "source": {
+        "sheet": "Лист1",
+        "row": 201,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8032",
+      "sourceSku": "MK8032",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 202,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8044",
+      "sourceSku": "MK8044",
+      "designerPriceUsd": 8.6,
+      "clientPriceUsd": 17.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 203,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8051",
+      "sourceSku": "MK8051",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 204,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8053",
+      "sourceSku": "MK8053",
+      "designerPriceUsd": 6.3,
+      "clientPriceUsd": 12.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 205,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8057",
+      "sourceSku": "MK8057",
+      "designerPriceUsd": 1.4,
+      "clientPriceUsd": 2.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 206,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8128A",
+      "sourceSku": "MK8128A",
+      "designerPriceUsd": 5,
+      "clientPriceUsd": 10,
+      "source": {
+        "sheet": "Лист1",
+        "row": 207,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK8137",
+      "sourceSku": "MK8137",
+      "designerPriceUsd": 8,
+      "clientPriceUsd": 16,
+      "source": {
+        "sheet": "Лист1",
+        "row": 30,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK970",
+      "sourceSku": "MK970",
+      "designerPriceUsd": 13.4,
+      "clientPriceUsd": 26.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 208,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK971",
+      "sourceSku": "MK971",
+      "designerPriceUsd": 5.4,
+      "clientPriceUsd": 10.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 209,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK971A",
+      "sourceSku": "MK971A",
+      "designerPriceUsd": 25.5,
+      "clientPriceUsd": 51,
+      "source": {
+        "sheet": "Лист1",
+        "row": 210,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK974",
+      "sourceSku": "MK974",
+      "designerPriceUsd": 7.1,
+      "clientPriceUsd": 14.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 211,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK975",
+      "sourceSku": "MK975",
+      "designerPriceUsd": 23.5,
+      "clientPriceUsd": 47,
+      "source": {
+        "sheet": "Лист1",
+        "row": 212,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK981",
+      "sourceSku": "MK981",
+      "designerPriceUsd": 11.6,
+      "clientPriceUsd": 23.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 213,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK982",
+      "sourceSku": "MK982",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 214,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK990",
+      "sourceSku": "MK990",
+      "designerPriceUsd": 6.5,
+      "clientPriceUsd": 13,
+      "source": {
+        "sheet": "Лист1",
+        "row": 215,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK993",
+      "sourceSku": "MK993",
+      "designerPriceUsd": 44.7,
+      "clientPriceUsd": 89.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 216,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MK996A",
+      "sourceSku": "MK996A",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 217,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MKR964",
+      "sourceSku": "MKR964",
+      "designerPriceUsd": 11.6,
+      "clientPriceUsd": 23.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 457,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MN8001",
+      "sourceSku": "MN8001",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 218,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MPZ8084",
+      "sourceSku": "MPZ8084",
+      "designerPriceUsd": 15,
+      "clientPriceUsd": 30,
+      "source": {
+        "sheet": "Лист1",
+        "row": 8,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MPZ8128",
+      "sourceSku": "MPZ8128",
+      "designerPriceUsd": 5,
+      "clientPriceUsd": 10,
+      "source": {
+        "sheet": "Лист1",
+        "row": 8,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MPZ942",
+      "sourceSku": "MPZ942",
+      "designerPriceUsd": 14.1,
+      "clientPriceUsd": 28.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 220,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MPZ981",
+      "sourceSku": "MPZ981",
+      "designerPriceUsd": 12.3,
+      "clientPriceUsd": 24.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 221,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQRZ8051",
+      "sourceSku": "MQRZ8051",
+      "designerPriceUsd": 4.6,
+      "clientPriceUsd": 9.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 222,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ8015A",
+      "sourceSku": "MQZ8015A",
+      "designerPriceUsd": 5.4,
+      "clientPriceUsd": 10.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 223,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ8137A",
+      "sourceSku": "MQZ8137A",
+      "designerPriceUsd": 6,
+      "clientPriceUsd": 12,
+      "source": {
+        "sheet": "Лист1",
+        "row": 29,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ964",
+      "sourceSku": "MQZ964",
+      "designerPriceUsd": 4.7,
+      "clientPriceUsd": 9.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 459,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ970",
+      "sourceSku": "MQZ970",
+      "designerPriceUsd": 5,
+      "clientPriceUsd": 10,
+      "source": {
+        "sheet": "Лист1",
+        "row": 227,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ970A",
+      "sourceSku": "MQZ970A",
+      "designerPriceUsd": 4.3,
+      "clientPriceUsd": 8.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 228,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ971",
+      "sourceSku": "MQZ971",
+      "designerPriceUsd": 7.8,
+      "clientPriceUsd": 15.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 229,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "MQZ993",
+      "sourceSku": "MQZ993",
+      "designerPriceUsd": 7.7,
+      "clientPriceUsd": 15.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 230,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SB8084Y",
+      "sourceSku": "SB8084Y",
+      "designerPriceUsd": 22.1,
+      "clientPriceUsd": 44.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 6,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM8005Y",
+      "sourceSku": "SBM8005Y",
+      "designerPriceUsd": 43.8,
+      "clientPriceUsd": 87.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 231,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM8043Y",
+      "sourceSku": "SBM8043Y",
+      "designerPriceUsd": 25.1,
+      "clientPriceUsd": 50.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 232,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM8065AY",
+      "sourceSku": "SBM8065AY",
+      "designerPriceUsd": 26,
+      "clientPriceUsd": 52,
+      "source": {
+        "sheet": "Лист1",
+        "row": 233,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM8065BY",
+      "sourceSku": "SBM8065BY",
+      "designerPriceUsd": 21.4,
+      "clientPriceUsd": 42.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 234,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM933",
+      "sourceSku": "SBM933",
+      "designerPriceUsd": 39.3,
+      "clientPriceUsd": 78.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 238,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBM990Y",
+      "sourceSku": "SBM990Y",
+      "designerPriceUsd": 26,
+      "clientPriceUsd": 52,
+      "source": {
+        "sheet": "Лист1",
+        "row": 236,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SBMY8057Y",
+      "sourceSku": "SBMY8057Y",
+      "designerPriceUsd": 24.2,
+      "clientPriceUsd": 48.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 239,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "SKMY8057",
+      "sourceSku": "SKMY8057",
+      "designerPriceUsd": 11.4,
+      "clientPriceUsd": 22.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 240,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TB8005",
+      "sourceSku": "TB8005",
+      "designerPriceUsd": 15.7,
+      "clientPriceUsd": 31.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 241,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TB8063A",
+      "sourceSku": "TB8063A",
+      "designerPriceUsd": 39.5,
+      "clientPriceUsd": 79,
+      "source": {
+        "sheet": "Лист1",
+        "row": 242,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TB959",
+      "sourceSku": "TB959",
+      "designerPriceUsd": 29.5,
+      "clientPriceUsd": 59,
+      "source": {
+        "sheet": "Лист1",
+        "row": 243,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8005",
+      "sourceSku": "TBM8005",
+      "designerPriceUsd": 34.2,
+      "clientPriceUsd": 68.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 244,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8045A",
+      "sourceSku": "TBM8045A",
+      "designerPriceUsd": 33.8,
+      "clientPriceUsd": 67.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 245,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8045AY",
+      "sourceSku": "TBM8045AY",
+      "designerPriceUsd": 21,
+      "clientPriceUsd": 42,
+      "source": {
+        "sheet": "Лист1",
+        "row": 246,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8063AY",
+      "sourceSku": "TBM8063AY",
+      "designerPriceUsd": 25,
+      "clientPriceUsd": 50,
+      "source": {
+        "sheet": "Лист1",
+        "row": 247,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8063Y",
+      "sourceSku": "TBM8063Y",
+      "designerPriceUsd": 36.7,
+      "clientPriceUsd": 73.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 248,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM8067Y",
+      "sourceSku": "TBM8067Y",
+      "designerPriceUsd": 26.5,
+      "clientPriceUsd": 53,
+      "source": {
+        "sheet": "Лист1",
+        "row": 249,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TBM959",
+      "sourceSku": "TBM959",
+      "designerPriceUsd": 122.4,
+      "clientPriceUsd": 244.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 250,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "TKM959",
+      "sourceSku": "TKM959",
+      "designerPriceUsd": 23.2,
+      "clientPriceUsd": 46.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 251,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VDF8128A",
+      "sourceSku": "VDF8128A",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 22,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VDFB8052A",
+      "sourceSku": "VDFB8052A",
+      "designerPriceUsd": 0.8,
+      "clientPriceUsd": 1.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 252,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VDFB8052B",
+      "sourceSku": "VDFB8052B",
+      "designerPriceUsd": 1.2,
+      "clientPriceUsd": 2.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 253,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VM975",
+      "sourceSku": "VM975",
+      "designerPriceUsd": 2.6,
+      "clientPriceUsd": 5.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 257,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VM975A",
+      "sourceSku": "VM975A",
+      "designerPriceUsd": 2.3,
+      "clientPriceUsd": 4.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 258,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VMFB8001",
+      "sourceSku": "VMFB8001",
+      "designerPriceUsd": 1.2,
+      "clientPriceUsd": 2.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 259,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VMFB959",
+      "sourceSku": "VMFB959",
+      "designerPriceUsd": 3.4,
+      "clientPriceUsd": 6.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 260,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VMFB975A",
+      "sourceSku": "VMFB975A",
+      "designerPriceUsd": 2.5,
+      "clientPriceUsd": 5,
+      "source": {
+        "sheet": "Лист1",
+        "row": 261,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VMFC8005",
+      "sourceSku": "VMFC8005",
+      "designerPriceUsd": 1.7,
+      "clientPriceUsd": 3.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 262,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VMFC975",
+      "sourceSku": "VMFC975",
+      "designerPriceUsd": 2.8,
+      "clientPriceUsd": 5.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 263,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "VUFC974",
+      "sourceSku": "VUFC974",
+      "designerPriceUsd": 2.4,
+      "clientPriceUsd": 4.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 264,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WB8052Y",
+      "sourceSku": "WB8052Y",
+      "designerPriceUsd": 15.1,
+      "clientPriceUsd": 30.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 265,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WC962Y",
+      "sourceSku": "WC962Y",
+      "designerPriceUsd": 4.1,
+      "clientPriceUsd": 8.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 266,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WDF1B",
+      "sourceSku": "WDF1B",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 267,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WDF974",
+      "sourceSku": "WDF974",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 268,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG17U",
+      "sourceSku": "WG17U",
+      "designerPriceUsd": 1.8,
+      "clientPriceUsd": 3.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 269,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG32G",
+      "sourceSku": "WG32G",
+      "designerPriceUsd": 1.5,
+      "clientPriceUsd": 3,
+      "source": {
+        "sheet": "Лист1",
+        "row": 270,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG37U",
+      "sourceSku": "WG37U",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 271,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG8001Y",
+      "sourceSku": "WG8001Y",
+      "designerPriceUsd": 2.2,
+      "clientPriceUsd": 4.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 272,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG8053F",
+      "sourceSku": "WG8053F",
+      "designerPriceUsd": 6.5,
+      "clientPriceUsd": 13,
+      "source": {
+        "sheet": "Лист1",
+        "row": 273,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG8065",
+      "sourceSku": "WG8065",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 274,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG89",
+      "sourceSku": "WG89",
+      "designerPriceUsd": 2,
+      "clientPriceUsd": 4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 275,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WG98AY",
+      "sourceSku": "WG98AY",
+      "designerPriceUsd": 4.5,
+      "clientPriceUsd": 9,
+      "source": {
+        "sheet": "Лист1",
+        "row": 276,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK8043",
+      "sourceSku": "WK8043",
+      "designerPriceUsd": 1.8,
+      "clientPriceUsd": 3.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 277,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK8052",
+      "sourceSku": "WK8052",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 278,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK8057",
+      "sourceSku": "WK8057",
+      "designerPriceUsd": 1,
+      "clientPriceUsd": 2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 279,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK962",
+      "sourceSku": "WK962",
+      "designerPriceUsd": 1.5,
+      "clientPriceUsd": 3,
+      "source": {
+        "sheet": "Лист1",
+        "row": 280,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK990",
+      "sourceSku": "WK990",
+      "designerPriceUsd": 2.3,
+      "clientPriceUsd": 4.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 281,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WK993",
+      "sourceSku": "WK993",
+      "designerPriceUsd": 2.5,
+      "clientPriceUsd": 5,
+      "source": {
+        "sheet": "Лист1",
+        "row": 282,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WKY8057B",
+      "sourceSku": "WKY8057B",
+      "designerPriceUsd": 8.5,
+      "clientPriceUsd": 17,
+      "source": {
+        "sheet": "Лист1",
+        "row": 283,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WKY8057C",
+      "sourceSku": "WKY8057C",
+      "designerPriceUsd": 7.1,
+      "clientPriceUsd": 14.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 284,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WKY8057D",
+      "sourceSku": "WKY8057D",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 285,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ131C",
+      "sourceSku": "WQ131C",
+      "designerPriceUsd": 10.2,
+      "clientPriceUsd": 20.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 288,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ131D",
+      "sourceSku": "WQ131D",
+      "designerPriceUsd": 5,
+      "clientPriceUsd": 10,
+      "source": {
+        "sheet": "Лист1",
+        "row": 289,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ137C",
+      "sourceSku": "WQ137C",
+      "designerPriceUsd": 20.5,
+      "clientPriceUsd": 41,
+      "source": {
+        "sheet": "Лист1",
+        "row": 292,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ137D",
+      "sourceSku": "WQ137D",
+      "designerPriceUsd": 22,
+      "clientPriceUsd": 44,
+      "source": {
+        "sheet": "Лист1",
+        "row": 293,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ137G",
+      "sourceSku": "WQ137G",
+      "designerPriceUsd": 8.2,
+      "clientPriceUsd": 16.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 295,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ137H",
+      "sourceSku": "WQ137H",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 296,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ137L",
+      "sourceSku": "WQ137L",
+      "designerPriceUsd": 9.5,
+      "clientPriceUsd": 19,
+      "source": {
+        "sheet": "Лист1",
+        "row": 297,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ154A",
+      "sourceSku": "WQ154A",
+      "designerPriceUsd": 6,
+      "clientPriceUsd": 12,
+      "source": {
+        "sheet": "Лист1",
+        "row": 298,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ154B",
+      "sourceSku": "WQ154B",
+      "designerPriceUsd": 6.3,
+      "clientPriceUsd": 12.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 299,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ154C",
+      "sourceSku": "WQ154C",
+      "designerPriceUsd": 5.8,
+      "clientPriceUsd": 11.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 300,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ166",
+      "sourceSku": "WQ166",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 301,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ166A",
+      "sourceSku": "WQ166A",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 302,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ166B",
+      "sourceSku": "WQ166B",
+      "designerPriceUsd": 8.1,
+      "clientPriceUsd": 16.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 303,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ166C",
+      "sourceSku": "WQ166C",
+      "designerPriceUsd": 8,
+      "clientPriceUsd": 16,
+      "source": {
+        "sheet": "Лист1",
+        "row": 304,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ166D",
+      "sourceSku": "WQ166D",
+      "designerPriceUsd": 6.6,
+      "clientPriceUsd": 13.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 305,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ169",
+      "sourceSku": "WQ169",
+      "designerPriceUsd": 7.2,
+      "clientPriceUsd": 14.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 306,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ169A",
+      "sourceSku": "WQ169A",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 307,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ169C",
+      "sourceSku": "WQ169C",
+      "designerPriceUsd": 7.2,
+      "clientPriceUsd": 14.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 308,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ171A",
+      "sourceSku": "WQ171A",
+      "designerPriceUsd": 5.4,
+      "clientPriceUsd": 10.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 314,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ171F",
+      "sourceSku": "WQ171F",
+      "designerPriceUsd": 5.8,
+      "clientPriceUsd": 11.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 315,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ69C",
+      "sourceSku": "WQ69C",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 317,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ69D",
+      "sourceSku": "WQ69D",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 318,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ69E",
+      "sourceSku": "WQ69E",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 319,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ69F",
+      "sourceSku": "WQ69F",
+      "designerPriceUsd": 1.5,
+      "clientPriceUsd": 3,
+      "source": {
+        "sheet": "Лист1",
+        "row": 320,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WQ69H",
+      "sourceSku": "WQ69H",
+      "designerPriceUsd": 3,
+      "clientPriceUsd": 6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 321,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR121B",
+      "sourceSku": "WR121B",
+      "designerPriceUsd": 1.9,
+      "clientPriceUsd": 3.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 322,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR135A",
+      "sourceSku": "WR135A",
+      "designerPriceUsd": 3.5,
+      "clientPriceUsd": 7,
+      "source": {
+        "sheet": "Лист1",
+        "row": 323,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR8032",
+      "sourceSku": "WR8032",
+      "designerPriceUsd": 10.1,
+      "clientPriceUsd": 20.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 324,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR8053",
+      "sourceSku": "WR8053",
+      "designerPriceUsd": 21.1,
+      "clientPriceUsd": 42.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 325,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR8053A",
+      "sourceSku": "WR8053A",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 326,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR8065",
+      "sourceSku": "WR8065",
+      "designerPriceUsd": 11.1,
+      "clientPriceUsd": 22.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 327,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR87",
+      "sourceSku": "WR87",
+      "designerPriceUsd": 3.1,
+      "clientPriceUsd": 6.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 328,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WR962",
+      "sourceSku": "WR962",
+      "designerPriceUsd": 3.1,
+      "clientPriceUsd": 6.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 329,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WRQ8032",
+      "sourceSku": "WRQ8032",
+      "designerPriceUsd": 12.1,
+      "clientPriceUsd": 24.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 331,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WT8094Y",
+      "sourceSku": "WT8094Y",
+      "designerPriceUsd": 19.2,
+      "clientPriceUsd": 38.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 22,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXG982A",
+      "sourceSku": "WXG982A",
+      "designerPriceUsd": 6.1,
+      "clientPriceUsd": 12.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 335,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXG982C",
+      "sourceSku": "WXG982C",
+      "designerPriceUsd": 5.7,
+      "clientPriceUsd": 11.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 336,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR157A",
+      "sourceSku": "WXR157A",
+      "designerPriceUsd": 14,
+      "clientPriceUsd": 28,
+      "source": {
+        "sheet": "Лист1",
+        "row": 339,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR158A",
+      "sourceSku": "WXR158A",
+      "designerPriceUsd": 21.3,
+      "clientPriceUsd": 42.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 340,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR36D",
+      "sourceSku": "WXR36D",
+      "designerPriceUsd": 17.2,
+      "clientPriceUsd": 34.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 341,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR36E",
+      "sourceSku": "WXR36E",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 342,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR40B",
+      "sourceSku": "WXR40B",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 343,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR75",
+      "sourceSku": "WXR75",
+      "designerPriceUsd": 6.2,
+      "clientPriceUsd": 12.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 344,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR77",
+      "sourceSku": "WXR77",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 345,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8001B",
+      "sourceSku": "WXR8001B",
+      "designerPriceUsd": 8.6,
+      "clientPriceUsd": 17.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 346,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8001C",
+      "sourceSku": "WXR8001C",
+      "designerPriceUsd": 9,
+      "clientPriceUsd": 18,
+      "source": {
+        "sheet": "Лист1",
+        "row": 347,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8032",
+      "sourceSku": "WXR8032",
+      "designerPriceUsd": 12.7,
+      "clientPriceUsd": 25.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 348,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8043",
+      "sourceSku": "WXR8043",
+      "designerPriceUsd": 8.5,
+      "clientPriceUsd": 17,
+      "source": {
+        "sheet": "Лист1",
+        "row": 349,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8043A",
+      "sourceSku": "WXR8043A",
+      "designerPriceUsd": 14,
+      "clientPriceUsd": 28,
+      "source": {
+        "sheet": "Лист1",
+        "row": 350,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8043B",
+      "sourceSku": "WXR8043B",
+      "designerPriceUsd": 14.6,
+      "clientPriceUsd": 29.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 351,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8043C",
+      "sourceSku": "WXR8043C",
+      "designerPriceUsd": 12.3,
+      "clientPriceUsd": 24.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 352,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8043D",
+      "sourceSku": "WXR8043D",
+      "designerPriceUsd": 16.4,
+      "clientPriceUsd": 32.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 353,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8044",
+      "sourceSku": "WXR8044",
+      "designerPriceUsd": 7.3,
+      "clientPriceUsd": 14.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 354,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8044B",
+      "sourceSku": "WXR8044B",
+      "designerPriceUsd": 16,
+      "clientPriceUsd": 32,
+      "source": {
+        "sheet": "Лист1",
+        "row": 355,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8044C",
+      "sourceSku": "WXR8044C",
+      "designerPriceUsd": 12.8,
+      "clientPriceUsd": 25.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 356,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8044D",
+      "sourceSku": "WXR8044D",
+      "designerPriceUsd": 9.1,
+      "clientPriceUsd": 18.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 357,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8044E",
+      "sourceSku": "WXR8044E",
+      "designerPriceUsd": 13.2,
+      "clientPriceUsd": 26.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 358,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8045A",
+      "sourceSku": "WXR8045A",
+      "designerPriceUsd": 8,
+      "clientPriceUsd": 16,
+      "source": {
+        "sheet": "Лист1",
+        "row": 359,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8045B",
+      "sourceSku": "WXR8045B",
+      "designerPriceUsd": 8,
+      "clientPriceUsd": 16,
+      "source": {
+        "sheet": "Лист1",
+        "row": 360,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8063C",
+      "sourceSku": "WXR8063C",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 361,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8063F",
+      "sourceSku": "WXR8063F",
+      "designerPriceUsd": 10.7,
+      "clientPriceUsd": 21.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 362,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8063L",
+      "sourceSku": "WXR8063L",
+      "designerPriceUsd": 9.3,
+      "clientPriceUsd": 18.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 363,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8065",
+      "sourceSku": "WXR8065",
+      "designerPriceUsd": 15,
+      "clientPriceUsd": 30,
+      "source": {
+        "sheet": "Лист1",
+        "row": 364,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8065A",
+      "sourceSku": "WXR8065A",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 365,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8065B",
+      "sourceSku": "WXR8065B",
+      "designerPriceUsd": 9.3,
+      "clientPriceUsd": 18.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 366,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8067B",
+      "sourceSku": "WXR8067B",
+      "designerPriceUsd": 13,
+      "clientPriceUsd": 26,
+      "source": {
+        "sheet": "Лист1",
+        "row": 367,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8067C",
+      "sourceSku": "WXR8067C",
+      "designerPriceUsd": 9.3,
+      "clientPriceUsd": 18.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 368,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8067D",
+      "sourceSku": "WXR8067D",
+      "designerPriceUsd": 9.3,
+      "clientPriceUsd": 18.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 369,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8067M",
+      "sourceSku": "WXR8067M",
+      "designerPriceUsd": 10.2,
+      "clientPriceUsd": 20.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 370,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8084",
+      "sourceSku": "WXR8084",
+      "designerPriceUsd": 13,
+      "clientPriceUsd": 26,
+      "source": {
+        "sheet": "Лист1",
+        "row": 15,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8084B",
+      "sourceSku": "WXR8084B",
+      "designerPriceUsd": 11,
+      "clientPriceUsd": 22,
+      "source": {
+        "sheet": "Лист1",
+        "row": 14,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR88",
+      "sourceSku": "WXR88",
+      "designerPriceUsd": 10.2,
+      "clientPriceUsd": 20.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 371,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR89",
+      "sourceSku": "WXR89",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 372,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR8A",
+      "sourceSku": "WXR8A",
+      "designerPriceUsd": 19.4,
+      "clientPriceUsd": 38.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 373,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR90",
+      "sourceSku": "WXR90",
+      "designerPriceUsd": 17.6,
+      "clientPriceUsd": 35.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 374,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR981",
+      "sourceSku": "WXR981",
+      "designerPriceUsd": 26.8,
+      "clientPriceUsd": 53.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 375,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR982A",
+      "sourceSku": "WXR982A",
+      "designerPriceUsd": 13.6,
+      "clientPriceUsd": 27.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 377,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR982C",
+      "sourceSku": "WXR982C",
+      "designerPriceUsd": 20.7,
+      "clientPriceUsd": 41.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 379,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR982D",
+      "sourceSku": "WXR982D",
+      "designerPriceUsd": 13.2,
+      "clientPriceUsd": 26.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 380,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR982H",
+      "sourceSku": "WXR982H",
+      "designerPriceUsd": 7.8,
+      "clientPriceUsd": 15.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 381,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "WXR996",
+      "sourceSku": "WXR996",
+      "designerPriceUsd": 21.8,
+      "clientPriceUsd": 43.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 383,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XE971AY",
+      "sourceSku": "XE971AY",
+      "designerPriceUsd": 38.9,
+      "clientPriceUsd": 77.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 386,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XG993",
+      "sourceSku": "XG993",
+      "designerPriceUsd": 16.2,
+      "clientPriceUsd": 32.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 387,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XG993A",
+      "sourceSku": "XG993A",
+      "designerPriceUsd": 15.8,
+      "clientPriceUsd": 31.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 388,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XH971Y",
+      "sourceSku": "XH971Y",
+      "designerPriceUsd": 57.9,
+      "clientPriceUsd": 115.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 389,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR26",
+      "sourceSku": "XR26",
+      "designerPriceUsd": 7.8,
+      "clientPriceUsd": 15.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 390,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR8137",
+      "sourceSku": "XR8137",
+      "designerPriceUsd": 18,
+      "clientPriceUsd": 36,
+      "source": {
+        "sheet": "Лист1",
+        "row": 37,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR971",
+      "sourceSku": "XR971",
+      "designerPriceUsd": 19.4,
+      "clientPriceUsd": 38.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 391,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR974",
+      "sourceSku": "XR974",
+      "designerPriceUsd": 23,
+      "clientPriceUsd": 46,
+      "source": {
+        "sheet": "Лист1",
+        "row": 392,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR975A",
+      "sourceSku": "XR975A",
+      "designerPriceUsd": 59.4,
+      "clientPriceUsd": 118.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 393,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR993",
+      "sourceSku": "XR993",
+      "designerPriceUsd": 15.8,
+      "clientPriceUsd": 31.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 394,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XR993B",
+      "sourceSku": "XR993B",
+      "designerPriceUsd": 42.9,
+      "clientPriceUsd": 85.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 395,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XT971",
+      "sourceSku": "XT971",
+      "designerPriceUsd": 57.3,
+      "clientPriceUsd": 114.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 396,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XT971AY",
+      "sourceSku": "XT971AY",
+      "designerPriceUsd": 54.6,
+      "clientPriceUsd": 109.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 397,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XT971BY",
+      "sourceSku": "XT971BY",
+      "designerPriceUsd": 61.8,
+      "clientPriceUsd": 123.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 398,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XT993",
+      "sourceSku": "XT993",
+      "designerPriceUsd": 45.2,
+      "clientPriceUsd": 90.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 399,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XT993AY",
+      "sourceSku": "XT993AY",
+      "designerPriceUsd": 53.8,
+      "clientPriceUsd": 107.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 400,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "XV993Y",
+      "sourceSku": "XV993Y",
+      "designerPriceUsd": 77,
+      "clientPriceUsd": 154,
+      "source": {
+        "sheet": "Лист1",
+        "row": 401,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZB8052",
+      "sourceSku": "ZB8052",
+      "designerPriceUsd": 12,
+      "clientPriceUsd": 24,
+      "source": {
+        "sheet": "Лист1",
+        "row": 403,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZBM8029",
+      "sourceSku": "ZBM8029",
+      "designerPriceUsd": 28.3,
+      "clientPriceUsd": 56.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 404,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZBM8053",
+      "sourceSku": "ZBM8053",
+      "designerPriceUsd": 16,
+      "clientPriceUsd": 32,
+      "source": {
+        "sheet": "Лист1",
+        "row": 405,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG539A",
+      "sourceSku": "ZG539A",
+      "designerPriceUsd": 2.3,
+      "clientPriceUsd": 4.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 408,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8005",
+      "sourceSku": "ZG8005",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 409,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8015",
+      "sourceSku": "ZG8015",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 410,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8015A",
+      "sourceSku": "ZG8015A",
+      "designerPriceUsd": 1.3,
+      "clientPriceUsd": 2.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 411,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8021",
+      "sourceSku": "ZG8021",
+      "designerPriceUsd": 1.6,
+      "clientPriceUsd": 3.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 412,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8029",
+      "sourceSku": "ZG8029",
+      "designerPriceUsd": 1.7,
+      "clientPriceUsd": 3.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 413,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8067",
+      "sourceSku": "ZG8067",
+      "designerPriceUsd": 2.3,
+      "clientPriceUsd": 4.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 414,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG8128A",
+      "sourceSku": "ZG8128A",
+      "designerPriceUsd": 4,
+      "clientPriceUsd": 8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 15,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZG975A",
+      "sourceSku": "ZG975A",
+      "designerPriceUsd": 12.7,
+      "clientPriceUsd": 25.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 415,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZR8029",
+      "sourceSku": "ZR8029",
+      "designerPriceUsd": 4.6,
+      "clientPriceUsd": 9.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 416,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZR8067A",
+      "sourceSku": "ZR8067A",
+      "designerPriceUsd": 2.8,
+      "clientPriceUsd": 5.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 417,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZR8128Y",
+      "sourceSku": "ZR8128Y",
+      "designerPriceUsd": 11,
+      "clientPriceUsd": 22,
+      "source": {
+        "sheet": "Лист1",
+        "row": 19,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZSE981Y",
+      "sourceSku": "ZSE981Y",
+      "designerPriceUsd": 42,
+      "clientPriceUsd": 84,
+      "source": {
+        "sheet": "Лист1",
+        "row": 419,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZSR8015",
+      "sourceSku": "ZSR8015",
+      "designerPriceUsd": 11.6,
+      "clientPriceUsd": 23.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 420,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZST981",
+      "sourceSku": "ZST981",
+      "designerPriceUsd": 61.1,
+      "clientPriceUsd": 122.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 421,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT626R",
+      "sourceSku": "ZT626R",
+      "designerPriceUsd": 19.8,
+      "clientPriceUsd": 39.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 422,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT626S",
+      "sourceSku": "ZT626S",
+      "designerPriceUsd": 24.8,
+      "clientPriceUsd": 49.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 423,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT626T",
+      "sourceSku": "ZT626T",
+      "designerPriceUsd": 55,
+      "clientPriceUsd": 110,
+      "source": {
+        "sheet": "Лист1",
+        "row": 424,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8005",
+      "sourceSku": "ZT8005",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 425,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8005A",
+      "sourceSku": "ZT8005A",
+      "designerPriceUsd": 17.8,
+      "clientPriceUsd": 35.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 426,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8005B",
+      "sourceSku": "ZT8005B",
+      "designerPriceUsd": 17.5,
+      "clientPriceUsd": 35,
+      "source": {
+        "sheet": "Лист1",
+        "row": 427,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8005D",
+      "sourceSku": "ZT8005D",
+      "designerPriceUsd": 19.2,
+      "clientPriceUsd": 38.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 428,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8015",
+      "sourceSku": "ZT8015",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 429,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8015A",
+      "sourceSku": "ZT8015A",
+      "designerPriceUsd": 15.6,
+      "clientPriceUsd": 31.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 430,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8015B",
+      "sourceSku": "ZT8015B",
+      "designerPriceUsd": 45.2,
+      "clientPriceUsd": 90.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 431,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8015C",
+      "sourceSku": "ZT8015C",
+      "designerPriceUsd": 7.2,
+      "clientPriceUsd": 14.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 432,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8021C",
+      "sourceSku": "ZT8021C",
+      "designerPriceUsd": 9.4,
+      "clientPriceUsd": 18.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 433,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8029C",
+      "sourceSku": "ZT8029C",
+      "designerPriceUsd": 10.5,
+      "clientPriceUsd": 21,
+      "source": {
+        "sheet": "Лист1",
+        "row": 434,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8032",
+      "sourceSku": "ZT8032",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 435,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8032A",
+      "sourceSku": "ZT8032A",
+      "designerPriceUsd": 13.5,
+      "clientPriceUsd": 27,
+      "source": {
+        "sheet": "Лист1",
+        "row": 436,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8043A",
+      "sourceSku": "ZT8043A",
+      "designerPriceUsd": 5.9,
+      "clientPriceUsd": 11.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 437,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8043B",
+      "sourceSku": "ZT8043B",
+      "designerPriceUsd": 13.7,
+      "clientPriceUsd": 27.4,
+      "source": {
+        "sheet": "Лист1",
+        "row": 438,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8043C",
+      "sourceSku": "ZT8043C",
+      "designerPriceUsd": 17.8,
+      "clientPriceUsd": 35.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 439,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8044",
+      "sourceSku": "ZT8044",
+      "designerPriceUsd": 11.8,
+      "clientPriceUsd": 23.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 440,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8045",
+      "sourceSku": "ZT8045",
+      "designerPriceUsd": 8.5,
+      "clientPriceUsd": 17,
+      "source": {
+        "sheet": "Лист1",
+        "row": 441,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8045A",
+      "sourceSku": "ZT8045A",
+      "designerPriceUsd": 12.3,
+      "clientPriceUsd": 24.6,
+      "source": {
+        "sheet": "Лист1",
+        "row": 442,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8045B",
+      "sourceSku": "ZT8045B",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 443,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8057",
+      "sourceSku": "ZT8057",
+      "designerPriceUsd": 7,
+      "clientPriceUsd": 14,
+      "source": {
+        "sheet": "Лист1",
+        "row": 444,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8084",
+      "sourceSku": "ZT8084",
+      "designerPriceUsd": 11,
+      "clientPriceUsd": 22,
+      "source": {
+        "sheet": "Лист1",
+        "row": 12,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8084C",
+      "sourceSku": "ZT8084C",
+      "designerPriceUsd": 11,
+      "clientPriceUsd": 22,
+      "source": {
+        "sheet": "Лист1",
+        "row": 13,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8094B",
+      "sourceSku": "ZT8094B",
+      "designerPriceUsd": 13,
+      "clientPriceUsd": 26,
+      "source": {
+        "sheet": "Лист1",
+        "row": 23,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8094Y",
+      "sourceSku": "ZT8094Y",
+      "designerPriceUsd": 15.4,
+      "clientPriceUsd": 30.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 21,
+        "block": "Annecy / Nera"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT8128",
+      "sourceSku": "ZT8128",
+      "designerPriceUsd": 10,
+      "clientPriceUsd": 20,
+      "source": {
+        "sheet": "Лист1",
+        "row": 10,
+        "block": "Bottega / Medici"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT955D",
+      "sourceSku": "ZT955D",
+      "designerPriceUsd": 7.5,
+      "clientPriceUsd": 15,
+      "source": {
+        "sheet": "Лист1",
+        "row": 447,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT975",
+      "sourceSku": "ZT975",
+      "designerPriceUsd": 42,
+      "clientPriceUsd": 84,
+      "source": {
+        "sheet": "Лист1",
+        "row": 448,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZT975AY",
+      "sourceSku": "ZT975AY",
+      "designerPriceUsd": 27.9,
+      "clientPriceUsd": 55.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 449,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZXR8021",
+      "sourceSku": "ZXR8021",
+      "designerPriceUsd": 5.6,
+      "clientPriceUsd": 11.2,
+      "source": {
+        "sheet": "Лист1",
+        "row": 450,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    },
+    {
+      "sku": "ZXR8021A",
+      "sourceSku": "ZXR8021A",
+      "designerPriceUsd": 7.4,
+      "clientPriceUsd": 14.8,
+      "source": {
+        "sheet": "Лист1",
+        "row": 451,
+        "block": "основной прайс"
+      },
+      "match": "exact"
+    }
+  ]
+}

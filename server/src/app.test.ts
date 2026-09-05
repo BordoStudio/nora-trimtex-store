@@ -19,12 +19,15 @@ const product = {
   featured: true,
   attributes: {},
   priceUsd: 12,
+  partnerPriceUsd: 12,
+  retailPriceUsd: 24,
   createdAt: new Date(),
   updatedAt: new Date(),
 };
 
 const insertedRequests: unknown[] = [];
 const insertedOrders: unknown[] = [];
+const insertedOrderPricing: unknown[] = [];
 const services: AppServices = {
   databaseHealth: async () => undefined,
   catalog: {
@@ -42,7 +45,7 @@ const services: AppServices = {
     create: async (document) => { insertedRequests.push(document); },
   },
   orders: {
-    create: async (document) => { insertedOrders.push(document); },
+    create: async (document, pricing) => { insertedOrders.push(document); insertedOrderPricing.push(pricing); },
   },
 };
 
@@ -59,7 +62,11 @@ test("catalog and sample request API", async () => {
 
   const tradeCatalog = await app.inject({ method: "GET", url: "/api/v1/catalog/products?locale=en", headers: { "x-internal-api-key": "test-internal-api-key-000000000000" } });
   assert.equal(tradeCatalog.statusCode, 200);
-  assert.equal(tradeCatalog.json().data[0].priceUsd, 12);
+  assert.equal(tradeCatalog.json().data[0].priceUsd, 24);
+
+  const partnerCatalog = await app.inject({ method: "GET", url: "/api/v1/catalog/products?locale=en&priceTier=partner", headers: { "x-internal-api-key": "test-internal-api-key-000000000000" } });
+  assert.equal(partnerCatalog.statusCode, 200);
+  assert.equal(partnerCatalog.json().data[0].priceUsd, 12);
 
   const sampleRequest = await app.inject({
     method: "POST",
@@ -85,6 +92,7 @@ test("catalog and sample request API", async () => {
   assert.equal(order.statusCode, 201);
   assert.match(order.json().data.id, /^LTX-\d{8}-[A-Z0-9]{6}$/);
   assert.equal(insertedOrders.length, 1);
+  assert.deepEqual(insertedOrderPricing[0], { tier: "retail", discountPercent: 0 });
 
   await app.close();
 });

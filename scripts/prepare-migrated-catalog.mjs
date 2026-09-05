@@ -8,7 +8,18 @@ const migrationDir = join(root, "data", "migration");
 const raw = JSON.parse(await readFile(join(migrationDir, "catalog.raw.json"), "utf8"));
 const curated = JSON.parse(await readFile(join(root, "data", "catalog.seed.json"), "utf8"));
 const bordoPriceFile = JSON.parse(await readFile(join(root, "data", "bordo-prices.json"), "utf8").catch(() => "{\"prices\":[]}"));
-const bordoPrices = new Map(bordoPriceFile.prices.map((item) => [item.sku, item.priceUsd]));
+const furniturePriceFile = JSON.parse(await readFile(join(root, "data", "furniture-prices.json"), "utf8").catch(() => "{\"prices\":[]}"));
+const priceRecords = new Map(bordoPriceFile.prices.map((item) => [item.sku, {
+  designerPriceUsd: item.priceUsd,
+  clientPriceUsd: Math.round(item.priceUsd * 200) / 100,
+}]));
+for (const item of furniturePriceFile.prices) {
+  priceRecords.set(item.sku, { designerPriceUsd: item.designerPriceUsd, clientPriceUsd: item.clientPriceUsd });
+}
+const priceFields = (sku) => {
+  const price = priceRecords.get(sku);
+  return price ? { priceUsd: price.designerPriceUsd, partnerPriceUsd: price.designerPriceUsd, retailPriceUsd: price.clientPriceUsd } : {};
+};
 const curatedIds = new Set(curated.map((product) => product.id));
 const rawById = new Map(raw.products.map((product) => [product.id, product]));
 
@@ -73,7 +84,6 @@ const products = [];
 for (const [index, product] of raw.products.filter((item) => item.localImage && !curatedIds.has(item.id)).entries()) {
     const names = categoryNames[product.category] || categoryNames["decorative-tapes"];
     const imageFile = basename(product.localImage);
-    const priceUsd = bordoPrices.get(product.sku);
     const displayNames = Object.fromEntries(
       Object.entries(names).map(([locale, name]) => [locale, `${name} ${product.sku}`]),
     );
@@ -100,7 +110,7 @@ for (const [index, product] of raw.products.filter((item) => item.localImage && 
       featured: index < 12,
       isNew: false,
       attributes: { legacyName: product.originalName },
-      ...(priceUsd === undefined ? {} : { priceUsd }),
+      ...priceFields(product.sku),
       localImage: `assets/${imageFile}`,
     });
 }
@@ -119,7 +129,7 @@ const previewProducts = products.map((product) => ({
   variants: product.variants.map((variant) => ({ id: variant.id, imageKey: variant.mediaKeys[0] })),
   variantCount: product.variants.length,
   isNew: product.isNew,
-  ...(product.priceUsd === undefined ? {} : { priceUsd: product.priceUsd }),
+  ...priceFields(product.sku),
 }));
 
 const enrichedCurated = [];
@@ -127,6 +137,7 @@ for (const product of curated) {
   const variants = await getVariants(rawById.get(product.id), product.primaryImageKey);
   enrichedCurated.push({
     ...product,
+    ...priceFields(product.sku),
     variants,
     variantCount: variants.length,
   });

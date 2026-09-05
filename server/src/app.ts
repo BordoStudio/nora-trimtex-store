@@ -33,7 +33,7 @@ export async function buildApp(services: AppServices) {
   await app.register(healthRoutes(services.databaseHealth));
   await app.register(catalogRoutes(services.catalog));
   await app.register(sampleRequestRoutes(services.sampleRequests));
-  await app.register(orderRoutes(services.orders));
+  await app.register(orderRoutes(services.orders, services.db));
   if (services.db) {
     await app.register(authRoutes(services.db));
     await app.register(cartRoutes(services.db));

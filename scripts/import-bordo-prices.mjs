@@ -23,7 +23,11 @@ const fullPath = resolve(root, "data/catalog.full.json");
 const full = JSON.parse(await readFile(fullPath, "utf8"));
 for (const product of full) {
   const price = prices.get(product.sku);
-  if (price) product.priceUsd = price.priceUsd;
+  if (price) {
+    product.priceUsd = price.priceUsd;
+    product.partnerPriceUsd = price.priceUsd;
+    product.retailPriceUsd = Math.round(price.priceUsd * 200) / 100;
+  }
 }
 await writeFile(fullPath, `${JSON.stringify(full, null, 2)}\n`);
 
@@ -33,7 +37,9 @@ for (const product of migration.products) {
   const price = prices.get(product.sku);
   if (!price) continue;
   product.priceUsd = price.priceUsd;
-  product.attributes = { ...product.attributes, priceUsd: price.priceUsd, priceSource: `${price.source.sheet}!${price.source.row}` };
+  product.partnerPriceUsd = price.priceUsd;
+  product.retailPriceUsd = Math.round(price.priceUsd * 200) / 100;
+  product.attributes = { ...product.attributes, priceUsd: price.priceUsd, designerPriceUsd: price.priceUsd, clientPriceUsd: product.retailPriceUsd, priceSource: `${price.source.sheet}!${price.source.row}` };
 }
 await writeFile(migrationPath, `${JSON.stringify(migration, null, 2)}\n`);
 

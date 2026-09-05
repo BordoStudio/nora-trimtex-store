@@ -20,6 +20,8 @@ export type Product = {
   image: string;
   variants: ProductVariant[];
   priceUsd?: number;
+  retailPriceUsd?: number;
+  partnerPriceUsd?: number;
   variantCount: number;
   isNew?: boolean;
   availability: "in_stock" | "low_stock" | "preorder" | "on_request";
@@ -43,6 +45,8 @@ type SeedProduct = {
   primaryImageKey: string;
   variants?: Array<{ id: string; imageKey: string }>;
   priceUsd?: number;
+  retailPriceUsd?: number;
+  partnerPriceUsd?: number;
   variantCount: number;
   isNew: boolean;
   dimensions?: Partial<LocalizedText>;
@@ -133,6 +137,8 @@ export function getSeedProducts(locale: Locale): Product[] {
         image: assetUrl(variant.imageKey, 7),
       })),
       priceUsd: product.priceUsd,
+      retailPriceUsd: product.retailPriceUsd,
+      partnerPriceUsd: product.partnerPriceUsd,
       variantCount: product.variantCount,
       isNew: product.isNew,
       availability: "on_request",

@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import type { MongoDatabase } from "./mongo.js";
 import type { ProductDocument } from "./domain/types.js";
@@ -19,11 +19,22 @@ type SampleSeedProduct = {
   isNew: boolean;
 };
 
+async function catalogDataRoot() {
+  const candidates = [resolve(process.cwd(), "data"), resolve(process.cwd(), "../data")];
+  for (const candidate of candidates) {
+    try {
+      await access(resolve(candidate, "migration/catalog.postgres.json"));
+      return candidate;
+    } catch {
+      // Try the packaged or workspace-level data directory next.
+    }
+  }
+  throw new Error("Catalogue migration data was not found");
+}
+
 export async function bootstrapCatalog(db: MongoDatabase): Promise<number> {
   const productsCollection = db.collection<ProductDocument>("products");
-  if (await productsCollection.estimatedDocumentCount() > 0) return 0;
-
-  const dataRoot = resolve(process.cwd(), "data");
+  const dataRoot = await catalogDataRoot();
   const source = JSON.parse(await readFile(resolve(dataRoot, "migration/catalog.postgres.json"), "utf8")) as MigrationFile;
   const sampleSource = JSON.parse(await readFile(resolve(dataRoot, "catalog.samples.json"), "utf8")) as SampleSeedProduct[];
   const samples: MigrationProduct[] = sampleSource.map((product) => ({
@@ -35,6 +46,29 @@ export async function bootstrapCatalog(db: MongoDatabase): Promise<number> {
     attributes: { source: "chinatrimming.cn", productType: "sample" },
   }));
   const products = [...source.products, ...samples];
+  const priceImportId = "furniture-prices-2026-09-05";
+
+  if (await productsCollection.estimatedDocumentCount() > 0) {
+    const imports = db.collection<{ id: string; appliedAt: Date }>("dataImports");
+    if (!await imports.findOne({ id: priceImportId })) {
+      const pricedProducts = products.filter((product) => product.partnerPriceUsd !== undefined || product.priceUsd !== undefined);
+      if (pricedProducts.length) {
+        await productsCollection.bulkWrite(pricedProducts.map((product) => {
+          const partnerPriceUsd = product.partnerPriceUsd ?? product.priceUsd!;
+          const retailPriceUsd = product.retailPriceUsd ?? partnerPriceUsd * 2;
+          return {
+            updateOne: {
+              filter: { id: product.id },
+              update: { $set: { priceUsd: partnerPriceUsd, partnerPriceUsd, retailPriceUsd } },
+            },
+          };
+        }), { ordered: false });
+      }
+      await imports.updateOne({ id: priceImportId }, { $set: { appliedAt: new Date() } }, { upsert: true });
+    }
+    return 0;
+  }
+
   const now = new Date();
 
   await db.collection("categories").bulkWrite(categorySeed.map((category) => ({
@@ -47,5 +81,10 @@ export async function bootstrapCatalog(db: MongoDatabase): Promise<number> {
       upsert: true,
     },
   })), { ordered: false });
+  await db.collection<{ id: string; appliedAt: Date }>("dataImports").updateOne(
+    { id: priceImportId },
+    { $set: { appliedAt: now } },
+    { upsert: true },
+  );
   return products.length;
 }

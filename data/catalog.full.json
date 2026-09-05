@@ -2193,7 +2193,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.1,
+    "partnerPriceUsd": 13.1,
+    "retailPriceUsd": 26.2
   },
   {
     "id": "342",
@@ -3337,7 +3340,10 @@
       }
     ],
     "variantCount": 20,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "1569",
@@ -5352,7 +5358,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23,
+    "partnerPriceUsd": 23,
+    "retailPriceUsd": 46
   },
   {
     "id": "1442",
@@ -5394,7 +5403,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 22,
+    "partnerPriceUsd": 22,
+    "retailPriceUsd": 44
   },
   {
     "id": "1443",
@@ -5440,7 +5452,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "1444",
@@ -5486,7 +5501,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "1445",
@@ -5532,7 +5550,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.5,
+    "partnerPriceUsd": 3.5,
+    "retailPriceUsd": 7
   },
   {
     "id": "1446",
@@ -5578,7 +5599,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "1447",
@@ -5620,7 +5644,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "1448",
@@ -5667,7 +5694,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 6
+    "priceUsd": 6,
+    "partnerPriceUsd": 6,
+    "retailPriceUsd": 12
   },
   {
     "id": "1449",
@@ -5713,7 +5742,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.5,
+    "partnerPriceUsd": 6.5,
+    "retailPriceUsd": 13
   },
   {
     "id": "1450",
@@ -5759,7 +5791,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1451",
@@ -5801,7 +5836,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11,
+    "partnerPriceUsd": 11,
+    "retailPriceUsd": 22
   },
   {
     "id": "1452",
@@ -5843,7 +5881,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1453",
@@ -5889,7 +5930,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "1454",
@@ -5932,7 +5976,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 13
+    "priceUsd": 15,
+    "partnerPriceUsd": 15,
+    "retailPriceUsd": 30
   },
   {
     "id": "1455",
@@ -5974,7 +6020,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "1456",
@@ -6016,7 +6065,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5,
+    "partnerPriceUsd": 5,
+    "retailPriceUsd": 10
   },
   {
     "id": "1457",
@@ -6058,7 +6110,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5,
+    "partnerPriceUsd": 5,
+    "retailPriceUsd": 10
   },
   {
     "id": "1422",
@@ -6720,7 +6775,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 45,
+    "partnerPriceUsd": 45,
+    "retailPriceUsd": 90
   },
   {
     "id": "1459",
@@ -6762,7 +6820,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 34,
+    "partnerPriceUsd": 34,
+    "retailPriceUsd": 68
   },
   {
     "id": "1460",
@@ -6808,7 +6869,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "1461",
@@ -6854,7 +6918,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "1462",
@@ -6900,7 +6967,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1463",
@@ -6946,7 +7016,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 18,
+    "partnerPriceUsd": 18,
+    "retailPriceUsd": 36
   },
   {
     "id": "1464",
@@ -6988,7 +7061,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "1465",
@@ -7035,7 +7111,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 27
+    "priceUsd": 27,
+    "partnerPriceUsd": 27,
+    "retailPriceUsd": 54
   },
   {
     "id": "1466",
@@ -7081,7 +7159,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 18,
+    "partnerPriceUsd": 18,
+    "retailPriceUsd": 36
   },
   {
     "id": "1467",
@@ -7124,7 +7205,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 33
+    "priceUsd": 33,
+    "partnerPriceUsd": 33,
+    "retailPriceUsd": 66
   },
   {
     "id": "1468",
@@ -7166,7 +7249,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8,
+    "partnerPriceUsd": 8,
+    "retailPriceUsd": 16
   },
   {
     "id": "1469",
@@ -7208,7 +7294,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6,
+    "partnerPriceUsd": 6,
+    "retailPriceUsd": 12
   },
   {
     "id": "1470",
@@ -7254,7 +7343,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "1484",
@@ -9200,7 +9292,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.4,
+    "partnerPriceUsd": 4.4,
+    "retailPriceUsd": 8.8
   },
   {
     "id": "1305",
@@ -9265,7 +9360,9 @@
     ],
     "variantCount": 5,
     "isNew": false,
-    "priceUsd": 24
+    "priceUsd": 24,
+    "partnerPriceUsd": 24,
+    "retailPriceUsd": 48
   },
   {
     "id": "1327",
@@ -9308,7 +9405,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 17
+    "priceUsd": 17,
+    "partnerPriceUsd": 17,
+    "retailPriceUsd": 34
   },
   {
     "id": "1328",
@@ -11209,7 +11308,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.4,
+    "partnerPriceUsd": 15.4,
+    "retailPriceUsd": 30.8
   },
   {
     "id": "1247",
@@ -11231,7 +11333,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.2,
+    "partnerPriceUsd": 19.2,
+    "retailPriceUsd": 38.4
   },
   {
     "id": "1248",
@@ -11265,7 +11370,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13,
+    "partnerPriceUsd": 13,
+    "retailPriceUsd": 26
   },
   {
     "id": "1284",
@@ -11405,7 +11513,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14,
+    "partnerPriceUsd": 14,
+    "retailPriceUsd": 28
   },
   {
     "id": "1213",
@@ -11456,7 +11567,9 @@
     ],
     "variantCount": 8,
     "isNew": false,
-    "priceUsd": 14
+    "priceUsd": 13,
+    "partnerPriceUsd": 13,
+    "retailPriceUsd": 26
   },
   {
     "id": "1214",
@@ -11498,7 +11611,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 18,
+    "partnerPriceUsd": 18,
+    "retailPriceUsd": 36
   },
   {
     "id": "1215",
@@ -11524,7 +11640,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11,
+    "partnerPriceUsd": 11,
+    "retailPriceUsd": 22
   },
   {
     "id": "1216",
@@ -11546,7 +11665,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11,
+    "partnerPriceUsd": 11,
+    "retailPriceUsd": 22
   },
   {
     "id": "1238",
@@ -11706,7 +11828,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 32.2,
+    "partnerPriceUsd": 32.2,
+    "retailPriceUsd": 64.4
   },
   {
     "id": "1245",
@@ -11990,7 +12115,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 22
+    "priceUsd": 22.1,
+    "partnerPriceUsd": 22.1,
+    "retailPriceUsd": 44.2
   },
   {
     "id": "1210",
@@ -12025,7 +12152,9 @@
     ],
     "variantCount": 4,
     "isNew": false,
-    "priceUsd": 46
+    "priceUsd": 46,
+    "partnerPriceUsd": 46,
+    "retailPriceUsd": 92
   },
   {
     "id": "1211",
@@ -12059,7 +12188,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15,
+    "partnerPriceUsd": 15,
+    "retailPriceUsd": 30
   },
   {
     "id": "1217",
@@ -12101,7 +12233,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 28,
+    "partnerPriceUsd": 28,
+    "retailPriceUsd": 56
   },
   {
     "id": "1240",
@@ -12966,7 +13101,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 11
+    "priceUsd": 11,
+    "partnerPriceUsd": 11,
+    "retailPriceUsd": 22
   },
   {
     "id": "1208",
@@ -13001,7 +13138,9 @@
     ],
     "variantCount": 4,
     "isNew": false,
-    "priceUsd": 12
+    "priceUsd": 13,
+    "partnerPriceUsd": 13,
+    "retailPriceUsd": 26
   },
   {
     "id": "1229",
@@ -14117,7 +14256,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "1165",
@@ -15487,7 +15629,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 36.7,
+    "partnerPriceUsd": 36.7,
+    "retailPriceUsd": 73.4
   },
   {
     "id": "1086",
@@ -15529,7 +15674,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 25,
+    "partnerPriceUsd": 25,
+    "retailPriceUsd": 50
   },
   {
     "id": "1087",
@@ -15579,7 +15727,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 39.5,
+    "partnerPriceUsd": 39.5,
+    "retailPriceUsd": 79
   },
   {
     "id": "1088",
@@ -15633,7 +15784,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.6,
+    "partnerPriceUsd": 11.6,
+    "retailPriceUsd": 23.2
   },
   {
     "id": "1089",
@@ -15687,7 +15841,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.7,
+    "partnerPriceUsd": 10.7,
+    "retailPriceUsd": 21.4
   },
   {
     "id": "1090",
@@ -15734,7 +15891,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 7
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "1091",
@@ -15772,7 +15931,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14.4,
+    "partnerPriceUsd": 14.4,
+    "retailPriceUsd": 28.8
   },
   {
     "id": "1092",
@@ -15810,7 +15972,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9.3,
+    "partnerPriceUsd": 9.3,
+    "retailPriceUsd": 18.6
   },
   {
     "id": "1093",
@@ -15856,7 +16021,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 26.5,
+    "partnerPriceUsd": 26.5,
+    "retailPriceUsd": 53
   },
   {
     "id": "1094",
@@ -15898,7 +16066,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13,
+    "partnerPriceUsd": 13,
+    "retailPriceUsd": 26
   },
   {
     "id": "1095",
@@ -15944,7 +16115,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9.3,
+    "partnerPriceUsd": 9.3,
+    "retailPriceUsd": 18.6
   },
   {
     "id": "1096",
@@ -15994,7 +16168,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9.3,
+    "partnerPriceUsd": 9.3,
+    "retailPriceUsd": 18.6
   },
   {
     "id": "1097",
@@ -16044,7 +16221,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.8,
+    "partnerPriceUsd": 2.8,
+    "retailPriceUsd": 5.6
   },
   {
     "id": "1098",
@@ -16094,7 +16274,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.2,
+    "partnerPriceUsd": 10.2,
+    "retailPriceUsd": 20.4
   },
   {
     "id": "1099",
@@ -16144,7 +16327,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.3,
+    "partnerPriceUsd": 2.3,
+    "retailPriceUsd": 4.6
   },
   {
     "id": "1100",
@@ -16186,7 +16372,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 26,
+    "partnerPriceUsd": 26,
+    "retailPriceUsd": 52
   },
   {
     "id": "1101",
@@ -16224,7 +16413,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21.4,
+    "partnerPriceUsd": 21.4,
+    "retailPriceUsd": 42.8
   },
   {
     "id": "1102",
@@ -16262,7 +16454,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 24.2,
+    "partnerPriceUsd": 24.2,
+    "retailPriceUsd": 48.4
   },
   {
     "id": "1103",
@@ -16304,7 +16499,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "1104",
@@ -16346,7 +16544,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.1,
+    "partnerPriceUsd": 11.1,
+    "retailPriceUsd": 22.2
   },
   {
     "id": "1105",
@@ -16388,7 +16589,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15,
+    "partnerPriceUsd": 15,
+    "retailPriceUsd": 30
   },
   {
     "id": "1106",
@@ -16414,7 +16618,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "1107",
@@ -16461,7 +16668,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 9
+    "priceUsd": 9.3,
+    "partnerPriceUsd": 9.3,
+    "retailPriceUsd": 18.6
   },
   {
     "id": "1039",
@@ -16503,7 +16712,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.7,
+    "partnerPriceUsd": 5.7,
+    "retailPriceUsd": 11.4
   },
   {
     "id": "1040",
@@ -16537,7 +16749,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "1041",
@@ -16567,7 +16782,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.7,
+    "partnerPriceUsd": 1.7,
+    "retailPriceUsd": 3.4
   },
   {
     "id": "1043",
@@ -16597,7 +16815,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.1,
+    "partnerPriceUsd": 8.1,
+    "retailPriceUsd": 16.2
   },
   {
     "id": "1044",
@@ -16647,7 +16868,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1045",
@@ -16705,7 +16929,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1046",
@@ -16755,7 +16982,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.4,
+    "partnerPriceUsd": 8.4,
+    "retailPriceUsd": 16.8
   },
   {
     "id": "1047",
@@ -16809,7 +17039,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.7,
+    "partnerPriceUsd": 5.7,
+    "retailPriceUsd": 11.4
   },
   {
     "id": "1048",
@@ -16859,7 +17092,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.7,
+    "partnerPriceUsd": 17.7,
+    "retailPriceUsd": 35.4
   },
   {
     "id": "1049",
@@ -16897,7 +17133,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.1,
+    "partnerPriceUsd": 15.1,
+    "retailPriceUsd": 30.2
   },
   {
     "id": "1050",
@@ -16951,7 +17190,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "1051",
@@ -16993,7 +17235,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "1052",
@@ -17035,7 +17280,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.5,
+    "partnerPriceUsd": 6.5,
+    "retailPriceUsd": 13
   },
   {
     "id": "1053",
@@ -17069,7 +17317,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "1054",
@@ -17111,7 +17362,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 24.2,
+    "partnerPriceUsd": 24.2,
+    "retailPriceUsd": 48.4
   },
   {
     "id": "1055",
@@ -17153,7 +17407,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.4,
+    "partnerPriceUsd": 11.4,
+    "retailPriceUsd": 22.8
   },
   {
     "id": "1056",
@@ -17199,7 +17456,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1,
+    "partnerPriceUsd": 1,
+    "retailPriceUsd": 2
   },
   {
     "id": "1057",
@@ -17249,7 +17509,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.5,
+    "partnerPriceUsd": 8.5,
+    "retailPriceUsd": 17
   },
   {
     "id": "1058",
@@ -17283,7 +17546,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.1,
+    "partnerPriceUsd": 7.1,
+    "retailPriceUsd": 14.2
   },
   {
     "id": "1059",
@@ -17333,7 +17599,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1062",
@@ -17367,7 +17636,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "441",
@@ -17405,7 +17677,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 68,
+    "partnerPriceUsd": 68,
+    "retailPriceUsd": 136
   },
   {
     "id": "465",
@@ -17459,7 +17734,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.7,
+    "partnerPriceUsd": 11.7,
+    "retailPriceUsd": 23.4
   },
   {
     "id": "443",
@@ -17505,7 +17783,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "453",
@@ -17563,7 +17844,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.6,
+    "partnerPriceUsd": 15.6,
+    "retailPriceUsd": 31.2
   },
   {
     "id": "446",
@@ -17621,7 +17905,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.6,
+    "partnerPriceUsd": 11.6,
+    "retailPriceUsd": 23.2
   },
   {
     "id": "856",
@@ -17643,7 +17930,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 22,
+    "partnerPriceUsd": 22,
+    "retailPriceUsd": 44
   },
   {
     "id": "831",
@@ -17673,7 +17963,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.2,
+    "partnerPriceUsd": 8.2,
+    "retailPriceUsd": 16.4
   },
   {
     "id": "1033",
@@ -17703,7 +17996,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9.5,
+    "partnerPriceUsd": 9.5,
+    "retailPriceUsd": 19
   },
   {
     "id": "860",
@@ -17725,7 +18021,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6,
+    "partnerPriceUsd": 6,
+    "retailPriceUsd": 12
   },
   {
     "id": "791",
@@ -17759,7 +18058,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.8,
+    "partnerPriceUsd": 5.8,
+    "retailPriceUsd": 11.6
   },
   {
     "id": "825",
@@ -17781,7 +18083,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "1034",
@@ -17811,7 +18116,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "861",
@@ -17845,7 +18153,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8,
+    "partnerPriceUsd": 8,
+    "retailPriceUsd": 16
   },
   {
     "id": "792",
@@ -17871,7 +18182,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.6,
+    "partnerPriceUsd": 6.6,
+    "retailPriceUsd": 13.2
   },
   {
     "id": "790",
@@ -17905,7 +18219,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.2,
+    "partnerPriceUsd": 7.2,
+    "retailPriceUsd": 14.4
   },
   {
     "id": "1035",
@@ -17935,7 +18252,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.2,
+    "partnerPriceUsd": 7.2,
+    "retailPriceUsd": 14.4
   },
   {
     "id": "857",
@@ -17965,7 +18285,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.4,
+    "partnerPriceUsd": 5.4,
+    "retailPriceUsd": 10.8
   },
   {
     "id": "1036",
@@ -17995,7 +18318,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.8,
+    "partnerPriceUsd": 5.8,
+    "retailPriceUsd": 11.6
   },
   {
     "id": "788",
@@ -18029,7 +18355,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "859",
@@ -18063,7 +18392,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "858",
@@ -18097,7 +18429,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "1037",
@@ -18127,7 +18462,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.5,
+    "partnerPriceUsd": 1.5,
+    "retailPriceUsd": 3
   },
   {
     "id": "1038",
@@ -18149,7 +18487,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "914",
@@ -18184,7 +18525,9 @@
     ],
     "variantCount": 4,
     "isNew": false,
-    "priceUsd": 20
+    "priceUsd": 20,
+    "partnerPriceUsd": 20,
+    "retailPriceUsd": 40
   },
   {
     "id": "907",
@@ -18219,7 +18562,9 @@
     ],
     "variantCount": 4,
     "isNew": false,
-    "priceUsd": 24
+    "priceUsd": 24,
+    "partnerPriceUsd": 24,
+    "retailPriceUsd": 48
   },
   {
     "id": "913",
@@ -18253,7 +18598,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "911",
@@ -18307,7 +18655,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.6,
+    "partnerPriceUsd": 4.6,
+    "retailPriceUsd": 9.2
   },
   {
     "id": "909",
@@ -18369,7 +18720,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.7,
+    "partnerPriceUsd": 7.7,
+    "retailPriceUsd": 15.4
   },
   {
     "id": "905",
@@ -18419,7 +18773,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19,
+    "partnerPriceUsd": 19,
+    "retailPriceUsd": 38
   },
   {
     "id": "910",
@@ -18481,7 +18838,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14.8,
+    "partnerPriceUsd": 14.8,
+    "retailPriceUsd": 29.6
   },
   {
     "id": "906",
@@ -18543,7 +18903,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14.8,
+    "partnerPriceUsd": 14.8,
+    "retailPriceUsd": 29.6
   },
   {
     "id": "912",
@@ -18589,7 +18952,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21.1,
+    "partnerPriceUsd": 21.1,
+    "retailPriceUsd": 42.2
   },
   {
     "id": "908",
@@ -18647,7 +19013,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.5,
+    "partnerPriceUsd": 10.5,
+    "retailPriceUsd": 21
   },
   {
     "id": "920",
@@ -18685,7 +19054,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23,
+    "partnerPriceUsd": 23,
+    "retailPriceUsd": 46
   },
   {
     "id": "921",
@@ -18728,7 +19100,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 16
+    "priceUsd": 16,
+    "partnerPriceUsd": 16,
+    "retailPriceUsd": 32
   },
   {
     "id": "922",
@@ -18771,7 +19145,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 7
+    "priceUsd": 6.3,
+    "partnerPriceUsd": 6.3,
+    "retailPriceUsd": 12.6
   },
   {
     "id": "926",
@@ -18797,7 +19173,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.2,
+    "partnerPriceUsd": 12.2,
+    "retailPriceUsd": 24.4
   },
   {
     "id": "919",
@@ -18823,7 +19202,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.2,
+    "partnerPriceUsd": 12.2,
+    "retailPriceUsd": 24.4
   },
   {
     "id": "925",
@@ -18865,7 +19247,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.5,
+    "partnerPriceUsd": 6.5,
+    "retailPriceUsd": 13
   },
   {
     "id": "923",
@@ -18907,7 +19292,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21.1,
+    "partnerPriceUsd": 21.1,
+    "retailPriceUsd": 42.2
   },
   {
     "id": "924",
@@ -18941,7 +19329,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "1298",
@@ -19065,7 +19456,10 @@
       }
     ],
     "variantCount": 16,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1,
+    "partnerPriceUsd": 1,
+    "retailPriceUsd": 2
   },
   {
     "id": "918",
@@ -19107,7 +19501,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "916",
@@ -19137,7 +19534,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "903",
@@ -19239,7 +19639,10 @@
       }
     ],
     "variantCount": 21,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.6,
+    "partnerPriceUsd": 0.6,
+    "retailPriceUsd": 1.2
   },
   {
     "id": "902",
@@ -19341,7 +19744,10 @@
       }
     ],
     "variantCount": 21,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.8,
+    "partnerPriceUsd": 0.8,
+    "retailPriceUsd": 1.6
   },
   {
     "id": "917",
@@ -19371,7 +19777,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.2,
+    "partnerPriceUsd": 1.2,
+    "retailPriceUsd": 2.4
   },
   {
     "id": "707",
@@ -19426,7 +19835,9 @@
     ],
     "variantCount": 9,
     "isNew": false,
-    "priceUsd": 34
+    "priceUsd": 33.8,
+    "partnerPriceUsd": 33.8,
+    "retailPriceUsd": 67.6
   },
   {
     "id": "709",
@@ -19476,7 +19887,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21,
+    "partnerPriceUsd": 21,
+    "retailPriceUsd": 42
   },
   {
     "id": "712",
@@ -19530,7 +19944,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.5,
+    "partnerPriceUsd": 8.5,
+    "retailPriceUsd": 17
   },
   {
     "id": "711",
@@ -19584,7 +20001,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.3,
+    "partnerPriceUsd": 12.3,
+    "retailPriceUsd": 24.6
   },
   {
     "id": "710",
@@ -19638,7 +20058,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "708",
@@ -19688,7 +20111,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8,
+    "partnerPriceUsd": 8,
+    "retailPriceUsd": 16
   },
   {
     "id": "714",
@@ -19750,7 +20176,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8,
+    "partnerPriceUsd": 8,
+    "retailPriceUsd": 16
   },
   {
     "id": "713",
@@ -19854,7 +20283,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 25.1,
+    "partnerPriceUsd": 25.1,
+    "retailPriceUsd": 50.2
   },
   {
     "id": "723",
@@ -19900,7 +20332,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.8,
+    "partnerPriceUsd": 1.8,
+    "retailPriceUsd": 3.6
   },
   {
     "id": "724",
@@ -19946,7 +20381,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.9,
+    "partnerPriceUsd": 5.9,
+    "retailPriceUsd": 11.8
   },
   {
     "id": "721",
@@ -19976,7 +20414,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.7,
+    "partnerPriceUsd": 13.7,
+    "retailPriceUsd": 27.4
   },
   {
     "id": "720",
@@ -20027,7 +20468,9 @@
     ],
     "variantCount": 8,
     "isNew": false,
-    "priceUsd": 15
+    "priceUsd": 17.8,
+    "partnerPriceUsd": 17.8,
+    "retailPriceUsd": 35.6
   },
   {
     "id": "719",
@@ -20077,7 +20520,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.5,
+    "partnerPriceUsd": 8.5,
+    "retailPriceUsd": 17
   },
   {
     "id": "716",
@@ -20135,7 +20581,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14,
+    "partnerPriceUsd": 14,
+    "retailPriceUsd": 28
   },
   {
     "id": "718",
@@ -20181,7 +20630,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14.6,
+    "partnerPriceUsd": 14.6,
+    "retailPriceUsd": 29.2
   },
   {
     "id": "715",
@@ -20239,7 +20691,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.3,
+    "partnerPriceUsd": 12.3,
+    "retailPriceUsd": 24.6
   },
   {
     "id": "722",
@@ -20297,7 +20752,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 16.4,
+    "partnerPriceUsd": 16.4,
+    "retailPriceUsd": 32.8
   },
   {
     "id": "259",
@@ -20419,7 +20877,10 @@
       }
     ],
     "variantCount": 26,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.8,
+    "partnerPriceUsd": 1.8,
+    "retailPriceUsd": 3.6
   },
   {
     "id": "252",
@@ -20529,7 +20990,10 @@
       }
     ],
     "variantCount": 23,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.5,
+    "partnerPriceUsd": 3.5,
+    "retailPriceUsd": 7
   },
   {
     "id": "258",
@@ -20551,7 +21015,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "255",
@@ -20697,7 +21164,10 @@
       }
     ],
     "variantCount": 32,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "701",
@@ -20743,7 +21213,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 27.4,
+    "partnerPriceUsd": 27.4,
+    "retailPriceUsd": 54.8
   },
   {
     "id": "699",
@@ -20777,7 +21250,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 20.1,
+    "partnerPriceUsd": 20.1,
+    "retailPriceUsd": 40.2
   },
   {
     "id": "706",
@@ -20827,7 +21303,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 25.1,
+    "partnerPriceUsd": 25.1,
+    "retailPriceUsd": 50.2
   },
   {
     "id": "698",
@@ -20873,7 +21352,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.6,
+    "partnerPriceUsd": 8.6,
+    "retailPriceUsd": 17.2
   },
   {
     "id": "704",
@@ -20923,7 +21405,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.8,
+    "partnerPriceUsd": 11.8,
+    "retailPriceUsd": 23.6
   },
   {
     "id": "697",
@@ -20981,7 +21466,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.3,
+    "partnerPriceUsd": 7.3,
+    "retailPriceUsd": 14.6
   },
   {
     "id": "703",
@@ -21043,7 +21531,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 16,
+    "partnerPriceUsd": 16,
+    "retailPriceUsd": 32
   },
   {
     "id": "705",
@@ -21097,7 +21588,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.8,
+    "partnerPriceUsd": 12.8,
+    "retailPriceUsd": 25.6
   },
   {
     "id": "700",
@@ -21159,7 +21653,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9.1,
+    "partnerPriceUsd": 9.1,
+    "retailPriceUsd": 18.2
   },
   {
     "id": "702",
@@ -21221,7 +21718,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.2,
+    "partnerPriceUsd": 13.2,
+    "retailPriceUsd": 26.4
   },
   {
     "id": "514",
@@ -21243,7 +21743,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.5,
+    "partnerPriceUsd": 1.5,
+    "retailPriceUsd": 3
   },
   {
     "id": "193",
@@ -21269,7 +21772,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.1,
+    "partnerPriceUsd": 2.1,
+    "retailPriceUsd": 4.2
   },
   {
     "id": "524",
@@ -21311,7 +21817,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "468",
@@ -21361,7 +21870,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "525",
@@ -21395,7 +21907,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.3,
+    "partnerPriceUsd": 4.3,
+    "retailPriceUsd": 8.6
   },
   {
     "id": "164",
@@ -21429,7 +21944,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.4,
+    "partnerPriceUsd": 5.4,
+    "retailPriceUsd": 10.8
   },
   {
     "id": "357",
@@ -21471,7 +21989,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.5,
+    "partnerPriceUsd": 1.5,
+    "retailPriceUsd": 3
   },
   {
     "id": "765",
@@ -21517,7 +22038,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "358",
@@ -21559,7 +22083,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.5,
+    "partnerPriceUsd": 4.5,
+    "retailPriceUsd": 9
   },
   {
     "id": "758",
@@ -21581,7 +22108,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.9,
+    "partnerPriceUsd": 1.9,
+    "retailPriceUsd": 3.8
   },
   {
     "id": "696",
@@ -21623,7 +22153,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.1,
+    "partnerPriceUsd": 3.1,
+    "retailPriceUsd": 6.2
   },
   {
     "id": "760",
@@ -21673,7 +22206,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14,
+    "partnerPriceUsd": 14,
+    "retailPriceUsd": 28
   },
   {
     "id": "515",
@@ -21699,7 +22235,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21.3,
+    "partnerPriceUsd": 21.3,
+    "retailPriceUsd": 42.6
   },
   {
     "id": "574",
@@ -21745,7 +22284,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.8,
+    "partnerPriceUsd": 7.8,
+    "retailPriceUsd": 15.6
   },
   {
     "id": "190",
@@ -21787,7 +22329,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.4,
+    "partnerPriceUsd": 19.4,
+    "retailPriceUsd": 38.8
   },
   {
     "id": "172",
@@ -21837,7 +22382,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.4,
+    "partnerPriceUsd": 19.4,
+    "retailPriceUsd": 38.8
   },
   {
     "id": "185",
@@ -21891,7 +22439,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "186",
@@ -21949,7 +22500,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "168",
@@ -21995,7 +22549,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "169",
@@ -22053,7 +22610,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.1,
+    "partnerPriceUsd": 10.1,
+    "retailPriceUsd": 20.2
   },
   {
     "id": "178",
@@ -22103,7 +22663,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.1,
+    "partnerPriceUsd": 12.1,
+    "retailPriceUsd": 24.2
   },
   {
     "id": "189",
@@ -22203,7 +22766,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.7,
+    "partnerPriceUsd": 12.7,
+    "retailPriceUsd": 25.4
   },
   {
     "id": "685",
@@ -22230,7 +22796,9 @@
     ],
     "variantCount": 2,
     "isNew": false,
-    "priceUsd": 22
+    "priceUsd": 17,
+    "partnerPriceUsd": 17,
+    "retailPriceUsd": 34
   },
   {
     "id": "684",
@@ -22264,7 +22832,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 28.3,
+    "partnerPriceUsd": 28.3,
+    "retailPriceUsd": 56.6
   },
   {
     "id": "682",
@@ -22302,7 +22873,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5,
+    "partnerPriceUsd": 5,
+    "retailPriceUsd": 10
   },
   {
     "id": "686",
@@ -22356,7 +22930,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 18.6,
+    "partnerPriceUsd": 18.6,
+    "retailPriceUsd": 37.2
   },
   {
     "id": "687",
@@ -22398,7 +22975,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.3,
+    "partnerPriceUsd": 6.3,
+    "retailPriceUsd": 12.6
   },
   {
     "id": "692",
@@ -22428,7 +23008,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.5,
+    "partnerPriceUsd": 10.5,
+    "retailPriceUsd": 21
   },
   {
     "id": "691",
@@ -22454,7 +23037,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1,
+    "partnerPriceUsd": 1,
+    "retailPriceUsd": 2
   },
   {
     "id": "690",
@@ -22520,7 +23106,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.2,
+    "partnerPriceUsd": 4.2,
+    "retailPriceUsd": 8.4
   },
   {
     "id": "689",
@@ -22586,7 +23175,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.2,
+    "partnerPriceUsd": 4.2,
+    "retailPriceUsd": 8.4
   },
   {
     "id": "694",
@@ -22624,7 +23216,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.1,
+    "partnerPriceUsd": 7.1,
+    "retailPriceUsd": 14.2
   },
   {
     "id": "693",
@@ -22682,7 +23277,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.7,
+    "partnerPriceUsd": 1.7,
+    "retailPriceUsd": 3.4
   },
   {
     "id": "683",
@@ -22760,7 +23358,10 @@
       }
     ],
     "variantCount": 15,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.6,
+    "partnerPriceUsd": 4.6,
+    "retailPriceUsd": 9.2
   },
   {
     "id": "688",
@@ -22802,7 +23403,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.9,
+    "partnerPriceUsd": 2.9,
+    "retailPriceUsd": 5.8
   },
   {
     "id": "670",
@@ -22836,7 +23440,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13,
+    "partnerPriceUsd": 13,
+    "retailPriceUsd": 26
   },
   {
     "id": "671",
@@ -22867,7 +23474,9 @@
     ],
     "variantCount": 3,
     "isNew": false,
-    "priceUsd": 9.4
+    "priceUsd": 9.4,
+    "partnerPriceUsd": 9.4,
+    "retailPriceUsd": 18.8
   },
   {
     "id": "674",
@@ -22909,7 +23518,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "673",
@@ -22951,7 +23563,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.6,
+    "partnerPriceUsd": 5.6,
+    "retailPriceUsd": 11.2
   },
   {
     "id": "672",
@@ -22993,7 +23608,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.4,
+    "partnerPriceUsd": 7.4,
+    "retailPriceUsd": 14.8
   },
   {
     "id": "667",
@@ -23023,7 +23641,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.3,
+    "partnerPriceUsd": 2.3,
+    "retailPriceUsd": 4.6
   },
   {
     "id": "666",
@@ -23093,7 +23714,10 @@
       }
     ],
     "variantCount": 13,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.8,
+    "partnerPriceUsd": 0.8,
+    "retailPriceUsd": 1.6
   },
   {
     "id": "452",
@@ -23131,7 +23755,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 58,
+    "partnerPriceUsd": 58,
+    "retailPriceUsd": 116
   },
   {
     "id": "451",
@@ -23157,7 +23784,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.7,
+    "partnerPriceUsd": 2.7,
+    "retailPriceUsd": 5.4
   },
   {
     "id": "460",
@@ -23191,7 +23821,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.4,
+    "partnerPriceUsd": 5.4,
+    "retailPriceUsd": 10.8
   },
   {
     "id": "448",
@@ -23217,7 +23850,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 45.2,
+    "partnerPriceUsd": 45.2,
+    "retailPriceUsd": 90.4
   },
   {
     "id": "445",
@@ -23259,7 +23895,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.2,
+    "partnerPriceUsd": 7.2,
+    "retailPriceUsd": 14.4
   },
   {
     "id": "444",
@@ -23289,7 +23928,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.4,
+    "partnerPriceUsd": 4.4,
+    "retailPriceUsd": 8.8
   },
   {
     "id": "464",
@@ -23339,7 +23981,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "469",
@@ -23381,7 +24026,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.1,
+    "partnerPriceUsd": 13.1,
+    "retailPriceUsd": 26.2
   },
   {
     "id": "450",
@@ -23403,7 +24051,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 36.1,
+    "partnerPriceUsd": 36.1,
+    "retailPriceUsd": 72.2
   },
   {
     "id": "456",
@@ -23429,7 +24080,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.7,
+    "partnerPriceUsd": 0.7,
+    "retailPriceUsd": 1.4
   },
   {
     "id": "474",
@@ -23491,7 +24145,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.8,
+    "partnerPriceUsd": 0.8,
+    "retailPriceUsd": 1.6
   },
   {
     "id": "461",
@@ -23513,7 +24170,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "475",
@@ -23551,7 +24211,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.8,
+    "partnerPriceUsd": 1.8,
+    "retailPriceUsd": 3.6
   },
   {
     "id": "610",
@@ -23617,7 +24280,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 43.8,
+    "partnerPriceUsd": 43.8,
+    "retailPriceUsd": 87.6
   },
   {
     "id": "609",
@@ -23667,7 +24333,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.7,
+    "partnerPriceUsd": 15.7,
+    "retailPriceUsd": 31.4
   },
   {
     "id": "613",
@@ -23729,7 +24398,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 34.2,
+    "partnerPriceUsd": 34.2,
+    "retailPriceUsd": 68.4
   },
   {
     "id": "614",
@@ -23779,7 +24451,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "617",
@@ -23809,7 +24484,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.8,
+    "partnerPriceUsd": 17.8,
+    "retailPriceUsd": 35.6
   },
   {
     "id": "616",
@@ -23859,7 +24537,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.5,
+    "partnerPriceUsd": 17.5,
+    "retailPriceUsd": 35
   },
   {
     "id": "611",
@@ -23921,7 +24602,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.2,
+    "partnerPriceUsd": 19.2,
+    "retailPriceUsd": 38.4
   },
   {
     "id": "612",
@@ -23987,7 +24671,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "618",
@@ -24041,7 +24728,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "615",
@@ -24115,7 +24805,10 @@
       }
     ],
     "variantCount": 14,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "620",
@@ -24161,7 +24854,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.2,
+    "partnerPriceUsd": 12.2,
+    "retailPriceUsd": 24.4
   },
   {
     "id": "619",
@@ -24211,7 +24907,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.7,
+    "partnerPriceUsd": 1.7,
+    "retailPriceUsd": 3.4
   },
   {
     "id": "678",
@@ -24241,7 +24940,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.9,
+    "partnerPriceUsd": 3.9,
+    "retailPriceUsd": 7.8
   },
   {
     "id": "557",
@@ -24299,7 +25001,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.3,
+    "partnerPriceUsd": 5.3,
+    "retailPriceUsd": 10.6
   },
   {
     "id": "679",
@@ -24329,7 +25034,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.7,
+    "partnerPriceUsd": 4.7,
+    "retailPriceUsd": 9.4
   },
   {
     "id": "560",
@@ -24379,7 +25087,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.9,
+    "partnerPriceUsd": 3.9,
+    "retailPriceUsd": 7.8
   },
   {
     "id": "561",
@@ -24445,7 +25156,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.5,
+    "partnerPriceUsd": 4.5,
+    "retailPriceUsd": 9
   },
   {
     "id": "563",
@@ -24475,7 +25189,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.5,
+    "partnerPriceUsd": 4.5,
+    "retailPriceUsd": 9
   },
   {
     "id": "677",
@@ -24521,7 +25238,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.9,
+    "partnerPriceUsd": 3.9,
+    "retailPriceUsd": 7.8
   },
   {
     "id": "676",
@@ -24587,7 +25307,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.2,
+    "partnerPriceUsd": 17.2,
+    "retailPriceUsd": 34.4
   },
   {
     "id": "554",
@@ -24653,7 +25376,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "553",
@@ -24715,7 +25441,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "680",
@@ -24741,7 +25470,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.2,
+    "partnerPriceUsd": 6.2,
+    "retailPriceUsd": 12.4
   },
   {
     "id": "558",
@@ -24783,7 +25515,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "675",
@@ -24841,7 +25576,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.2,
+    "partnerPriceUsd": 10.2,
+    "retailPriceUsd": 20.4
   },
   {
     "id": "681",
@@ -24863,7 +25601,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.5,
+    "partnerPriceUsd": 13.5,
+    "retailPriceUsd": 27
   },
   {
     "id": "555",
@@ -24913,7 +25654,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.4,
+    "partnerPriceUsd": 19.4,
+    "retailPriceUsd": 38.8
   },
   {
     "id": "556",
@@ -24975,7 +25719,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.6,
+    "partnerPriceUsd": 17.6,
+    "retailPriceUsd": 35.2
   },
   {
     "id": "870",
@@ -25001,7 +25748,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.2,
+    "partnerPriceUsd": 10.2,
+    "retailPriceUsd": 20.4
   },
   {
     "id": "832",
@@ -25039,7 +25789,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5,
+    "partnerPriceUsd": 5,
+    "retailPriceUsd": 10
   },
   {
     "id": "869",
@@ -25061,7 +25814,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 20.5,
+    "partnerPriceUsd": 20.5,
+    "retailPriceUsd": 41
   },
   {
     "id": "830",
@@ -25091,7 +25847,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "875",
@@ -25117,7 +25876,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.3,
+    "partnerPriceUsd": 6.3,
+    "retailPriceUsd": 12.6
   },
   {
     "id": "876",
@@ -25147,7 +25909,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.1,
+    "partnerPriceUsd": 8.1,
+    "retailPriceUsd": 16.2
   },
   {
     "id": "874",
@@ -25177,7 +25942,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "626",
@@ -25269,7 +26037,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.1,
+    "partnerPriceUsd": 6.1,
+    "retailPriceUsd": 12.2
   },
   {
     "id": "365",
@@ -25307,7 +26078,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 22.5,
+    "partnerPriceUsd": 22.5,
+    "retailPriceUsd": 45
   },
   {
     "id": "371",
@@ -25337,7 +26111,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "376",
@@ -25399,7 +26176,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "375",
@@ -25465,7 +26245,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.3,
+    "partnerPriceUsd": 6.3,
+    "retailPriceUsd": 12.6
   },
   {
     "id": "377",
@@ -25503,7 +26286,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.2,
+    "partnerPriceUsd": 10.2,
+    "retailPriceUsd": 20.4
   },
   {
     "id": "373",
@@ -25541,7 +26327,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "378",
@@ -25587,7 +26376,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1,
+    "partnerPriceUsd": 1,
+    "retailPriceUsd": 2
   },
   {
     "id": "372",
@@ -25629,7 +26421,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.2,
+    "partnerPriceUsd": 7.2,
+    "retailPriceUsd": 14.4
   },
   {
     "id": "366",
@@ -25691,7 +26486,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.6,
+    "partnerPriceUsd": 8.6,
+    "retailPriceUsd": 17.2
   },
   {
     "id": "370",
@@ -25729,7 +26527,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 9,
+    "partnerPriceUsd": 9,
+    "retailPriceUsd": 18
   },
   {
     "id": "364",
@@ -25779,7 +26580,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.5,
+    "partnerPriceUsd": 3.5,
+    "retailPriceUsd": 7
   },
   {
     "id": "367",
@@ -25825,7 +26629,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.1,
+    "partnerPriceUsd": 13.1,
+    "retailPriceUsd": 26.2
   },
   {
     "id": "363",
@@ -25863,7 +26670,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.2,
+    "partnerPriceUsd": 1.2,
+    "retailPriceUsd": 2.4
   },
   {
     "id": "368",
@@ -25917,7 +26727,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.2,
+    "partnerPriceUsd": 2.2,
+    "retailPriceUsd": 4.4
   },
   {
     "id": "653",
@@ -26320,7 +27133,9 @@
     ],
     "variantCount": 11,
     "isNew": false,
-    "priceUsd": 41
+    "priceUsd": 41,
+    "partnerPriceUsd": 41,
+    "retailPriceUsd": 82
   },
   {
     "id": "154",
@@ -26371,7 +27186,9 @@
     ],
     "variantCount": 8,
     "isNew": false,
-    "priceUsd": 21
+    "priceUsd": 21,
+    "partnerPriceUsd": 21,
+    "retailPriceUsd": 42
   },
   {
     "id": "153",
@@ -26410,7 +27227,9 @@
     ],
     "variantCount": 5,
     "isNew": false,
-    "priceUsd": 10
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "159",
@@ -26464,7 +27283,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.3,
+    "partnerPriceUsd": 4.3,
+    "retailPriceUsd": 8.6
   },
   {
     "id": "148",
@@ -26522,7 +27344,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.1,
+    "partnerPriceUsd": 7.1,
+    "retailPriceUsd": 14.2
   },
   {
     "id": "150",
@@ -26580,7 +27405,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14,
+    "partnerPriceUsd": 14,
+    "retailPriceUsd": 28
   },
   {
     "id": "149",
@@ -26634,7 +27462,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 16.5,
+    "partnerPriceUsd": 16.5,
+    "retailPriceUsd": 33
   },
   {
     "id": "156",
@@ -26656,7 +27487,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "152",
@@ -26698,7 +27532,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "155",
@@ -26728,7 +27565,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 21.8,
+    "partnerPriceUsd": 21.8,
+    "retailPriceUsd": 43.6
   },
   {
     "id": "151",
@@ -26787,7 +27627,9 @@
     ],
     "variantCount": 10,
     "isNew": false,
-    "priceUsd": 23
+    "priceUsd": 22.5,
+    "partnerPriceUsd": 22.5,
+    "retailPriceUsd": 45
   },
   {
     "id": "147",
@@ -26821,7 +27663,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17,
+    "partnerPriceUsd": 17,
+    "retailPriceUsd": 34
   },
   {
     "id": "160",
@@ -26847,7 +27692,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.1,
+    "partnerPriceUsd": 1.1,
+    "retailPriceUsd": 2.2
   },
   {
     "id": "292",
@@ -27129,7 +27977,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 160,
+    "partnerPriceUsd": 160,
+    "retailPriceUsd": 320
   },
   {
     "id": "439",
@@ -27167,7 +28018,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 44.7,
+    "partnerPriceUsd": 44.7,
+    "retailPriceUsd": 89.4
   },
   {
     "id": "440",
@@ -27193,7 +28047,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.7,
+    "partnerPriceUsd": 7.7,
+    "retailPriceUsd": 15.4
   },
   {
     "id": "462",
@@ -27231,7 +28088,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.5,
+    "partnerPriceUsd": 2.5,
+    "retailPriceUsd": 5
   },
   {
     "id": "447",
@@ -27285,7 +28145,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 45.2,
+    "partnerPriceUsd": 45.2,
+    "retailPriceUsd": 90.4
   },
   {
     "id": "457",
@@ -27343,7 +28206,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 53.8,
+    "partnerPriceUsd": 53.8,
+    "retailPriceUsd": 107.6
   },
   {
     "id": "467",
@@ -27397,7 +28263,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.8,
+    "partnerPriceUsd": 19.8,
+    "retailPriceUsd": 39.6
   },
   {
     "id": "436",
@@ -27475,7 +28344,10 @@
       }
     ],
     "variantCount": 15,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 24.8,
+    "partnerPriceUsd": 24.8,
+    "retailPriceUsd": 49.6
   },
   {
     "id": "437",
@@ -27533,7 +28405,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 55,
+    "partnerPriceUsd": 55,
+    "retailPriceUsd": 110
   },
   {
     "id": "455",
@@ -27587,7 +28462,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.1,
+    "partnerPriceUsd": 8.1,
+    "retailPriceUsd": 16.2
   },
   {
     "id": "463",
@@ -27633,7 +28511,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 16.2,
+    "partnerPriceUsd": 16.2,
+    "retailPriceUsd": 32.4
   },
   {
     "id": "473",
@@ -27691,7 +28572,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.8,
+    "partnerPriceUsd": 15.8,
+    "retailPriceUsd": 31.6
   },
   {
     "id": "459",
@@ -27733,7 +28617,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.8,
+    "partnerPriceUsd": 15.8,
+    "retailPriceUsd": 31.6
   },
   {
     "id": "458",
@@ -27779,7 +28666,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 42.9,
+    "partnerPriceUsd": 42.9,
+    "retailPriceUsd": 85.8
   },
   {
     "id": "472",
@@ -27841,7 +28731,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 40.7,
+    "partnerPriceUsd": 40.7,
+    "retailPriceUsd": 81.4
   },
   {
     "id": "466",
@@ -27899,7 +28792,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 22.6,
+    "partnerPriceUsd": 22.6,
+    "retailPriceUsd": 45.2
   },
   {
     "id": "476",
@@ -27973,7 +28869,10 @@
       }
     ],
     "variantCount": 14,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 77,
+    "partnerPriceUsd": 77,
+    "retailPriceUsd": 154
   },
   {
     "id": "438",
@@ -28003,7 +28902,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.2,
+    "partnerPriceUsd": 2.2,
+    "retailPriceUsd": 4.4
   },
   {
     "id": "470",
@@ -28045,7 +28947,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.4,
+    "partnerPriceUsd": 2.4,
+    "retailPriceUsd": 4.8
   },
   {
     "id": "442",
@@ -28095,7 +29000,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.1,
+    "partnerPriceUsd": 7.1,
+    "retailPriceUsd": 14.2
   },
   {
     "id": "573",
@@ -28149,7 +29057,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 29.5,
+    "partnerPriceUsd": 29.5,
+    "retailPriceUsd": 59
   },
   {
     "id": "569",
@@ -28195,7 +29106,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 122.4,
+    "partnerPriceUsd": 122.4,
+    "retailPriceUsd": 244.8
   },
   {
     "id": "572",
@@ -28245,7 +29159,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23.2,
+    "partnerPriceUsd": 23.2,
+    "retailPriceUsd": 46.4
   },
   {
     "id": "567",
@@ -28299,7 +29216,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "566",
@@ -28341,7 +29261,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.2,
+    "partnerPriceUsd": 4.2,
+    "retailPriceUsd": 8.4
   },
   {
     "id": "570",
@@ -28379,7 +29302,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "568",
@@ -28401,7 +29327,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10.5,
+    "partnerPriceUsd": 10.5,
+    "retailPriceUsd": 21
   },
   {
     "id": "565",
@@ -28423,7 +29352,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.6,
+    "partnerPriceUsd": 6.6,
+    "retailPriceUsd": 13.2
   },
   {
     "id": "564",
@@ -28473,7 +29405,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.4,
+    "partnerPriceUsd": 3.4,
+    "retailPriceUsd": 6.8
   },
   {
     "id": "532",
@@ -28890,7 +29825,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.6,
+    "partnerPriceUsd": 1.6,
+    "retailPriceUsd": 3.2
   },
   {
     "id": "534",
@@ -28932,7 +29870,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "533",
@@ -29002,7 +29943,10 @@
       }
     ],
     "variantCount": 13,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "539",
@@ -29048,7 +29992,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.8,
+    "partnerPriceUsd": 1.8,
+    "retailPriceUsd": 3.6
   },
   {
     "id": "583",
@@ -29070,7 +30017,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 26,
+    "partnerPriceUsd": 26,
+    "retailPriceUsd": 52
   },
   {
     "id": "590",
@@ -29092,7 +30042,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.5,
+    "partnerPriceUsd": 6.5,
+    "retailPriceUsd": 13
   },
   {
     "id": "587",
@@ -29146,7 +30099,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.3,
+    "partnerPriceUsd": 2.3,
+    "retailPriceUsd": 4.6
   },
   {
     "id": "586",
@@ -29176,7 +30132,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 18,
+    "partnerPriceUsd": 18,
+    "retailPriceUsd": 36
   },
   {
     "id": "585",
@@ -29218,7 +30177,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 10,
+    "partnerPriceUsd": 10,
+    "retailPriceUsd": 20
   },
   {
     "id": "584",
@@ -29248,7 +30210,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "591",
@@ -29278,7 +30243,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "588",
@@ -29300,7 +30268,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "589",
@@ -29326,7 +30297,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.2,
+    "partnerPriceUsd": 13.2,
+    "retailPriceUsd": 26.4
   },
   {
     "id": "581",
@@ -29368,7 +30342,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.9,
+    "partnerPriceUsd": 0.9,
+    "retailPriceUsd": 1.8
   },
   {
     "id": "580",
@@ -29390,7 +30367,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1,
+    "partnerPriceUsd": 1,
+    "retailPriceUsd": 2
   },
   {
     "id": "551",
@@ -29444,7 +30424,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 201.4,
+    "partnerPriceUsd": 201.4,
+    "retailPriceUsd": 402.8
   },
   {
     "id": "542",
@@ -29482,7 +30465,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23.5,
+    "partnerPriceUsd": 23.5,
+    "retailPriceUsd": 47
   },
   {
     "id": "541",
@@ -29544,7 +30530,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 42,
+    "partnerPriceUsd": 42,
+    "retailPriceUsd": 84
   },
   {
     "id": "546",
@@ -29598,7 +30587,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 27.9,
+    "partnerPriceUsd": 27.9,
+    "retailPriceUsd": 55.8
   },
   {
     "id": "549",
@@ -29652,7 +30644,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 59.4,
+    "partnerPriceUsd": 59.4,
+    "retailPriceUsd": 118.8
   },
   {
     "id": "548",
@@ -29714,7 +30709,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.7,
+    "partnerPriceUsd": 12.7,
+    "retailPriceUsd": 25.4
   },
   {
     "id": "547",
@@ -29838,7 +30836,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.6,
+    "partnerPriceUsd": 2.6,
+    "retailPriceUsd": 5.2
   },
   {
     "id": "543",
@@ -29872,7 +30873,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.3,
+    "partnerPriceUsd": 2.3,
+    "retailPriceUsd": 4.6
   },
   {
     "id": "550",
@@ -29930,7 +30934,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.5,
+    "partnerPriceUsd": 2.5,
+    "retailPriceUsd": 5
   },
   {
     "id": "545",
@@ -29988,7 +30995,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.8,
+    "partnerPriceUsd": 2.8,
+    "retailPriceUsd": 5.6
   },
   {
     "id": "246",
@@ -30050,7 +31060,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 65,
+    "partnerPriceUsd": 65,
+    "retailPriceUsd": 130
   },
   {
     "id": "248",
@@ -30076,7 +31089,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.6,
+    "partnerPriceUsd": 11.6,
+    "retailPriceUsd": 23.2
   },
   {
     "id": "477",
@@ -30126,7 +31142,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12.3,
+    "partnerPriceUsd": 12.3,
+    "retailPriceUsd": 24.6
   },
   {
     "id": "241",
@@ -30180,7 +31199,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 32,
+    "partnerPriceUsd": 32,
+    "retailPriceUsd": 64
   },
   {
     "id": "244",
@@ -30242,7 +31264,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17,
+    "partnerPriceUsd": 17,
+    "retailPriceUsd": 34
   },
   {
     "id": "249",
@@ -30296,7 +31321,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 61.1,
+    "partnerPriceUsd": 61.1,
+    "retailPriceUsd": 122.2
   },
   {
     "id": "243",
@@ -30350,7 +31378,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.5,
+    "partnerPriceUsd": 6.5,
+    "retailPriceUsd": 13
   },
   {
     "id": "237",
@@ -30408,7 +31439,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 26.8,
+    "partnerPriceUsd": 26.8,
+    "retailPriceUsd": 53.6
   },
   {
     "id": "240",
@@ -30524,7 +31558,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.7,
+    "partnerPriceUsd": 6.7,
+    "retailPriceUsd": 13.4
   },
   {
     "id": "236",
@@ -30590,7 +31627,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 42,
+    "partnerPriceUsd": 42,
+    "retailPriceUsd": 84
   },
   {
     "id": "238",
@@ -30656,7 +31696,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.6,
+    "partnerPriceUsd": 6.6,
+    "retailPriceUsd": 13.2
   },
   {
     "id": "245",
@@ -30714,7 +31757,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "239",
@@ -30780,7 +31826,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.4,
+    "partnerPriceUsd": 2.4,
+    "retailPriceUsd": 4.8
   },
   {
     "id": "422",
@@ -30839,7 +31888,9 @@
     ],
     "variantCount": 10,
     "isNew": false,
-    "priceUsd": 21
+    "priceUsd": 20.9,
+    "partnerPriceUsd": 20.9,
+    "retailPriceUsd": 41.8
   },
   {
     "id": "415",
@@ -30885,7 +31936,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 24.4,
+    "partnerPriceUsd": 24.4,
+    "retailPriceUsd": 48.8
   },
   {
     "id": "419",
@@ -30951,7 +32005,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "420",
@@ -31013,7 +32070,10 @@
       }
     ],
     "variantCount": 11,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.6,
+    "partnerPriceUsd": 6.6,
+    "retailPriceUsd": 13.2
   },
   {
     "id": "417",
@@ -31067,7 +32127,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23.3,
+    "partnerPriceUsd": 23.3,
+    "retailPriceUsd": 46.6
   },
   {
     "id": "416",
@@ -31141,7 +32204,10 @@
       }
     ],
     "variantCount": 14,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 6.1,
+    "partnerPriceUsd": 6.1,
+    "retailPriceUsd": 12.2
   },
   {
     "id": "421",
@@ -31211,7 +32277,10 @@
       }
     ],
     "variantCount": 13,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.7,
+    "partnerPriceUsd": 5.7,
+    "retailPriceUsd": 11.4
   },
   {
     "id": "424",
@@ -31317,7 +32386,10 @@
       }
     ],
     "variantCount": 22,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.6,
+    "partnerPriceUsd": 13.6,
+    "retailPriceUsd": 27.2
   },
   {
     "id": "418",
@@ -31375,7 +32447,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 20.7,
+    "partnerPriceUsd": 20.7,
+    "retailPriceUsd": 41.4
   },
   {
     "id": "423",
@@ -31441,7 +32516,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 13.2,
+    "partnerPriceUsd": 13.2,
+    "retailPriceUsd": 26.4
   },
   {
     "id": "425",
@@ -31507,7 +32585,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.3,
+    "partnerPriceUsd": 2.3,
+    "retailPriceUsd": 4.6
   },
   {
     "id": "576",
@@ -32451,7 +33532,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 33.8,
+    "partnerPriceUsd": 33.8,
+    "retailPriceUsd": 67.6
   },
   {
     "id": "401",
@@ -32485,7 +33569,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 27.4,
+    "partnerPriceUsd": 27.4,
+    "retailPriceUsd": 54.8
   },
   {
     "id": "399",
@@ -32519,7 +33606,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.1,
+    "partnerPriceUsd": 7.1,
+    "retailPriceUsd": 14.2
   },
   {
     "id": "398",
@@ -32573,7 +33663,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.7,
+    "partnerPriceUsd": 11.7,
+    "retailPriceUsd": 23.4
   },
   {
     "id": "407",
@@ -32623,7 +33716,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "405",
@@ -32661,7 +33757,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 0.7,
+    "partnerPriceUsd": 0.7,
+    "retailPriceUsd": 1.4
   },
   {
     "id": "403",
@@ -32695,7 +33794,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.5,
+    "partnerPriceUsd": 1.5,
+    "retailPriceUsd": 3
   },
   {
     "id": "404",
@@ -32721,7 +33823,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.1,
+    "partnerPriceUsd": 3.1,
+    "retailPriceUsd": 6.2
   },
   {
     "id": "409",
@@ -32743,7 +33848,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23,
+    "partnerPriceUsd": 23,
+    "retailPriceUsd": 46
   },
   {
     "id": "396",
@@ -32777,7 +33885,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.9,
+    "partnerPriceUsd": 4.9,
+    "retailPriceUsd": 9.8
   },
   {
     "id": "406",
@@ -32819,7 +33930,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.4,
+    "partnerPriceUsd": 2.4,
+    "retailPriceUsd": 4.8
   },
   {
     "id": "408",
@@ -32853,7 +33967,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2,
+    "partnerPriceUsd": 2,
+    "retailPriceUsd": 4
   },
   {
     "id": "331",
@@ -33313,7 +34430,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 33.5,
+    "partnerPriceUsd": 33.5,
+    "retailPriceUsd": 67
   },
   {
     "id": "518",
@@ -33447,7 +34567,10 @@
       }
     ],
     "variantCount": 12,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 112,
+    "partnerPriceUsd": 112,
+    "retailPriceUsd": 224
   },
   {
     "id": "277",
@@ -33473,7 +34596,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.4,
+    "partnerPriceUsd": 5.4,
+    "retailPriceUsd": 10.8
   },
   {
     "id": "275",
@@ -33519,7 +34645,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 25.5,
+    "partnerPriceUsd": 25.5,
+    "retailPriceUsd": 51
   },
   {
     "id": "268",
@@ -33577,7 +34706,10 @@
       }
     ],
     "variantCount": 10,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.8,
+    "partnerPriceUsd": 7.8,
+    "retailPriceUsd": 15.6
   },
   {
     "id": "269",
@@ -33619,7 +34751,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 57.3,
+    "partnerPriceUsd": 57.3,
+    "retailPriceUsd": 114.6
   },
   {
     "id": "274",
@@ -33653,7 +34788,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 54.6,
+    "partnerPriceUsd": 54.6,
+    "retailPriceUsd": 109.2
   },
   {
     "id": "271",
@@ -33679,7 +34817,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 61.8,
+    "partnerPriceUsd": 61.8,
+    "retailPriceUsd": 123.6
   },
   {
     "id": "276",
@@ -33733,7 +34874,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 19.4,
+    "partnerPriceUsd": 19.4,
+    "retailPriceUsd": 38.8
   },
   {
     "id": "270",
@@ -33787,7 +34931,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 38.9,
+    "partnerPriceUsd": 38.9,
+    "retailPriceUsd": 77.8
   },
   {
     "id": "273",
@@ -33829,7 +34976,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 57.9,
+    "partnerPriceUsd": 57.9,
+    "retailPriceUsd": 115.8
   },
   {
     "id": "272",
@@ -33901,7 +35051,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3,
+    "partnerPriceUsd": 3,
+    "retailPriceUsd": 6
   },
   {
     "id": "492",
@@ -33951,7 +35104,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 71,
+    "partnerPriceUsd": 71,
+    "retailPriceUsd": 142
   },
   {
     "id": "489",
@@ -34002,7 +35158,9 @@
     ],
     "variantCount": 8,
     "isNew": false,
-    "priceUsd": 26
+    "priceUsd": 26,
+    "partnerPriceUsd": 26,
+    "retailPriceUsd": 52
   },
   {
     "id": "488",
@@ -34037,7 +35195,9 @@
     ],
     "variantCount": 4,
     "isNew": false,
-    "priceUsd": 14
+    "priceUsd": 13.4,
+    "partnerPriceUsd": 13.4,
+    "retailPriceUsd": 26.8
   },
   {
     "id": "494",
@@ -34083,7 +35243,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5,
+    "partnerPriceUsd": 5,
+    "retailPriceUsd": 10
   },
   {
     "id": "487",
@@ -34181,7 +35344,10 @@
       }
     ],
     "variantCount": 20,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.8,
+    "partnerPriceUsd": 17.8,
+    "retailPriceUsd": 35.6
   },
   {
     "id": "500",
@@ -34223,7 +35389,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 40,
+    "partnerPriceUsd": 40,
+    "retailPriceUsd": 80
   },
   {
     "id": "490",
@@ -34325,7 +35494,10 @@
       }
     ],
     "variantCount": 21,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 20,
+    "partnerPriceUsd": 20,
+    "retailPriceUsd": 40
   },
   {
     "id": "493",
@@ -34371,7 +35543,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "491",
@@ -34441,7 +35616,10 @@
       }
     ],
     "variantCount": 13,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 25.2,
+    "partnerPriceUsd": 25.2,
+    "retailPriceUsd": 50.4
   },
   {
     "id": "510",
@@ -34491,7 +35669,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 39.1,
+    "partnerPriceUsd": 39.1,
+    "retailPriceUsd": 78.2
   },
   {
     "id": "511",
@@ -34529,7 +35710,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 35.6,
+    "partnerPriceUsd": 35.6,
+    "retailPriceUsd": 71.2
   },
   {
     "id": "509",
@@ -34567,7 +35751,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.5,
+    "partnerPriceUsd": 1.5,
+    "retailPriceUsd": 3
   },
   {
     "id": "507",
@@ -34589,7 +35776,10 @@
       }
     ],
     "variantCount": 1,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17,
+    "partnerPriceUsd": 17,
+    "retailPriceUsd": 34
   },
   {
     "id": "513",
@@ -34635,7 +35825,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.1,
+    "partnerPriceUsd": 3.1,
+    "retailPriceUsd": 6.2
   },
   {
     "id": "512",
@@ -34665,7 +35858,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.1,
+    "partnerPriceUsd": 4.1,
+    "retailPriceUsd": 8.2
   },
   {
     "id": "312",
@@ -34715,7 +35911,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 62,
+    "partnerPriceUsd": 62,
+    "retailPriceUsd": 124
   },
   {
     "id": "311",
@@ -34778,7 +35977,9 @@
     ],
     "variantCount": 11,
     "isNew": false,
-    "priceUsd": 22
+    "priceUsd": 22,
+    "partnerPriceUsd": 22,
+    "retailPriceUsd": 44
   },
   {
     "id": "316",
@@ -34824,7 +36025,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 14.1,
+    "partnerPriceUsd": 14.1,
+    "retailPriceUsd": 28.2
   },
   {
     "id": "320",
@@ -34866,7 +36070,10 @@
       }
     ],
     "variantCount": 6,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "313",
@@ -34920,7 +36127,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 20,
+    "partnerPriceUsd": 20,
+    "retailPriceUsd": 40
   },
   {
     "id": "315",
@@ -34954,7 +36164,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.7,
+    "partnerPriceUsd": 1.7,
+    "retailPriceUsd": 3.4
   },
   {
     "id": "314",
@@ -35008,7 +36221,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.4,
+    "partnerPriceUsd": 11.4,
+    "retailPriceUsd": 22.8
   },
   {
     "id": "318",
@@ -35038,7 +36254,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 8.5,
+    "partnerPriceUsd": 8.5,
+    "retailPriceUsd": 17
   },
   {
     "id": "319",
@@ -35072,7 +36291,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.4,
+    "partnerPriceUsd": 1.4,
+    "retailPriceUsd": 2.8
   },
   {
     "id": "209",
@@ -35106,7 +36328,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 41.2,
+    "partnerPriceUsd": 41.2,
+    "retailPriceUsd": 82.4
   },
   {
     "id": "202",
@@ -35140,7 +36365,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 11.6,
+    "partnerPriceUsd": 11.6,
+    "retailPriceUsd": 23.2
   },
   {
     "id": "200",
@@ -35166,7 +36394,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 4.7,
+    "partnerPriceUsd": 4.7,
+    "retailPriceUsd": 9.4
   },
   {
     "id": "208",
@@ -35216,7 +36447,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 16.8,
+    "partnerPriceUsd": 16.8,
+    "retailPriceUsd": 33.6
   },
   {
     "id": "212",
@@ -35242,7 +36476,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 23.1,
+    "partnerPriceUsd": 23.1,
+    "retailPriceUsd": 46.2
   },
   {
     "id": "206",
@@ -35272,7 +36509,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.7,
+    "partnerPriceUsd": 3.7,
+    "retailPriceUsd": 7.4
   },
   {
     "id": "203",
@@ -35302,7 +36542,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 17.3,
+    "partnerPriceUsd": 17.3,
+    "retailPriceUsd": 34.6
   },
   {
     "id": "204",
@@ -35340,7 +36583,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 15.4,
+    "partnerPriceUsd": 15.4,
+    "retailPriceUsd": 30.8
   },
   {
     "id": "207",
@@ -35394,7 +36640,10 @@
       }
     ],
     "variantCount": 9,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "201",
@@ -35428,7 +36677,10 @@
       }
     ],
     "variantCount": 4,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 1.3,
+    "partnerPriceUsd": 1.3,
+    "retailPriceUsd": 2.6
   },
   {
     "id": "211",
@@ -35458,7 +36710,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.1,
+    "partnerPriceUsd": 2.1,
+    "retailPriceUsd": 4.2
   },
   {
     "id": "392",
@@ -35547,7 +36802,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 27
+    "priceUsd": 26.3,
+    "partnerPriceUsd": 26.3,
+    "retailPriceUsd": 52.6
   },
   {
     "id": "176",
@@ -35798,7 +37055,9 @@
     ],
     "variantCount": 1,
     "isNew": false,
-    "priceUsd": 7.5
+    "priceUsd": 7.5,
+    "partnerPriceUsd": 7.5,
+    "retailPriceUsd": 15
   },
   {
     "id": "175",
@@ -35886,7 +37145,10 @@
       }
     ],
     "variantCount": 8,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 3.5,
+    "partnerPriceUsd": 3.5,
+    "retailPriceUsd": 7
   },
   {
     "id": "188",
@@ -36381,7 +37643,10 @@
       }
     ],
     "variantCount": 3,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 39.3,
+    "partnerPriceUsd": 39.3,
+    "retailPriceUsd": 78.6
   },
   {
     "id": "264",
@@ -37259,7 +38524,10 @@
       }
     ],
     "variantCount": 2,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 2.4,
+    "partnerPriceUsd": 2.4,
+    "retailPriceUsd": 4.8
   },
   {
     "id": "848",
@@ -37302,7 +38570,9 @@
     ],
     "variantCount": 6,
     "isNew": false,
-    "priceUsd": 32
+    "priceUsd": 31.3,
+    "partnerPriceUsd": 31.3,
+    "retailPriceUsd": 62.6
   },
   {
     "id": "780",
@@ -37390,7 +38660,9 @@
     ],
     "variantCount": 5,
     "isNew": false,
-    "priceUsd": 12
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "855",
@@ -37594,7 +38866,10 @@
       }
     ],
     "variantCount": 7,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 7.8,
+    "partnerPriceUsd": 7.8,
+    "retailPriceUsd": 15.6
   },
   {
     "id": "10",
@@ -38048,7 +39323,10 @@
       }
     ],
     "variantCount": 5,
-    "isNew": false
+    "isNew": false,
+    "priceUsd": 5.6,
+    "partnerPriceUsd": 5.6,
+    "retailPriceUsd": 11.2
   },
   {
     "id": "828",

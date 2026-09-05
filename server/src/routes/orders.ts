@@ -2,6 +2,8 @@ import { randomUUID } from "node:crypto";
 import type { FastifyPluginAsync } from "fastify";
 import { locales, type Locale, type OrderDocument } from "../domain/types.js";
 import type { OrderRepository } from "../repositories.js";
+import type { MongoDatabase } from "../mongo.js";
+import { getSessionUser } from "../auth.js";
 import { sendEmail, sendOwnerNotification } from "../email.js";
 import { orderConfirmationEmail } from "../email-templates.js";
 
@@ -11,7 +13,7 @@ type OrderBody = {
   items: Array<{ productId: string; sku: string; name?: string; slug?: string; categoryId?: string; variantId?: string; variantLabel?: string; unitPriceUsd?: number; quantity: number }>;
 };
 
-export function orderRoutes(repository: OrderRepository): FastifyPluginAsync {
+export function orderRoutes(repository: OrderRepository, db?: MongoDatabase): FastifyPluginAsync {
   return async (app) => {
     app.post<{ Body: OrderBody }>("/api/v1/orders", {
       config: { rateLimit: { max: 10, timeWindow: "1 minute" } },
@@ -76,7 +78,12 @@ export function orderRoutes(repository: OrderRepository): FastifyPluginAsync {
         createdAt: now,
         updatedAt: now,
       };
-      await repository.create(document);
+      const user = db ? await getSessionUser(db, request) : null;
+      const hasPartnerPrice = user?.status === "active" && (user.role === "partner" || user.role === "admin");
+      await repository.create(document, {
+        tier: hasPartnerPrice ? "partner" : "retail",
+        discountPercent: hasPartnerPrice && user?.role === "partner" ? Math.min(80, Math.max(0, user.partnerDiscountPercent || 0)) : 0,
+      });
       const notification = [
         `New Nora TrimTex order ${orderNumber}`,
         `Customer: ${request.body.customer.name}`,

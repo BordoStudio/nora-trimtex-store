@@ -5,5 +5,5 @@ export async function POST(request: Request) {
     method: "POST",
     headers: visitorHeaders(request),
     body: await request.text(),
-  }));
+  }, true));
 }

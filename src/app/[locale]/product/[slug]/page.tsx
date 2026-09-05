@@ -57,9 +57,9 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   const { locale, slug } = await params;
   if (!isLocale(locale)) notFound();
   const pricing = await getPartnerPricingContext();
-  const product = await getCatalogProductBySlug(locale, slug, pricing.hasAccess, pricing.discountPercent);
+  const product = await getCatalogProductBySlug(locale, slug, true, pricing.discountPercent, pricing.priceTier);
   if (!product) notFound();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: pricing.hasAccess, discountPercent: pricing.discountPercent });
+  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier, discountPercent: pricing.discountPercent });
   const t = getDictionary(locale);
   const copy = {
     ru: { quality: "Премиальное качество", samples: "Образцы доступны", description: "Фурнитура для оформления штор и интерьерного текстиля. Посмотрите доступные варианты, изучите фактуру и добавьте изделие или образец в корзину. Размер, состав и наличие подтверждаются для выбранного варианта.", dimensions: "РАЗМЕРЫ", composition: "СОСТАВ", collection: "КАТЕГОРИЯ", delivery: "ПОСТАВКА", deliveryValue: "Срок подтверждается при заказе", more: "ПОХОЖАЯ ФУРНИТУРА" },
