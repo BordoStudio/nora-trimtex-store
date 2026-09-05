@@ -57,7 +57,14 @@ export async function getCatalogProducts(
       next: { revalidate: 300 },
     });
     if (!response.ok) throw new Error(`Catalog API responded with ${response.status}`);
-    const apiProducts = ((await response.json()) as CatalogResponse).data.map((product) => applyApiPrice({ ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [] }));
+    const localProductsById = new Map(getSeedProducts(locale).flatMap((product) => [[product.id, product], [product.slug, product]]));
+    const apiProducts = ((await response.json()) as CatalogResponse).data.map((product) => {
+      const normalizedProduct = { ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [] };
+      const pricedProduct = applyApiPrice(normalizedProduct);
+      const localProduct = localProductsById.get(product.id) || localProductsById.get(product.slug);
+      if (pricedProduct.priceUsd !== undefined || !localProduct) return pricedProduct;
+      return { ...pricedProduct, priceUsd: applyAccountPrice(localProduct).priceUsd };
+    });
     if (options.featured) return apiProducts;
 
     // The database remains the source of truth. Keep the independently
@@ -117,7 +124,9 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     const payload = await response.json() as { data: Product };
     const localProduct = getSeedProducts(locale).find((item) => item.id === payload.data.id || item.slug === slug);
     const specifications = getFallbackSpecifications(payload.data.categoryId, locale);
-    return apiPrice({ ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] });
+    const pricedProduct = apiPrice({ ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] });
+    if (pricedProduct.priceUsd !== undefined || !localProduct) return pricedProduct;
+    return { ...pricedProduct, priceUsd: accountPrice(localProduct).priceUsd };
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const product = getSeedProducts(locale).find((item) => item.slug === slug);
