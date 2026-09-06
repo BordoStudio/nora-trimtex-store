@@ -246,36 +246,44 @@ export async function importChinaProductByUrl(value: string, status: "draft" | "
   return { source, product, response: await createBackendProduct(product) };
 }
 
-export async function syncNewChinaProducts(existingSkus: Set<string>, status: "draft" | "active" = "active", maxImports = 8) {
+export async function scanNewChinaProducts(existingSkus: Set<string>) {
   const session = await chinaSession();
   const first = await session.request(`${CHINA_ORIGIN}/commodity.html`);
   if (!first.ok) throw new Error(`Китайский каталог вернул ошибку ${first.status}.`);
   const firstHtml = await first.text();
+  if (/请输入手机号|user_login_/.test(firstHtml)) throw new Error("Китайский сайт не сохранил авторизацию.");
   const pageLinks = [...firstHtml.matchAll(/href="([^"]*\/commodity\/[^"/]+\/(\d+)\.html)"/g)];
   const totalPages = Math.max(1, ...pageLinks.map((match) => Number(match[2])));
   const templateMatch = pageLinks.find((match) => Number(match[2]) === totalPages) || pageLinks[0];
   const template = templateMatch ? new URL(templateMatch[1], CHINA_ORIGIN).href.replace(/\/\d+\.html$/, "/{page}.html") : null;
-  const discovered: ChinaListingProduct[] = [];
-  for (let page = 1; page <= Math.min(totalPages, 3); page += 1) {
-    const html = page === 1 ? firstHtml : await (await session.request(template!.replace("{page}", String(page)))).text();
-    for (const product of parseChinaListing(html)) if (!discovered.some((item) => item.sku === product.sku)) discovered.push(product);
-  }
-  const candidates = discovered.filter((product) => !existingSkus.has(product.sku.toUpperCase()));
-  const selected = candidates.slice(0, Math.max(1, Math.min(maxImports, 8)));
-  const imported: Array<{ sku: string; slug?: string }> = [];
-  const failed: Array<{ sku: string; error: string }> = [];
-  for (const source of [...selected].reverse()) {
-    try {
-      const uploaded = await uploadRemoteImages(source.familyId, source.variants);
-      const response = await createBackendProduct(productFromChina(source, uploaded, status));
-      const body = await response.json() as { data?: { slug?: string }; error?: string };
-      if (!response.ok) throw new Error(body.error || `API ${response.status}`);
-      imported.push({ sku: source.sku, slug: body.data?.slug });
-      existingSkus.add(source.sku.toUpperCase());
-    } catch (error) {
-      failed.push({ sku: source.sku, error: error instanceof Error ? error.message : "Неизвестная ошибка" });
+  if (totalPages > 1 && !template) throw new Error("Не удалось определить страницы китайского каталога.");
+  const pages = new Array<string>(totalPages);
+  pages[0] = firstHtml;
+  let nextPage = 2;
+  const worker = async () => {
+    while (nextPage <= totalPages) {
+      const page = nextPage++;
+      const response = await session.request(template!.replace("{page}", String(page)));
+      if (!response.ok) throw new Error(`Страница ${page} китайского каталога вернула ошибку ${response.status}.`);
+      pages[page - 1] = await response.text();
     }
+  };
+  await Promise.all(Array.from({ length: Math.min(4, Math.max(0, totalPages - 1)) }, () => worker()));
+  const bySku = new Map<string, ChinaListingProduct>();
+  for (const html of pages) {
+    for (const product of parseChinaListing(html)) if (!bySku.has(product.sku)) bySku.set(product.sku, product);
   }
-  imported.reverse();
-  return { scanned: discovered.length, newFound: candidates.length, imported, failed, remaining: Math.max(0, candidates.length - imported.length) };
+  const discovered = [...bySku.values()];
+  const items = discovered
+    .filter((product) => !existingSkus.has(product.sku.toUpperCase()))
+    .map((product) => ({
+      familyId: product.familyId,
+      url: product.url,
+      sku: product.sku,
+      originalName: product.originalName,
+      categoryId: categoryFor(product.originalName),
+      previewImage: product.variants[0]?.imageUrl || "",
+      variantCount: product.variants.length,
+    }));
+  return { scanned: discovered.length, totalPages, items };
 }

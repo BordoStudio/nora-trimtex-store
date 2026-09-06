@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useCallback, useEffect, useState } from "react";
-import { Check, CirclePlus, Eraser, Eye, EyeOff, Link2, LoaderCircle, MapPin, PackagePlus, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, Trash2, Upload, UserRoundCheck, UserX } from "lucide-react";
+import { Check, CirclePlus, Eraser, ExternalLink, Eye, EyeOff, Link2, LoaderCircle, MapPin, PackagePlus, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, Trash2, Upload, UserRoundCheck, UserX } from "lucide-react";
 
 type AdminUser = {
   id: string; email: string; role: string; status: string; firstName: string; lastName: string;
@@ -18,6 +18,7 @@ type UserDetail = {
   connectedAccounts?: Array<{ provider: string; providerEmail?: string; displayName?: string; createdAt: string }>;
 };
 type Product = { id: string; sku: string; slug: string; categoryId: string; names: Record<string, string>; image: string; retailPriceUsd: number | null; partnerPriceUsd: number | null; status: string };
+type ChinaCandidate = { familyId: string; url: string; sku: string; originalName: string; categoryId: string; previewImage: string; variantCount: number };
 type Activity = { userId: string; email: string; firstName: string; lastName: string; countryCode?: string; region?: string; city?: string; userAgent?: string; referrer?: string; lastSeenAt: string };
 type Guest = {
   id: string; countryCode?: string; region?: string; city?: string; userAgent?: string; referrer?: string; landingPage?: string; lastPage?: string; createdAt: string; lastSeenAt: string;
@@ -41,6 +42,9 @@ export function AdminDashboard() {
   const [savingPrices, setSavingPrices] = useState(false);
   const [productTool, setProductTool] = useState<"manual" | "china" | null>(null);
   const [productActionBusy, setProductActionBusy] = useState(false);
+  const [chinaCandidates, setChinaCandidates] = useState<ChinaCandidate[] | null>(null);
+  const [selectedChinaSkus, setSelectedChinaSkus] = useState<Record<string, boolean>>({});
+  const [chinaProgress, setChinaProgress] = useState<{ done: number; total: number } | null>(null);
   const [activity, setActivity] = useState<Activity[]>([]);
   const [guests, setGuests] = useState<Guest[]>([]);
   const [busy, setBusy] = useState(true);
@@ -139,14 +143,48 @@ export function AdminDashboard() {
     form.reset(); setProductTool(null); setMessage(`Товар ${payload.data?.sku || ""} импортирован.`); await load();
   }
   async function syncChinaProducts() {
-    setProductActionBusy(true); setMessage("Проверяем новые товары на китайском сайте…");
-    const response = await fetch("/api/admin/products/sync-china", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ status: "active" }) });
-    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { scanned: number; newFound: number; imported: Array<{ sku: string }>; failed: Array<{ sku: string; error: string }>; remaining: number } };
+    setProductActionBusy(true); setChinaProgress(null); setMessage("Проверяем все страницы китайского каталога…");
+    const response = await fetch("/api/admin/products/sync-china", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
+    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { scanned: number; totalPages: number; items: ChinaCandidate[] } };
     setProductActionBusy(false);
     if (!response.ok || !payload.data) return setMessage(payload.error || "Не удалось проверить каталог.");
-    const { imported, failed, remaining } = payload.data;
-    setMessage(imported.length ? `Добавлено товаров: ${imported.length}${remaining ? `. Осталось новых: ${remaining} — нажмите кнопку ещё раз.` : "."}${failed.length ? ` Ошибок: ${failed.length}.` : ""}` : failed.length ? `Новые товары найдены, но не добавлены. Ошибок: ${failed.length}.` : "Новых товаров не найдено.");
-    if (imported.length) await load();
+    setProductTool(null);
+    setChinaCandidates(payload.data.items);
+    setSelectedChinaSkus(Object.fromEntries(payload.data.items.map((item) => [item.sku, true])));
+    setMessage(payload.data.items.length ? `Найдено новых позиций: ${payload.data.items.length}. Проверьте список и снимите ненужные галочки.` : `Проверено ${payload.data.scanned} товаров на ${payload.data.totalPages} страницах. Новых позиций нет.`);
+  }
+  async function importSelectedChinaProducts(status: "draft" | "active") {
+    const selected = (chinaCandidates || []).filter((item) => selectedChinaSkus[item.sku]);
+    if (!selected.length) return setMessage("Отметьте хотя бы один товар для импорта.");
+    setProductActionBusy(true); setChinaProgress({ done: 0, total: selected.length }); setMessage(`Переносим выбранные товары: 0 из ${selected.length}…`);
+    const succeeded = new Set<string>();
+    const failed: Array<{ sku: string; error: string }> = [];
+    let cursor = 0;
+    let completed = 0;
+    const worker = async () => {
+      while (cursor < selected.length) {
+        const item = selected[cursor++];
+        if (!item) continue;
+        try {
+          const response = await fetch("/api/admin/products/import-china", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ url: item.url, status }) });
+          const payload = await response.json().catch(() => ({})) as { error?: string };
+          if (!response.ok) throw new Error(payload.error || `Ошибка ${response.status}`);
+          succeeded.add(item.sku);
+        } catch (error) {
+          failed.push({ sku: item.sku, error: error instanceof Error ? error.message : "Неизвестная ошибка" });
+        } finally {
+          completed += 1;
+          setChinaProgress({ done: completed, total: selected.length });
+          setMessage(`Переносим выбранные товары: ${completed} из ${selected.length}…`);
+        }
+      }
+    };
+    await Promise.all(Array.from({ length: Math.min(2, selected.length) }, () => worker()));
+    setProductActionBusy(false); setChinaProgress(null);
+    setChinaCandidates((items) => items?.filter((item) => !succeeded.has(item.sku)) || []);
+    setSelectedChinaSkus((current) => Object.fromEntries(Object.entries(current).filter(([sku]) => !succeeded.has(sku))));
+    if (succeeded.size) await load();
+    setMessage(failed.length ? `Перенесено ${succeeded.size} из ${selected.length}. Не удалось: ${failed.map((item) => item.sku).join(", ")}.` : `Готово. Перенесено товаров: ${succeeded.size}.`);
   }
 
   if (needsLogin) return <AdminLogin />;
@@ -159,7 +197,7 @@ export function AdminDashboard() {
       <button className={tab === "activity" ? "active" : ""} onClick={() => { setTab("activity"); setQuery(""); }}>Входы</button>
     </nav>
     {message && <p className="admin-message">{message}</p>}
-    {tab === "products" && <ProductManagement activeTool={productTool} busy={productActionBusy} onTool={setProductTool} onCreate={createProduct} onImport={importChinaProduct} onSync={syncChinaProducts} />}
+    {tab === "products" && <ProductManagement activeTool={productTool} busy={productActionBusy} candidates={chinaCandidates} selectedSkus={selectedChinaSkus} progress={chinaProgress} onTool={setProductTool} onCreate={createProduct} onImport={importChinaProduct} onScan={syncChinaProducts} onToggle={(sku, checked) => setSelectedChinaSkus((current) => ({ ...current, [sku]: checked }))} onToggleAll={(checked) => setSelectedChinaSkus(Object.fromEntries((chinaCandidates || []).map((item) => [item.sku, checked])))} onImportSelected={importSelectedChinaProducts} onCloseSelection={() => { setChinaCandidates(null); setSelectedChinaSkus({}); }} />}
     {(tab === "users" || tab === "products") && <div className="admin-filters">
       <label><Search size={16} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={tab === "products" ? "Артикул или название" : "Имя, email, компания"} /></label>
       {tab === "users" && <><select value={role} onChange={(event) => setRole(event.target.value)}><option value="">Все типы</option><option value="retail">Клиенты</option><option value="partner">Дизайнеры</option><option value="admin">Администраторы</option></select><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Все статусы</option><option value="pending_approval">Ожидают решения</option><option value="active">Активные</option><option value="email_pending">Не подтвердили email</option><option value="rejected">Отклонённые</option><option value="disabled">Отключённые</option></select></>}
@@ -178,19 +216,28 @@ const productCategories = [
   ["cords", "Шнуры и канты"], ["holdbacks", "Крючки и розетки"], ["home", "Декор для дома"], ["samples", "Образцы"],
 ] as const;
 
-function ProductManagement({ activeTool, busy, onTool, onCreate, onImport, onSync }: {
+function ProductManagement({ activeTool, busy, candidates, selectedSkus, progress, onTool, onCreate, onImport, onScan, onToggle, onToggleAll, onImportSelected, onCloseSelection }: {
   activeTool: "manual" | "china" | null;
   busy: boolean;
+  candidates: ChinaCandidate[] | null;
+  selectedSkus: Record<string, boolean>;
+  progress: { done: number; total: number } | null;
   onTool: (tool: "manual" | "china" | null) => void;
   onCreate: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
   onImport: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
-  onSync: () => Promise<void>;
+  onScan: () => Promise<void>;
+  onToggle: (sku: string, checked: boolean) => void;
+  onToggleAll: (checked: boolean) => void;
+  onImportSelected: (status: "draft" | "active") => Promise<void>;
+  onCloseSelection: () => void;
 }) {
+  const [selectionStatus, setSelectionStatus] = useState<"draft" | "active">("active");
+  const selectedCount = candidates?.filter((item) => selectedSkus[item.sku]).length || 0;
   return <section className="admin-product-tools">
     <div className="admin-product-tool-actions">
       <button className={activeTool === "manual" ? "button primary" : "button outline"} onClick={() => onTool(activeTool === "manual" ? null : "manual")}><CirclePlus size={17} />Добавить вручную</button>
       <button className={activeTool === "china" ? "button primary" : "button outline"} onClick={() => onTool(activeTool === "china" ? null : "china")}><Link2 size={17} />Импорт по ссылке</button>
-      <button className="button outline" disabled={busy} onClick={() => void onSync()}>{busy ? <LoaderCircle className="spin" size={17} /> : <RefreshCw size={17} />}Проверить китайский сайт</button>
+      <button className="button outline" disabled={busy} onClick={() => void onScan()}>{busy && !progress ? <LoaderCircle className="spin" size={17} /> : <RefreshCw size={17} />}Проверить китайский сайт</button>
     </div>
     {activeTool === "manual" && <form className="admin-product-form" onSubmit={(event) => void onCreate(event)}>
       <div className="admin-form-heading"><PackagePlus /><div><h2>Новый товар</h2><p>Артикул, категория и русское название обязательны. Остальные языки можно заполнить позже.</p></div></div>
@@ -215,6 +262,22 @@ function ProductManagement({ activeTool, busy, onTool, onCreate, onImport, onSyn
       <label>Публикация<select name="status" defaultValue="active"><option value="active">Сразу на сайте</option><option value="draft">Черновик</option></select></label>
       <button className="button primary" disabled={busy}>{busy ? <LoaderCircle className="spin" size={17} /> : <Upload size={17} />}{busy ? "Импортируем…" : "Импортировать"}</button>
     </form>}
+    {candidates !== null && <div className="admin-china-selection">
+      <header><div><span>НОВЫЕ ПОЗИЦИИ</span><h2>{candidates.length ? `${candidates.length} найдено · ${selectedCount} выбрано` : "Новых товаров нет"}</h2><p>Все новые позиции отмечены. Снимите галочки с товаров, которые переносить не нужно.</p></div><button type="button" className="button outline" disabled={busy} onClick={onCloseSelection}>Закрыть</button></header>
+      {!!candidates.length && <>
+        <div className="admin-china-selection-bar">
+          <label className="admin-checkbox"><input type="checkbox" checked={selectedCount === candidates.length} onChange={(event) => onToggleAll(event.target.checked)} />Выбрать все</label>
+          <label>Публикация<select value={selectionStatus} onChange={(event) => setSelectionStatus(event.target.value as "draft" | "active")} disabled={busy}><option value="active">Сразу на сайте</option><option value="draft">Черновики</option></select></label>
+          <button className="button primary" disabled={busy || !selectedCount} onClick={() => void onImportSelected(selectionStatus)}>{busy ? <LoaderCircle className="spin" size={17} /> : <Upload size={17} />}{progress ? `Переносим ${progress.done}/${progress.total}` : `Перенести выбранные (${selectedCount})`}</button>
+        </div>
+        <div className="admin-china-grid">{candidates.map((item) => <label key={item.sku} className={selectedSkus[item.sku] ? "selected" : ""}>
+          <input type="checkbox" checked={Boolean(selectedSkus[item.sku])} disabled={busy} onChange={(event) => onToggle(item.sku, event.target.checked)} />
+          {item.previewImage ? <img src={`/api/admin/products/china-preview?url=${encodeURIComponent(item.previewImage)}`} alt="" /> : <span className="admin-china-image-empty">Нет фото</span>}
+          <span><strong>{item.sku}</strong><small>{item.originalName || "Без названия"}</small><em>{item.categoryId} · {item.variantCount} фото</em></span>
+          <a href={item.url} target="_blank" rel="noreferrer" title="Открыть на китайском сайте" onClick={(event) => event.stopPropagation()}><ExternalLink size={16} /></a>
+        </label>)}</div>
+      </>}
+    </div>}
   </section>;
 }
 

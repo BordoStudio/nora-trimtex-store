@@ -771,7 +771,27 @@ body { background:#f5ead9; }
 .admin-checkbox input { width:18px; min-height:18px; height:18px; margin:0; accent-color:#9f7943; }
 .admin-product-import-form { grid-template-columns:minmax(280px,1fr) 210px auto; }
 .admin-product-import-form .admin-form-wide { grid-column:auto; }
-@media(max-width:800px) { .admin-product-tool-actions { display:grid; grid-template-columns:1fr; }.admin-product-tool-actions .button { width:100%; justify-content:center; }.admin-product-form,.admin-product-import-form { grid-template-columns:minmax(0,1fr); padding:18px; }.admin-form-grid { grid-template-columns:minmax(0,1fr); }.admin-product-import-form .admin-form-wide,.admin-form-wide { grid-column:1; }.admin-product-form>.button { width:100%; }.admin-form-heading { grid-column:1; } }
+.admin-china-selection { display:grid; gap:16px; padding:22px; border:1px solid rgba(142,100,31,.2); border-radius:22px; background:#fffaf2; box-shadow:0 18px 46px rgba(65,42,19,.09); }
+.admin-china-selection>header { display:flex; align-items:start; justify-content:space-between; gap:20px; }
+.admin-china-selection>header span { color:#956f3d; font:600 10px/1.2 var(--sans); letter-spacing:.14em; }
+.admin-china-selection>header h2 { margin:5px 0 4px; font:400 28px/1.1 var(--serif); }
+.admin-china-selection>header p { margin:0; color:#735f4e; font-size:13px; }
+.admin-china-selection-bar { position:sticky; top:12px; z-index:7; display:grid; grid-template-columns:1fr 210px auto; align-items:end; gap:12px; padding:12px; border:1px solid rgba(142,100,31,.18); border-radius:16px; background:rgba(255,250,242,.96); box-shadow:0 8px 24px rgba(65,42,19,.09); backdrop-filter:blur(12px); }
+.admin-china-selection-bar>label:not(.admin-checkbox) { display:grid; gap:6px; color:#604a38; font:600 10px/1.2 var(--sans); letter-spacing:.04em; text-transform:uppercase; }
+.admin-china-selection-bar select { min-height:42px; padding:0 12px; border:1px solid rgba(142,100,31,.22); border-radius:12px; background:#fffdf8; color:#30221b; }
+.admin-china-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; max-height:620px; padding:2px; overflow:auto; }
+.admin-china-grid>label { position:relative; display:grid; grid-template-columns:22px 72px minmax(0,1fr) 22px; align-items:center; gap:10px; min-width:0; padding:10px; border:1px solid rgba(142,100,31,.14); border-radius:15px; background:#f7f0e6; opacity:.58; cursor:pointer; transition:border-color .18s ease,background .18s ease,opacity .18s ease,transform .18s ease; }
+.admin-china-grid>label:hover { transform:translateY(-1px); }
+.admin-china-grid>label.selected { border-color:rgba(162,120,59,.5); background:#fffdf8; opacity:1; }
+.admin-china-grid input[type="checkbox"] { width:18px; height:18px; accent-color:#9f7943; }
+.admin-china-grid img,.admin-china-image-empty { width:72px; height:72px; object-fit:contain; border-radius:10px; background:#fff; }
+.admin-china-image-empty { display:grid; place-items:center; color:#92775b; font-size:10px; text-align:center; }
+.admin-china-grid>label>span:not(.admin-china-image-empty) { display:grid; gap:4px; min-width:0; }
+.admin-china-grid strong { color:#3f2b20; font:600 15px/1.2 var(--sans); }
+.admin-china-grid small { overflow:hidden; color:#765f4c; font-size:11px; text-overflow:ellipsis; white-space:nowrap; }
+.admin-china-grid em { color:#9b7b58; font:500 9px/1.3 var(--sans); text-transform:uppercase; font-style:normal; }
+.admin-china-grid a { display:grid; place-items:center; width:22px; height:22px; color:#795b39; }
+@media(max-width:800px) { .admin-product-tool-actions { display:grid; grid-template-columns:1fr; }.admin-product-tool-actions .button { width:100%; justify-content:center; }.admin-product-form,.admin-product-import-form { grid-template-columns:minmax(0,1fr); padding:18px; }.admin-form-grid { grid-template-columns:minmax(0,1fr); }.admin-product-import-form .admin-form-wide,.admin-form-wide { grid-column:1; }.admin-product-form>.button { width:100%; }.admin-form-heading { grid-column:1; }.admin-china-selection { padding:16px; }.admin-china-selection>header { flex-direction:column; }.admin-china-selection>header .button { width:100%; }.admin-china-selection-bar { position:static; grid-template-columns:1fr; }.admin-china-selection-bar .button { width:100%; }.admin-china-grid { grid-template-columns:minmax(0,1fr); max-height:70vh; } }
 .button.danger { border-color:rgba(143,53,42,.34); background:#fff8f5; color:#8f352a; }
 .button.danger:hover { border-color:#8f352a; background:#8f352a; color:#fff; }
 .admin-delete-user { width:100%; margin-top:22px; }
