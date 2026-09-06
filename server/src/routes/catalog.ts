@@ -24,14 +24,16 @@ function availability(product: ProductDocument) {
   return { availability: availableQuantity > 5 ? "in_stock" as const : availableQuantity > 0 ? "low_stock" as const : "preorder" as const, availableQuantity };
 }
 
-function productPrice(product: ProductDocument, priceTier: "retail" | "partner") {
+function productPricing(product: ProductDocument) {
   const partnerPrice = product.partnerPriceUsd ?? product.priceUsd;
-  return priceTier === "partner"
-    ? partnerPrice
-    : product.retailPriceUsd ?? (partnerPrice === undefined ? undefined : partnerPrice * 2);
+  return {
+    partnerPriceUsd: partnerPrice,
+    retailPriceUsd: partnerPrice === undefined ? undefined : Number((partnerPrice * 2).toFixed(2)),
+  };
 }
 
 function serializeProductSummary(product: ProductDocument, locale: Locale, priceTier?: "retail" | "partner") {
+  const pricing = productPricing(product);
   return {
     id: product.id,
     sku: product.sku,
@@ -42,7 +44,11 @@ function serializeProductSummary(product: ProductDocument, locale: Locale, price
     variantCount: product.variantCount,
     isNew: product.isNew,
     ...availability(product),
-    ...(priceTier && productPrice(product, priceTier) !== undefined ? { priceUsd: productPrice(product, priceTier) } : {}),
+    ...(priceTier && pricing.partnerPriceUsd !== undefined ? {
+      priceUsd: priceTier === "partner" ? pricing.partnerPriceUsd : pricing.retailPriceUsd,
+      partnerPriceUsd: pricing.partnerPriceUsd,
+      retailPriceUsd: pricing.retailPriceUsd,
+    } : {}),
   };
 }
 

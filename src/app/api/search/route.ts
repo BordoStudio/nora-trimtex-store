@@ -9,7 +9,7 @@ export async function GET(request: Request) {
   const query = (url.searchParams.get("q") || "").trim().toLowerCase().slice(0, 80);
   if (query.length < 2) return Response.json({ data: [] });
   const pricing = await getPartnerPricingContext();
-  const data = (await getCatalogProducts(locale, { limit: 1_000, search: query, includePrices: true, priceTier: pricing.priceTier, discountPercent: pricing.discountPercent }))
+  const data = (await getCatalogProducts(locale, { limit: 1_000, search: query, includePrices: true, priceTier: pricing.priceTier }))
     .filter((product) => product.priceUsd !== undefined)
     .slice(0, 6);
   // Results can include partner prices for an authenticated account, so never

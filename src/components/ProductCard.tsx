@@ -27,7 +27,7 @@ export function ProductCard({ product, locale }: { product: Product; locale: Loc
     {product.availability === "on_request"
       ? <button type="button" className="product-stock availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}>{t.product.availabilityOnRequest}</button>
       : <Link className={`product-stock is-${product.availability}`} href={`/${locale}/product/${product.slug}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</Link>}
-    {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `${t.product.priceFrom} $${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
+    {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
     <ImageZoomButton className="is-card" label={zoomLabels[locale].zoomIn} onClick={() => setZoomed(true)} />
     <ImageZoomViewer src={product.image} alt={`${product.sku} — ${product.name}`} open={zoomed} onClose={() => setZoomed(false)} labels={zoomLabels[locale]} />
   </article>;

@@ -55,7 +55,7 @@ export async function bootstrapCatalog(db: MongoDatabase): Promise<number> {
       if (pricedProducts.length) {
         await productsCollection.bulkWrite(pricedProducts.map((product) => {
           const partnerPriceUsd = product.partnerPriceUsd ?? product.priceUsd!;
-          const retailPriceUsd = product.retailPriceUsd ?? partnerPriceUsd * 2;
+          const retailPriceUsd = Number((partnerPriceUsd * 2).toFixed(2));
           return {
             updateOne: {
               filter: { id: product.id },

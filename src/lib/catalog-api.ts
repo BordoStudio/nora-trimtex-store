@@ -17,28 +17,35 @@ function withoutPricingInternals(product: Product): Product {
   return safeProduct;
 }
 
+function designerPrice(product: Product | undefined) {
+  return product?.partnerPriceUsd ?? product?.priceUsd;
+}
+
+function resolvePricingSource(apiProduct: Product, localProduct?: Product): Product {
+  if (apiProduct.partnerPriceUsd !== undefined) return apiProduct;
+  const apiDesignerPrice = apiProduct.priceUsd;
+  const localDesignerPrice = designerPrice(localProduct);
+  if (apiDesignerPrice !== undefined && (localDesignerPrice === undefined || Math.abs(apiDesignerPrice - localDesignerPrice) > 0.0001)) {
+    return { ...apiProduct, partnerPriceUsd: apiDesignerPrice, retailPriceUsd: apiDesignerPrice * 2 };
+  }
+  return localProduct ?? apiProduct;
+}
+
 export async function getCatalogProducts(
   locale: Locale,
-  options: { limit?: number; featured?: boolean; search?: string; includePrices?: boolean; priceTier?: PriceTier; discountPercent?: number } = {},
+  options: { limit?: number; featured?: boolean; search?: string; includePrices?: boolean; priceTier?: PriceTier } = {},
 ): Promise<Product[]> {
   const priceTier = options.priceTier || "retail";
   const applyAccountPrice = (product: Product): Product => {
     const safeProduct = withoutPricingInternals(product);
     if (!options.includePrices) return { ...safeProduct, priceUsd: undefined, tradePriceHidden: true };
-    const partnerPrice = product.partnerPriceUsd ?? product.priceUsd;
-    const basePrice = priceTier === "partner" ? partnerPrice : product.retailPriceUsd ?? (partnerPrice === undefined ? undefined : partnerPrice * 2);
-    const discount = priceTier === "partner" ? Math.min(80, Math.max(0, options.discountPercent || 0)) : 0;
+    const partnerPrice = designerPrice(product);
+    const basePrice = priceTier === "partner" ? partnerPrice : partnerPrice === undefined ? undefined : partnerPrice * 2;
     return {
       ...safeProduct,
-      priceUsd: basePrice === undefined ? undefined : Number((basePrice * (1 - discount / 100)).toFixed(2)),
+      priceUsd: basePrice === undefined ? undefined : Number(basePrice.toFixed(2)),
       tradePriceHidden: false,
     };
-  };
-  const applyApiPrice = (product: Product): Product => {
-    const safeProduct = withoutPricingInternals(product);
-    if (!options.includePrices) return { ...safeProduct, priceUsd: undefined, tradePriceHidden: true };
-    const discount = priceTier === "partner" ? Math.min(80, Math.max(0, options.discountPercent || 0)) : 0;
-    return { ...safeProduct, priceUsd: product.priceUsd === undefined ? undefined : Number((product.priceUsd * (1 - discount / 100)).toFixed(2)), tradePriceHidden: false };
   };
   if (!apiUrl) {
     const query = options.search?.trim().toLowerCase();
@@ -60,10 +67,14 @@ export async function getCatalogProducts(
     const localProductsById = new Map(getSeedProducts(locale).flatMap((product) => [[product.id, product], [product.slug, product]]));
     const apiProducts = ((await response.json()) as CatalogResponse).data.map((product) => {
       const normalizedProduct = { ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [] };
-      const pricedProduct = applyApiPrice(normalizedProduct);
       const localProduct = localProductsById.get(product.id) || localProductsById.get(product.slug);
-      if (!localProduct) return pricedProduct;
-      return { ...pricedProduct, priceUsd: applyAccountPrice(localProduct).priceUsd };
+      const pricingSource = resolvePricingSource(normalizedProduct, localProduct);
+      return applyAccountPrice({
+        ...normalizedProduct,
+        priceUsd: pricingSource.priceUsd,
+        partnerPriceUsd: pricingSource.partnerPriceUsd,
+        retailPriceUsd: pricingSource.retailPriceUsd,
+      });
     });
     if (options.featured) return apiProducts;
 
@@ -89,20 +100,13 @@ export async function getCatalogProducts(
   }
 }
 
-export async function getCatalogProductBySlug(locale: Locale, slug: string, includePrices = false, discountPercent = 0, priceTier: PriceTier = "retail"): Promise<Product | undefined> {
+export async function getCatalogProductBySlug(locale: Locale, slug: string, includePrices = false, priceTier: PriceTier = "retail"): Promise<Product | undefined> {
   const accountPrice = (product: Product): Product => {
-    const { retailPriceUsd, partnerPriceUsd, ...safeProduct } = product;
-    if (!includePrices) return { ...safeProduct, priceUsd: undefined, tradePriceHidden: true };
-    const partnerPrice = partnerPriceUsd ?? product.priceUsd;
-    const basePrice = priceTier === "partner" ? partnerPrice : retailPriceUsd ?? (partnerPrice === undefined ? undefined : partnerPrice * 2);
-    const discount = priceTier === "partner" ? Math.min(80, Math.max(0, discountPercent)) : 0;
-    return { ...safeProduct, priceUsd: basePrice === undefined ? undefined : Number((basePrice * (1 - discount / 100)).toFixed(2)), tradePriceHidden: false };
-  };
-  const apiPrice = (product: Product): Product => {
     const safeProduct = withoutPricingInternals(product);
     if (!includePrices) return { ...safeProduct, priceUsd: undefined, tradePriceHidden: true };
-    const discount = priceTier === "partner" ? Math.min(80, Math.max(0, discountPercent)) : 0;
-    return { ...safeProduct, priceUsd: product.priceUsd === undefined ? undefined : Number((product.priceUsd * (1 - discount / 100)).toFixed(2)), tradePriceHidden: false };
+    const partnerPrice = designerPrice(product);
+    const basePrice = priceTier === "partner" ? partnerPrice : partnerPrice === undefined ? undefined : partnerPrice * 2;
+    return { ...safeProduct, priceUsd: basePrice === undefined ? undefined : Number(basePrice.toFixed(2)), tradePriceHidden: false };
   };
   if (!apiUrl) {
     const product = getSeedProducts(locale).find((item) => item.slug === slug);
@@ -124,9 +128,14 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     const payload = await response.json() as { data: Product };
     const localProduct = getSeedProducts(locale).find((item) => item.id === payload.data.id || item.slug === slug);
     const specifications = getFallbackSpecifications(payload.data.categoryId, locale);
-    const pricedProduct = apiPrice({ ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] });
-    if (!localProduct) return pricedProduct;
-    return { ...pricedProduct, priceUsd: accountPrice(localProduct).priceUsd };
+    const normalizedProduct = { ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] };
+    const pricingSource = resolvePricingSource(normalizedProduct, localProduct);
+    return accountPrice({
+      ...normalizedProduct,
+      priceUsd: pricingSource.priceUsd,
+      partnerPriceUsd: pricingSource.partnerPriceUsd,
+      retailPriceUsd: pricingSource.retailPriceUsd,
+    });
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const product = getSeedProducts(locale).find((item) => item.slug === slug);

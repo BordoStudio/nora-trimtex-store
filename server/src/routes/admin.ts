@@ -113,24 +113,34 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
         collection.find(filter, { projection: { _id: 0, id: 1, sku: 1, slug: 1, categoryId: 1, names: 1, priceUsd: 1, retailPriceUsd: 1, partnerPriceUsd: 1, status: 1, primaryImageKey: 1, updatedAt: 1 } }).sort({ sku: 1 }).skip((page - 1) * limit).limit(limit).toArray(),
         collection.countDocuments(filter),
       ]);
-      return { data: { items: items.map(({ primaryImageKey, ...item }) => ({
-        ...item,
-        retailPriceUsd: item.retailPriceUsd ?? null,
-        partnerPriceUsd: item.partnerPriceUsd ?? item.priceUsd ?? null,
-        image: publicAssetUrl(primaryImageKey),
-      })), page, total } };
+      return { data: { items: items.map(({ primaryImageKey, ...item }) => {
+        const partnerPriceUsd = item.partnerPriceUsd ?? item.priceUsd ?? null;
+        return {
+          ...item,
+          retailPriceUsd: partnerPriceUsd === null ? null : Number((partnerPriceUsd * 2).toFixed(2)),
+          partnerPriceUsd,
+          image: publicAssetUrl(primaryImageKey),
+        };
+      }), page, total } };
     });
 
     app.patch<{ Params: { id: string }; Body: { retailPriceUsd?: number | null; partnerPriceUsd?: number | null } }>("/api/v1/admin/products/:id/price", async (request, reply) => {
       await requireAdmin(db, request);
       const normalizePrice = (raw: number | null | undefined) => raw === null || raw === undefined ? null : Number(raw);
-      const retailPriceUsd = normalizePrice(request.body?.retailPriceUsd);
       const partnerPriceUsd = normalizePrice(request.body?.partnerPriceUsd);
-      if ([retailPriceUsd, partnerPriceUsd].some((price) => price !== null && (!Number.isFinite(price) || price < 0 || price > 1_000_000))) return reply.code(400).send({ error: "invalid_price" });
+      if (partnerPriceUsd !== null && (!Number.isFinite(partnerPriceUsd) || partnerPriceUsd < 0 || partnerPriceUsd > 1_000_000)) return reply.code(400).send({ error: "invalid_price" });
+      const retailPriceUsd = partnerPriceUsd === null ? null : Number((partnerPriceUsd * 2).toFixed(2));
       const unset: Record<string, ""> = {};
       const set: Record<string, number | Date> = { updatedAt: new Date() };
-      if (retailPriceUsd === null) unset.retailPriceUsd = ""; else set.retailPriceUsd = retailPriceUsd;
-      if (partnerPriceUsd === null) { unset.partnerPriceUsd = ""; unset.priceUsd = ""; } else { set.partnerPriceUsd = partnerPriceUsd; set.priceUsd = partnerPriceUsd; }
+      if (partnerPriceUsd === null) {
+        unset.retailPriceUsd = "";
+        unset.partnerPriceUsd = "";
+        unset.priceUsd = "";
+      } else {
+        set.retailPriceUsd = retailPriceUsd!;
+        set.partnerPriceUsd = partnerPriceUsd;
+        set.priceUsd = partnerPriceUsd;
+      }
       const result = await db.collection<ProductDocument>("products").updateOne({ id: request.params.id }, { $set: set, ...(Object.keys(unset).length ? { $unset: unset } : {}) });
       if (!result.matchedCount) return reply.code(404).send({ error: "product_not_found" });
       return { data: { retailPriceUsd, partnerPriceUsd } };

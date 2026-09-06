@@ -33,7 +33,7 @@ export interface SampleRequestRepository {
 }
 
 export interface OrderRepository {
-  create(document: OrderDocument, pricing?: { tier: "retail" | "partner"; discountPercent: number }): Promise<void>;
+  create(document: OrderDocument, pricing?: { tier: "retail" | "partner" }): Promise<void>;
 }
 
 export type AppServices = {

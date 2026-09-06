@@ -30,7 +30,7 @@ type Tab = "users" | "products" | "guests" | "activity";
 
 const formatDate = (value?: string) => value ? new Intl.DateTimeFormat("ru", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value)) : "—";
 const deviceName = (ua?: string) => !ua ? "Неизвестное устройство" : /iphone|ipad/i.test(ua) ? "iPhone / iPad" : /android/i.test(ua) ? "Android" : /macintosh|mac os/i.test(ua) ? "Mac" : /windows/i.test(ua) ? "Windows" : "Браузер";
-const roleName = (value: string) => value === "admin" ? "Администратор" : value === "partner" ? "Партнёр" : "Клиент";
+const roleName = (value: string) => value === "admin" ? "Администратор" : value === "partner" ? "Дизайнер" : "Клиент";
 
 export function AdminDashboard() {
   const [tab, setTab] = useState<Tab>("users");
@@ -69,14 +69,10 @@ export function AdminDashboard() {
     if (!response.ok) return setMessage("Не удалось изменить статус пользователя.");
     await load(); if (selected?.user.id === id) await openUser(id);
   }
-  async function saveDiscount(id: string, partnerDiscountPercent: number) {
-    const response = await fetch(`/api/admin/users/${id}/pricing`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ partnerDiscountPercent }) });
-    setMessage(response.ok ? "Индивидуальная цена партнёра сохранена." : "Не удалось сохранить скидку.");
-    if (response.ok) { await load(); await openUser(id); }
-  }
-  async function savePrice(id: string, retailPriceUsd: number | null, partnerPriceUsd: number | null) {
-    const response = await fetch(`/api/admin/products/${id}/price`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ retailPriceUsd, partnerPriceUsd }) });
-    setMessage(response.ok ? "Цены для клиентов и партнёров сохранены." : "Не удалось сохранить цены.");
+  async function savePrice(id: string, designerPriceUsd: number | null) {
+    const clientPriceUsd = designerPriceUsd === null ? null : Number((designerPriceUsd * 2).toFixed(2));
+    const response = await fetch(`/api/admin/products/${id}/price`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ retailPriceUsd: clientPriceUsd, partnerPriceUsd: designerPriceUsd }) });
+    setMessage(response.ok ? "Цена дизайнера сохранена. Цена клиента рассчитана ×2." : "Не удалось сохранить цену.");
     if (response.ok) await load();
   }
 
@@ -92,23 +88,21 @@ export function AdminDashboard() {
     {message && <p className="admin-message">{message}</p>}
     {(tab === "users" || tab === "products") && <div className="admin-filters">
       <label><Search size={16} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={tab === "products" ? "Артикул или название" : "Имя, email, компания"} /></label>
-      {tab === "users" && <><select value={role} onChange={(event) => setRole(event.target.value)}><option value="">Все типы</option><option value="retail">Розница</option><option value="partner">Дизайнеры / партнёры</option><option value="admin">Администраторы</option></select><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Все статусы</option><option value="pending_approval">Ожидают решения</option><option value="active">Активные</option><option value="email_pending">Не подтвердили email</option><option value="rejected">Отклонённые</option><option value="disabled">Отключённые</option></select></>}
+      {tab === "users" && <><select value={role} onChange={(event) => setRole(event.target.value)}><option value="">Все типы</option><option value="retail">Клиенты</option><option value="partner">Дизайнеры</option><option value="admin">Администраторы</option></select><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Все статусы</option><option value="pending_approval">Ожидают решения</option><option value="active">Активные</option><option value="email_pending">Не подтвердили email</option><option value="rejected">Отклонённые</option><option value="disabled">Отключённые</option></select></>}
     </div>}
     {busy && <div className="admin-loading"><LoaderCircle className="spin" /> Загрузка…</div>}
-    {!busy && tab === "users" && <div className="admin-layout"><div className="admin-list">{users.map((user) => <button key={user.id} className={selected?.user.id === user.id ? "active" : ""} onClick={() => void openUser(user.id)}><span><strong>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</strong><small>{user.email}</small></span><span><b>{roleName(user.role)}</b><em data-status={user.status}>{user.status}</em></span><span><small>Корзина: {user.cartItems}</small><small>Заказы: {user.orders}</small></span></button>)}</div><UserDetailPanel key={selected?.user.id || "none"} detail={selected} onStatus={changeStatus} onDiscount={saveDiscount} /></div>}
-    {!busy && tab === "products" && <div className="admin-products"><div className="admin-products-head"><span>Товар</span><span>Для клиентов</span><span>Для партнёров</span><span /></div>{products.map((product) => <ProductPriceRow key={`${product.id}-${product.retailPriceUsd ?? "request"}-${product.partnerPriceUsd ?? "request"}`} product={product} onSave={savePrice} />)}</div>}
+    {!busy && tab === "users" && <div className="admin-layout"><div className="admin-list">{users.map((user) => <button key={user.id} className={selected?.user.id === user.id ? "active" : ""} onClick={() => void openUser(user.id)}><span><strong>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</strong><small>{user.email}</small></span><span><b>{roleName(user.role)}</b><em data-status={user.status}>{user.status}</em></span><span><small>Корзина: {user.cartItems}</small><small>Заказы: {user.orders}</small></span></button>)}</div><UserDetailPanel key={selected?.user.id || "none"} detail={selected} onStatus={changeStatus} /></div>}
+    {!busy && tab === "products" && <div className="admin-products"><div className="admin-products-head"><span>Товар</span><span>Для клиентов (×2)</span><span>Для дизайнеров (×1)</span><span /></div>{products.map((product) => <ProductPriceRow key={`${product.id}-${product.retailPriceUsd ?? "request"}-${product.partnerPriceUsd ?? "request"}`} product={product} onSave={savePrice} />)}</div>}
     {!busy && tab === "guests" && <GuestList guests={guests} />}
     {!busy && tab === "activity" && <div className="admin-activity">{activity.map((item, index) => <article key={`${item.userId}-${item.lastSeenAt}-${index}`}><UserRoundCheck /><div><strong>{item.firstName} {item.lastName}</strong><small>{item.email}</small></div><div><span>{[item.city, item.region, item.countryCode].filter(Boolean).join(", ") || "Локация не определена"}</span><small>{deviceName(item.userAgent)}</small></div><time>{formatDate(item.lastSeenAt)}</time></article>)}</div>}
   </div>;
 }
 
-function UserDetailPanel({ detail, onStatus, onDiscount }: { detail: UserDetail | null; onStatus: (id: string, status: string) => Promise<void>; onDiscount: (id: string, discount: number) => Promise<void> }) {
-  const initialDiscount = detail?.user.partnerDiscountPercent || 0;
-  const [discount, setDiscount] = useState(initialDiscount);
+function UserDetailPanel({ detail, onStatus }: { detail: UserDetail | null; onStatus: (id: string, status: string) => Promise<void> }) {
   if (!detail) return <aside className="admin-detail"><div className="admin-empty"><ShieldCheck /><p>Выберите клиента</p></div></aside>;
   const { user } = detail;
   return <aside className="admin-detail"><span>{roleName(user.role)}</span><h2>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</h2><p>{user.email}<br />{user.phone}<br />{user.company}<br />{[user.city, user.country].filter(Boolean).join(", ")}</p><p><small>Регистрация: {formatDate(user.createdAt)}<br />Последний вход: {formatDate(user.lastLoginAt)}</small></p>
-    {user.role === "partner" && <><div className="admin-actions"><button className="button primary" onClick={() => void onStatus(user.id, "active")}><Check size={16} />Одобрить</button><button className="button outline" onClick={() => void onStatus(user.id, "rejected")}><UserX size={16} />Отклонить</button></div><label className="admin-price-control"><span>Дополнительная скидка партнёра, %</span><div><input type="number" min="0" max="80" step="0.5" value={discount} onChange={(event) => setDiscount(Number(event.target.value))} /><button onClick={() => void onDiscount(user.id, discount)} aria-label="Сохранить скидку"><Save /></button></div><small>Применяется к базовой цене для партнёров после входа.</small></label></>}
+    {user.role === "partner" && <div className="admin-actions"><button className="button primary" onClick={() => void onStatus(user.id, "active")}><Check size={16} />Одобрить как дизайнера</button><button className="button outline" onClick={() => void onStatus(user.id, "rejected")}><UserX size={16} />Отклонить</button></div>}
     <h3>Корзина</h3>{detail.cart?.items?.length ? detail.cart.items.map((item, index) => <div className="admin-cart-line" key={`${item.sku}-${index}`}><span>{item.sku}<small>{item.name}</small></span><b>× {item.quantity}</b></div>) : <p>Корзина пуста</p>}
     <h3>История входов</h3>{detail.sessions?.length ? detail.sessions.slice(0, 8).map((session, index) => <div className="admin-session" key={`${session.createdAt}-${index}`}><strong>{[session.city, session.region, session.countryCode].filter(Boolean).join(", ") || "Локация не определена"}</strong><span>{deviceName(session.userAgent)} · {formatDate(session.lastSeenAt)}</span>{session.referrer && <small>Источник: {session.referrer}</small>}</div>) : <p>Входов пока нет</p>}
     <h3>Подключённые аккаунты</h3>{detail.connectedAccounts?.length ? detail.connectedAccounts.map((account) => <p key={account.provider}>{account.provider}: {account.providerEmail || account.displayName || "подключён"}</p>) : <p>Социальные аккаунты не подключены. Они появятся здесь только после добровольного входа через соответствующий сервис.</p>}
@@ -116,10 +110,11 @@ function UserDetailPanel({ detail, onStatus, onDiscount }: { detail: UserDetail 
   </aside>;
 }
 
-function ProductPriceRow({ product, onSave }: { product: Product; onSave: (id: string, retail: number | null, partner: number | null) => Promise<void> }) {
-  const [retail, setRetail] = useState(product.retailPriceUsd?.toString() || "");
-  const [partner, setPartner] = useState(product.partnerPriceUsd?.toString() || "");
-  return <article><img src={product.image} alt="" /><div><strong>{product.sku}</strong><small>{product.names.ru || product.names.en || product.slug}</small><em>{product.categoryId}</em></div><label><input type="number" min="0" step="0.01" value={retail} placeholder="По запросу" onChange={(event) => setRetail(event.target.value)} /><b>USD</b></label><label><input type="number" min="0" step="0.01" value={partner} placeholder="По запросу" onChange={(event) => setPartner(event.target.value)} /><b>USD</b></label><button className="button primary" onClick={() => void onSave(product.id, retail === "" ? null : Number(retail), partner === "" ? null : Number(partner))}><Save size={16} />Сохранить</button></article>;
+function ProductPriceRow({ product, onSave }: { product: Product; onSave: (id: string, designer: number | null) => Promise<void> }) {
+  const [designer, setDesigner] = useState(product.partnerPriceUsd?.toString() || "");
+  const numericDesignerPrice = designer === "" ? null : Number(designer);
+  const clientPrice = numericDesignerPrice === null || !Number.isFinite(numericDesignerPrice) ? "" : (numericDesignerPrice * 2).toFixed(2);
+  return <article><img src={product.image} alt="" /><div><strong>{product.sku}</strong><small>{product.names.ru || product.names.en || product.slug}</small><em>{product.categoryId}</em></div><label><input type="number" value={clientPrice} placeholder="—" readOnly aria-label={`Цена для клиента ${product.sku}`} /><b>USD</b></label><label><input type="number" min="0" step="0.01" value={designer} placeholder="Добавить цену" onChange={(event) => setDesigner(event.target.value)} aria-label={`Цена для дизайнера ${product.sku}`} /><b>USD</b></label><button className="button primary" onClick={() => void onSave(product.id, numericDesignerPrice)}><Save size={16} />Сохранить</button></article>;
 }
 
 function GuestList({ guests }: { guests: Guest[] }) {

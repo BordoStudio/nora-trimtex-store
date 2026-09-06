@@ -79,11 +79,8 @@ export function orderRoutes(repository: OrderRepository, db?: MongoDatabase): Fa
         updatedAt: now,
       };
       const user = db ? await getSessionUser(db, request) : null;
-      const hasPartnerPrice = user?.status === "active" && (user.role === "partner" || user.role === "admin");
-      await repository.create(document, {
-        tier: hasPartnerPrice ? "partner" : "retail",
-        discountPercent: hasPartnerPrice && user?.role === "partner" ? Math.min(80, Math.max(0, user.partnerDiscountPercent || 0)) : 0,
-      });
+      const hasPartnerPrice = user?.status === "active" && user.role === "partner";
+      await repository.create(document, { tier: hasPartnerPrice ? "partner" : "retail" });
       const notification = [
         `New Nora TrimTex order ${orderNumber}`,
         `Customer: ${request.body.customer.name}`,
