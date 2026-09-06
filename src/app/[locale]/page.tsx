@@ -13,7 +13,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
   const pricing = await getPartnerPricingContext();
-  const products = await getCatalogProducts(locale, { limit: 8, featured: true, includePrices: true, priceTier: pricing.priceTier, discountPercent: pricing.discountPercent });
+  const products = (await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier, discountPercent: pricing.discountPercent }))
+    .filter((product) => product.priceUsd !== undefined)
+    .slice(0, 8);
   const faq = {
     ru: [["Можно заказать образцы цветов?", "Да. Выберите цвет на странице товара, добавьте его в корзину и отправьте запрос."], ["Вы поставляете товары по Европе?", "Да. Срок, наличие и стоимость доставки подтверждаются в персональном предложении."], ["Где посмотреть оптовые цены?", "В каталоге указаны цены для клиентов. Подтверждённые дизайнеры и партнёры после входа видят свои цены. Позиции без фиксированной цены рассчитываются по объёму и условиям поставки."]],
     uk: [["Чи можна замовити зразки кольорів?", "Так. Оберіть колір на сторінці товару, додайте його до кошика та надішліть запит."], ["Ви постачаєте товари по Європі?", "Так. Термін, наявність і вартість доставки підтверджуються в персональній пропозиції."], ["Де переглянути оптові ціни?", "У каталозі вказані ціни для клієнтів. Підтверджені дизайнери й партнери після входу бачать свої ціни. Позиції без фіксованої ціни розраховуються за обсягом та умовами постачання."]],

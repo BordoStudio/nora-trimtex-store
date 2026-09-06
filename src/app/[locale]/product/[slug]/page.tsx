@@ -58,7 +58,7 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   if (!isLocale(locale)) notFound();
   const pricing = await getPartnerPricingContext();
   const product = await getCatalogProductBySlug(locale, slug, true, pricing.discountPercent, pricing.priceTier);
-  if (!product) notFound();
+  if (!product || product.priceUsd === undefined) notFound();
   const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier, discountPercent: pricing.discountPercent });
   const t = getDictionary(locale);
   const copy = {
@@ -67,7 +67,7 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
     de: { quality: "Premiumqualität", samples: "Muster verfügbar", description: "Zubehör für Vorhänge und textile Raumgestaltung. Sehen Sie sich die verfügbaren Varianten und die Textur an und legen Sie das Produkt oder ein Muster in den Warenkorb. Maße, Material und Verfügbarkeit werden für die gewählte Variante bestätigt.", dimensions: "ABMESSUNGEN", composition: "MATERIAL", collection: "KATEGORIE", delivery: "LIEFERUNG", deliveryValue: "Termin wird bei Bestellung bestätigt", more: "ÄHNLICHES VORHANGZUBEHÖR" },
     en: { quality: "Premium quality", samples: "Samples available", description: "Trimmings for curtains and interior textiles. View the available options, examine the texture and add the product or a sample to your basket. Dimensions, composition and availability are confirmed for the selected option.", dimensions: "DIMENSIONS", composition: "COMPOSITION", collection: "CATEGORY", delivery: "DELIVERY", deliveryValue: "Lead time confirmed with order", more: "SIMILAR CURTAIN TRIMMINGS" },
   }[locale];
-  const related = products.filter((item) => item.categoryId === product.categoryId && item.id !== product.id).slice(0, 4);
+  const related = products.filter((item) => item.priceUsd !== undefined && item.categoryId === product.categoryId && item.id !== product.id).slice(0, 4);
   const requestedVariant = (await searchParams).variant;
   const initialVariantId = product.variants.some((variant) => variant.id === requestedVariant) ? requestedVariant : product.variants[0]?.id;
   const productUrl = `${siteUrl}/${locale}/product/${product.slug}`;
