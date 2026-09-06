@@ -24,10 +24,10 @@ export function CatalogClient({ locale, initialProducts }: { locale: Locale; ini
   const urlParams = useSearchParams();
   const requestedCategory = urlParams.get("category");
   const urlCategory: CategoryId | "all" = categoryIds.includes(requestedCategory as CategoryId) ? requestedCategory as CategoryId : "all";
-  const urlSort: "new" | "sku" = urlParams.get("sort") === "sku" ? "sku" : "new";
+  const urlSort: "catalog" | "sku" = urlParams.get("sort") === "sku" ? "sku" : "catalog";
   const updateLocation = (key: string, value: string) => {
     const url = new URL(window.location.href);
-    if (value === "all" || (key === "sort" && value === "new")) url.searchParams.delete(key);
+    if (value === "all" || (key === "sort" && value === "catalog")) url.searchParams.delete(key);
     else url.searchParams.set(key, value);
     router.push(`${url.pathname}${url.search}`, { scroll: false });
     setVisibleCount(36);
@@ -57,11 +57,11 @@ export function CatalogClient({ locale, initialProducts }: { locale: Locale; ini
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     const source = normalized.length >= 2 ? searchResults : initialProducts;
-    return source
+    const products = source
       .filter((product) => category === "all" || product.categoryId === category)
       .filter((product) => !normalized || `${product.sku} ${product.name}`.toLowerCase().includes(normalized))
-      .filter((product) => category !== "samples" || sampleType === "all" || (sampleType === "books" ? product.sku.startsWith("Y-DL-") : product.sku.startsWith("YK-DL-")))
-      .sort((a, b) => sort === "sku" ? a.sku.localeCompare(b.sku) : Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
+      .filter((product) => category !== "samples" || sampleType === "all" || (sampleType === "books" ? product.sku.startsWith("Y-DL-") : product.sku.startsWith("YK-DL-")));
+    return sort === "sku" ? [...products].sort((a, b) => a.sku.localeCompare(b.sku)) : products;
   }, [category, initialProducts, query, sampleType, searchResults, sort]);
 
   const isSamples = category === "samples";
@@ -69,7 +69,7 @@ export function CatalogClient({ locale, initialProducts }: { locale: Locale; ini
   return <>
     <div className="catalog-toolbar">
       <label className="search-field"><Search size={18} /><input value={query} aria-label={t.catalog.search} onChange={(e) => { setQuery(e.target.value); setVisibleCount(36); }} placeholder={isSamples ? sampleCopy[locale].search : t.catalog.search} /></label>
-      <label className="sort-field"><SlidersHorizontal size={17} /><span>{t.catalog.sort}</span><select value={sort} onChange={(e) => updateLocation("sort", e.target.value)}><option value="new">{t.catalog.newest}</option><option value="sku">{t.catalog.sku}</option></select></label>
+      <label className="sort-field"><SlidersHorizontal size={17} /><span>{t.catalog.sort}</span><select value={sort} onChange={(e) => updateLocation("sort", e.target.value)}><option value="catalog">{t.catalog.catalogOrder}</option><option value="sku">{t.catalog.sku}</option></select></label>
     </div>
     <label className="mobile-category-select"><span>{{ru:"Категория",uk:"Категорія",de:"Kategorie",en:"Category"}[locale]}</span><select value={category} onChange={(event) => updateLocation("category", event.target.value)}><option value="all">{t.catalog.all}</option>{categoryIds.map(id => <option key={id} value={id}>{t.categories[id]}</option>)}</select></label>
     <div className="category-filter"><button aria-pressed={category === "all"} className={category === "all" ? "active" : ""} onClick={() => updateLocation("category", "all")}>{t.catalog.all}</button>{categoryIds.map((id) => <button key={id} aria-pressed={category === id} className={category === id ? "active" : ""} onClick={() => updateLocation("category", id)}>{t.categories[id]}</button>)}</div>

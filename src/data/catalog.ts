@@ -153,6 +153,26 @@ function toProduct(product: SeedProduct, locale: Locale): Product {
   };
 }
 
+function toProductSummary(product: SeedProduct, locale: Locale): Product {
+  const firstVariant = product.variants?.[0] || { id: `${product.id}-default`, imageKey: product.primaryImageKey };
+  return {
+    id: product.id,
+    sku: product.sku,
+    slug: product.slug,
+    categoryId: product.categoryId,
+    name: product.names[locale],
+    names: product.names,
+    image: assetUrl(product.primaryImageKey, 6),
+    variants: [{ id: firstVariant.id, image: assetUrl(firstVariant.imageKey, 7) }],
+    priceUsd: product.priceUsd,
+    retailPriceUsd: product.retailPriceUsd,
+    partnerPriceUsd: product.partnerPriceUsd,
+    variantCount: product.variantCount,
+    isNew: product.isNew,
+    availability: "on_request",
+  };
+}
+
 export function getSeedProducts(locale: Locale): Product[] {
   return allSeedProducts.map((product) => toProduct(product, locale));
 }
@@ -180,8 +200,5 @@ export function getSeedProductsBySearch(locale: Locale, query: string): Product[
 }
 
 export function getProductSummaries(locale: Locale): Product[] {
-  return getSeedProducts(locale).map((product) => ({
-    ...product,
-    variants: product.variants.slice(0, 1),
-  }));
+  return allSeedProducts.map((product) => toProductSummary(product, locale));
 }

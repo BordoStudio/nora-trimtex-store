@@ -1,4 +1,4 @@
-import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, getSeedProductsBySearch, getSeedShopProducts, type CategoryId, type Product } from "@/data/catalog";
+import { getFallbackSpecifications, getProductSummaries, getSeedProductBySlug, type CategoryId, type Product } from "@/data/catalog";
 import type { Locale } from "@/lib/i18n";
 import { cache } from "react";
 
@@ -48,14 +48,16 @@ export async function getCatalogProducts(
       tradePriceHidden: false,
     };
   };
-  const visibleProduct = (product: Product) => product.priceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples";
-  const localSource = (query?: string) => query
-    ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
-    : options.category ? getSeedProductsByCategory(locale, options.category) : options.visibleOnly ? getSeedShopProducts(locale) : getSeedProducts(locale);
+  const localSource = (query?: string) => {
+    const normalized = query?.trim().toLowerCase();
+    return getProductSummaries(locale)
+      .filter((product) => !options.category || product.categoryId === options.category)
+      .filter((product) => !normalized || `${product.sku} ${product.name}`.toLowerCase().includes(normalized));
+  };
   if (!apiUrl) {
     const query = options.search?.trim().toLowerCase();
     const products = localSource(query).map(applyAccountPrice);
-    return (options.visibleOnly ? products.filter(visibleProduct) : products).slice(0, options.limit);
+    return products.slice(0, options.limit);
   }
 
   const params = new URLSearchParams({ locale, limit: String(options.limit || 100) });
@@ -96,12 +98,12 @@ export async function getCatalogProducts(
     const apiIds = new Set(apiProducts.map((product) => product.id));
     const mergedProducts = [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
       .sort((left, right) => (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER))
-    return (options.visibleOnly ? mergedProducts.filter(visibleProduct) : mergedProducts).slice(0, options.limit || 100);
+    return mergedProducts.slice(0, options.limit || 100);
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();
     const products = localSource(query).map(applyAccountPrice);
-    return (options.visibleOnly ? products.filter(visibleProduct) : products).slice(0, options.limit);
+    return products.slice(0, options.limit);
   }
 }
 
