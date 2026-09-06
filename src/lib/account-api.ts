@@ -5,7 +5,9 @@ const backendUrl = () => process.env.CATALOG_API_URL || process.env.NEXT_PUBLIC_
 
 export async function accountRequest(path: string, init: RequestInit = {}, withSession = false) {
   const headers = new Headers(init.headers);
-  headers.set("content-type", "application/json");
+  if (init.body !== undefined && !headers.has("content-type")) {
+    headers.set("content-type", "application/json");
+  }
   if (withSession) {
     const token = (await cookies()).get(accountCookieName)?.value;
     if (token) headers.set("authorization", `Bearer ${token}`);
