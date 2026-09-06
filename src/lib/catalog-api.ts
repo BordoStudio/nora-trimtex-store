@@ -62,7 +62,7 @@ export async function getCatalogProducts(
       const normalizedProduct = { ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [] };
       const pricedProduct = applyApiPrice(normalizedProduct);
       const localProduct = localProductsById.get(product.id) || localProductsById.get(product.slug);
-      if (pricedProduct.priceUsd !== undefined || !localProduct) return pricedProduct;
+      if (!localProduct) return pricedProduct;
       return { ...pricedProduct, priceUsd: applyAccountPrice(localProduct).priceUsd };
     });
     if (options.featured) return apiProducts;
@@ -125,7 +125,7 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     const localProduct = getSeedProducts(locale).find((item) => item.id === payload.data.id || item.slug === slug);
     const specifications = getFallbackSpecifications(payload.data.categoryId, locale);
     const pricedProduct = apiPrice({ ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] });
-    if (pricedProduct.priceUsd !== undefined || !localProduct) return pricedProduct;
+    if (!localProduct) return pricedProduct;
     return { ...pricedProduct, priceUsd: accountPrice(localProduct).priceUsd };
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
