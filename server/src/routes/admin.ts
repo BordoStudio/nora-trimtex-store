@@ -87,7 +87,22 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
         await sendEmail({ to: user.email, ...message, idempotencyKey: `partner-${action}-${user.id}` })
           .catch((error) => request.log.error(error, "Partner decision email failed"));
       }
-      return { data: { status } };
+      return { data: { status, user: { ...publicUser(user), status, approvedAt: action === "approve" ? now : user.approvedAt, approvedBy: action === "approve" ? admin.id : user.approvedBy, updatedAt: now } } };
+    });
+
+    app.delete<{ Params: { id: string } }>("/api/v1/admin/users/:id", async (request, reply) => {
+      await requireAdmin(db, request);
+      const user = await db.collection<UserRecord>("users").findOne({ id: request.params.id });
+      if (!user) return reply.code(404).send({ error: "not_found" });
+      if (user.role === "admin") return reply.code(400).send({ error: "cannot_delete_admin" });
+      const [deleted] = await Promise.all([
+        db.collection<UserRecord>("users").deleteOne({ id: user.id }),
+        db.collection("authSessions").deleteMany({ userId: user.id }),
+        db.collection("authTokens").deleteMany({ userId: user.id }),
+        db.collection("carts").deleteMany({ userId: user.id }),
+        db.collection("connectedAccounts").deleteMany({ userId: user.id }),
+      ]);
+      return { data: { deleted: deleted.deletedCount === 1 } };
     });
 
     app.patch<{ Params: { id: string }; Body: { partnerDiscountPercent?: number } }>("/api/v1/admin/users/:id/pricing", async (request, reply) => {
@@ -171,6 +186,16 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
         orders: ordersByGuest[guest.id] ?? [],
         sampleRequests: samplesByGuest[guest.id] ?? [],
       })) } };
+    });
+
+    app.delete("/api/v1/admin/guests", async (request) => {
+      await requireAdmin(db, request);
+      const [sessions, carts, messages] = await Promise.all([
+        db.collection("guestSessions").deleteMany({}),
+        db.collection("guestCarts").deleteMany({}),
+        db.collection("guestMessages").deleteMany({}),
+      ]);
+      return { data: { cleared: true, deleted: { sessions: sessions.deletedCount, carts: carts.deletedCount, messages: messages.deletedCount } } };
     });
 
     app.get("/api/v1/admin/activity", async (request) => {

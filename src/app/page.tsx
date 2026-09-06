@@ -17,6 +17,8 @@ function preferredLocale(acceptLanguage: string): SupportedLocale {
 }
 
 export default async function RootPage() {
-  const acceptLanguage = (await headers()).get("accept-language") || "";
+  const requestHeaders = await headers();
+  if (requestHeaders.get("host")?.split(":")[0].toLowerCase() === "admin.noratrim.com") redirect("/admin");
+  const acceptLanguage = requestHeaders.get("accept-language") || "";
   redirect(`/${preferredLocale(acceptLanguage)}`);
 }

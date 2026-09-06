@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useCallback, useEffect, useState } from "react";
-import { Check, Eye, EyeOff, LoaderCircle, MapPin, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, UserRoundCheck, UserX } from "lucide-react";
+import { Check, Eraser, Eye, EyeOff, LoaderCircle, MapPin, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, Trash2, UserRoundCheck, UserX } from "lucide-react";
 
 type AdminUser = {
   id: string; email: string; role: string; status: string; firstName: string; lastName: string;
@@ -37,6 +37,8 @@ export function AdminDashboard() {
   const [users, setUsers] = useState<AdminUser[]>([]);
   const [selected, setSelected] = useState<UserDetail | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
+  const [priceDrafts, setPriceDrafts] = useState<Record<string, string>>({});
+  const [savingPrices, setSavingPrices] = useState(false);
   const [activity, setActivity] = useState<Activity[]>([]);
   const [guests, setGuests] = useState<Guest[]>([]);
   const [busy, setBusy] = useState(true);
@@ -55,7 +57,10 @@ export function AdminDashboard() {
     else if (response.ok) {
       const payload = (await response.json()).data;
       if (tab === "users") setUsers(payload.items);
-      if (tab === "products") setProducts(payload.items);
+      if (tab === "products") {
+        setProducts(payload.items);
+        setPriceDrafts(Object.fromEntries(payload.items.map((product: Product) => [product.id, product.partnerPriceUsd?.toString() || ""])));
+      }
       if (tab === "activity") setActivity(payload.sessions);
       if (tab === "guests") setGuests(payload.items);
     } else setMessage("Не удалось загрузить данные.");
@@ -67,13 +72,48 @@ export function AdminDashboard() {
   async function changeStatus(id: string, nextStatus: string) {
     const response = await fetch(`/api/admin/users/${id}/status`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ status: nextStatus }) });
     if (!response.ok) return setMessage("Не удалось изменить статус пользователя.");
+    setSelected((current) => current?.user.id === id ? { ...current, user: { ...current.user, status: nextStatus } } : current);
+    setMessage(nextStatus === "active" ? "Доступ дизайнера подтверждён. Пользователю отправлено письмо." : "Статус пользователя изменён.");
     await load(); if (selected?.user.id === id) await openUser(id);
+  }
+  async function deleteUser(id: string) {
+    if (!window.confirm("Удалить пользователя и его активные сессии? История заказов останется сохранена.")) return;
+    const response = await fetch(`/api/admin/users/${id}`, { method: "DELETE" });
+    if (!response.ok) return setMessage("Не удалось удалить пользователя.");
+    setSelected(null); setUsers((items) => items.filter((user) => user.id !== id)); setMessage("Пользователь удалён.");
+  }
+  async function clearGuests() {
+    if (!window.confirm("Очистить список гостей, их корзины и сообщения?")) return;
+    const response = await fetch("/api/admin/guests", { method: "DELETE" });
+    if (!response.ok) return setMessage("Не удалось очистить список гостей.");
+    setGuests([]); setMessage("Список гостей очищен.");
   }
   async function savePrice(id: string, designerPriceUsd: number | null) {
     const clientPriceUsd = designerPriceUsd === null ? null : Number((designerPriceUsd * 2).toFixed(2));
     const response = await fetch(`/api/admin/products/${id}/price`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ retailPriceUsd: clientPriceUsd, partnerPriceUsd: designerPriceUsd }) });
     setMessage(response.ok ? "Цена дизайнера сохранена. Цена клиента рассчитана ×2." : "Не удалось сохранить цену.");
-    if (response.ok) await load();
+    if (response.ok) setProducts((items) => items.map((product) => product.id === id ? { ...product, retailPriceUsd: clientPriceUsd, partnerPriceUsd: designerPriceUsd } : product));
+    return response.ok;
+  }
+  async function saveAllPrices() {
+    const changed = products.filter((product) => (product.partnerPriceUsd?.toString() || "") !== (priceDrafts[product.id] ?? ""));
+    if (!changed.length) return setMessage("Изменений цен нет.");
+    setSavingPrices(true);
+    const results = await Promise.all(changed.map((product) => {
+      const value = priceDrafts[product.id] ?? "";
+      const designerPrice = value === "" ? null : Number(value);
+      const clientPrice = designerPrice === null ? null : Number((designerPrice * 2).toFixed(2));
+      return fetch(`/api/admin/products/${product.id}/price`, { method: "PATCH", headers: { "content-type": "application/json" }, body: JSON.stringify({ retailPriceUsd: clientPrice, partnerPriceUsd: designerPrice }) })
+        .then((response) => ({ id: product.id, ok: response.ok, designerPrice, clientPrice }));
+    }));
+    const saved = results.filter((result) => result.ok);
+    const savedById = new Map(saved.map((result) => [result.id, result]));
+    setProducts((items) => items.map((product) => {
+      const result = savedById.get(product.id);
+      return result ? { ...product, retailPriceUsd: result.clientPrice, partnerPriceUsd: result.designerPrice } : product;
+    }));
+    setSavingPrices(false);
+    setMessage(saved.length === changed.length ? `Сохранено цен: ${saved.length}.` : `Сохранено ${saved.length} из ${changed.length}. Проверьте отмеченные позиции.`);
   }
 
   if (needsLogin) return <AdminLogin />;
@@ -91,18 +131,20 @@ export function AdminDashboard() {
       {tab === "users" && <><select value={role} onChange={(event) => setRole(event.target.value)}><option value="">Все типы</option><option value="retail">Клиенты</option><option value="partner">Дизайнеры</option><option value="admin">Администраторы</option></select><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Все статусы</option><option value="pending_approval">Ожидают решения</option><option value="active">Активные</option><option value="email_pending">Не подтвердили email</option><option value="rejected">Отклонённые</option><option value="disabled">Отключённые</option></select></>}
     </div>}
     {busy && <div className="admin-loading"><LoaderCircle className="spin" /> Загрузка…</div>}
-    {!busy && tab === "users" && <div className="admin-layout"><div className="admin-list">{users.map((user) => <button key={user.id} className={selected?.user.id === user.id ? "active" : ""} onClick={() => void openUser(user.id)}><span><strong>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</strong><small>{user.email}</small></span><span><b>{roleName(user.role)}</b><em data-status={user.status}>{user.status}</em></span><span><small>Корзина: {user.cartItems}</small><small>Заказы: {user.orders}</small></span></button>)}</div><UserDetailPanel key={selected?.user.id || "none"} detail={selected} onStatus={changeStatus} /></div>}
-    {!busy && tab === "products" && <div className="admin-products"><div className="admin-products-head"><span>Товар</span><span>Для клиентов (×2)</span><span>Для дизайнеров (×1)</span><span /></div>{products.map((product) => <ProductPriceRow key={`${product.id}-${product.retailPriceUsd ?? "request"}-${product.partnerPriceUsd ?? "request"}`} product={product} onSave={savePrice} />)}</div>}
-    {!busy && tab === "guests" && <GuestList guests={guests} />}
+    {!busy && tab === "users" && <div className="admin-layout"><div className="admin-list">{users.map((user) => <button key={user.id} className={selected?.user.id === user.id ? "active" : ""} onClick={() => void openUser(user.id)}><span><strong>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</strong><small>{user.email}</small></span><span><b>{roleName(user.role)}</b><em data-status={user.status}>{user.status}</em></span><span><small>Корзина: {user.cartItems}</small><small>Заказы: {user.orders}</small></span></button>)}</div><UserDetailPanel key={selected?.user.id || "none"} detail={selected} onStatus={changeStatus} onDelete={deleteUser} /></div>}
+    {!busy && tab === "products" && <><div className="admin-products-toolbar"><span>Изменено: {products.filter((product) => (product.partnerPriceUsd?.toString() || "") !== (priceDrafts[product.id] ?? "")).length}</span><button className="button primary" disabled={savingPrices} onClick={() => void saveAllPrices()}>{savingPrices ? <LoaderCircle className="spin" size={16} /> : <Save size={16} />}{savingPrices ? "Сохраняем…" : "Сохранить все"}</button></div><div className="admin-products"><div className="admin-products-head"><span>Товар</span><span>Для клиентов (×2)</span><span>Для дизайнеров (×1)</span><span /></div>{products.map((product) => <ProductPriceRow key={product.id} product={product} designer={priceDrafts[product.id] ?? ""} onDesignerChange={(value) => setPriceDrafts((drafts) => ({ ...drafts, [product.id]: value }))} onSave={savePrice} saving={savingPrices} />)}</div></>}
+    {!busy && tab === "guests" && <><div className="admin-section-actions"><button className="button danger" onClick={() => void clearGuests()}><Eraser size={16} />Очистить список гостей</button></div><GuestList guests={guests} /></>}
     {!busy && tab === "activity" && <div className="admin-activity">{activity.map((item, index) => <article key={`${item.userId}-${item.lastSeenAt}-${index}`}><UserRoundCheck /><div><strong>{item.firstName} {item.lastName}</strong><small>{item.email}</small></div><div><span>{[item.city, item.region, item.countryCode].filter(Boolean).join(", ") || "Локация не определена"}</span><small>{deviceName(item.userAgent)}</small></div><time>{formatDate(item.lastSeenAt)}</time></article>)}</div>}
   </div>;
 }
 
-function UserDetailPanel({ detail, onStatus }: { detail: UserDetail | null; onStatus: (id: string, status: string) => Promise<void> }) {
+function UserDetailPanel({ detail, onStatus, onDelete }: { detail: UserDetail | null; onStatus: (id: string, status: string) => Promise<void>; onDelete: (id: string) => Promise<void> }) {
   if (!detail) return <aside className="admin-detail"><div className="admin-empty"><ShieldCheck /><p>Выберите клиента</p></div></aside>;
   const { user } = detail;
   return <aside className="admin-detail"><span>{roleName(user.role)}</span><h2>{user.role === "admin" ? "Администратор" : `${user.firstName} ${user.lastName}`}</h2><p>{user.email}<br />{user.phone}<br />{user.company}<br />{[user.city, user.country].filter(Boolean).join(", ")}</p><p><small>Регистрация: {formatDate(user.createdAt)}<br />Последний вход: {formatDate(user.lastLoginAt)}</small></p>
-    {user.role === "partner" && <div className="admin-actions"><button className="button primary" onClick={() => void onStatus(user.id, "active")}><Check size={16} />Одобрить как дизайнера</button><button className="button outline" onClick={() => void onStatus(user.id, "rejected")}><UserX size={16} />Отклонить</button></div>}
+    {user.role === "partner" && user.status === "pending_approval" && <div className="admin-actions"><button className="button primary" onClick={() => void onStatus(user.id, "active")}><Check size={16} />Одобрить как дизайнера</button><button className="button outline" onClick={() => void onStatus(user.id, "rejected")}><UserX size={16} />Отклонить</button></div>}
+    {user.role === "partner" && user.status === "active" && <p className="admin-approved"><Check size={16} />Доступ к ценам для дизайнеров активен</p>}
+    {user.role !== "admin" && <button className="button danger admin-delete-user" onClick={() => void onDelete(user.id)}><Trash2 size={16} />Удалить пользователя</button>}
     <h3>Корзина</h3>{detail.cart?.items?.length ? detail.cart.items.map((item, index) => <div className="admin-cart-line" key={`${item.sku}-${index}`}><span>{item.sku}<small>{item.name}</small></span><b>× {item.quantity}</b></div>) : <p>Корзина пуста</p>}
     <h3>История входов</h3>{detail.sessions?.length ? detail.sessions.slice(0, 8).map((session, index) => <div className="admin-session" key={`${session.createdAt}-${index}`}><strong>{[session.city, session.region, session.countryCode].filter(Boolean).join(", ") || "Локация не определена"}</strong><span>{deviceName(session.userAgent)} · {formatDate(session.lastSeenAt)}</span>{session.referrer && <small>Источник: {session.referrer}</small>}</div>) : <p>Входов пока нет</p>}
     <h3>Подключённые аккаунты</h3>{detail.connectedAccounts?.length ? detail.connectedAccounts.map((account) => <p key={account.provider}>{account.provider}: {account.providerEmail || account.displayName || "подключён"}</p>) : <p>Социальные аккаунты не подключены. Они появятся здесь только после добровольного входа через соответствующий сервис.</p>}
@@ -110,11 +152,11 @@ function UserDetailPanel({ detail, onStatus }: { detail: UserDetail | null; onSt
   </aside>;
 }
 
-function ProductPriceRow({ product, onSave }: { product: Product; onSave: (id: string, designer: number | null) => Promise<void> }) {
-  const [designer, setDesigner] = useState(product.partnerPriceUsd?.toString() || "");
+function ProductPriceRow({ product, designer, onDesignerChange, onSave, saving }: { product: Product; designer: string; onDesignerChange: (value: string) => void; onSave: (id: string, designer: number | null) => Promise<boolean>; saving: boolean }) {
   const numericDesignerPrice = designer === "" ? null : Number(designer);
   const clientPrice = numericDesignerPrice === null || !Number.isFinite(numericDesignerPrice) ? "" : (numericDesignerPrice * 2).toFixed(2);
-  return <article><img src={product.image} alt="" /><div><strong>{product.sku}</strong><small>{product.names.ru || product.names.en || product.slug}</small><em>{product.categoryId}</em></div><label><input type="number" value={clientPrice} placeholder="—" readOnly aria-label={`Цена для клиента ${product.sku}`} /><b>USD</b></label><label><input type="number" min="0" step="0.01" value={designer} placeholder="Добавить цену" onChange={(event) => setDesigner(event.target.value)} aria-label={`Цена для дизайнера ${product.sku}`} /><b>USD</b></label><button className="button primary" onClick={() => void onSave(product.id, numericDesignerPrice)}><Save size={16} />Сохранить</button></article>;
+  const changed = (product.partnerPriceUsd?.toString() || "") !== designer;
+  return <article className={changed ? "is-price-dirty" : ""}><img src={product.image} alt="" /><div><strong>{product.sku}</strong><small>{product.names.ru || product.names.en || product.slug}</small><em>{product.categoryId}</em></div><label><input type="number" value={clientPrice} placeholder="—" readOnly aria-label={`Цена для клиента ${product.sku}`} /><b>USD</b></label><label><input type="number" min="0" step="0.01" value={designer} placeholder="Добавить цену" onChange={(event) => onDesignerChange(event.target.value)} aria-label={`Цена для дизайнера ${product.sku}`} /><b>USD</b></label><button className="button primary" disabled={saving || !changed || (designer !== "" && !Number.isFinite(numericDesignerPrice))} onClick={() => void onSave(product.id, numericDesignerPrice)}><Save size={16} />Сохранить</button></article>;
 }
 
 function GuestList({ guests }: { guests: Guest[] }) {

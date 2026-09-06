@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { orderConfirmationEmail, partnerDecisionEmail, sampleConfirmationEmail, verificationEmail } from "./email-templates.js";
+import { orderConfirmationEmail, partnerApprovalRequestEmail, partnerDecisionEmail, sampleConfirmationEmail, verificationEmail } from "./email-templates.js";
 
 test("verification email is localized, branded and escapes customer data", () => {
   const message = verificationEmail("ru", "<Ирина>", "123456");
@@ -17,4 +17,13 @@ test("partner decisions and customer transaction emails support every locale", (
     assert.ok(orderConfirmationEmail(locale, { name: "Nora", country: "DE", city: "Berlin", address: "Street 1", postcode: "10115" }, "LTX-1", 3).text.includes("LTX-1"));
     assert.ok(sampleConfirmationEmail(locale, "Nora", "SR-1", 2).text.includes("SR-1"));
   }
+});
+
+test("partner approval request contains a direct seven-day approval link", () => {
+  const url = "https://admin.noratrim.com/approve#token=test-token";
+  const message = partnerApprovalRequestEmail({ firstName: "Анна", lastName: "Дизайнер", email: "anna@example.com" }, url);
+  assert.match(message.subject, /Подтвердить доступ дизайнеру/);
+  assert.match(message.text, /7 дней/);
+  assert.match(message.html, /Одобрить доступ дизайнеру/);
+  assert.ok(message.html.includes(url));
 });

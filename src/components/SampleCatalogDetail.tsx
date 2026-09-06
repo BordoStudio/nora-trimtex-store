@@ -61,7 +61,7 @@ const copy = {
   },
 } satisfies Record<Locale, Record<string, string>>;
 
-export function SampleCatalogDetail({ product, locale, pages }: { product: Product; locale: Locale; pages: string[] }) {
+export function SampleCatalogDetail({ product, locale, pages, hasDesignerAccess = false }: { product: Product; locale: Locale; pages: string[]; hasDesignerAccess?: boolean }) {
   const dispatch = useDispatch();
   const t = getDictionary(locale);
   const l = copy[locale];
@@ -99,11 +99,11 @@ export function SampleCatalogDetail({ product, locale, pages }: { product: Produ
       </div>
       <div className="sample-catalog-hero-copy">
         <p className="eyebrow">{l.eyebrow}</p>
-        <h1>{product.sku}</h1><DesignerPriceLink locale={locale} slug={product.slug} />
+        <h1>{product.sku}</h1><DesignerPriceLink locale={locale} slug={product.slug} hasAccess={hasDesignerAccess} />
         <h2>{l.intro}</h2>
         <p>{l.body}</p>
         <div className="sample-catalog-summary"><BookOpen /><span>{pages.length} {l.pages}</span></div>
-        {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong> {t.product.availabilityOnRequest}</button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}</p>}
+        {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong><span>{t.product.availabilityOnRequest}</span></button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong><span>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}</span></p>}
         <div className="product-actions">
           <button className={`button primary product-add-button${added ? " is-added" : ""}`} onClick={add} aria-live="polite"><span className="product-add-icon"><CartAddIcon added={added} /></span><span>{added ? l.added : l.add}</span></button>
         </div>

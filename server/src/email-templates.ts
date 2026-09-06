@@ -71,6 +71,26 @@ export function partnerDecisionEmail(locale: Locale, name: string, approved: boo
     : { subject: t.rejectedSubject, ...brandEmail({ preheader: t.rejectedBody, eyebrow: "PARTNER", title: t.rejectedTitle, greeting: t.hello(name), paragraphs: [t.rejectedBody] }) };
 }
 
+export function partnerApprovalRequestEmail(user: { firstName: string; lastName: string; email: string }, approvalUrl: string): MailContent {
+  const fullName = `${user.firstName} ${user.lastName}`.trim();
+  const preheader = `${fullName} подтвердил email и ожидает доступа к ценам для дизайнеров.`;
+  return {
+    subject: `[Nora TrimTex] Подтвердить доступ дизайнеру — ${fullName}`,
+    ...brandEmail({
+      preheader,
+      eyebrow: "DESIGNER ACCESS",
+      title: "Новая заявка дизайнера",
+      greeting: "Здравствуйте!",
+      paragraphs: [
+        `${fullName} подтвердил email и ожидает доступа к ценам для дизайнеров.`,
+        "Нажмите кнопку ниже, чтобы сразу выдать доступ. Вход в админку не потребуется. Ссылка одноразовая и действует 7 дней.",
+      ],
+      details: [{ label: "Имя", value: fullName }, { label: "Email", value: user.email }],
+      action: { label: "Одобрить доступ дизайнеру", href: approvalUrl },
+    }),
+  };
+}
+
 export function orderConfirmationEmail(locale: Locale, customer: { name: string; country: string; city: string; address: string; postcode: string }, orderNumber: string, itemCount: number): MailContent {
   const t = translations[locale];
   return { subject: t.orderSubject(orderNumber), ...brandEmail({ preheader: t.orderBody, eyebrow: "ORDER", title: t.orderTitle, greeting: t.hello(customer.name), paragraphs: [t.orderBody], details: [{ label: t.order, value: orderNumber }, { label: t.items, value: String(itemCount) }, { label: t.delivery, value: `${customer.country}, ${customer.city}, ${customer.address}, ${customer.postcode}` }] }) };
@@ -80,4 +100,3 @@ export function sampleConfirmationEmail(locale: Locale, name: string, requestNum
   const t = translations[locale];
   return { subject: t.sampleSubject(requestNumber), ...brandEmail({ preheader: t.sampleBody, eyebrow: "SAMPLES", title: t.sampleTitle, greeting: t.hello(name), paragraphs: [t.sampleBody], details: [{ label: t.request, value: requestNumber }, { label: t.items, value: String(itemCount) }] }) };
 }
-

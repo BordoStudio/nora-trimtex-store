@@ -125,7 +125,7 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
     <Link className="product-back" href={`/${locale}/catalog?category=${product.categoryId}`}><ArrowLeft />{t.categories[product.categoryId]}</Link>
     {samplePages.length > 0
-      ? <SampleCatalogDetail product={product} locale={locale} pages={samplePages} />
-      : <ProductDetailClient product={product} locale={locale} categoryName={t.categories[product.categoryId]} copy={copy} initialVariantId={initialVariantId} />}
+      ? <SampleCatalogDetail product={product} locale={locale} pages={samplePages} hasDesignerAccess={pricing.hasAccess} />
+      : <ProductDetailClient product={product} locale={locale} categoryName={t.categories[product.categoryId]} copy={copy} initialVariantId={initialVariantId} hasDesignerAccess={pricing.hasAccess} />}
   </div>;
 }

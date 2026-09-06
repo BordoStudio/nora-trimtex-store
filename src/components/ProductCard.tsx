@@ -14,7 +14,7 @@ import { addSample } from "@/store/cartSlice";
 import { flyToCart } from "@/lib/flyToCart";
 import { notifyCartAddition } from "@/lib/cart-notifications";
 
-export function ProductCard({ product, locale }: { product: Product; locale: Locale }) {
+export function ProductCard({ product, locale, hasDesignerAccess = false }: { product: Product; locale: Locale; hasDesignerAccess?: boolean }) {
   const t = getDictionary(locale);
   const dispatch = useDispatch();
   const [zoomed, setZoomed] = useState(false);
@@ -60,7 +60,7 @@ export function ProductCard({ product, locale }: { product: Product; locale: Loc
       {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
     </div>
     <div className="product-card-footer">
-      <DesignerPriceLink locale={locale} slug={product.slug} />
+      <DesignerPriceLink locale={locale} slug={product.slug} hasAccess={hasDesignerAccess} />
       <button type="button" className={`card-add-button${added ? " is-added" : ""}`} onClick={add} aria-label={added ? t.product.added : t.product.add} aria-live="polite">
         <CartAddIcon added={added} />
       </button>

@@ -69,5 +69,5 @@ export default async function CatalogPage({ params, searchParams }: { params: Pr
       itemListElement: listedProducts.slice(0, 36).map((product, index) => ({ "@type": "ListItem", position: index + 1, name: `${product.sku} — ${product.name}`, url: `${siteUrl}/${locale}/product/${product.slug}` })),
     },
   };
-  return <section className={`catalog-page${selectedCategory === "samples" ? " samples-page" : ""}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} /><header className="catalog-intro"><p className="eyebrow">{intro.eyebrow}</p><h1>{intro.title}</h1><p>{intro.body}</p></header><CatalogClient locale={locale} initialProducts={products} /></section>;
+  return <section className={`catalog-page${selectedCategory === "samples" ? " samples-page" : ""}`}><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} /><header className="catalog-intro"><p className="eyebrow">{intro.eyebrow}</p><h1>{intro.title}</h1><p>{intro.body}</p></header><CatalogClient locale={locale} initialProducts={products} hasDesignerAccess={pricing.hasAccess} /></section>;
 }

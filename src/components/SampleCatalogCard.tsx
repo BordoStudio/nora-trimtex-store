@@ -21,7 +21,7 @@ const copy = {
   en: { book: "Sample book", cards: "Sample cards & box", open: "Open catalogue", add: "Add catalogue", added: "Added" },
 } satisfies Record<Locale, Record<string, string>>;
 
-export function SampleCatalogCard({ product, locale }: { product: Product; locale: Locale }) {
+export function SampleCatalogCard({ product, locale, hasDesignerAccess = false }: { product: Product; locale: Locale; hasDesignerAccess?: boolean }) {
   const dispatch = useDispatch();
   const [added, setAdded] = useState(false);
   const [zoomed, setZoomed] = useState(false);
@@ -60,7 +60,7 @@ export function SampleCatalogCard({ product, locale }: { product: Product; local
     <div className="sample-catalog-copy">
       <span className="sample-catalog-sku">{product.sku}</span>
       <h3><Link href={`/${locale}/product/${product.slug}`}>{product.name}</Link></h3>
-      <DesignerPriceLink locale={locale} slug={product.slug} />
+      <DesignerPriceLink locale={locale} slug={product.slug} hasAccess={hasDesignerAccess} />
       <div className="sample-catalog-actions">
         <button type="button" className={`card-add-button${added ? " is-added" : ""}`} onClick={add} aria-label={added ? copy[locale].added : copy[locale].add} aria-live="polite"><CartAddIcon added={added} /></button>
       </div>

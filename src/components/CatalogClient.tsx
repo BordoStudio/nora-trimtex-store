@@ -16,7 +16,7 @@ const sampleCopy = {
   en: { all: "All catalogues", books: "Sample books", cards: "Sample cards & boxes", results: "catalogues", search: "Search catalogue or article" },
 } satisfies Record<Locale, Record<string, string>>;
 
-export function CatalogClient({ locale, initialProducts }: { locale: Locale; initialProducts: Product[] }) {
+export function CatalogClient({ locale, initialProducts, hasDesignerAccess = false }: { locale: Locale; initialProducts: Product[]; hasDesignerAccess?: boolean }) {
   const t = getDictionary(locale);
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState<Product[]>([]);
@@ -81,8 +81,8 @@ export function CatalogClient({ locale, initialProducts }: { locale: Locale; ini
     <div className="result-count" role="status" aria-live="polite"><span>{filtered.length} {isSamples ? sampleCopy[locale].results : t.catalog.results}</span><span>{category === "all" ? t.catalog.all : t.categories[category]}</span></div>
     {filtered.length === 0 && <div className="catalog-empty"><h2>{{ru:"Ничего не найдено",uk:"Нічого не знайдено",de:"Keine Ergebnisse",en:"No results found"}[locale]}</h2><p>{{ru:"Попробуйте другой артикул или сбросьте фильтры.",uk:"Спробуйте інший артикул або скиньте фільтри.",de:"Versuchen Sie eine andere Artikelnummer oder setzen Sie die Filter zurück.",en:"Try another item code or reset your filters."}[locale]}</p><button className="button outline" onClick={() => { setQuery(""); setSampleType("all"); updateLocation("category", "all"); }}>{{ru:"Сбросить фильтры",uk:"Скинути фільтри",de:"Filter zurücksetzen",en:"Reset filters"}[locale]}</button></div>}
     {isSamples
-      ? <div className="sample-catalog-grid">{filtered.slice(0, visibleCount).map((product) => <SampleCatalogCard key={product.id} product={product} locale={locale} />)}</div>
-      : <div className="product-grid">{filtered.slice(0, visibleCount).map((product) => <ProductCard key={product.id} product={product} locale={locale} />)}</div>}
+      ? <div className="sample-catalog-grid">{filtered.slice(0, visibleCount).map((product) => <SampleCatalogCard key={product.id} product={product} locale={locale} hasDesignerAccess={hasDesignerAccess} />)}</div>
+      : <div className="product-grid">{filtered.slice(0, visibleCount).map((product) => <ProductCard key={product.id} product={product} locale={locale} hasDesignerAccess={hasDesignerAccess} />)}</div>}
     {visibleCount < filtered.length && <div className="center"><button className="button outline" onClick={() => setVisibleCount((count) => count + 36)}>{t.catalog.loadMore}</button></div>}
   </>;
 }

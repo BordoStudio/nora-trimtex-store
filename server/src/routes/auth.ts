@@ -1,10 +1,10 @@
 import { randomInt, randomUUID } from "node:crypto";
 import type { FastifyPluginAsync } from "fastify";
 import type { MongoDatabase } from "../mongo.js";
-import { config } from "../config.js";
 import { createSession, getSessionUser, hashPassword, hashToken, normalizeEmail, verifyPassword, type AccountRole, type UserRecord } from "../auth.js";
-import { sendEmail, sendOwnerNotification } from "../email.js";
+import { sendEmail } from "../email.js";
 import { verificationEmail } from "../email-templates.js";
+import { approvePartnerByToken, sendPartnerApprovalRequest } from "../partner-approval.js";
 
 type RegisterBody = {
   accountType: "retail" | "partner";
@@ -108,9 +108,21 @@ export function authRoutes(db: MongoDatabase): FastifyPluginAsync {
         { $set: { emailVerifiedAt: now, status: nextStatus, updatedAt: now } },
       );
       if (record.role === "partner") {
-        await sendOwnerNotification({ subject: "[Nora TrimTex] New partner approval", text: `Partner ${record.email} confirmed the email and is waiting for approval.\n${config.ADMIN_URL}`, idempotencyKey: `partner-${record.userId}` }).catch(() => false);
+        const user = await db.collection<UserRecord>("users").findOne({ id: record.userId });
+        if (user) await sendPartnerApprovalRequest(db, user).catch((error) => request.log.error(error, "Partner approval request email failed"));
       }
       return { data: { status: nextStatus } };
+    });
+
+    app.post<{ Body: { token?: string } }>("/api/v1/auth/approve-partner", { config: { rateLimit: { max: 10, timeWindow: "10 minutes" } } }, async (request, reply) => {
+      const token = request.body?.token?.trim() || "";
+      if (token.length < 32) return reply.code(400).send({ error: "invalid_or_expired_token" });
+      const user = await approvePartnerByToken(db, token).catch((error) => {
+        request.log.error(error, "Partner approval failed");
+        return null;
+      });
+      if (!user) return reply.code(400).send({ error: "invalid_or_expired_token" });
+      return { data: { status: "active", email: user.email } };
     });
 
     app.post<{ Body: { email?: string } }>("/api/v1/auth/resend-verification", { config: { rateLimit: { max: 3, timeWindow: "15 minutes" } } }, async (request, reply) => {
