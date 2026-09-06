@@ -144,14 +144,31 @@ export function AdminDashboard() {
   }
   async function syncChinaProducts() {
     setProductActionBusy(true); setChinaProgress(null); setMessage("Проверяем все страницы китайского каталога…");
-    const response = await fetch("/api/admin/products/sync-china", { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
-    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { scanned: number; totalPages: number; items: ChinaCandidate[] } };
-    setProductActionBusy(false);
-    if (!response.ok || !payload.data) return setMessage(payload.error || "Не удалось проверить каталог.");
-    setProductTool(null);
-    setChinaCandidates(payload.data.items);
-    setSelectedChinaSkus(Object.fromEntries(payload.data.items.map((item) => [item.sku, true])));
-    setMessage(payload.data.items.length ? `Найдено новых позиций: ${payload.data.items.length}. Проверьте список и снимите ненужные галочки.` : `Проверено ${payload.data.scanned} товаров на ${payload.data.totalPages} страницах. Новых позиций нет.`);
+    const found = new Map<string, ChinaCandidate>();
+    let startPage = 1;
+    let totalPages = 1;
+    let scanned = 0;
+    try {
+      do {
+        const response = await fetch("/api/admin/products/sync-china", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ startPage, pageSize: 20 }) });
+        const payload = await response.json().catch(() => ({})) as { error?: string; data?: { scanned: number; startPage: number; endPage: number; totalPages: number; items: ChinaCandidate[] } };
+        if (!response.ok || !payload.data) throw new Error(payload.error || "Не удалось проверить каталог.");
+        totalPages = payload.data.totalPages;
+        scanned += payload.data.scanned;
+        for (const item of payload.data.items) if (!found.has(item.sku)) found.set(item.sku, item);
+        startPage = payload.data.endPage + 1;
+        setMessage(`Проверено страниц: ${payload.data.endPage} из ${totalPages}…`);
+      } while (startPage <= totalPages);
+      const items = [...found.values()];
+      setProductTool(null);
+      setChinaCandidates(items);
+      setSelectedChinaSkus(Object.fromEntries(items.map((item) => [item.sku, true])));
+      setMessage(items.length ? `Проверено ${scanned} товаров на ${totalPages} страницах. Найдено новых позиций: ${items.length}. Проверьте список и снимите ненужные галочки.` : `Проверено ${scanned} товаров на ${totalPages} страницах. Новых позиций нет.`);
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Не удалось проверить каталог.");
+    } finally {
+      setProductActionBusy(false);
+    }
   }
   async function importSelectedChinaProducts(status: "draft" | "active") {
     const selected = (chinaCandidates || []).filter((item) => selectedChinaSkus[item.sku]);

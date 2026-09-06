@@ -246,7 +246,7 @@ export async function importChinaProductByUrl(value: string, status: "draft" | "
   return { source, product, response: await createBackendProduct(product) };
 }
 
-export async function scanNewChinaProducts(existingSkus: Set<string>) {
+export async function scanNewChinaProducts(existingSkus: Set<string>, startPage = 1, pageSize = 20) {
   const session = await chinaSession();
   const first = await session.request(`${CHINA_ORIGIN}/commodity.html`);
   if (!first.ok) throw new Error(`Китайский каталог вернул ошибку ${first.status}.`);
@@ -257,20 +257,24 @@ export async function scanNewChinaProducts(existingSkus: Set<string>) {
   const templateMatch = pageLinks.find((match) => Number(match[2]) === totalPages) || pageLinks[0];
   const template = templateMatch ? new URL(templateMatch[1], CHINA_ORIGIN).href.replace(/\/\d+\.html$/, "/{page}.html") : null;
   if (totalPages > 1 && !template) throw new Error("Не удалось определить страницы китайского каталога.");
-  const pages = new Array<string>(totalPages);
-  pages[0] = firstHtml;
-  let nextPage = 2;
+  const safeStart = Math.min(Math.max(1, Math.trunc(startPage)), totalPages);
+  const safeSize = Math.min(Math.max(1, Math.trunc(pageSize)), 20);
+  const endPage = Math.min(totalPages, safeStart + safeSize - 1);
+  const pages = new Map<number, string>();
+  if (safeStart === 1) pages.set(1, firstHtml);
+  let nextPage = safeStart === 1 ? 2 : safeStart;
   const worker = async () => {
-    while (nextPage <= totalPages) {
+    while (nextPage <= endPage) {
       const page = nextPage++;
       const response = await session.request(template!.replace("{page}", String(page)));
       if (!response.ok) throw new Error(`Страница ${page} китайского каталога вернула ошибку ${response.status}.`);
-      pages[page - 1] = await response.text();
+      pages.set(page, await response.text());
     }
   };
-  await Promise.all(Array.from({ length: Math.min(4, Math.max(0, totalPages - 1)) }, () => worker()));
+  await Promise.all(Array.from({ length: Math.min(4, Math.max(0, endPage - nextPage + 1)) }, () => worker()));
   const bySku = new Map<string, ChinaListingProduct>();
-  for (const html of pages) {
+  for (const page of [...pages.keys()].sort((a, b) => a - b)) {
+    const html = pages.get(page)!;
     for (const product of parseChinaListing(html)) if (!bySku.has(product.sku)) bySku.set(product.sku, product);
   }
   const discovered = [...bySku.values()];
@@ -285,5 +289,5 @@ export async function scanNewChinaProducts(existingSkus: Set<string>) {
       previewImage: product.variants[0]?.imageUrl || "",
       variantCount: product.variants.length,
     }));
-  return { scanned: discovered.length, totalPages, items };
+  return { scanned: discovered.length, startPage: safeStart, endPage, totalPages, items };
 }

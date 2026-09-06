@@ -5,9 +5,6 @@
   "workers_dev": true,
   "compatibility_date": "2026-08-04",
   "compatibility_flags": ["nodejs_compat"],
-  "limits": {
-    "subrequests": 1000
-  },
   "routes": [
     { "pattern": "noratrim.com/*", "zone_name": "noratrim.com" },
     { "pattern": "www.noratrim.com/*", "zone_name": "noratrim.com" },
