@@ -27,5 +27,12 @@ export async function sendEmail(message: EmailMessage) {
 }
 
 export async function sendOwnerNotification(notification: Notification) {
-  return sendEmail({ ...notification, to: config.NOTIFICATION_TO_EMAIL });
+  const recipients = [...new Set([config.NOTIFICATION_TO_EMAIL, config.NOTIFICATION_COPY_TO_EMAIL].filter(Boolean))];
+  const results = await Promise.allSettled(recipients.map((to) => sendEmail({
+    ...notification, to, idempotencyKey: `${notification.idempotencyKey}-${to}`,
+  })));
+  const failed = results.find((result) => result.status === "rejected");
+  if (failed?.status === "rejected") throw failed.reason;
+  return results.every((result) => result.status === "fulfilled" && result.value);
+
 }

@@ -59,7 +59,7 @@ export function authRoutes(db: MongoDatabase): FastifyPluginAsync {
   return async (app) => {
     app.post<{ Body: RegisterBody }>("/api/v1/auth/register", { config: { rateLimit: { max: 6, timeWindow: "10 minutes" } } }, async (request, reply) => {
       const body = request.body;
-      if (!body || !["retail", "partner"].includes(body.accountType) || !body.email || !body.password || body.password.length < 10 || !body.firstName || !body.lastName || (body.accountType === "partner" && !body.company?.trim())) {
+      if (!body || !["retail", "partner"].includes(body.accountType) || !body.email || !body.password || body.password.length < 10 || !body.firstName || !body.lastName) {
         return reply.code(400).send({ error: "invalid_registration" });
       }
       const email = normalizeEmail(body.email);
