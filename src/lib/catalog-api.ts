@@ -1,5 +1,6 @@
-import { getFallbackSpecifications, getSeedProducts, type Product } from "@/data/catalog";
+import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, type CategoryId, type Product } from "@/data/catalog";
 import type { Locale } from "@/lib/i18n";
+import { cache } from "react";
 
 type CatalogResponse = {
   data: Array<Omit<Product, "variants"> & { variants?: Product["variants"] }>;
@@ -33,7 +34,7 @@ function resolvePricingSource(apiProduct: Product, localProduct?: Product): Prod
 
 export async function getCatalogProducts(
   locale: Locale,
-  options: { limit?: number; featured?: boolean; search?: string; includePrices?: boolean; priceTier?: PriceTier } = {},
+  options: { limit?: number; featured?: boolean; search?: string; category?: CategoryId; includePrices?: boolean; priceTier?: PriceTier } = {},
 ): Promise<Product[]> {
   const priceTier = options.priceTier || "retail";
   const applyAccountPrice = (product: Product): Product => {
@@ -49,13 +50,15 @@ export async function getCatalogProducts(
   };
   if (!apiUrl) {
     const query = options.search?.trim().toLowerCase();
-    const products = query ? getSeedProducts(locale).filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : getSeedProducts(locale);
+    const categoryProducts = options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
+    const products = query ? categoryProducts.filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : categoryProducts;
     return products.slice(0, options.limit).map(applyAccountPrice);
   }
 
   const params = new URLSearchParams({ locale, limit: String(options.limit || 100) });
   if (options.featured) params.set("featured", "true");
   if (options.search) params.set("q", options.search);
+  if (options.category) params.set("category", options.category);
   if (options.includePrices) params.set("priceTier", priceTier);
 
   try {
@@ -84,7 +87,7 @@ export async function getCatalogProducts(
     // local import also preserves the exact product sequence from the
     // original catalogue; database update timestamps must not reshuffle it.
     const query = options.search?.trim().toLowerCase();
-    const localProducts = getSeedProducts(locale)
+    const localProducts = (options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale))
       .filter((product) => !query || `${product.sku} ${product.name}`.toLowerCase().includes(query))
       .map(applyAccountPrice);
     const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
@@ -95,12 +98,13 @@ export async function getCatalogProducts(
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();
-    const products = query ? getSeedProducts(locale).filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : getSeedProducts(locale);
+    const categoryProducts = options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
+    const products = query ? categoryProducts.filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : categoryProducts;
     return products.slice(0, options.limit).map(applyAccountPrice);
   }
 }
 
-export async function getCatalogProductBySlug(locale: Locale, slug: string, includePrices = false, priceTier: PriceTier = "retail"): Promise<Product | undefined> {
+async function loadCatalogProductBySlug(locale: Locale, slug: string, includePrices = false, priceTier: PriceTier = "retail"): Promise<Product | undefined> {
   const accountPrice = (product: Product): Product => {
     const safeProduct = withoutPricingInternals(product);
     if (!includePrices) return { ...safeProduct, priceUsd: undefined, tradePriceHidden: true };
@@ -109,7 +113,7 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     return { ...safeProduct, priceUsd: basePrice === undefined ? undefined : Number(basePrice.toFixed(2)), tradePriceHidden: false };
   };
   if (!apiUrl) {
-    const product = getSeedProducts(locale).find((item) => item.slug === slug);
+    const product = getSeedProductBySlug(locale, slug);
     return product ? accountPrice(product) : undefined;
   }
   try {
@@ -121,12 +125,12 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     });
     if (response.status === 404) {
       if (process.env.CATALOG_FALLBACK === "false") return undefined;
-      const product = getSeedProducts(locale).find((item) => item.slug === slug);
+      const product = getSeedProductBySlug(locale, slug);
       return product ? accountPrice(product) : undefined;
     }
     if (!response.ok) throw new Error(`Catalog API responded with ${response.status}`);
     const payload = await response.json() as { data: Product };
-    const localProduct = getSeedProducts(locale).find((item) => item.id === payload.data.id || item.slug === slug);
+    const localProduct = getSeedProductBySlug(locale, slug);
     const specifications = getFallbackSpecifications(payload.data.categoryId, locale);
     const normalizedProduct = { ...payload.data, dimensionImage: localProduct?.dimensionImage, technicalImages: localProduct?.technicalImages, dimensions: payload.data.dimensions || localProduct?.dimensions || specifications.dimensions, composition: payload.data.composition || localProduct?.composition || specifications.composition, variants: payload.data.variants?.length ? payload.data.variants : [{ id: `${payload.data.id}-default`, image: payload.data.image }] };
     const pricingSource = resolvePricingSource(normalizedProduct, localProduct);
@@ -138,7 +142,9 @@ export async function getCatalogProductBySlug(locale: Locale, slug: string, incl
     });
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
-    const product = getSeedProducts(locale).find((item) => item.slug === slug);
+    const product = getSeedProductBySlug(locale, slug);
     return product ? accountPrice(product) : undefined;
   }
 }
+
+export const getCatalogProductBySlug = cache(loadCatalogProductBySlug);

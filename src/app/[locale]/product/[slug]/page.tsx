@@ -1,12 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ProductDetailClient } from "@/components/ProductDetailClient";
-import { ProductCard } from "@/components/ProductCard";
-import { SampleCatalogCard } from "@/components/SampleCatalogCard";
 import { SampleCatalogDetail } from "@/components/SampleCatalogDetail";
-import { getCatalogProductBySlug, getCatalogProducts } from "@/lib/catalog-api";
+import { getCatalogProductBySlug } from "@/lib/catalog-api";
 import { getDictionary, isLocale } from "@/lib/i18n";
 import { jsonLd, languageAlternates, siteUrl } from "@/lib/site";
 import { getPartnerPricingContext } from "@/lib/partner-pricing";
@@ -39,7 +37,7 @@ const excludedSampleTextPages = new Set([
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   if (!isLocale(locale)) return {};
-  const product = await getCatalogProductBySlug(locale, slug, false);
+  const product = await getCatalogProductBySlug(locale, slug, true, "retail");
   if (!product) return {};
   const description = productDescription(locale, product, getDictionary(locale).categories[product.categoryId]);
   const title = `${product.sku} — ${product.name}`;
@@ -58,8 +56,7 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   if (!isLocale(locale)) notFound();
   const pricing = await getPartnerPricingContext();
   const product = await getCatalogProductBySlug(locale, slug, true, pricing.priceTier);
-  if (!product || product.priceUsd === undefined) notFound();
-  const products = await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier });
+  if (!product) notFound();
   const t = getDictionary(locale);
   const copy = {
     ru: { quality: "Премиальное качество", samples: "Образцы доступны", description: "Фурнитура для оформления штор и интерьерного текстиля. Посмотрите доступные варианты, изучите фактуру и добавьте изделие или образец в корзину. Размер, состав и наличие подтверждаются для выбранного варианта.", dimensions: "РАЗМЕРЫ", composition: "СОСТАВ", collection: "КАТЕГОРИЯ", delivery: "ПОСТАВКА", deliveryValue: "Срок подтверждается при заказе", more: "ПОХОЖАЯ ФУРНИТУРА" },
@@ -67,7 +64,6 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
     de: { quality: "Premiumqualität", samples: "Muster verfügbar", description: "Zubehör für Vorhänge und textile Raumgestaltung. Sehen Sie sich die verfügbaren Varianten und die Textur an und legen Sie das Produkt oder ein Muster in den Warenkorb. Maße, Material und Verfügbarkeit werden für die gewählte Variante bestätigt.", dimensions: "ABMESSUNGEN", composition: "MATERIAL", collection: "KATEGORIE", delivery: "LIEFERUNG", deliveryValue: "Termin wird bei Bestellung bestätigt", more: "ÄHNLICHES VORHANGZUBEHÖR" },
     en: { quality: "Premium quality", samples: "Samples available", description: "Trimmings for curtains and interior textiles. View the available options, examine the texture and add the product or a sample to your basket. Dimensions, composition and availability are confirmed for the selected option.", dimensions: "DIMENSIONS", composition: "COMPOSITION", collection: "CATEGORY", delivery: "DELIVERY", deliveryValue: "Lead time confirmed with order", more: "SIMILAR CURTAIN TRIMMINGS" },
   }[locale];
-  const related = products.filter((item) => item.priceUsd !== undefined && item.categoryId === product.categoryId && item.id !== product.id).slice(0, 4);
   const requestedVariant = (await searchParams).variant;
   const initialVariantId = product.variants.some((variant) => variant.id === requestedVariant) ? requestedVariant : product.variants[0]?.id;
   const productUrl = `${siteUrl}/${locale}/product/${product.slug}`;
@@ -125,12 +121,11 @@ export default async function ProductPage({ params, searchParams }: { params: Pr
   const sampleAssetsBase = process.env.NEXT_PUBLIC_ASSETS_URL?.replace(/\/$/, "");
   const samplePages = filteredSamplePages.map((page) => sampleAssetsBase ? `${sampleAssetsBase}${page}` : page);
 
-  return <main className="product-page">
+  return <div className="product-page">
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(structuredData) }} />
     <Link className="product-back" href={`/${locale}/catalog?category=${product.categoryId}`}><ArrowLeft />{t.categories[product.categoryId]}</Link>
     {samplePages.length > 0
       ? <SampleCatalogDetail product={product} locale={locale} pages={samplePages} />
       : <ProductDetailClient product={product} locale={locale} categoryName={t.categories[product.categoryId]} copy={copy} initialVariantId={initialVariantId} />}
-    {related.length > 0 && <section className="related-products"><div className="related-head"><div><p className="eyebrow">{copy.more}</p><h2>{t.categories[product.categoryId]}</h2></div><Link href={`/${locale}/catalog?category=${product.categoryId}`}>{t.home.viewAll}<ArrowRight /></Link></div>{product.categoryId === "samples" ? <div className="sample-catalog-grid">{related.map((item) => <SampleCatalogCard key={item.id} product={item} locale={locale} />)}</div> : <div className="product-grid">{related.map((item) => <ProductCard key={item.id} product={item} locale={locale} />)}</div>}</section>}
-  </main>;
+  </div>;
 }

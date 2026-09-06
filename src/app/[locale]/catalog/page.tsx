@@ -52,8 +52,8 @@ export default async function CatalogPage({ params, searchParams }: { params: Pr
       ? { eyebrow: t.catalog.eyebrow, title: t.categories[selectedCategory], body: categoryBody[locale](t.categories[selectedCategory]) }
       : { eyebrow: t.catalog.eyebrow, title: t.catalog.title, body: t.catalog.body };
   const pricing = await getPartnerPricingContext();
-  const products = (await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier }))
-    .filter((product) => product.priceUsd !== undefined);
+  const products = (await getCatalogProducts(locale, { limit: 1_000, category: selectedCategory, includePrices: true, priceTier: pricing.priceTier }))
+    .filter((product) => product.priceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples");
   const listedProducts = selectedCategory ? products.filter((product) => product.categoryId === selectedCategory) : products;
   const path = selectedCategory ? `/catalog?category=${selectedCategory}` : "/catalog";
   const structuredData = {

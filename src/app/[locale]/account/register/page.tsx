@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function RegisterPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ email?: string }> }) {
+export default async function RegisterPage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ email?: string; type?: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  const { email = "" } = await searchParams;
+  const { email = "", type } = await searchParams;
   const initialEmail = email.trim().slice(0, 200);
-  return <div className="account-register-page"><RegistrationPageClient locale={locale} initialEmail={initialEmail} /></div>;
+  return <div className="account-register-page"><RegistrationPageClient locale={locale} initialEmail={initialEmail} initialType={type === "partner" ? "partner" : "retail"} /></div>;
 }

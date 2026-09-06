@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link";
+import { usePanelFocus } from "@/lib/usePanelFocus";
 import { ArrowLeft, ArrowRight, CheckCircle2, Minus, PackageOpen, Plus, Trash2, X } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +15,7 @@ import { guestHeaders } from "@/lib/guest";
 export function CartDrawer({ locale }: { locale: Locale }) {
   const { items, open } = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
+  usePanelFocus(".cart-drawer", open);
   const t = getDictionary(locale);
   const copy = {
     ru: { cart: "Корзина", checkout: "Оформление заказа", review: "Ваш заказ", proceed: "Перейти к оформлению", back: "Назад в корзину", kicker: "ЗАКАЗ", continue: "Продолжить покупки", close: "Закрыть", decrease: "Уменьшить количество", increase: "Увеличить количество", remove: "Удалить товар" },
@@ -81,7 +83,7 @@ export function CartDrawer({ locale }: { locale: Locale }) {
 
   return <div className="drawer-layer" onClick={close}>
     <aside className="cart-drawer" role="dialog" aria-modal="true" aria-label={copy.cart} onClick={(event) => event.stopPropagation()}>
-      <div className="drawer-head">{step === "checkout" && status !== "success" ? <button className="drawer-back" onClick={() => setStep("cart")} aria-label={copy.back}><ArrowLeft /></button> : <div className="drawer-kicker">{copy.kicker}</div>}<div className="drawer-title"><small>{step === "cart" ? formatItems(itemCount) : copy.review}</small><h2>{step === "cart" ? copy.cart : copy.checkout}</h2></div><button className="drawer-close" onClick={close} aria-label={copy.close}><X /></button></div>
+      <div className="drawer-head">{step === "checkout" && status !== "success" ? <button className="drawer-back" onClick={() => setStep("cart")} aria-label={copy.back}><ArrowLeft /></button> : <span aria-hidden="true" />}<div className="drawer-title"><small>{step === "cart" ? formatItems(itemCount) : copy.review}</small><h2>{step === "cart" ? copy.cart : copy.checkout}</h2></div><button className="drawer-close" onClick={close} aria-label={copy.close}><X /></button></div>
       {status === "success" ? <div className="order-success"><CheckCircle2 /><p>{t.samples.success}</p><strong>{orderId}</strong><span>{t.samples.successBody}</span><button className="button primary" onClick={close}>{t.samples.continue}</button></div> : <>
         {step === "cart" && (items.length === 0 ? <div className="empty-cart"><PackageOpen /><p>{t.samples.empty}</p><button className="button outline" onClick={close}>{copy.continue}</button></div> : <>
           <div className="drawer-items">{items.map((item) => <div className="drawer-item" key={item.lineId}>

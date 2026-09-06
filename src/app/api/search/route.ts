@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   if (query.length < 2) return Response.json({ data: [] });
   const pricing = await getPartnerPricingContext();
   const data = (await getCatalogProducts(locale, { limit: 1_000, search: query, includePrices: true, priceTier: pricing.priceTier }))
-    .filter((product) => product.priceUsd !== undefined)
+    .filter((product) => product.priceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples")
     .slice(0, 6);
   // Results can include partner prices for an authenticated account, so never
   // let a shared edge/browser cache serve one customer's response to another.

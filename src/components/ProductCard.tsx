@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { DesignerPriceLink } from "@/components/DesignerPriceLink";
 import Link from "next/link";
 import { useState } from "react";
 import type { Product } from "@/data/catalog";
@@ -28,6 +29,7 @@ export function ProductCard({ product, locale }: { product: Product; locale: Loc
       ? <button type="button" className="product-stock availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}>{t.product.availabilityOnRequest}</button>
       : <Link className={`product-stock is-${product.availability}`} href={`/${locale}/product/${product.slug}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</Link>}
     {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
+    <DesignerPriceLink locale={locale} slug={product.slug} />
     <ImageZoomButton className="is-card" label={zoomLabels[locale].zoomIn} onClick={() => setZoomed(true)} />
     <ImageZoomViewer src={product.image} alt={`${product.sku} — ${product.name}`} open={zoomed} onClose={() => setZoomed(false)} labels={zoomLabels[locale]} />
   </article>;

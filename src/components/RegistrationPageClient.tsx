@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Eye, EyeOff, LoaderCircle, MailCheck, Store, UserRound } from "lucide-react";
+import { CheckCircle2, Eye, EyeOff, LoaderCircle, MailCheck } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/i18n";
 
@@ -15,11 +15,11 @@ const copy = {
   en: { eyebrow: "NORA TRIMTEX ACCOUNT", title: "Registration", choose: "Choose an account type", retail: "Retail customer", retailText: "For personal orders and a saved basket.", partner: "Partner", partnerText: "For designers, studios and wholesale orders.", first: "First name", last: "Last name", email: "Email", password: "Password — at least 10 characters", showPassword: "Show password", hidePassword: "Hide password", phone: "Phone", country: "Country", city: "City", company: "Company", submitRetail: "Create account", submitPartner: "Send application", sending: "Sending…", retailNote: "After registration we will send a six-digit confirmation code.", partnerNote: "Confirm your email first. An administrator will then review the partner application.", sent: "Enter the code from your email", sentBody: "We sent a six-digit code to", code: "Confirmation code", verify: "Confirm email", verifying: "Checking…", resend: "Send another code", resent: "A new code has been sent.", codeError: "The code is incorrect or has expired.", verified: "Email confirmed. Your account is ready.", pending: "Email confirmed. Your partner application was sent for review.", exists: "This email is already registered.", invalid: "Please check the entered details.", error: "Could not submit the form. Please try again.", signIn: "Go to sign in", back: "Home" },
 } as const;
 
-export function RegistrationPageClient({ locale, initialEmail }: { locale: Locale; initialEmail: string }) {
+export function RegistrationPageClient({ locale, initialEmail, initialType = "retail" }: { locale: Locale; initialEmail: string; initialType?: AccountType }) {
   const t = copy[locale];
-  const [type, setType] = useState<AccountType>("retail");
-  const [busy, setBusy] = useState(false);
+  const [type, setType] = useState<AccountType>(initialType);
   const [showPassword, setShowPassword] = useState(false);
+  const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [pendingEmail, setPendingEmail] = useState(initialEmail);
 
@@ -60,7 +60,7 @@ export function RegistrationPageClient({ locale, initialEmail }: { locale: Local
     } catch { setStatus("error"); } finally { setBusy(false); }
   }
 
-  if (["verified", "pending_approval"].includes(status)) return <section className="registration-card registration-success"><CheckCircle2 /><span>{t.eyebrow}</span><h1>{status === "pending_approval" ? t.pending : t.verified}</h1><Link className="button primary" href={`/${locale}`}>{t.signIn}</Link></section>;
+  if (["verified", "pending_approval"].includes(status)) return <section className="registration-card registration-success"><CheckCircle2 /><span>{t.eyebrow}</span><h1>{status === "pending_approval" ? t.pending : t.verified}</h1><Link className="button primary" href={`/${locale}/designers`}>{t.signIn}</Link></section>;
 
   if (["sent", "resent", "code_error"].includes(status)) return <section className="registration-card registration-success registration-code"><MailCheck /><span>{t.eyebrow}</span><h1>{t.sent}</h1><p>{t.sentBody} <strong>{pendingEmail}</strong></p><form className="account-form" onSubmit={verify}><label>{t.code}<input name="code" className="verification-code" inputMode="numeric" autoComplete="one-time-code" pattern="[0-9]{6}" minLength={6} maxLength={6} required autoFocus /></label>{status === "code_error" && <p className="account-message" role="alert">{t.codeError}</p>}{status === "resent" && <p className="account-note" role="status">{t.resent}</p>}<button className="button primary wide" disabled={busy}>{busy && <LoaderCircle className="spin" size={17} />}{busy ? t.verifying : t.verify}</button></form><button className="registration-resend" type="button" disabled={busy} onClick={resend}>{t.resend}</button></section>;
 
@@ -68,14 +68,13 @@ export function RegistrationPageClient({ locale, initialEmail }: { locale: Local
   return <section className="registration-card">
     <span>{t.eyebrow}</span><h1>{t.title}</h1><p className="registration-intro">{t.choose}</p>
     <div className="registration-choice" role="radiogroup" aria-label={t.choose}>
-      <button type="button" role="radio" aria-checked={type === "retail"} className={type === "retail" ? "active" : ""} onClick={() => { setType("retail"); setStatus("idle"); }}><UserRound /><strong>{t.retail}</strong><small>{t.retailText}</small></button>
-      <button type="button" role="radio" aria-checked={type === "partner"} className={type === "partner" ? "active" : ""} onClick={() => { setType("partner"); setStatus("idle"); }}><Store /><strong>{t.partner}</strong><small>{t.partnerText}</small></button>
+      <button type="button" role="radio" aria-checked={type === "retail"} className={type === "retail" ? "active" : ""} onClick={() => { setType("retail"); setStatus("idle"); }}><strong>{t.retail}</strong></button>
+      <button type="button" role="radio" aria-checked={type === "partner"} className={type === "partner" ? "active" : ""} onClick={() => { setType("partner"); setStatus("idle"); }}><strong>{t.partner}</strong></button>
     </div>
     <form className="account-form registration-form" onSubmit={submit}>
       <div className="account-grid"><label>{t.first}<input name="firstName" required autoComplete="given-name" /></label><label>{t.last}<input name="lastName" required autoComplete="family-name" /></label></div>
       <label>{t.email}<input name="email" type="email" required autoComplete="email" defaultValue={initialEmail} /></label>
-      <label>{t.password}<span className="password-input"><input name="password" type={showPassword ? "text" : "password"} minLength={10} required autoComplete="new-password" /><button type="button" aria-label={showPassword ? t.hidePassword : t.showPassword} aria-pressed={showPassword} title={showPassword ? t.hidePassword : t.showPassword} onClick={() => setShowPassword((value) => !value)}>{showPassword ? <EyeOff /> : <Eye />}</button></span></label>
-      <div className="account-grid"><label>{t.phone}<input name="phone" autoComplete="tel" /></label><label>{t.country}<input name="country" autoComplete="country-name" /></label><label>{t.city}<input name="city" autoComplete="address-level2" /></label>{type === "partner" && <label>{t.company}<input name="company" required autoComplete="organization" /></label>}</div>
+      <label>{t.password}<span className="password-input"><input name="password" type={showPassword ? "text" : "password"} minLength={10} required autoComplete="new-password" /><button type="button" aria-label={showPassword ? t.hidePassword : t.showPassword} aria-pressed={showPassword} onClick={() => setShowPassword(value => !value)}>{showPassword ? <EyeOff /> : <Eye />}</button></span></label>
       <p className="account-note">{type === "partner" ? t.partnerNote : t.retailNote}</p>
       {errorText && <p className="account-message" role="alert">{errorText}</p>}
       <button className="button primary wide" disabled={busy}>{busy && <LoaderCircle className="spin" size={17} />}{busy ? t.sending : type === "retail" ? t.submitRetail : t.submitPartner}</button>

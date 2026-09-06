@@ -120,37 +120,50 @@ export function getFallbackSpecifications(categoryId: CategoryId, locale: Locale
   return { dimensions: specification.dimensions[locale], composition: specification.composition[locale] };
 }
 
+const allSeedProducts = [...(seed as SeedProduct[]), ...(sampleSeed as SeedProduct[])];
+
+function toProduct(product: SeedProduct, locale: Locale): Product {
+  const imported = (specificationSeed as SpecificationSeed)[product.id];
+  const fallback = getFallbackSpecifications(product.categoryId, locale);
+  return {
+    id: product.id,
+    sku: product.sku,
+    slug: product.slug,
+    categoryId: product.categoryId,
+    name: product.names[locale],
+    names: product.names,
+    image: assetUrl(product.primaryImageKey, 6),
+    variants: (product.variants?.length ? product.variants : [{ id: `${product.id}-default`, imageKey: product.primaryImageKey }]).map((variant) => ({
+      id: variant.id,
+      image: assetUrl(variant.imageKey, 7),
+    })),
+    priceUsd: product.priceUsd,
+    retailPriceUsd: product.retailPriceUsd,
+    partnerPriceUsd: product.partnerPriceUsd,
+    variantCount: product.variantCount,
+    isNew: product.isNew,
+    availability: "on_request",
+    dimensions: imported?.dimensions?.[locale] || product.dimensions?.[locale] || fallback.dimensions,
+    composition: imported?.composition?.[locale] || product.composition?.[locale] || fallback.composition,
+    dimensionImage: !dimensionPhotoOnlyIds.has(product.id) && (dimensionSeed as Record<string, string>)[product.id]
+      ? assetUrl((dimensionSeed as Record<string, string>)[product.id], 3)
+      : undefined,
+    technicalImages: ((technicalImageSeed as Record<string, Array<{ kind: "dimensions" | "sewing"; image: string }>>)[product.id] || [])
+      .map((item) => ({ ...item, image: assetUrl(item.image, 1) })),
+  };
+}
+
 export function getSeedProducts(locale: Locale): Product[] {
-  return ([...(seed as SeedProduct[]), ...(sampleSeed as SeedProduct[])]).map((product) => {
-    const imported = (specificationSeed as SpecificationSeed)[product.id];
-    const fallback = getFallbackSpecifications(product.categoryId, locale);
-    return {
-      id: product.id,
-      sku: product.sku,
-      slug: product.slug,
-      categoryId: product.categoryId,
-      name: product.names[locale],
-      names: product.names,
-      image: assetUrl(product.primaryImageKey, 6),
-      variants: (product.variants?.length ? product.variants : [{ id: `${product.id}-default`, imageKey: product.primaryImageKey }]).map((variant) => ({
-        id: variant.id,
-        image: assetUrl(variant.imageKey, 7),
-      })),
-      priceUsd: product.priceUsd,
-      retailPriceUsd: product.retailPriceUsd,
-      partnerPriceUsd: product.partnerPriceUsd,
-      variantCount: product.variantCount,
-      isNew: product.isNew,
-      availability: "on_request",
-      dimensions: imported?.dimensions?.[locale] || product.dimensions?.[locale] || fallback.dimensions,
-      composition: imported?.composition?.[locale] || product.composition?.[locale] || fallback.composition,
-      dimensionImage: !dimensionPhotoOnlyIds.has(product.id) && (dimensionSeed as Record<string, string>)[product.id]
-        ? assetUrl((dimensionSeed as Record<string, string>)[product.id], 3)
-        : undefined,
-      technicalImages: ((technicalImageSeed as Record<string, Array<{ kind: "dimensions" | "sewing"; image: string }>>)[product.id] || [])
-        .map((item) => ({ ...item, image: assetUrl(item.image, 1) })),
-    };
-  });
+  return allSeedProducts.map((product) => toProduct(product, locale));
+}
+
+export function getSeedProductBySlug(locale: Locale, slug: string): Product | undefined {
+  const product = allSeedProducts.find((item) => item.slug === slug);
+  return product ? toProduct(product, locale) : undefined;
+}
+
+export function getSeedProductsByCategory(locale: Locale, categoryId: CategoryId): Product[] {
+  return allSeedProducts.filter((product) => product.categoryId === categoryId).map((product) => toProduct(product, locale));
 }
 
 export function getProductSummaries(locale: Locale): Product[] {

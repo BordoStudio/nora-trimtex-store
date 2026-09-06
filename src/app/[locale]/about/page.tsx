@@ -8,39 +8,39 @@ import { languageAlternates, siteUrl } from "@/lib/site";
 
 const content = {
   en: {
-    eyebrow: "NORA TRIMTEX · CURTAIN TRIMMINGS",
-    title: "Beautiful curtains begin with the right detail.",
-    intro: "We curate tassels, wall hooks, rosettes, fringes, piping, braids and cords for private interiors and professional curtain projects.",
-    storyTitle: "A collection designed for easy selection",
-    story: "Nora TrimTex shows not only the product, but the part it can play in an interior. The catalogue is organised by trimming type, article and colour, helping designers, decorators and curtain studios find the right solution quickly.",
-    pillars: [["Design", "We select trimmings that complement the fabric, curtain silhouette and character of the room."], ["Choice", "Articles and colourways are shown clearly, at useful scale and without unnecessary repetition."], ["Service", "We confirm dimensions, composition, availability, samples, lead times and delivery before the order."]],
+    eyebrow: "ABOUT NORA",
+    title: "Decor that completes the look of your curtains.",
+    intro: "We offer premium tassels, fringes, braids, rosettes and hooks. Nora TrimTex brings colour, texture and form together to complete your curtains.",
+    storyTitle: "Fabric and decor in harmony",
+    story: "Soft fringe defines an edge, braid introduces rhythm and tassels gather folds into a graceful silhouette. From quiet cream shades to rich, saturated tones, find a combination that complements your interior.",
+    pillars: [["Tassels and fringes", "Expressive silhouettes, flowing threads and rich textures for classic and contemporary curtains."], ["Braids and cords", "Finish an edge, introduce a contrast or create a subtle tonal pairing with your fabric."], ["Rosettes and hooks", "Finishing accents that bring balance to the composition and frame your drapery."]],
     catalogue: "Explore the catalogue", account: "Create an account",
   },
   de: {
-    eyebrow: "NORA TRIMTEX · VORHANGZUBEHÖR",
-    title: "Schöne Vorhänge beginnen mit dem richtigen Detail.",
-    intro: "Wir kuratieren Quasten, Wandhaken, Rosetten, Fransen, Paspeln, Borten und Kordeln für private Interieurs und professionelle Vorhangprojekte.",
-    storyTitle: "Eine Kollektion, in der Auswahl leichtfällt",
-    story: "Nora TrimTex zeigt nicht nur das einzelne Produkt, sondern seine Wirkung im Interieur. Der Katalog ist nach Zubehörart, Artikel und Farbe geordnet, damit Designer, Dekorateure und Gardinenstudios schnell die passende Lösung finden.",
-    pillars: [["Design", "Wir wählen Zubehör, das Stoff, Vorhangform und Charakter des Raumes unterstreicht."], ["Auswahl", "Artikel und Farbvarianten werden klar, groß und ohne unnötige Wiederholungen gezeigt."], ["Service", "Maße, Material, Verfügbarkeit, Muster, Lieferzeit und Versand bestätigen wir vor der Bestellung."]],
+    eyebrow: "ÜBER NORA",
+    title: "Dekor, der Ihre Vorhänge vollendet.",
+    intro: "Wir bieten Quasten, Fransen, Borten, Rosetten und Haken der Premiumklasse. Nora TrimTex verbindet Farbe, Struktur und Form zu einem stimmigen Gesamtbild für Ihre Vorhänge.",
+    storyTitle: "Stoff und Dekor im Einklang",
+    story: "Weiche Fransen betonen die Stoffkante, Borten setzen Akzente und Quasten fassen Falten zu einer eleganten Silhouette. Von sanften Cremetönen bis zu satten Farben — finden Sie die Kombination, die zu Ihrem Interieur passt.",
+    pillars: [["Quasten und Fransen", "Ausdrucksvolle Formen, fließende Fäden und schöne Texturen für klassische und moderne Vorhänge."], ["Borten und Kordeln", "Für einen eleganten Kantenabschluss, einen bewussten Kontrast oder eine feine Ton-in-Ton-Kombination."], ["Rosetten und Haken", "Abschließende Akzente, die der Komposition Halt geben und Ihre Drapierung einrahmen."]],
     catalogue: "Katalog entdecken", account: "Konto erstellen",
   },
   uk: {
-    eyebrow: "NORA TRIMTEX · ФУРНІТУРА ДЛЯ ШТОР",
-    title: "Красиві штори починаються з правильної деталі.",
-    intro: "Ми добираємо китиці, настінні гачки, розетки, бахрому, канти, тасьму й шнури для приватних інтер’єрів і професійних проєктів.",
-    storyTitle: "Колекція, у якій легко обирати",
-    story: "Nora TrimTex допомагає побачити не лише окремий виріб, а його роль в інтер’єрі. Каталог упорядкований за типом фурнітури, артикулом і кольором, щоб дизайнери, декоратори та салони штор швидше знаходили потрібне рішення.",
-    pillars: [["Дизайн", "Добираємо фурнітуру, що підкреслює тканину, форму штор і характер простору."], ["Вибір", "Показуємо артикули й кольорові варіанти крупно, зрозуміло та без повторів."], ["Сервіс", "Уточнюємо розміри, склад, наявність, зразки, терміни й умови постачання до замовлення."]],
+    eyebrow: "ПРО БРЕНД",
+    title: "Декор, що довершує образ ваших штор.",
+    intro: "Ми пропонуємо китиці, бахрому, тасьму, розетки та гачки преміумкласу. Nora TrimTex — декор для штор, у якому колір, фактура й форма створюють цілісний образ.",
+    storyTitle: "Гармонія тканини й декору",
+    story: "М’яка бахрома підкреслює край тканини, тасьма задає ритм, а китиці красиво збирають складки. Від спокійних молочних відтінків до глибоких насичених тонів — оберіть поєднання, що підтримає характер вашого інтер’єру.",
+    pillars: [["Китиці та бахрома", "Виразні силуети, м’який рух ниток і красиві поєднання фактур для класичних та сучасних штор."], ["Тасьма та шнури", "Для оформлення краю, контрастного акценту чи тонкого поєднання з основною тканиною."], ["Розетки та гачки", "Завершальні акценти, які підтримують композицію та красиво обрамлюють драпірування."]],
     catalogue: "Переглянути каталог", account: "Створити акаунт",
   },
   ru: {
-    eyebrow: "NORA TRIMTEX · ФУРНИТУРА ДЛЯ ШТОР",
-    title: "Красивые шторы начинаются с правильной детали.",
-    intro: "Мы собираем выразительные кисти, настенные крючки, розетки, бахрому, бордюры, тесьмы и шнуры для частных интерьеров и профессиональных проектов.",
-    storyTitle: "Коллекция, в которой легко выбирать",
-    story: "Nora TrimTex помогает увидеть не просто отдельное изделие, а его роль в интерьере. Каталог организован по типу фурнитуры, артикулу и цвету, чтобы дизайнеры, декораторы и салоны штор быстрее находили подходящее решение.",
-    pillars: [["Дизайн", "Подбираем фурнитуру, которая подчёркивает ткань, форму штор и характер пространства."], ["Выбор", "Показываем артикулы и цветовые варианты крупно, понятно и без повторов."], ["Сервис", "Уточняем размеры, состав, наличие, образцы, сроки и условия поставки перед заказом."]],
+    eyebrow: "О БРЕНДЕ",
+    title: "Декор, который завершает образ ваших штор.",
+    intro: "Мы предлагаем кисти, бахрому, тесьмы, розетки и крючки премиум-класса. Nora TrimTex — декор для штор, в котором цвет, фактура и форма создают цельный образ.",
+    storyTitle: "Гармония ткани и декора",
+    story: "Мягкая бахрома подчёркивает край ткани, тесьма задаёт ритм, а кисти красиво собирают складки. От спокойных молочных оттенков до глубоких насыщенных тонов — подберите сочетание, которое поддержит характер вашего интерьера.",
+    pillars: [["Кисти и бахрома", "Выразительные силуэты, мягкое движение нитей и красивые сочетания фактур для классических и современных штор."], ["Тесьмы и шнуры", "Для оформления края, контрастного акцента или тонкого сочетания в тон основной ткани."], ["Розетки и крючки", "Завершающие акценты, которые поддерживают композицию и красиво обрамляют драпировку."]],
     catalogue: "Смотреть каталог", account: "Создать аккаунт",
   },
 } as const;
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const copy = content[locale];
   const path = "/about";
   return {
-    title: copy.eyebrow.split(" · ")[1],
+    title: copy.eyebrow,
     description: copy.intro,
     alternates: { canonical: `${siteUrl}/${locale}${path}`, languages: languageAlternates(path) },
     openGraph: { url: `${siteUrl}/${locale}${path}`, title: copy.title, description: copy.intro },
@@ -65,11 +65,10 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return <article className="about-page">
     <header className="about-hero">
       <div><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.title}</h1><p>{copy.intro}</p></div>
-      <div className="about-hero-image"><Image src="/brand/hero.jpg" alt="Nora TrimTex curtain trimmings" fill priority sizes="(max-width: 760px) 100vw, 46vw" /></div>
+      <div className="about-hero-image"><Image src="/brand/hero-collage-beige-v2.png" alt="Nora TrimTex curtain trimmings" fill priority sizes="(max-width: 760px) 100vw, 46vw" /></div>
     </header>
-    <section className="about-story"><div><p className="eyebrow">01 · NORA</p><h2>{copy.storyTitle}</h2></div><p>{copy.story}</p></section>
+    <section className="about-story"><div><p className="eyebrow">NORA TRIMTEX</p><h2>{copy.storyTitle}</h2></div><p>{copy.story}</p></section>
     <section className="about-pillars">{copy.pillars.map(([title, body], index) => <div key={title}><span>0{index + 1}</span><h2>{title}</h2><p>{body}</p></div>)}</section>
-    <section className="about-statements"><div><strong>968</strong><span>ARTICLES</span></div><div><strong>4</strong><span>LANGUAGES</span></div><div><strong>B2B</strong><span>PROJECT SERVICE</span></div></section>
     <section className="about-actions"><Link className="button primary" href={`/${locale}/catalog`}>{copy.catalogue}<ArrowRight /></Link><Link className="button outline" href={`/${locale}/account/register`}>{copy.account}</Link></section>
   </article>;
 }

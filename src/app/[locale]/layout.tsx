@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/Header";
 import { CartDrawer } from "@/components/CartDrawer";
 import { ContactChat } from "@/components/ContactChat";
-import { getDictionary, isLocale } from "@/lib/i18n";
+import { isLocale } from "@/lib/i18n";
 import { languageAlternates, siteUrl } from "@/lib/site";
 import { getPartnerPricingContext } from "@/lib/partner-pricing";
-import { BrandLogo } from "@/components/BrandLogo";
+import { DocumentLanguage } from "@/components/DocumentLanguage";
+import { StoreFooter } from "@/components/StoreFooter";
 
 // Render localized storefront pages on request. This avoids the Next.js 16
 // parallel prerender workStore bug while preserving fully indexable SSR HTML.
@@ -42,18 +42,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
-  const t = getDictionary(locale);
   const pricing = await getPartnerPricingContext();
-  const footerLinks = {
-    en: { about: "About", catalog: "Catalogue", privacy: "Privacy" },
-    de: { about: "Über uns", catalog: "Katalog", privacy: "Datenschutz" },
-    uk: { about: "Про бренд", catalog: "Каталог", privacy: "Конфіденційність" },
-    ru: { about: "О бренде", catalog: "Каталог", privacy: "Конфиденциальность" },
-  }[locale];
   return <>
-    <script
-      dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(locale)}` }}
-    />
-    <Providers priceTier={pricing.priceTier}><Header locale={locale} /><main>{children}</main><footer className="site-footer"><div className="brand footer-brand"><BrandLogo footer /></div><p>{t.footer.note}</p><nav className="footer-nav"><Link href={`/${locale}/about`}>{footerLinks.about}</Link><Link href={`/${locale}/catalog`}>{footerLinks.catalog}</Link><Link href={`/${locale}/privacy`}>{footerLinks.privacy}</Link></nav><span>{t.footer.legal}</span></footer><CartDrawer locale={locale} /><ContactChat locale={locale} /></Providers>
+    <link rel="preload" href="/fonts/libre-bodoni-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+    <DocumentLanguage locale={locale} />
+    <Providers priceTier={pricing.priceTier}><a className="skip-link" href="#main-content">{{ru:"К содержимому",uk:"До вмісту",en:"Skip to content",de:"Zum Inhalt"}[locale]}</a><Header locale={locale} /><main id="main-content" tabIndex={-1}>{children}</main><StoreFooter locale={locale} /><CartDrawer locale={locale} /><ContactChat locale={locale} /></Providers>
   </>;
 }

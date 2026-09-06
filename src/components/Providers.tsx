@@ -14,6 +14,7 @@ export function Providers({ children, priceTier }: { children: React.ReactNode; 
   const pathname = usePathname();
   useEffect(() => {
     const guestId = getGuestId();
+    if (!guestId) return;
     const page = `${location.pathname}${location.search}`;
     void fetch("/api/guest/session", {
       method: "POST",
@@ -44,17 +45,18 @@ export function Providers({ children, priceTier }: { children: React.ReactNode; 
       if (Array.isArray(remote) && remote.length > 0 && !hydrated) store.dispatch(hydrateCart(remote));
     }).catch(() => undefined);
     let syncTimer: number | undefined;
-    return store.subscribe(() => {
+    const unsubscribe = store.subscribe(() => {
       const safeItems = store.getState().cart.items.map((item) => {
         if (priceTier === "retail") return item;
         const safeItem = { ...item, tradePriceHidden: true };
         delete safeItem.priceUsd;
         return safeItem;
       });
-      window.localStorage.setItem(cartKey, JSON.stringify(safeItems));
+      try { window.localStorage.setItem(cartKey, JSON.stringify(safeItems)); } catch { /* Browsing and the cart remain available when storage is blocked. */ }
       window.clearTimeout(syncTimer);
-      syncTimer = window.setTimeout(() => { void fetch("/api/account/cart", { method: "PUT", headers: guestHeaders(), body: JSON.stringify({ items: safeItems, locale: location.pathname.split("/")[1] || "en" }) }); }, 500);
+      syncTimer = window.setTimeout(() => { void fetch("/api/account/cart", { method: "PUT", headers: guestHeaders(), body: JSON.stringify({ items: safeItems, locale: location.pathname.split("/")[1] || "en" }) }).catch(() => undefined); }, 500);
     });
+    return () => { unsubscribe(); window.clearTimeout(syncTimer); };
   }, [priceTier, store]);
   return <Provider store={store}>{children}</Provider>;
 }

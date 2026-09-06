@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Box, Check, Layers3, Plus, Ruler, Scissors, ShieldCheck, ShoppingBag } from "lucide-react";
+import { DesignerPriceLink } from "@/components/DesignerPriceLink";
+import { Box, Check, Layers3, Plus, Ruler, Scissors, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import type { Product } from "@/data/catalog";
 import { formatColourways, getDictionary, type Locale } from "@/lib/i18n";
-import { addSample, setCartOpen } from "@/store/cartSlice";
+import { addSample } from "@/store/cartSlice";
 import { flyToCart } from "@/lib/flyToCart";
 import { notifyCartAddition } from "@/lib/cart-notifications";
 import { ImageZoomMark, ImageZoomViewer, zoomLabels } from "@/components/ImageZoomViewer";
@@ -37,7 +38,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
   const variants = product.variants.length ? product.variants : [{ id: `${product.id}-default`, image: product.image }];
   const initialIndex = Math.max(0, variants.findIndex((variant) => variant.id === initialVariantId));
   const [selectedId, setSelectedId] = useState(variants[initialIndex].id);
-  const [activeImage, setActiveImage] = useState(initialIndex);
+  const [activeImage, setActiveImage] = useState(Math.max(0, variants.filter((variant, index, all) => all.findIndex((item) => item.image === variant.image) === index).findIndex((variant) => variant.image === variants[initialIndex].image)));
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [added, setAdded] = useState(false);
   const selectedIndex = Math.max(0, variants.findIndex((variant) => variant.id === selectedId));
@@ -61,6 +62,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
 
   const chooseVariant = (id: string) => {
     setSelectedId(id);
+    setAdded(false);
     const variant = variants.find((item) => item.id === id);
     const imageIndex = colourGallery.findIndex((item) => item.image === variant?.image);
     if (imageIndex >= 0) setActiveImage(imageIndex);
@@ -102,7 +104,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
           <ImageZoomMark label={l.enlarge} />
         </button>
         {colourGallery.length > 1 && <div className="gallery-thumbs" aria-label={l.choose}>
-          {colourGallery.map((item, index) => <button key={item.id} className={index === activeImage ? "active" : ""} onClick={() => { setActiveImage(index); chooseVariant(item.id); }} aria-label={`${l.colour} ${index + 1}`} title={`${l.colour} ${index + 1}`}>
+          {colourGallery.map((item, index) => <button key={item.id} aria-pressed={index === activeImage} className={index === activeImage ? "active" : ""} onClick={() => { setActiveImage(index); chooseVariant(item.id); }} aria-label={`${l.colour} ${index + 1}`} title={`${l.colour} ${index + 1}`}>
             <Image src={item.image} alt="" fill sizes="90px" />
           </button>)}
         </div>}
@@ -111,12 +113,12 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
         <p className="eyebrow">{categoryName}</p>
         <h1>{product.sku}</h1>
         {!product.tradePriceHidden && <p className="product-detail-price">{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</p>}
+        <DesignerPriceLink locale={locale} slug={product.slug} />
         {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong> {t.product.availabilityOnRequest}</button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</p>}
         <div className="product-facts"><span><Layers3 />{formatColourways(locale, variants.length)}</span><span><ShieldCheck />{copy.quality}</span><span><Box />{copy.samples}</span></div>
         <p className="product-description">{copy.description}</p>
         <div className="product-actions">
-          <button className="button primary" onClick={add}>{added ? <Check /> : <Plus />}{added ? t.product.added : t.product.add}</button>
-          <button className="button outline" onClick={() => dispatch(setCartOpen(true))}><ShoppingBag />{t.nav.samples}</button>
+          <button className="button primary" onClick={add} aria-live="polite">{added ? <Check /> : <Plus />}{added ? t.product.added : t.product.add}</button>
         </div>
         <dl className="product-specifications"><div><dt>{copy.dimensions}</dt><dd>{product.dimensions}</dd></div><div><dt>{copy.composition}</dt><dd>{product.composition}</dd></div><div><dt>{copy.collection}</dt><dd>{categoryName}</dd></div><div><dt>{copy.delivery}</dt><dd>{copy.deliveryValue}</dd></div></dl>
       </div>

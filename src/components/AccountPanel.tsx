@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, type FormEvent } from "react";
 import { CheckCircle2, Eye, EyeOff, LoaderCircle, LogOut, X } from "lucide-react";
+import { designerCopy } from "@/lib/designer-copy";
 import type { Locale } from "@/lib/i18n";
 
 type User = { email: string; role: "retail" | "partner" | "admin"; firstName: string; lastName: string };
@@ -15,7 +16,7 @@ const copy = {
   en: { title: "Sign in", email: "Email", password: "Password", showPassword: "Show password", hidePassword: "Hide password", submit: "Sign in", register: "Register", noAccount: "No account yet?", notFound: "No account was found for this email.", registerEmail: "Register with this email", pending: "The account is not active yet or is awaiting confirmation.", invalid: "Incorrect email or password.", error: "Could not sign in. Please try again.", logout: "Sign out", close: "Close" },
 } as const;
 
-export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () => void }) {
+export function AccountPanel({ locale, onClose, designer = false, returnTo }: { locale: Locale; onClose?: () => void; designer?: boolean; returnTo?: string }) {
   const t = copy[locale];
   const [user, setUser] = useState<User | null>(null);
   const [busy, setBusy] = useState(false);
@@ -25,7 +26,10 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
 
   useEffect(() => { void fetch("/api/account/me").then(async (response) => { if (response.ok) setUser((await response.json()).data.user); }).catch(() => undefined); }, []);
 
-  const registerHref = `/${locale}/account/register${email ? `?email=${encodeURIComponent(email)}` : ""}`;
+  const registerParams = new URLSearchParams();
+  if (email) registerParams.set("email", email);
+  if (designer) registerParams.set("type", "partner");
+  const registerHref = `/${locale}/account/register?${registerParams}`;
   const issueText = issue === "not_found" ? t.notFound : issue === "pending" ? t.pending : issue === "invalid" ? t.invalid : issue === "error" ? t.error : "";
 
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -40,7 +44,7 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
         setIssue(payload?.error === "account_not_found" ? "not_found" : payload?.error === "account_not_active" ? "pending" : payload?.error === "invalid_credentials" ? "invalid" : "error");
         return;
       }
-      window.location.reload();
+      if (returnTo) window.location.assign(returnTo); else window.location.reload();
     } catch {
       setIssue("error");
     } finally {
@@ -48,8 +52,8 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
     }
   }
 
-  return <section className="account-panel account-auth" role="dialog" aria-modal="true" aria-label={t.title} onClick={(event) => event.stopPropagation()}>
-    <button type="button" className="account-close" onClick={onClose} aria-label={t.close}><X /></button>
+  return <section className={`account-panel account-auth${designer ? " designer-auth" : ""}`} role={designer ? undefined : "dialog"} aria-modal={designer ? undefined : true} aria-label={t.title} onClick={(event) => event.stopPropagation()}>
+    {!designer && <button type="button" className="account-close" onClick={onClose} aria-label={t.close}><X /></button>}
     <span>NORA TRIMTEX ACCOUNT</span><h2>{t.title}</h2>
     {user ? <div className="account-profile"><CheckCircle2 /><strong>{user.firstName} {user.lastName}</strong><p>{user.email}</p><small>{user.role}</small><button className="button outline" onClick={async () => { await fetch("/api/account/logout", { method: "POST" }); window.location.reload(); }}><LogOut size={16} />{t.logout}</button></div> : <>
       <form className="account-form" onSubmit={submit}>
@@ -58,7 +62,7 @@ export function AccountPanel({ locale, onClose }: { locale: Locale; onClose: () 
         {issueText && <div className={`account-message${issue === "not_found" ? " is-not-found" : ""}`} role="alert"><p>{issueText}</p>{issue === "not_found" && <Link className="button primary wide" href={registerHref} onClick={onClose}>{t.registerEmail}</Link>}</div>}
         <button className="button primary wide" disabled={busy}>{busy && <LoaderCircle className="spin" size={17} />}{t.submit}</button>
       </form>
-      <div className="account-register-link"><span>{t.noAccount}</span><Link className="button outline wide" href={registerHref} onClick={onClose}>{t.register}</Link></div>
+      <div className="account-register-link"><span>{t.noAccount}</span><Link className="button outline wide" href={registerHref} onClick={onClose}>{designer ? designerCopy[locale].register : t.register}</Link></div>
     </>}
   </section>;
 }

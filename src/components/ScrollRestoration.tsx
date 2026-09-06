@@ -7,20 +7,21 @@ const storageKey = () => `nora-scroll:${location.pathname}${location.search}`;
 export function ScrollRestoration() {
   useEffect(() => {
     if (!("scrollRestoration" in history)) return;
-    history.scrollRestoration = "manual";
+    try { history.scrollRestoration = "manual"; } catch { return; }
     let frame = 0;
     let restoring = false;
 
     const save = () => {
       if (restoring) return;
-      sessionStorage.setItem(storageKey(), String(Math.max(0, Math.round(window.scrollY))));
+      try { sessionStorage.setItem(storageKey(), String(Math.max(0, Math.round(window.scrollY)))); } catch { /* Embedded browsers can disable storage. */ }
     };
     const onScroll = () => {
       if (frame) return;
       frame = requestAnimationFrame(() => { frame = 0; save(); });
     };
     const restore = () => {
-      const value = Number(sessionStorage.getItem(storageKey()));
+      let value = 0;
+      try { value = Number(sessionStorage.getItem(storageKey())); } catch { return; }
       if (!Number.isFinite(value) || value <= 0) return;
       restoring = true;
       const html = document.documentElement;
