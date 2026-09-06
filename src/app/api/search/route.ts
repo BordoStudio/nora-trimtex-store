@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const requestedLimit = Number(url.searchParams.get("limit") || 6);
   const limit = Number.isFinite(requestedLimit) ? Math.min(36, Math.max(1, Math.round(requestedLimit))) : 6;
   const pricing = await getPartnerPricingContext();
-  const data = (await getCatalogProducts(locale, { limit: 1_000, search: query, includePrices: true, priceTier: pricing.priceTier }))
+  const data = (await getCatalogProducts(locale, { limit: 1_000, search: query, visibleOnly: true, includePrices: true, priceTier: pricing.priceTier }))
     .filter((product) => product.priceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples")
     .slice(0, limit);
   // Results can include partner prices for an authenticated account, so never

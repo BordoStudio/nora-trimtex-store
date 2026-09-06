@@ -1,4 +1,4 @@
-import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, getSeedProductsBySearch, type CategoryId, type Product } from "@/data/catalog";
+import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, getSeedProductsBySearch, getSeedShopProducts, type CategoryId, type Product } from "@/data/catalog";
 import type { Locale } from "@/lib/i18n";
 import { cache } from "react";
 
@@ -34,7 +34,7 @@ function resolvePricingSource(apiProduct: Product, localProduct?: Product): Prod
 
 export async function getCatalogProducts(
   locale: Locale,
-  options: { limit?: number; featured?: boolean; search?: string; category?: CategoryId; includePrices?: boolean; priceTier?: PriceTier } = {},
+  options: { limit?: number; featured?: boolean; search?: string; category?: CategoryId; visibleOnly?: boolean; includePrices?: boolean; priceTier?: PriceTier } = {},
 ): Promise<Product[]> {
   const priceTier = options.priceTier || "retail";
   const applyAccountPrice = (product: Product): Product => {
@@ -48,12 +48,14 @@ export async function getCatalogProducts(
       tradePriceHidden: false,
     };
   };
+  const visibleProduct = (product: Product) => product.priceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples";
+  const localSource = (query?: string) => query
+    ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
+    : options.category ? getSeedProductsByCategory(locale, options.category) : options.visibleOnly ? getSeedShopProducts(locale) : getSeedProducts(locale);
   if (!apiUrl) {
     const query = options.search?.trim().toLowerCase();
-    const products = query
-      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
-      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
-    return products.slice(0, options.limit).map(applyAccountPrice);
+    const products = localSource(query).map(applyAccountPrice);
+    return (options.visibleOnly ? products.filter(visibleProduct) : products).slice(0, options.limit);
   }
 
   const params = new URLSearchParams({ locale, limit: String(options.limit || 100) });
@@ -68,7 +70,9 @@ export async function getCatalogProducts(
       next: { revalidate: 300 },
     });
     if (!response.ok) throw new Error(`Catalog API responded with ${response.status}`);
-    const localProductsById = new Map(getSeedProducts(locale).flatMap((product) => [[product.id, product], [product.slug, product]]));
+    const query = options.search?.trim().toLowerCase();
+    const localSeedProducts = localSource(query);
+    const localProductsById = new Map(localSeedProducts.flatMap((product) => [[product.id, product], [product.slug, product]]));
     const apiProducts = ((await response.json()) as CatalogResponse).data.map((product) => {
       const normalizedProduct = { ...product, dimensionImage: undefined, technicalImages: undefined, variants: product.variants || [] };
       const localProduct = localProductsById.get(product.id) || localProductsById.get(product.slug);
@@ -87,23 +91,17 @@ export async function getCatalogProducts(
     // being completed, without replacing or duplicating API products. The
     // local import also preserves the exact product sequence from the
     // original catalogue; database update timestamps must not reshuffle it.
-    const query = options.search?.trim().toLowerCase();
-    const localProducts = (query
-      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
-      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale))
-      .map(applyAccountPrice);
+    const localProducts = localSeedProducts.map(applyAccountPrice);
     const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
     const apiIds = new Set(apiProducts.map((product) => product.id));
-    return [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
+    const mergedProducts = [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
       .sort((left, right) => (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER))
-      .slice(0, options.limit || 100);
+    return (options.visibleOnly ? mergedProducts.filter(visibleProduct) : mergedProducts).slice(0, options.limit || 100);
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();
-    const products = query
-      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
-      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
-    return products.slice(0, options.limit).map(applyAccountPrice);
+    const products = localSource(query).map(applyAccountPrice);
+    return (options.visibleOnly ? products.filter(visibleProduct) : products).slice(0, options.limit);
   }
 }
 

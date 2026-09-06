@@ -13,7 +13,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) notFound();
   const t = getDictionary(locale);
   const pricing = await getPartnerPricingContext();
-  const products = (await getCatalogProducts(locale, { limit: 1_000, includePrices: true, priceTier: pricing.priceTier }))
+  const products = (await getCatalogProducts(locale, { limit: 8, visibleOnly: true, includePrices: true, priceTier: pricing.priceTier }))
     .filter((product) => product.priceUsd !== undefined)
     .slice(0, 8);
   const faq = {

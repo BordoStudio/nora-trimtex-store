@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { DesignerPriceLink } from "@/components/DesignerPriceLink";
 import Link from "next/link";
-import { BookOpen, Check, Layers3, Plus } from "lucide-react";
+import { BookOpen, Check, Layers3, Plus, ShoppingBag } from "lucide-react";
 import { useState, type MouseEvent } from "react";
 import { useDispatch } from "react-redux";
 import type { Product } from "@/data/catalog";
@@ -61,7 +61,7 @@ export function SampleCatalogCard({ product, locale }: { product: Product; local
       <h3><Link href={`/${locale}/product/${product.slug}`}>{product.name}</Link></h3>
       <DesignerPriceLink locale={locale} slug={product.slug} />
       <div className="sample-catalog-actions">
-        <button type="button" onClick={add}>{added ? <Check /> : <Plus />}<span>{added ? copy[locale].added : copy[locale].add}</span></button>
+        <button type="button" className={`card-add-button${added ? " is-added" : ""}`} onClick={add} aria-label={added ? copy[locale].added : copy[locale].add} aria-live="polite">{added ? <Check /> : <span className="card-add-glyph" aria-hidden="true"><ShoppingBag /><Plus /></span>}</button>
       </div>
     </div>
     <ImageZoomViewer src={product.image} alt={`${product.sku} — ${product.name}`} open={zoomed} onClose={() => setZoomed(false)} labels={zoomLabels[locale]} />

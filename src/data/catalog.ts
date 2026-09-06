@@ -166,6 +166,12 @@ export function getSeedProductsByCategory(locale: Locale, categoryId: CategoryId
   return allSeedProducts.filter((product) => product.categoryId === categoryId).map((product) => toProduct(product, locale));
 }
 
+export function getSeedShopProducts(locale: Locale): Product[] {
+  return allSeedProducts
+    .filter((product) => product.priceUsd !== undefined || product.partnerPriceUsd !== undefined || product.categoryId === "holdbacks" || product.categoryId === "samples")
+    .map((product) => toProduct(product, locale));
+}
+
 export function getSeedProductsBySearch(locale: Locale, query: string): Product[] {
   const normalized = query.trim().toLowerCase();
   return allSeedProducts
