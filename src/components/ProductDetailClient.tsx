@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { CartAddIcon } from "@/components/CartAddIcon";
 import { DesignerPriceLink } from "@/components/DesignerPriceLink";
-import { Box, Check, Layers3, Plus, Ruler, Scissors, ShieldCheck } from "lucide-react";
+import { Box, Layers3, Ruler, Scissors, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import type { Product } from "@/data/catalog";
@@ -118,7 +119,7 @@ export function ProductDetailClient({ product, locale, categoryName, copy, initi
         <div className="product-facts"><span><Layers3 />{formatColourways(locale, variants.length)}</span><span><ShieldCheck />{copy.quality}</span><span><Box />{copy.samples}</span></div>
         <p className="product-description">{copy.description}</p>
         <div className="product-actions">
-          <button className="button primary" onClick={add} aria-live="polite">{added ? <Check /> : <Plus />}{added ? t.product.added : t.product.add}</button>
+          <button className={`button primary product-add-button${added ? " is-added" : ""}`} onClick={add} aria-live="polite"><span className="product-add-icon"><CartAddIcon added={added} /></span><span>{added ? t.product.added : t.product.add}</span></button>
         </div>
         <dl className="product-specifications"><div><dt>{copy.dimensions}</dt><dd>{product.dimensions}</dd></div><div><dt>{copy.composition}</dt><dd>{product.composition}</dd></div><div><dt>{copy.collection}</dt><dd>{categoryName}</dd></div><div><dt>{copy.delivery}</dt><dd>{copy.deliveryValue}</dd></div></dl>
       </div>

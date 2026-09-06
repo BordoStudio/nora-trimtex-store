@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { CartAddIcon } from "@/components/CartAddIcon";
 import { DesignerPriceLink } from "@/components/DesignerPriceLink";
-import { BookOpen, Check, Plus } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import type { Product } from "@/data/catalog";
@@ -104,7 +105,7 @@ export function SampleCatalogDetail({ product, locale, pages }: { product: Produ
         <div className="sample-catalog-summary"><BookOpen /><span>{pages.length} {l.pages}</span></div>
         {product.availability === "on_request" ? <button type="button" className="product-availability availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}><strong>{t.product.availability}:</strong> {t.product.availabilityOnRequest}</button> : <p className={`product-availability is-${product.availability}`}><strong>{t.product.availability}:</strong> {product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}</p>}
         <div className="product-actions">
-          <button className="button primary" onClick={add}>{added ? <Check /> : <Plus />}{added ? l.added : l.add}</button>
+          <button className={`button primary product-add-button${added ? " is-added" : ""}`} onClick={add} aria-live="polite"><span className="product-add-icon"><CartAddIcon added={added} /></span><span>{added ? l.added : l.add}</span></button>
         </div>
       </div>
     </section>

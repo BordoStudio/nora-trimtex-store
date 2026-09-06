@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { CartAddIcon } from "@/components/CartAddIcon";
 import { DesignerPriceLink } from "@/components/DesignerPriceLink";
 import Link from "next/link";
-import { Check, Plus, ShoppingBag } from "lucide-react";
 import { useState, type MouseEvent } from "react";
 import { useDispatch } from "react-redux";
 import type { Product } from "@/data/catalog";
@@ -53,14 +53,16 @@ export function ProductCard({ product, locale }: { product: Product; locale: Loc
       </div>
       <span className="original-name">{product.name}</span>
     </Link>
-    {product.availability === "on_request"
-      ? <button type="button" className="product-stock availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}>{t.product.availabilityOnRequest}</button>
-      : <Link className={`product-stock is-${product.availability}`} href={`/${locale}/product/${product.slug}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</Link>}
-    {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
+    <div className="product-card-commerce">
+      {product.availability === "on_request"
+        ? <button type="button" className="product-stock availability-chat-button is-on_request" onClick={() => openContactChat(product.sku)}>{t.product.availabilityOnRequest}</button>
+        : <Link className={`product-stock is-${product.availability}`} href={`/${locale}/product/${product.slug}`}>{product.availability === "in_stock" ? t.product.inStock : product.availability === "low_stock" ? t.product.lowStock : t.product.preorder}{product.availableQuantity !== undefined ? ` · ${product.availableQuantity}` : ""}</Link>}
+      {!product.tradePriceHidden && <Link className="product-price" href={`/${locale}/product/${product.slug}`}>{product.priceUsd !== undefined ? `$${product.priceUsd.toFixed(2)} / ${["tassels-large", "tassels-small", "holdbacks", "home", "samples"].includes(product.categoryId) ? t.product.each : t.product.meter}` : t.product.priceOnRequest}</Link>}
+    </div>
     <div className="product-card-footer">
       <DesignerPriceLink locale={locale} slug={product.slug} />
       <button type="button" className={`card-add-button${added ? " is-added" : ""}`} onClick={add} aria-label={added ? t.product.added : t.product.add} aria-live="polite">
-        {added ? <Check /> : <span className="card-add-glyph" aria-hidden="true"><ShoppingBag /><Plus /></span>}
+        <CartAddIcon added={added} />
       </button>
     </div>
     <ImageZoomButton className="is-card" label={zoomLabels[locale].zoomIn} onClick={() => setZoomed(true)} />
