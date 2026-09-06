@@ -131,7 +131,6 @@ export function Header({ locale }: { locale: Locale }) {
     {accountOpen && <div className="search-layer" onClick={closePanel}><AccountPanel locale={locale} onClose={closePanel} /></div>}
 
     {mobileOpen && <nav id="mobile-navigation" className="mobile-menu" aria-label={a11y.navigation}>
-      <div className="mobile-menu-heading"><span>{t.nav.catalog}</span><button type="button" onClick={closeMobile} aria-label={a11y.close}><X size={20} /></button></div>
       <Link onClick={closeMobile} href={`/${locale}`}>{t.nav.home}<ArrowRight /></Link>
       <button type="button" className={mobileCatalogOpen ? "mobile-catalog-trigger active" : "mobile-catalog-trigger"} onClick={(event) => { event.stopPropagation(); setMobileCatalogOpen((open) => !open); }} aria-expanded={mobileCatalogOpen}>{t.nav.catalog}<ChevronDown /></button>
       {mobileCatalogOpen && <div className="mobile-category-list">
