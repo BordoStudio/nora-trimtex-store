@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { useCallback, useEffect, useState } from "react";
-import { Check, Eraser, Eye, EyeOff, LoaderCircle, MapPin, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, Trash2, UserRoundCheck, UserX } from "lucide-react";
+import { Check, CirclePlus, Eraser, Eye, EyeOff, Link2, LoaderCircle, MapPin, PackagePlus, RefreshCw, Save, Search, ShieldCheck, ShoppingBag, Trash2, Upload, UserRoundCheck, UserX } from "lucide-react";
 
 type AdminUser = {
   id: string; email: string; role: string; status: string; firstName: string; lastName: string;
@@ -39,6 +39,8 @@ export function AdminDashboard() {
   const [products, setProducts] = useState<Product[]>([]);
   const [priceDrafts, setPriceDrafts] = useState<Record<string, string>>({});
   const [savingPrices, setSavingPrices] = useState(false);
+  const [productTool, setProductTool] = useState<"manual" | "china" | null>(null);
+  const [productActionBusy, setProductActionBusy] = useState(false);
   const [activity, setActivity] = useState<Activity[]>([]);
   const [guests, setGuests] = useState<Guest[]>([]);
   const [busy, setBusy] = useState(true);
@@ -115,17 +117,49 @@ export function AdminDashboard() {
     setSavingPrices(false);
     setMessage(saved.length === changed.length ? `Сохранено цен: ${saved.length}.` : `Сохранено ${saved.length} из ${changed.length}. Проверьте отмеченные позиции.`);
   }
+  async function createProduct(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setProductActionBusy(true); setMessage("");
+    const response = await fetch("/api/admin/products", { method: "POST", body: new FormData(form) });
+    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { sku?: string } };
+    setProductActionBusy(false);
+    if (!response.ok) return setMessage(payload.error || "Не удалось добавить товар.");
+    form.reset(); setProductTool(null); setMessage(`Товар ${payload.data?.sku || ""} добавлен.`); await load();
+  }
+  async function importChinaProduct(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const values = Object.fromEntries(new FormData(form));
+    setProductActionBusy(true); setMessage("Загружаем товар и изображения…");
+    const response = await fetch("/api/admin/products/import-china", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(values) });
+    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { sku?: string } };
+    setProductActionBusy(false);
+    if (!response.ok) return setMessage(payload.error || "Не удалось импортировать товар.");
+    form.reset(); setProductTool(null); setMessage(`Товар ${payload.data?.sku || ""} импортирован.`); await load();
+  }
+  async function syncChinaProducts() {
+    setProductActionBusy(true); setMessage("Проверяем новые товары на китайском сайте…");
+    const response = await fetch("/api/admin/products/sync-china", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ status: "active" }) });
+    const payload = await response.json().catch(() => ({})) as { error?: string; data?: { scanned: number; newFound: number; imported: Array<{ sku: string }>; failed: Array<{ sku: string; error: string }>; remaining: number } };
+    setProductActionBusy(false);
+    if (!response.ok || !payload.data) return setMessage(payload.error || "Не удалось проверить каталог.");
+    const { imported, failed, remaining } = payload.data;
+    setMessage(imported.length ? `Добавлено товаров: ${imported.length}${remaining ? `. Осталось новых: ${remaining} — нажмите кнопку ещё раз.` : "."}${failed.length ? ` Ошибок: ${failed.length}.` : ""}` : failed.length ? `Новые товары найдены, но не добавлены. Ошибок: ${failed.length}.` : "Новых товаров не найдено.");
+    if (imported.length) await load();
+  }
 
   if (needsLogin) return <AdminLogin />;
   return <div className="admin-shell">
     <header><div><span>NORA TRIMTEX</span><h1>Администратор</h1></div><button className="button outline" onClick={() => void load()}><RefreshCw size={16} />Обновить</button></header>
     <nav className="admin-tabs" aria-label="Разделы админки">
       <button className={tab === "users" ? "active" : ""} onClick={() => { setTab("users"); setQuery(""); }}>Клиенты</button>
-      <button className={tab === "products" ? "active" : ""} onClick={() => { setTab("products"); setQuery(""); }}>Цены товаров</button>
+      <button className={tab === "products" ? "active" : ""} onClick={() => { setTab("products"); setQuery(""); }}>Товары и цены</button>
       <button className={tab === "guests" ? "active" : ""} onClick={() => { setTab("guests"); setQuery(""); }}>Гости</button>
       <button className={tab === "activity" ? "active" : ""} onClick={() => { setTab("activity"); setQuery(""); }}>Входы</button>
     </nav>
     {message && <p className="admin-message">{message}</p>}
+    {tab === "products" && <ProductManagement activeTool={productTool} busy={productActionBusy} onTool={setProductTool} onCreate={createProduct} onImport={importChinaProduct} onSync={syncChinaProducts} />}
     {(tab === "users" || tab === "products") && <div className="admin-filters">
       <label><Search size={16} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={tab === "products" ? "Артикул или название" : "Имя, email, компания"} /></label>
       {tab === "users" && <><select value={role} onChange={(event) => setRole(event.target.value)}><option value="">Все типы</option><option value="retail">Клиенты</option><option value="partner">Дизайнеры</option><option value="admin">Администраторы</option></select><select value={status} onChange={(event) => setStatus(event.target.value)}><option value="">Все статусы</option><option value="pending_approval">Ожидают решения</option><option value="active">Активные</option><option value="email_pending">Не подтвердили email</option><option value="rejected">Отклонённые</option><option value="disabled">Отключённые</option></select></>}
@@ -136,6 +170,52 @@ export function AdminDashboard() {
     {!busy && tab === "guests" && <><div className="admin-section-actions"><button className="button danger" onClick={() => void clearGuests()}><Eraser size={16} />Очистить список гостей</button></div><GuestList guests={guests} /></>}
     {!busy && tab === "activity" && <div className="admin-activity">{activity.map((item, index) => <article key={`${item.userId}-${item.lastSeenAt}-${index}`}><UserRoundCheck /><div><strong>{item.firstName} {item.lastName}</strong><small>{item.email}</small></div><div><span>{[item.city, item.region, item.countryCode].filter(Boolean).join(", ") || "Локация не определена"}</span><small>{deviceName(item.userAgent)}</small></div><time>{formatDate(item.lastSeenAt)}</time></article>)}</div>}
   </div>;
+}
+
+const productCategories = [
+  ["tassels-large", "Большие кисти"], ["tassels-small", "Малые кисти"], ["tassel-trim", "Бахрома с кистями"],
+  ["decorative-tapes", "Бордюры и тесьмы"], ["fringe", "Бахрома"], ["cord-fringe", "Шнуровая бахрома"],
+  ["cords", "Шнуры и канты"], ["holdbacks", "Крючки и розетки"], ["home", "Декор для дома"], ["samples", "Образцы"],
+] as const;
+
+function ProductManagement({ activeTool, busy, onTool, onCreate, onImport, onSync }: {
+  activeTool: "manual" | "china" | null;
+  busy: boolean;
+  onTool: (tool: "manual" | "china" | null) => void;
+  onCreate: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+  onImport: (event: React.FormEvent<HTMLFormElement>) => Promise<void>;
+  onSync: () => Promise<void>;
+}) {
+  return <section className="admin-product-tools">
+    <div className="admin-product-tool-actions">
+      <button className={activeTool === "manual" ? "button primary" : "button outline"} onClick={() => onTool(activeTool === "manual" ? null : "manual")}><CirclePlus size={17} />Добавить вручную</button>
+      <button className={activeTool === "china" ? "button primary" : "button outline"} onClick={() => onTool(activeTool === "china" ? null : "china")}><Link2 size={17} />Импорт по ссылке</button>
+      <button className="button outline" disabled={busy} onClick={() => void onSync()}>{busy ? <LoaderCircle className="spin" size={17} /> : <RefreshCw size={17} />}Проверить китайский сайт</button>
+    </div>
+    {activeTool === "manual" && <form className="admin-product-form" onSubmit={(event) => void onCreate(event)}>
+      <div className="admin-form-heading"><PackagePlus /><div><h2>Новый товар</h2><p>Артикул, категория и русское название обязательны. Остальные языки можно заполнить позже.</p></div></div>
+      <div className="admin-form-grid">
+        <label>Артикул<input name="sku" required maxLength={80} autoComplete="off" /></label>
+        <label>Категория<select name="categoryId" required defaultValue=""><option value="" disabled>Выберите категорию</option>{productCategories.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+        <label>Название RU<input name="nameRu" required /></label>
+        <label>Название UA<input name="nameUk" /></label>
+        <label>Название DE<input name="nameDe" /></label>
+        <label>Название EN<input name="nameEn" /></label>
+        <label>Цена для дизайнеров, USD<input name="partnerPriceUsd" type="number" min="0" max="1000000" step="0.01" /></label>
+        <label>Публикация<select name="status" defaultValue="active"><option value="active">Сразу на сайте</option><option value="draft">Черновик</option></select></label>
+        <label className="admin-form-wide">Описание<textarea name="description" rows={3} /></label>
+        <label className="admin-form-wide admin-file-field">Изображения<input name="images" type="file" accept="image/*" multiple required /><small>Первое изображение станет главным. До 24 файлов, каждый до 12 МБ.</small></label>
+        <label className="admin-checkbox"><input name="isNew" type="checkbox" defaultChecked />Показывать метку «Новинка»</label>
+      </div>
+      <button className="button primary" disabled={busy}>{busy ? <LoaderCircle className="spin" size={17} /> : <Upload size={17} />}{busy ? "Загружаем…" : "Добавить товар"}</button>
+    </form>}
+    {activeTool === "china" && <form className="admin-product-form admin-product-import-form" onSubmit={(event) => void onImport(event)}>
+      <div className="admin-form-heading"><Link2 /><div><h2>Импорт товара по ссылке</h2><p>Сайт сам войдёт в китайский каталог, скачает все варианты изображений и создаст карточку.</p></div></div>
+      <label className="admin-form-wide">Ссылка на товар<input name="url" type="url" required placeholder="http://www.chinatrimming.cn/commodities/show-20101.html" /></label>
+      <label>Публикация<select name="status" defaultValue="active"><option value="active">Сразу на сайте</option><option value="draft">Черновик</option></select></label>
+      <button className="button primary" disabled={busy}>{busy ? <LoaderCircle className="spin" size={17} /> : <Upload size={17} />}{busy ? "Импортируем…" : "Импортировать"}</button>
+    </form>}
+  </section>;
 }
 
 function UserDetailPanel({ detail, onStatus, onDelete }: { detail: UserDetail | null; onStatus: (id: string, status: string) => Promise<void>; onDelete: (id: string) => Promise<void> }) {

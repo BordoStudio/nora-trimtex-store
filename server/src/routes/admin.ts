@@ -1,4 +1,5 @@
 import type { FastifyPluginAsync } from "fastify";
+import { randomUUID } from "node:crypto";
 import type { MongoDatabase } from "../mongo.js";
 import { requireAdmin, type UserRecord } from "../auth.js";
 import { sendEmail } from "../email.js";
@@ -6,9 +7,27 @@ import { partnerDecisionEmail } from "../email-templates.js";
 import { config } from "../config.js";
 import type { OrderDocument, ProductDocument } from "../domain/types.js";
 import { publicAssetUrl } from "../storage/r2.js";
+import { categorySeed } from "../domain/categories.js";
 import type { GuestMessageRecord, GuestSessionRecord } from "./guests.js";
 
 const escapeRegex = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const categoryIds = new Set(categorySeed.map((category) => category.id));
+const slugify = (value: string) => value.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "product";
+
+type AdminProductCreateBody = {
+  id?: string;
+  sku?: string;
+  categoryId?: string;
+  status?: "draft" | "active";
+  names?: Partial<ProductDocument["names"]>;
+  descriptions?: ProductDocument["descriptions"];
+  primaryImageKey?: string;
+  media?: ProductDocument["media"];
+  variants?: ProductDocument["variants"];
+  partnerPriceUsd?: number | null;
+  isNew?: boolean;
+  attributes?: ProductDocument["attributes"];
+};
 
 type CartRecord = { userId: string; items: unknown[]; countryCode?: string; userAgent?: string; updatedAt: Date };
 type SessionRecord = { userId: string; countryCode?: string; region?: string; city?: string; userAgent?: string; referrer?: string; createdAt: Date; lastSeenAt: Date };
@@ -137,6 +156,62 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
           image: publicAssetUrl(primaryImageKey),
         };
       }), page, total } };
+    });
+
+    app.post<{ Body: AdminProductCreateBody }>("/api/v1/admin/products", async (request, reply) => {
+      await requireAdmin(db, request);
+      const body = request.body || {};
+      const sku = String(body.sku || "").trim().toUpperCase();
+      const categoryId = String(body.categoryId || "").trim();
+      const names = body.names;
+      const primaryImageKey = String(body.primaryImageKey || "").replace(/^\//, "");
+      if (!sku || sku.length > 80) return reply.code(400).send({ error: "invalid_sku" });
+      if (!categoryIds.has(categoryId)) return reply.code(400).send({ error: "invalid_category" });
+      if (!names?.ru?.trim() || !names?.en?.trim() || !names?.de?.trim() || !names?.uk?.trim()) return reply.code(400).send({ error: "missing_names" });
+      if (!/^products\/(admin|china)\//.test(primaryImageKey)) return reply.code(400).send({ error: "invalid_image_key" });
+      const partnerPriceUsd = body.partnerPriceUsd === null || body.partnerPriceUsd === undefined
+        ? undefined
+        : Number(body.partnerPriceUsd);
+      if (partnerPriceUsd !== undefined && (!Number.isFinite(partnerPriceUsd) || partnerPriceUsd < 0 || partnerPriceUsd > 1_000_000)) return reply.code(400).send({ error: "invalid_price" });
+      const duplicate = await db.collection<ProductDocument>("products").findOne({ sku: { $regex: `^${escapeRegex(sku)}$`, $options: "i" } });
+      if (duplicate) return reply.code(409).send({ error: "product_exists", data: { id: duplicate.id, sku: duplicate.sku, slug: duplicate.slug } });
+      const now = new Date();
+      const id = String(body.id || randomUUID()).slice(0, 120);
+      const slug = `${slugify(sku)}-${slugify(id).slice(-24)}`;
+      const media = Array.isArray(body.media) && body.media.length
+        ? body.media.slice(0, 24).map((item, sortOrder) => ({ key: String(item.key).replace(/^\//, ""), alt: item.alt || names, sortOrder }))
+        : [{ key: primaryImageKey, alt: names, sortOrder: 0 }];
+      const variants = Array.isArray(body.variants) && body.variants.length
+        ? body.variants.slice(0, 24).map((variant, index) => ({
+          id: String(variant.id || `${id}-${index + 1}`).slice(0, 120),
+          sku: variant.sku ? String(variant.sku).slice(0, 80) : undefined,
+          optionValues: variant.optionValues && typeof variant.optionValues === "object" ? variant.optionValues : {},
+          mediaKeys: Array.isArray(variant.mediaKeys) ? variant.mediaKeys.map((key) => String(key).replace(/^\//, "")).slice(0, 8) : [media[index]?.key || primaryImageKey],
+          stock: { tracked: Boolean(variant.stock?.tracked), available: Math.max(0, Number(variant.stock?.available || 0)) },
+        }))
+        : [{ id: `${id}-default`, optionValues: {}, mediaKeys: [primaryImageKey], stock: { tracked: false, available: 0 } }];
+      const product: ProductDocument = {
+        id,
+        sku,
+        slug,
+        categoryId,
+        status: body.status === "draft" ? "draft" : "active",
+        names: { en: names.en.trim(), de: names.de.trim(), uk: names.uk.trim(), ru: names.ru.trim() },
+        descriptions: body.descriptions,
+        primaryImageKey,
+        media,
+        variants,
+        variantCount: variants.length,
+        tags: [],
+        featured: false,
+        isNew: body.isNew ?? true,
+        attributes: body.attributes && typeof body.attributes === "object" ? body.attributes : {},
+        ...(partnerPriceUsd === undefined ? {} : { priceUsd: partnerPriceUsd, partnerPriceUsd, retailPriceUsd: Number((partnerPriceUsd * 2).toFixed(2)) }),
+        createdAt: now,
+        updatedAt: now,
+      };
+      await db.collection<ProductDocument>("products").insertOne(product);
+      return reply.code(201).send({ data: { id: product.id, sku: product.sku, slug: product.slug, status: product.status } });
     });
 
     app.patch<{ Params: { id: string }; Body: { retailPriceUsd?: number | null; partnerPriceUsd?: number | null } }>("/api/v1/admin/products/:id/price", async (request, reply) => {
