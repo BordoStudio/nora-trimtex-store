@@ -166,6 +166,13 @@ export function getSeedProductsByCategory(locale: Locale, categoryId: CategoryId
   return allSeedProducts.filter((product) => product.categoryId === categoryId).map((product) => toProduct(product, locale));
 }
 
+export function getSeedProductsBySearch(locale: Locale, query: string): Product[] {
+  const normalized = query.trim().toLowerCase();
+  return allSeedProducts
+    .filter((product) => `${product.sku} ${product.names[locale]}`.toLowerCase().includes(normalized))
+    .map((product) => toProduct(product, locale));
+}
+
 export function getProductSummaries(locale: Locale): Product[] {
   return getSeedProducts(locale).map((product) => ({
     ...product,

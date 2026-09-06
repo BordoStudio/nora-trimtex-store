@@ -1,4 +1,4 @@
-import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, type CategoryId, type Product } from "@/data/catalog";
+import { getFallbackSpecifications, getSeedProductBySlug, getSeedProducts, getSeedProductsByCategory, getSeedProductsBySearch, type CategoryId, type Product } from "@/data/catalog";
 import type { Locale } from "@/lib/i18n";
 import { cache } from "react";
 
@@ -50,8 +50,9 @@ export async function getCatalogProducts(
   };
   if (!apiUrl) {
     const query = options.search?.trim().toLowerCase();
-    const categoryProducts = options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
-    const products = query ? categoryProducts.filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : categoryProducts;
+    const products = query
+      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
+      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
     return products.slice(0, options.limit).map(applyAccountPrice);
   }
 
@@ -87,8 +88,9 @@ export async function getCatalogProducts(
     // local import also preserves the exact product sequence from the
     // original catalogue; database update timestamps must not reshuffle it.
     const query = options.search?.trim().toLowerCase();
-    const localProducts = (options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale))
-      .filter((product) => !query || `${product.sku} ${product.name}`.toLowerCase().includes(query))
+    const localProducts = (query
+      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
+      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale))
       .map(applyAccountPrice);
     const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
     const apiIds = new Set(apiProducts.map((product) => product.id));
@@ -98,8 +100,9 @@ export async function getCatalogProducts(
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
     const query = options.search?.trim().toLowerCase();
-    const categoryProducts = options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
-    const products = query ? categoryProducts.filter((product) => `${product.sku} ${product.name}`.toLowerCase().includes(query)) : categoryProducts;
+    const products = query
+      ? getSeedProductsBySearch(locale, query).filter((product) => !options.category || product.categoryId === options.category)
+      : options.category ? getSeedProductsByCategory(locale, options.category) : getSeedProducts(locale);
     return products.slice(0, options.limit).map(applyAccountPrice);
   }
 }

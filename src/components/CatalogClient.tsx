@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { Search, SlidersHorizontal } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Product } from "@/data/catalog";
 import { categoryIds, type CategoryId } from "@/data/categories";
 import { getDictionary, type Locale } from "@/lib/i18n";
@@ -19,6 +19,7 @@ const sampleCopy = {
 export function CatalogClient({ locale, initialProducts }: { locale: Locale; initialProducts: Product[] }) {
   const t = getDictionary(locale);
   const [query, setQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<Product[]>([]);
   const router = useRouter();
   const urlParams = useSearchParams();
   const requestedCategory = urlParams.get("category");
@@ -35,14 +36,33 @@ export function CatalogClient({ locale, initialProducts }: { locale: Locale; ini
   const category = urlCategory;
   const sort = urlSort;
   const [visibleCount, setVisibleCount] = useState(36);
+  useEffect(() => {
+    const value = query.trim();
+    const controller = new AbortController();
+    if (value.length < 2) {
+      return () => controller.abort();
+    }
+    const timer = window.setTimeout(async () => {
+      try {
+        const response = await fetch(`/api/search?locale=${locale}&limit=36&q=${encodeURIComponent(value)}`, { signal: controller.signal });
+        if (!response.ok) return;
+        const payload = await response.json() as { data: Product[] };
+        setSearchResults(payload.data);
+      } catch {
+        if (!controller.signal.aborted) setSearchResults([]);
+      }
+    }, 180);
+    return () => { window.clearTimeout(timer); controller.abort(); };
+  }, [locale, query]);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    return initialProducts
+    const source = normalized.length >= 2 ? searchResults : initialProducts;
+    return source
       .filter((product) => category === "all" || product.categoryId === category)
       .filter((product) => !normalized || `${product.sku} ${product.name}`.toLowerCase().includes(normalized))
       .filter((product) => category !== "samples" || sampleType === "all" || (sampleType === "books" ? product.sku.startsWith("Y-DL-") : product.sku.startsWith("YK-DL-")))
       .sort((a, b) => sort === "sku" ? a.sku.localeCompare(b.sku) : Number(Boolean(b.isNew)) - Number(Boolean(a.isNew)));
-  }, [category, initialProducts, query, sampleType, sort]);
+  }, [category, initialProducts, query, sampleType, searchResults, sort]);
 
   const isSamples = category === "samples";
 
