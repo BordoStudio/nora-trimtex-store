@@ -17454,14 +17454,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "宝缇嘉皮革带子",
-        "designerPriceUsd": 3.5,
-        "clientPriceUsd": 7,
+        "designerPriceUsd": 4,
+        "clientPriceUsd": 8,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!16"
       },
       "localImage": "assets/1445.jpg",
-      "priceUsd": 3.5,
-      "partnerPriceUsd": 3.5,
-      "retailPriceUsd": 7
+      "priceUsd": 4,
+      "partnerPriceUsd": 4,
+      "retailPriceUsd": 8
     },
     {
       "id": "1446",
@@ -18149,14 +18149,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "宝缇嘉皮革宽带带子",
-        "designerPriceUsd": 6.5,
-        "clientPriceUsd": 13,
+        "designerPriceUsd": 7,
+        "clientPriceUsd": 14,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!20"
       },
       "localImage": "assets/1449.jpg",
-      "priceUsd": 6.5,
-      "partnerPriceUsd": 6.5,
-      "retailPriceUsd": 13
+      "priceUsd": 7,
+      "partnerPriceUsd": 7,
+      "retailPriceUsd": 14
     },
     {
       "id": "1450",
@@ -36548,14 +36548,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "赫拉花边流苏羽毛",
-        "designerPriceUsd": 15.4,
-        "clientPriceUsd": 30.8,
+        "designerPriceUsd": 16,
+        "clientPriceUsd": 32,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!21"
       },
       "localImage": "assets/1246.jpg",
-      "priceUsd": 15.4,
-      "partnerPriceUsd": 15.4,
-      "retailPriceUsd": 30.8
+      "priceUsd": 16,
+      "partnerPriceUsd": 16,
+      "retailPriceUsd": 32
     },
     {
       "id": "1247",
@@ -36601,14 +36601,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "赫拉花边流苏羽毛",
-        "designerPriceUsd": 19.2,
-        "clientPriceUsd": 38.4,
+        "designerPriceUsd": 20,
+        "clientPriceUsd": 40,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!22"
       },
       "localImage": "assets/1247.jpg",
-      "priceUsd": 19.2,
-      "partnerPriceUsd": 19.2,
-      "retailPriceUsd": 38.4
+      "priceUsd": 20,
+      "partnerPriceUsd": 20,
+      "retailPriceUsd": 40
     },
     {
       "id": "1248",
@@ -37616,14 +37616,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "安纳西花边流苏珠子",
-        "designerPriceUsd": 11,
-        "clientPriceUsd": 22,
+        "designerPriceUsd": 12,
+        "clientPriceUsd": 24,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!12"
       },
       "localImage": "assets/1215.jpg",
-      "priceUsd": 11,
-      "partnerPriceUsd": 11,
-      "retailPriceUsd": 22
+      "priceUsd": 12,
+      "partnerPriceUsd": 12,
+      "retailPriceUsd": 24
     },
     {
       "id": "1216",
@@ -37669,14 +37669,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "安纳西花边流苏珠子",
-        "designerPriceUsd": 11,
-        "clientPriceUsd": 22,
+        "designerPriceUsd": 12,
+        "clientPriceUsd": 24,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!13"
       },
       "localImage": "assets/1216.jpg",
-      "priceUsd": 11,
-      "partnerPriceUsd": 11,
-      "retailPriceUsd": 22
+      "priceUsd": 12,
+      "partnerPriceUsd": 12,
+      "retailPriceUsd": 24
     },
     {
       "id": "1238",
@@ -38241,14 +38241,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "赫拉单头大穗挂球",
-        "designerPriceUsd": 32.2,
-        "clientPriceUsd": 64.4,
+        "designerPriceUsd": 32,
+        "clientPriceUsd": 64,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!20"
       },
       "localImage": "assets/1244.png",
-      "priceUsd": 32.2,
-      "partnerPriceUsd": 32.2,
-      "retailPriceUsd": 64.4
+      "priceUsd": 32,
+      "partnerPriceUsd": 32,
+      "retailPriceUsd": 64
     },
     {
       "id": "1245",
@@ -42400,14 +42400,14 @@
       "isNew": false,
       "attributes": {
         "legacyName": "安纳西刺绣带子装饰带边",
-        "designerPriceUsd": 11,
-        "clientPriceUsd": 22,
+        "designerPriceUsd": 12,
+        "clientPriceUsd": 24,
         "priceSource": "Фурнитура сайт.xlsx · Лист1!14"
       },
-      "priceUsd": 11,
+      "priceUsd": 12,
       "localImage": "assets/1207.jpg",
-      "partnerPriceUsd": 11,
-      "retailPriceUsd": 22
+      "partnerPriceUsd": 12,
+      "retailPriceUsd": 24
     },
     {
       "id": "1208",

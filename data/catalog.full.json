@@ -5551,9 +5551,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 3.5,
-    "partnerPriceUsd": 3.5,
-    "retailPriceUsd": 7
+    "priceUsd": 4,
+    "partnerPriceUsd": 4,
+    "retailPriceUsd": 8
   },
   {
     "id": "1446",
@@ -5743,9 +5743,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 6.5,
-    "partnerPriceUsd": 6.5,
-    "retailPriceUsd": 13
+    "priceUsd": 7,
+    "partnerPriceUsd": 7,
+    "retailPriceUsd": 14
   },
   {
     "id": "1450",
@@ -11309,9 +11309,9 @@
     ],
     "variantCount": 3,
     "isNew": false,
-    "priceUsd": 15.4,
-    "partnerPriceUsd": 15.4,
-    "retailPriceUsd": 30.8
+    "priceUsd": 16,
+    "partnerPriceUsd": 16,
+    "retailPriceUsd": 32
   },
   {
     "id": "1247",
@@ -11334,9 +11334,9 @@
     ],
     "variantCount": 1,
     "isNew": false,
-    "priceUsd": 19.2,
-    "partnerPriceUsd": 19.2,
-    "retailPriceUsd": 38.4
+    "priceUsd": 20,
+    "partnerPriceUsd": 20,
+    "retailPriceUsd": 40
   },
   {
     "id": "1248",
@@ -11641,9 +11641,9 @@
     ],
     "variantCount": 2,
     "isNew": false,
-    "priceUsd": 11,
-    "partnerPriceUsd": 11,
-    "retailPriceUsd": 22
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "1216",
@@ -11666,9 +11666,9 @@
     ],
     "variantCount": 1,
     "isNew": false,
-    "priceUsd": 11,
-    "partnerPriceUsd": 11,
-    "retailPriceUsd": 22
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "1238",
@@ -11829,9 +11829,9 @@
     ],
     "variantCount": 5,
     "isNew": false,
-    "priceUsd": 32.2,
-    "partnerPriceUsd": 32.2,
-    "retailPriceUsd": 64.4
+    "priceUsd": 32,
+    "partnerPriceUsd": 32,
+    "retailPriceUsd": 64
   },
   {
     "id": "1245",
@@ -13101,9 +13101,9 @@
     ],
     "variantCount": 7,
     "isNew": false,
-    "priceUsd": 11,
-    "partnerPriceUsd": 11,
-    "retailPriceUsd": 22
+    "priceUsd": 12,
+    "partnerPriceUsd": 12,
+    "retailPriceUsd": 24
   },
   {
     "id": "1208",

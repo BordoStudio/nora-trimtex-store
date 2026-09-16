@@ -46,12 +46,25 @@ export async function bootstrapCatalog(db: MongoDatabase): Promise<number> {
     attributes: { source: "chinatrimming.cn", productType: "sample" },
   }));
   const products = [...source.products, ...samples];
-  const priceImportId = "furniture-prices-2026-09-05";
+  const priceImportId = "furniture-prices-2026-09-16";
+  const priceImportSkus = new Set([
+    "AG8128C",
+    "AR8128C",
+    "ZT8094Y",
+    "WT8094Y",
+    "ZT8084",
+    "ZT8084C",
+    "MB8094Y",
+    "WXR8084B",
+  ]);
 
   if (await productsCollection.estimatedDocumentCount() > 0) {
     const imports = db.collection<{ id: string; appliedAt: Date }>("dataImports");
     if (!await imports.findOne({ id: priceImportId })) {
-      const pricedProducts = products.filter((product) => product.partnerPriceUsd !== undefined || product.priceUsd !== undefined);
+      const pricedProducts = products.filter((product) => (
+        priceImportSkus.has(product.sku)
+        && (product.partnerPriceUsd !== undefined || product.priceUsd !== undefined)
+      ));
       if (pricedProducts.length) {
         await productsCollection.bulkWrite(pricedProducts.map((product) => {
           const partnerPriceUsd = product.partnerPriceUsd ?? product.priceUsd!;
