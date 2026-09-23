@@ -749,6 +749,11 @@ body { background:#f5ead9; }
 @media(prefers-reduced-motion:reduce) { .product-add-button,.product-add-icon { transition:none; } }
 
 .product-card-footer .designer-price-label { min-width:0; margin:0; align-self:center; }
+
+/* Keep price, designer access and availability in separate flow rows at every width. */
+.product-detail-copy > .designer-price-link,
+.product-detail-copy > .designer-price-label { margin:0 0 10px; }
+.product-detail-copy > .product-availability { margin:0 0 28px; }
 .admin-section-actions { display:flex; justify-content:flex-end; margin:-2px 0 14px; }
 .admin-product-tools { display:grid; gap:14px; margin:0 0 18px; }
 .admin-product-tool-actions { display:flex; flex-wrap:wrap; gap:10px; }
