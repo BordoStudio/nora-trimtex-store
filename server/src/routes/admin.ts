@@ -214,6 +214,18 @@ export function adminRoutes(db: MongoDatabase): FastifyPluginAsync {
       return reply.code(201).send({ data: { id: product.id, sku: product.sku, slug: product.slug, status: product.status } });
     });
 
+    app.post<{ Body: { skus?: string[] } }>("/api/v1/admin/products/feature", async (request, reply) => {
+      await requireAdmin(db, request);
+      const skus = [...new Set((request.body?.skus || []).map((sku) => String(sku).trim().toUpperCase()).filter(Boolean))];
+      if (!skus.length || skus.length > 100) return reply.code(400).send({ error: "invalid_skus" });
+      const now = new Date();
+      const result = await db.collection<ProductDocument>("products").updateMany(
+        { sku: { $in: skus } },
+        { $set: { isNew: true, updatedAt: now } },
+      );
+      return { data: { matched: result.matchedCount, modified: result.modifiedCount } };
+    });
+
     app.patch<{ Params: { id: string }; Body: { retailPriceUsd?: number | null; partnerPriceUsd?: number | null } }>("/api/v1/admin/products/:id/price", async (request, reply) => {
       await requireAdmin(db, request);
       const normalizePrice = (raw: number | null | undefined) => raw === null || raw === undefined ? null : Number(raw);

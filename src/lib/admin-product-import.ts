@@ -5,6 +5,7 @@ import { accountRequest, relay } from "@/lib/account-api";
 
 const CHINA_ORIGIN = "http://www.chinatrimming.cn";
 const MAX_IMAGES = 24;
+const FEATURED_CHINA_SKUS = ["AE993U", "AH294", "AH295", "AH403Y"];
 
 export type ProductDraft = {
   id: string;
@@ -259,6 +260,17 @@ export async function scanNewChinaProducts(existingSkus: Set<string>, startPage 
   if (totalPages > 1 && !template) throw new Error("Не удалось определить страницы китайского каталога.");
   const safeStart = Math.min(Math.max(1, Math.trunc(startPage)), totalPages);
   const safeSize = Math.min(Math.max(1, Math.trunc(pageSize)), 20);
+  if (safeStart === 1) {
+    const featured = await accountRequest("/api/v1/admin/products/feature", {
+      method: "POST",
+      body: JSON.stringify({ skus: FEATURED_CHINA_SKUS }),
+    }, true);
+    if (!featured.ok) throw new Error(`Не удалось поднять выбранные товары наверх (${featured.status}).`);
+    const result = await featured.json() as { data?: { matched?: number } };
+    if ((result.data?.matched || 0) < FEATURED_CHINA_SKUS.length) {
+      throw new Error(`Не все выбранные товары найдены в каталоге (${result.data?.matched || 0} из ${FEATURED_CHINA_SKUS.length}).`);
+    }
+  }
   const endPage = Math.min(totalPages, safeStart + safeSize - 1);
   const pages = new Map<number, string>();
   if (safeStart === 1) pages.set(1, firstHtml);

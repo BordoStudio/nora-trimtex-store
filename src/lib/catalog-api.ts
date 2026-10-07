@@ -97,7 +97,8 @@ export async function getCatalogProducts(
     const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
     const apiIds = new Set(apiProducts.map((product) => product.id));
     const mergedProducts = [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
-      .sort((left, right) => (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER))
+      .sort((left, right) => Number(Boolean(right.isNew)) - Number(Boolean(left.isNew))
+        || (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER));
     return mergedProducts.slice(0, options.limit || 100);
   } catch (error) {
     if (process.env.CATALOG_FALLBACK === "false") throw error;
