@@ -265,10 +265,13 @@ export async function scanNewChinaProducts(existingSkus: Set<string>, startPage 
       method: "POST",
       body: JSON.stringify({ skus: FEATURED_CHINA_SKUS }),
     }, true);
-    if (!featured.ok) throw new Error(`Не удалось поднять выбранные товары наверх (${featured.status}).`);
-    const result = await featured.json() as { data?: { matched?: number } };
-    if ((result.data?.matched || 0) < FEATURED_CHINA_SKUS.length) {
-      throw new Error(`Не все выбранные товары найдены в каталоге (${result.data?.matched || 0} из ${FEATURED_CHINA_SKUS.length}).`);
+    if (featured.ok) {
+      const result = await featured.json() as { data?: { matched?: number } };
+      if ((result.data?.matched || 0) < FEATURED_CHINA_SKUS.length) {
+        throw new Error(`Не все выбранные товары найдены в каталоге (${result.data?.matched || 0} из ${FEATURED_CHINA_SKUS.length}).`);
+      }
+    } else if (featured.status !== 404) {
+      throw new Error(`Не удалось поднять выбранные товары наверх (${featured.status}).`);
     }
   }
   const endPage = Math.min(totalPages, safeStart + safeSize - 1);
