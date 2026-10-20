@@ -94,9 +94,25 @@ export async function getCatalogProducts(
     // local import also preserves the exact product sequence from the
     // original catalogue; database update timestamps must not reshuffle it.
     const localProducts = localSeedProducts.map(applyAccountPrice);
-    const originalOrder = new Map(localProducts.map((product, index) => [product.id, index]));
-    const apiIds = new Set(apiProducts.map((product) => product.id));
-    const mergedProducts = [...apiProducts, ...localProducts.filter((product) => !apiIds.has(product.id))]
+    // A SKU is the product identity across the curated catalogue and China imports.
+    // The API wins so a product imported from China can be enriched over time without
+    // creating a second card from the legacy local catalogue.
+    const normalizeSku = (product: Pick<Product, "sku">) => product.sku.trim().toUpperCase();
+    const seenSkus = new Set<string>();
+    const apiProductsWithoutDuplicateSkus = apiProducts.filter((product) => {
+      const sku = normalizeSku(product);
+      if (seenSkus.has(sku)) return false;
+      seenSkus.add(sku);
+      return true;
+    });
+    const localProductsWithoutDuplicateSkus = localProducts.filter((product) => {
+      const sku = normalizeSku(product);
+      if (seenSkus.has(sku)) return false;
+      seenSkus.add(sku);
+      return true;
+    });
+    const originalOrder = new Map(localProductsWithoutDuplicateSkus.map((product, index) => [product.id, index]));
+    const mergedProducts = [...apiProductsWithoutDuplicateSkus, ...localProductsWithoutDuplicateSkus]
       .sort((left, right) => Number(Boolean(right.isNew)) - Number(Boolean(left.isNew))
         || (originalOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) - (originalOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER));
     return mergedProducts.slice(0, options.limit || 100);
