@@ -1,6 +1,7 @@
 import "server-only";
 
 import { getCloudflareContext } from "@opennextjs/cloudflare";
+import { getProductSummaries } from "@/data/catalog";
 import { accountRequest, relay } from "@/lib/account-api";
 
 const CHINA_ORIGIN = "http://www.chinatrimming.cn";
@@ -139,7 +140,13 @@ export async function existingProductSkus(): Promise<Set<string>> {
   const response = await accountRequest("/api/v1/admin/products", {}, true);
   if (!response.ok) throw new Error(`Каталог недоступен (${response.status}).`);
   const payload = await response.json() as { data?: { items?: Array<{ sku?: string }> } };
-  return new Set((payload.data?.items || []).map((item) => String(item.sku || "").toUpperCase()).filter(Boolean));
+  // Imports must also recognise the legacy curated catalogue. Those products are
+  // merged on the storefront even when they have not been migrated to the API yet.
+  const catalogSkus = getProductSummaries("ru").map((product) => product.sku);
+  return new Set([...(payload.data?.items || []), ...catalogSkus]
+    .map((item) => typeof item === "string" ? item : item.sku)
+    .map((sku) => String(sku || "").trim().toUpperCase())
+    .filter(Boolean));
 }
 
 export async function createBackendProduct(product: ProductDraft): Promise<Response> {
